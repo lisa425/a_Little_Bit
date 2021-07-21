@@ -1,0 +1,32 @@
+@import 'App.css';
+
+.Mainpage{
+  background-image: url('../../assets/images/main_background.png');
+  width:100vw;
+  height: 100vh;
+  background-size: cover;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_title{
+    width:60%;
+}
+
+.start-btn{
+    font-family: "Montserrat Alternates";
+    font-weight: 300;
+    font-size: 1.5rem;
+    width:10rem;
+    height: 3rem;
+    color:white;
+    background:rgba(0,0,0,0);
+    border:1px solid white;
+    border-radius: 5px;
+}
+
+a{
+    color:white;
+}

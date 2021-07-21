@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "backend": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,11 @@
   "homepage": "https://github.com/lisa425/a_Little_Bit#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^6.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.13.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }

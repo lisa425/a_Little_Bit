@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 5000;
 const { User } = require("./models/User");
 const bodyParser = require("body-parser");
 
@@ -25,6 +25,23 @@ app.post('/test',(req,res)=>{
         if(err) return res.json({ success:false, err })
         return res.status(200).json({ success:true })
     })
+})
+
+app.get('/api/hello',(req,res) => {
+    const user = req.user
+    res.send(user.name);
+})
+app.post('/api/users/test',(req,res) => {
+    const user = new User(req.body)
+    user.save((err,userInfo) => {
+        if(err) return res.json({success:false,err})
+        return res.status(200).json({
+            success:true
+        })
+    })
+})
+app.get('/api/result',(req,res) => {
+    
 })
 
 app.listen(port,() => console.log(`Example app listening on port ${port}`));

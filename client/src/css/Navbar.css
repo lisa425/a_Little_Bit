@@ -1,0 +1,54 @@
+.nav-bar{
+    width:90vw;
+    position: absolute;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4% 5vw 0 5vw;
+}
+.nav-logo{
+    width:142px;
+}
+.nav-menu-icon{
+    color:rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);
+    border:none;
+    width:26px;
+    height: 20px;
+    position: absolute;
+    right:5.5vw;
+}
+.nav-menu-icon img{
+    width:26px;
+    height: 20px;
+}
+.nav-menu{
+    position: absolute;
+    top:0;
+    left:0;
+    font-family: "Elice Digital Baeum";
+    font-weight: 800;
+    display: none;
+    color:white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:100vw;
+    background:rgba(0,0,0,0.9);
+}
+.menu-title{
+    font-family: "Elice Digital Baeum";
+    font-weight: 800;
+    font-size:2rem;
+    margin-bottom: 4rem;
+}
+.nav-menu li{
+    padding:1.5rem;
+    list-style: none;
+    font-size:1.9rem;
+}
+.nav-menu.active{
+    display:flex;
+}
