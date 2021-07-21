@@ -1,7 +1,8 @@
 import React,{ useState } from 'react';
-import '../../../css/NavBar.css';
+import '../../../css/Navbar.css';
 import { Link } from 'react-router-dom';
 import {ReactComponent as Logo } from '../../../assets/images/logo.svg';
+import menuIcon from "../../../assets/images/menu_icon.png";
 
 const NavBar = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -22,7 +23,7 @@ const NavBar = () => {
                     <li>디지털 탄소를 줄이는 사소하지만 확실한 방법</li>
             </ul>
             <button className="nav-menu-icon" onClick={showSidebar}>  
-                <img src="../../../assets/images/menu_icon.png" />
+                <img src={menuIcon} />
             </button>
         </nav>  
 

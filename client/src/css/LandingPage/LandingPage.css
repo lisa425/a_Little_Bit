@@ -1,4 +1,4 @@
-@import 'App.css';
+@import "../core.css";
 
 .Mainpage{
   background-image: url('../../assets/images/main_background.png');
@@ -29,4 +29,5 @@
 
 a{
     color:white;
+    text-decoration: none;
 }

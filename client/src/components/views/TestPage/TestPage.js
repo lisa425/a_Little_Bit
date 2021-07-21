@@ -40,7 +40,7 @@ const TestPage = (props) => {
         dispatch(registerUser(body))
         .then(response => {
             if(response.payload.success){
-                props.history.push('/') //result
+                props.history.push('/result') //result
             }else{
                 alert('err')
             }

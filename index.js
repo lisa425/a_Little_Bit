@@ -28,8 +28,7 @@ app.post('/test',(req,res)=>{
 })
 
 app.get('/api/hello',(req,res) => {
-    const user = req.user
-    res.send(user.name);
+    console.log('hi')
 })
 app.post('/api/users/test',(req,res) => {
     const user = new User(req.body)
