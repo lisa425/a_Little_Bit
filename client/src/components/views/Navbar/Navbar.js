@@ -23,7 +23,7 @@ const NavBar = () => {
                     <li>디지털 탄소를 줄이는 사소하지만 확실한 방법</li>
             </ul>
             <button className="nav-menu-icon" onClick={showSidebar}>  
-                <img src={menuIcon} />
+                <img src={menuIcon} alt="menuIcon"/>
             </button>
         </nav>  
 

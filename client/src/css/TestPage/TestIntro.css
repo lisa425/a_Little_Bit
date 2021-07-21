@@ -1,0 +1,64 @@
+@import '../core.css';
+@keyframes moveToRight{
+    0% {
+        margin-left:0;
+    }
+    100% {
+        margin-left:20%;
+    }
+}
+@keyframes moveToLeft{
+    0% {
+        left:0;
+    }
+    100% {
+        left:-200px;
+    }
+}
+body{
+    background-color: black;
+}
+.start-page{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100vw;
+    height: 100vh;
+    overflow:hidden;
+    background-color: black;
+}
+h1{
+    font-size:10vw;
+    font-family: "Montserrat Alternates";
+    font-weight: 700;
+    color:white;
+    white-space: nowrap;
+
+}
+.first{
+    animation-name: moveToRight;
+    animation-duration:20s;
+}
+.second{
+    position: relative;
+    animation-name: moveToLeft;
+    animation-duration:20s;
+}
+.third{
+    position: relative;
+    animation-name: moveToLeft;
+    animation-duration:30s;
+}
+
+.without{
+    display: flex;
+    align-items: center;
+    color:white;
+}
+.without p{
+    font-family: "NEXON Lv2 Gothic";
+    font-weight: 400;
+    margin:5%;
+    font-size: 1vw;
+    line-height: 2rem;
+}

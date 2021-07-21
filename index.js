@@ -34,6 +34,7 @@ app.post('/api/users/test',(req,res) => {
     const user = new User(req.body)
     user.save((err,userInfo) => {
         if(err) return res.json({success:false,err})
+        console.log("save!")
         return res.status(200).json({
             success:true
         })

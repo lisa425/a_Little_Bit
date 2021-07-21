@@ -1,13 +1,11 @@
 import React,{ useEffect, useState } from 'react';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import { registerUser } from '../../../_actions/user_action'
+import registerUser from '../../../_actions/user_action';
+import '../../../css/TestPage/TestPage.css';
+import InputName from './inputUserData/InputName'
+import NavBar from '../Navbar/Navbar';
 
-
-//import { Route,Link } from 'react-router-dom';
-//import '../../../css/LandingPage/LandingPage.css';
-//import NavBar from '../NavBar/NavBar';
-//import StartPage from './DataTest/StartPage';
 
 const TestPage = (props) => {
     // useEffect(() => {
@@ -31,16 +29,14 @@ const TestPage = (props) => {
 
         let body = {
             name: name,
-            location : location
+            location: location
         }
 
-        //change branch
-
-        //axios.post('/api/users/test',body)
+        //axios.post('/api/users/test',body).then(response => console.log('save'));
         dispatch(registerUser(body))
         .then(response => {
             if(response.payload.success){
-                props.history.push('/result') //result
+                props.history.push('/test') //result
             }else{
                 alert('err')
             }
@@ -48,10 +44,13 @@ const TestPage = (props) => {
         
 
     }
+    
 
 
     return(
-        <div>Testpage
+        <div className="testpage">
+            <NavBar />
+            <InputName className="content" />
             <form>
                 <label>이름을 입력하세요</label>
                 <input type="text" value={name} onChange={onNameHandler}/>
@@ -60,13 +59,6 @@ const TestPage = (props) => {
                 <br/>
                 <button type="submit" onClick={onSubmitHandler}>DONE!</button>
             </form>
-        {/*
-        <div className="Mainpage">
-            <NavBar />
-            <img className="main_title" src="../../../assets/images/main_title.gif" alt="logo"/>
-            <button className="start-btn"><Link to="/startpage">start</Link></button>
-        </div> 
-        */}
         </div>
     );
 };

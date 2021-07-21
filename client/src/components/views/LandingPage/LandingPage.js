@@ -15,7 +15,7 @@ const LandingPage = () => {
         <div className="Mainpage">
             <NavBar />
             <img className="main_title" src={maintitle} alt="logo"/>
-            <button className="start-btn"><Link to="/test">start</Link></button>
+            <button className="start-btn"><Link to="/testintro">start</Link></button>
         </div> 
     );
 };
