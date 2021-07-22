@@ -1,11 +1,65 @@
+@import '../core.css';
+
+/*NavBar view 수정*/
+svg{
+    fill:black;
+}
+.nav-bar .nav-menu-icon{
+    display:none;
+}
+.nav-bar a:nth-child(1){
+    width:150px;
+}
 .testpage{
     background-color:white;
     width:100vw;
-    height:100vw;
+    color:black;
 }
 
-.content{
+/*테스트 컨텐츠 요소*/
+.input-contents{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+.get-info{
+    width:61vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:"Elice Digital Baeum";
+    font-size:1.4rem;
+}
+
+.get-info .input-info{
+    margin:2rem 0;
+    width:25rem;
+    height: 50px;
+    border:1px solid black;
+    padding:0.5rem;
+    font-size: 1.4rem;
+    font-family:"Elice Digital Baeum";
+    text-align: center;
+    background-color: transparent;
+}
+.get-info .submit-to-next{
+    position: absolute;
+    right:0;
+    bottom:0;
+    margin:0;
+    background-color:#70FF00;
+    font-family: 'Montserrat Alternates';
+    font-weight: 700;
+    font-size:1.6rem;
+    border:none;
+    padding:1rem;
+}
+#get-location{
+    display:none;
 }

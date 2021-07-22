@@ -11,17 +11,16 @@ const InputName = () => {
     const [Name,setName] = useState("");
 
     const onNameHandler = (event) => {
-        setName(event.target.value);
+        setName(event.currentTarget.value);
     }
 
     return(
-        <div>
-            <NavBar />
+        <div className="content">
             <p>당신의 이름을 입력하세요.</p>
-            <form>
-                <input className="input-name" type="text" value={Name} onChange={onNameHandler} />
-                <button className="submit-name" type="submit">DONE!</button>
-            </form>
+     
+            <input className="input-name" type="text" value={Name} onChange={onNameHandler} />
+            <button className="submit-name" type="submit">DONE!</button>
+      
         </div>
     );
     
