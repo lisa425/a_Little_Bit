@@ -116,33 +116,6 @@ const appList = {
 const TestPage = (props) => {
 
     let num = 1;
-    // useEffect(() => {
-    //     Axios.get('api/hello')
-    //     .then(response => console.log(response.data))
-    // },[])
-
-    // const dispatch = useDispatch();
-    
-    // const onSubmitHandler = (event) => {
-    //     event.preventDefault();
-
-    //     let body = {
-    //         name: name,
-    //         location: location
-    //     }
-
-    //     //Axios.post('/test',body).then(response => console.log('save'));
-    //     dispatch(registerUser(body))
-    //     .then(response => {
-    //         if(response.payload.success){
-    //             //props.history.push('/test/result') result
-    //         }else{
-    //             alert('err')
-    //         }
-    //     })
-        
-
-    // }
 
     //app list state
     const [netflixBox,setNetflixBox] = useState(false);
@@ -175,7 +148,7 @@ const TestPage = (props) => {
 
 
     //이름 input state 설정
-    const [Name,setName] = useState("");
+    const [name,setName] = useState("");
     const onNameHandler = (event) => {
         setName(event.currentTarget.value);
     }
@@ -197,7 +170,7 @@ const TestPage = (props) => {
         /*input2의 value를 변화시킨다.*/
         setNetflixDay(e.currentTarget.value);
     }
-    const NetflixResult = NetflixWeek * NetflixDay;
+    const netflixResult = NetflixWeek * NetflixDay;
 
     //youtube input state 설정
     const [YoutubeWeek, setYoutubeWeek] = useState(0);
@@ -211,7 +184,7 @@ const TestPage = (props) => {
         setYoutubeDay(e.currentTarget.value);
     }
 
-    const YoutubeResult = YoutubeWeek * YoutubeDay;
+    const youtubeResult = YoutubeWeek * YoutubeDay;
 
     //facebook input state 설정
     const [FacebookWeek, setFacebookWeek] = useState(0);
@@ -224,7 +197,7 @@ const TestPage = (props) => {
         /*input2의 value를 변화시킨다.*/
         setFacebookDay(e.currentTarget.value);
     }
-    const FacebookResult = FacebookWeek * FacebookDay;
+    const facebookResult = FacebookWeek * FacebookDay;
 
     //Twitter input state 설정
     const [TwitterWeek, setTwitterWeek] = useState(0);
@@ -237,7 +210,7 @@ const TestPage = (props) => {
         /*input2의 value를 변화시킨다.*/
         setTwitterDay(e.currentTarget.value);
     }
-    const TwitterResult = TwitterWeek * TwitterDay;
+    const twitterResult = TwitterWeek * TwitterDay;
 
     //Tiktok input state 설정
     const [TiktokWeek, setTiktokWeek] = useState(0);
@@ -250,7 +223,7 @@ const TestPage = (props) => {
         /*input2의 value를 변화시킨다.*/
         setTiktokDay(e.currentTarget.value);
     }
-    const TiktokResult = TiktokWeek * TiktokDay;
+    const tiktokResult = TiktokWeek * TiktokDay;
 
     //Instagram input state 설정
     const [InstagramWeek, setInstagramWeek] = useState(0);
@@ -263,7 +236,7 @@ const TestPage = (props) => {
         /*input2의 value를 변화시킨다.*/
         setInstagramDay(e.currentTarget.value);
     }
-    const InstagramResult = InstagramWeek * InstagramDay;
+    const instagramResult = InstagramWeek * InstagramDay;
 
     //KakaoTalk input state 설정
     const [KakaoTalkWeek, setKakaoTalkWeek] = useState(0);
@@ -276,7 +249,7 @@ const TestPage = (props) => {
         /*input2의 value를 변화시킨다.*/
         setKakaoTalkDay(e.currentTarget.value);
     }
-    const KakaoTalkResult = KakaoTalkWeek * KakaoTalkDay;
+    const kakaoTalkResult = KakaoTalkWeek * KakaoTalkDay;
 
     //Call input state 설정
     const [CallWeek, setCallWeek] = useState(0);
@@ -289,7 +262,7 @@ const TestPage = (props) => {
         /*input2의 value를 변화시킨다.*/
         setCallDay(e.currentTarget.value);
     }
-    const CallResult = CallWeek * CallDay;
+    const callResult = CallWeek * CallDay;
 
     //Zoom input state 설정
     const [ZoomWeek, setZoomWeek] = useState(0);
@@ -302,18 +275,20 @@ const TestPage = (props) => {
         /*input2의 value를 변화시킨다.*/
         setZoomDay(event.currentTarget.value);
     }
-    const ZoomResult = ZoomWeek * ZoomDay;
+    const zoomResult = ZoomWeek * ZoomDay;
 
     //email input state 설정
     const [EmailCount, setEmailCount] = useState(0);
     const onEmailCountChange = (e) => {
         setEmailCount(e.currentTarget.value);
     }
-    const EmailResult = () => {
+    const emailResult = () => {
         //if emaildelete === false return EmailCount*4
         //else return EmailCount
     }
 
+
+    //location 페이지 open
     const showLocation = (event) => {
         event.preventDefault();
         this.props.display = "none"
@@ -321,42 +296,54 @@ const TestPage = (props) => {
         const nextQuestion = document.querySelector("#get-location")
     }
 
+    //app 사용량 테스트 페이지 open
+    const showAppUseData = event => {
+
+    }
+
+
+    //app 버튼 클릭 시 색상 변경
     const onclickevent = (event) => {
         event.currentTarget.fill = "green";
     }
 
+    const appResult = () => {
+        let result = netflixResult + youtubeResult + facebookResult + twitterResult + tiktokResult + instagramResult + kakaoTalkResult + callResult + zoomResult + emailResult;
+        return result;
+    } 
+
+    //테스트 제출
     const onSubmit = (event) => {
         event.preventDefault();
 
         const variables = {
-            name: Name,
+            name: name,
             location: location,
-            netflix: NetflixResult,
-            youtube:YoutubeResult,
-            facebook:FacebookResult,
-            twitter:TwitterResult,
-            tictok:TiktokResult,
-            instagram:InstagramResult,
-            kakaotalk:KakaoTalkResult,
-            call:CallResult,
-            zoom:ZoomResult,
-            email:EmailResult
+            netflix: netflixResult,
+            youtube:youtubeResult,
+            facebook:facebookResult,
+            twitter:twitterResult,
+            tictok:tiktokResult,
+            instagram:instagramResult,
+            kakaotalk:kakaoTalkResult,
+            call:callResult,
+            zoom:zoomResult,
+            email:emailResult,
+            result:appResult
         }
 
-        Axios.post('/test',variables)
+        Axios.post('/api/test',variables)
         .then(response => {
             if(response.data.success){
                 console.log(response.data);
-                setTimeout(()=>{
-                    props.history.push('/test/result');
-                },4000)
+                // setTimeout(()=>{
+                //     props.history.push('/test/result');
+                // },4000)
             }else{
                 alert('테스트 실패');
             }
         })
     }
-
-
 
     //test가 끝나면 결과 페이지로 지금 입력한 정보들을 객체로 만들어서 전달
     //결과페이지는 (props)를 받아서 props.result, props.netflix 이런식으로 접근하자!
@@ -367,17 +354,17 @@ const TestPage = (props) => {
             <form className="input-contents">
                 <section className="get-info page-1" id="get-name">
                     <p>당신의 이름을 입력하세요.</p>
-                    <input className="input-info" type="text" name="name" value={Name} onChange={onNameHandler} />
+                    <input className="input-info" type="text" name="name" value={name} onChange={onNameHandler} />
                     <button className="submit-to-next" type="submit" onClick={showLocation}>DONE!</button>
                 </section>
 
                 <section className="get-info page-2" id="get-location">
                     <p>지금 계신 위치가 어디신가요?.</p>
                     <input className="input-info" type="text" name="name" value={location} onChange={onLocationHandler} />
-                    <button className="submit-to-next" type="submit">DONE!</button>
+                    <button className="submit-to-next" type="submit" onClick={showAppUseData}>DONE!</button>
                 </section>
 
-                <section className="test page-3">
+                <section className="test page-3" id="get-appUseData">
                     <h3>서비스를 클릭해 사용량을 기록해주세요</h3>
                     <ul className="applist-btn">
                         <li><button type="button" id="1">
@@ -420,7 +407,7 @@ const TestPage = (props) => {
 
 
                     {/* =====Netflix===== */}
-                    <article className="test-box index-1">
+                    <article id="netflix" className="test-box index-1">
                         <button id="before_question" className="ctrl-btn" disabled><Before/></button>
 
                         <div className="test-content">
@@ -453,7 +440,7 @@ const TestPage = (props) => {
 
 
                     {/* ===== Youtube ===== */}
-                    <article className="test-box index-2">
+                    <article id="youtube" className="test-box index-2">
                         <button id="before_question" className="ctrl-btn" disabled><Before/></button>
 
                         <div className="test-content">
@@ -486,7 +473,7 @@ const TestPage = (props) => {
 
 
                     {/* ===== Facebook ===== */}
-                    <article className="test-box index-3">
+                    <article id="facebook" className="test-box index-3">
                         <button id="before_question" className="ctrl-btn" disabled><Before/></button>
 
                         <div className="test-content">
@@ -519,7 +506,7 @@ const TestPage = (props) => {
 
 
                     {/* ===== Twitter ===== */}
-                    <article className="test-box index-4">
+                    <article id="twitter" className="test-box index-4">
                         <button id="before_question" className="ctrl-btn" disabled><Before/></button>
 
                         <div className="test-content">
@@ -552,7 +539,7 @@ const TestPage = (props) => {
 
 
                     {/* ===== Tiktok ===== */}
-                    <article className="test-box index-5">
+                    <article id="tiktok" className="test-box index-5">
                         <button id="before_question" className="ctrl-btn" disabled><Before/></button>
 
                         <div className="test-content">
@@ -585,7 +572,7 @@ const TestPage = (props) => {
 
 
                     {/* ===== Instagram ===== */}
-                    <article className="test-box index-6">
+                    <article id="instagram" className="test-box index-6">
                         <button id="before_question" className="ctrl-btn" disabled><Before/></button>
 
                         <div className="test-content">
@@ -618,7 +605,7 @@ const TestPage = (props) => {
 
 
                     {/* ===== KakaoTalk ===== */}
-                    <article className="test-box index-7">
+                    <article id="kakaotalk" className="test-box index-7">
                         <button id="before_question" className="ctrl-btn" disabled><Before/></button>
 
                         <div className="test-content">
@@ -651,7 +638,7 @@ const TestPage = (props) => {
 
 
                     {/* ===== Call ===== */}
-                    <article className="test-box index-8">
+                    <article id="call" className="test-box index-8">
                         <button id="before_question" className="ctrl-btn" disabled><Before/></button>
 
                         <div className="test-content">
@@ -684,7 +671,7 @@ const TestPage = (props) => {
 
 
                     {/* ===== Zoom ===== */}
-                    <article className="test-box index-9">
+                    <article id="zoom" className="test-box index-9">
                         <button id="before_question" className="ctrl-btn" disabled><Before/></button>
 
                         <div className="test-content">
@@ -716,7 +703,7 @@ const TestPage = (props) => {
                     </article>
 
                     {/* ===== Email ===== */}
-                    <article className="test-box index-10">
+                    <article id="email" className="test-box index-10">
                         <button id="before_question" className="ctrl-btn" disabled><Before/></button>
 
                         <div className="test-content">

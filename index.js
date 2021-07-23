@@ -17,15 +17,8 @@ mongoose.connect('mongodb+srv://chaewon:thtldmlznzl425@alittlebit.oxgxw.mongodb.
 
 
 app.get('/',(req,res)=>res.send('Hello World!'))
+app.use('/api/test', require('./routes/test'));
 
-app.post('/test',(req,res)=>{
-    //test 유저 정보를 client에서 가져와 DB에 저장
-    const test = new Test(req.body);
-    test.save((err,doc)=>{
-        if(err) return res.json({ success:false, err })
-        return res.status(200).json({ success:true })
-    })
-})
 
 app.get('/api/hello',(req,res) => {
     console.log('hi')
