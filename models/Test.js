@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const userSchema = mongoose.Schema({
+const testSchema = mongoose.Schema({
     name:{
         type:String,
         maxlength: 50
@@ -27,9 +27,6 @@ const userSchema = mongoose.Schema({
     instagram:{
         type:Number
     },
-    email:{
-        type:Number
-    },
     kakaotalk:{
         type:Number
     },
@@ -39,18 +36,18 @@ const userSchema = mongoose.Schema({
     zoom:{
         type:Number
     },
-    result:{
+    email:{
         type:Number
     },
-    date:{
-        type:String 
+    result:{
+        type:Number
     },
     message:{
         type:String,
         maxlength:150
     }
-})
+},{timestamps:true})
 
-const User = mongoose.model('User',userSchema)
+const Test = mongoose.model('Test',testSchema)
 
-module.exports = { User }
+module.exports = { Test }

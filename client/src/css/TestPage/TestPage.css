@@ -1,5 +1,8 @@
 @import '../core.css';
 
+html{
+    background: white;
+}
 /*NavBar view 수정*/
 svg{
     fill:black;
@@ -28,7 +31,6 @@ input:-webkit-autofill {
 }
 .get-info{
     width:61vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,5 +63,121 @@ input:-webkit-autofill {
     padding:1rem;
 }
 #get-location{
-    display:none;
+    display:flex;
+}
+
+
+
+.test{
+    font-family: 'Elice Digital Baeum';
+    width:100vw;
+    height: 100vh;
+    background-color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    font-size:1.3rem;
+    margin:0 auto;
+}
+.applist-btn{
+    display:flex;
+    flex-wrap: wrap;
+    margin:3rem 10vw;
+}
+
+.applist-btn li{
+    padding:0.5rem;
+    width:48px;
+    height: 48px;
+}
+.applist-btn li button{
+    border:none;
+    width:100%;
+    height:100%;
+}
+
+
+
+
+.test-box{
+    display: flex;
+    align-items: center;
+
+
+}
+.ctrl-btn{
+    width:50px;
+    height: 50px;
+    padding:5px;
+    margin:0 5vw;
+    background: #000;
+    border:none;
+    border-radius:4px;
+    color:#FFF;
+}
+.test-content{
+    width:658px;
+}
+
+.app-title{
+    display: flex;
+}
+.app-name{
+    margin-left:1rem;
+    font-size:1.4rem;
+}
+.app-name h5{
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+}
+
+.question-box{
+    margin-top:15%;
+    font-size: 1rem;
+}
+
+
+.qna{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.value-box{
+    width:75px;
+    height: 34px;
+    border:1px dashed #000;
+    border-radius: 4px;
+    background-color:#FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.test-range-bar{
+    width:100%;
+}
+.finish-btn{
+    width:164px;
+    height: 48px;
+    padding: 0.4rem 1.2rem;
+    background:#AAFF01;
+    border:1px solid black;
+    border-radius: 4px;
+    margin-top:5%;
+    font-family: 'Elice Digital Baeum';
+    opacity:0;
+}
+
+#submit-test{
+    width:164px;
+    height: 48px;
+    padding: 0.4rem 1.2rem;
+    background:#AAFF01;
+    border:1px solid black;
+    border-radius: 4px;
+    margin-top:5%;
+    font-family: 'Elice Digital Baeum';
+    opacity:0;
 }
