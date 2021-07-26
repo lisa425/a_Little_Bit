@@ -13,7 +13,6 @@ const LandingPage = () => {
     },[])
     return(
         <div className="Mainpage">
-            <NavBar />
             <img className="main_title" src={maintitle} alt="logo"/>
             <button className="start-btn"><Link to="/testintro">start</Link></button>
         </div> 

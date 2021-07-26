@@ -4,12 +4,12 @@ html{
     background: white;
 }
 /*NavBar view 수정*/
-svg{
+/* svg{
     fill:black;
 }
 .nav-bar .nav-menu-icon{
     display:none;
-}
+} */
 .nav-bar a:nth-child(1){
     width:150px;
 }
@@ -21,22 +21,38 @@ svg{
 
 /*테스트 컨텐츠 요소*/
 .input-contents{
+}
+.input-contents .content-wrapper{
+    width:100vw;
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 .get-info{
-    width:61vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family:"Elice Digital Baeum";
     font-size:1.4rem;
+}
+.get-info-input{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100vw;
+    height: 100vh;
+}
+section{
+    width: 100vw;
+    height: 100vh;
 }
 
 .get-info .input-info{
@@ -50,9 +66,8 @@ input:-webkit-autofill {
     text-align: center;
     background-color: transparent;
 }
-.get-info .submit-to-next{
-    position: absolute;
-    display: none;
+.submit-to-next{
+    position: fixed;
     right:0;
     bottom:0;
     margin:0;
@@ -63,10 +78,21 @@ input:-webkit-autofill {
     border:none;
     padding:1rem;
 }
-#get-location{
-    display:flex;
+#get-name{
+    z-index: 10;
 }
-
+#get-location{
+    z-index: 5;
+}
+#get-appUseData{
+    z-index: 1;
+}
+.next-clicked{
+    display: none;
+}
+.next2-clicked{
+    display:none;
+}
 
 
 .test{
@@ -74,7 +100,8 @@ input:-webkit-autofill {
     width:100vw;
     height: 100vh;
     background-color:white;
-    display:none;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -101,27 +128,54 @@ h3{
 
 
 
-
-.test-box{
+.test-wrapper{
+    width: 85vw;
+    overflow: hidden;
     display: flex;
+    justify-content: center;
     align-items: center;
-
-
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.test-box{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 .ctrl-btn{
     width:50px;
     height: 50px;
     padding:5px;
-    margin:0 5vw;
     background: #000;
     border:none;
     border-radius:4px;
     color:#FFF;
 }
+.before_question{
+    margin-right: 5vw;
+}
+.next_question{
+    margin-left: 5vw;
+}
+
 .test-content{
     width:658px;
 }
+/* #netflix, #youtube, #facebook, #twitter, 
+#tiktok, #instagram, #kakaotalk,
+#call, #zoom, #email{
+    display: none;
+} */
 
+.index-1, .index-2, .index-3,
+.index-4, .index-5, .index-6,
+.index-7, .index-8, .index-9, .index-10{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 .app-title{
     display: flex;
 }
@@ -135,7 +189,7 @@ h3{
 }
 
 .question-box{
-    margin-top:15%;
+    margin-top:12%;
     font-size: 1rem;
 }
 
@@ -172,14 +226,15 @@ h3{
 }
 
 #submit-test{
-    width:164px;
-    height: 48px;
-    padding: 0.4rem 1.2rem;
-    background:#AAFF01;
-    border:1px solid black;
-    border-radius: 4px;
-    margin-top:5%;
-    font-family: 'Elice Digital Baeum';
-    opacity:0;
-    color:black;
-}
+    position: fixed;
+    right:0;
+    bottom:0;
+    margin:0;
+    background-color:#70FF00;
+    font-family: 'Montserrat Alternates';
+    font-weight: 700;
+    font-size:1.6rem;
+    border:none;
+    padding:1rem;
+    z-index: 2;
+} 

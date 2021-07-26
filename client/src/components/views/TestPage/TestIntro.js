@@ -7,7 +7,6 @@ import introNext from '../../../assets/images/introNext.svg'
 const StartPage = () => {
     return(
         <div className="start-page">
-            <NavBar />
             <h1 className="first">Can we</h1>
             <div className="without">
                 <h1 className="second">live without</h1>
