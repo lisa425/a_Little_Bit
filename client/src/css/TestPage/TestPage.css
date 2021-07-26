@@ -200,6 +200,9 @@ h3{
     align-items: center;
     margin-bottom: 5%;
 }
+.qna>div>input{
+    margin-left:0.5em;
+}
 .value-box{
     width:75px;
     height: 34px;
@@ -213,16 +216,20 @@ h3{
 .test-range-bar{
     width:100%;
 }
-.finish-btn{
-    width:164px;
-    height: 48px;
-    padding: 0.4rem 1.2rem;
-    background:#AAFF01;
-    border:1px solid black;
-    border-radius: 4px;
-    margin-top:5%;
+
+.btn-sm{
     font-family: 'Elice Digital Baeum';
-    opacity:0;
+    font-size: 1em;
+    padding:0.5em;
+    border-radius: 5px;
+    background-color:black;
+    color:white;
+    width:70px;
+    border:none;
+}
+.btn-sm:hover{
+    background-color:#70FF00;
+    color:black;
 }
 
 #submit-test{

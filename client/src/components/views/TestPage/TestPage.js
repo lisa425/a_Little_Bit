@@ -760,8 +760,10 @@ const TestPage = (props) => {
                                             <div className="question-box">
                                                 <div className="qna">
                                                     <p className="question">읽은 메일을 평소 지우는 편이신가요?</p>
-                                                    <input className="btn-sm" name="email" type="button" value="yes"/>
-                                                    <input className="btn-sm" name="email" type="button" value="no" onClick={notEmailDelete}/>
+                                                    <div>
+                                                        <input className="btn-sm" name="email" type="button" value="예"/>
+                                                        <input className="btn-sm" name="email" type="button" value="아니오" onClick={notEmailDelete}/>
+                                                    </div>
                                                 </div>  
                                             </div>
                                         </div>
