@@ -74,6 +74,11 @@
     font-weight: 800;
     padding:0.1rem;
 }
+.result-metaphor-img{
+    width:340px;
+    height:190px;
+    border:1px solid white;
+}
 
 .test-result-detail{
     display: flex;
