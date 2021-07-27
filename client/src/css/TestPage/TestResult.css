@@ -1,0 +1,371 @@
+@import '../core.css';
+
+
+.TestResult{
+    width:100vw;
+    color:white;
+    padding-top:20vh;
+}
+
+
+/* 섹션 정렬*/
+.TestResult .test-result-section,
+.TestResult .world-degital-section,
+.TestResult .result-navigator
+{
+    width:80vw;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.TestResult h3{
+    font-size: 25px;
+    font-family: "Elice Digital Baeum";
+    font-weight: 600;
+    text-align: center;
+    line-height: 2.5rem;
+}
+.TestResult b{
+    font-weight: 700;
+}
+
+/* 테스트 결과 section */
+.TestResult .test-result-section article{
+    padding: 4rem 0 4rem 0;
+}
+
+.test-result-summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8rem;
+}
+.result-sum-title{
+    font-size:1.75rem;
+    font-family: "Elice Digital Baeum";
+    margin:3rem 0;
+}
+.result-number{
+    font-family: "Montserrat Alternates";
+    font-size:3.75rem;
+    font-weight: 800;
+    margin:3rem 0;
+}
+.result-number span{
+    font-size: 6.25rem;
+    color: #FAFF00;
+}
+
+.result-metaphor{
+    font-size: 1.12rem;
+    margin:3rem 0;
+    font-family: "NEXON Lv2 Gothic";
+    font-weight: 400;
+}
+.result-metaphor span{
+    background-color:#FAFF00;
+    color:black;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding:0.1rem;
+}
+
+.test-result-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.test-result-detail p{
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+}
+.test-result-bargraph{
+    width:100%;
+    height: 600px;
+    border:1px solid #cacaca;
+    margin:5% 0;
+}
+
+.test-result-recommend{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10rem;
+}
+.recommend-text p{
+    margin: 1rem 0 1.5rem 0;
+}
+.recommend-img{
+    width:15rem;
+    height: 15rem;
+    border:1px solid white;
+}
+.card-navigator{
+    width:180px;
+    color:#FF00FE;
+    border:1px solid #FF00FE;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0);
+    padding: 1rem 0.8rem;
+    font-family: "Elice Digital Baeum";
+    font-size: 0.95rem;
+    margin-top:1rem;
+}
+.card-navigator:hover{
+    transition: 0.2s;
+    background-color: #FF00FE;
+    color:white;
+}
+
+
+/* 전세계 데이터 사용량 section*/
+.world-digital-carbon-info,
+.world-degital-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:5rem;
+    width:100%;
+}
+
+.world-degital-title p{
+    margin: 1rem 0;
+}
+
+.world-metaphor,
+.world-degital-section ul,
+.unit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.world-degital-section ul{
+    margin-top: 3rem;
+}
+
+.world-data-info{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.world-data{
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top:2rem;
+}
+.world-data .carbon{
+    grid-column: 2;
+    font-size: 3.1rem;
+    font-family: "Montserrat Alternates";
+    font-weight: 800;
+    text-align: center;
+}
+
+.world-data .timer{
+    grid-column: 1;
+    font-size: 2.2rem;
+    font-family: "Montserrat Alternates";
+    font-weight: 700;
+}
+
+.world-data .unit{
+    grid-column: 3;
+    justify-content: flex-end;
+}
+
+.unit span{
+    font-size: 6px;
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+}
+.unit div{
+    margin-right: 4px;
+}
+#kg1{
+    display: inline-block;
+    width:5px;
+    height: 5px;
+    background: #c4c4c4;
+}
+#kg50{
+    display: inline-block;
+    width:8px;
+    height: 8px;
+    background: #00FFF9;
+}
+#kg1000{
+    display: inline-block;
+    width:11px;
+    height: 11px;
+    background: #70FF00;
+}
+#kg10000{
+    display: inline-block;
+    width:15px;
+    height: 15px;
+    background: #FAFF00;
+}
+#kg100000{
+    display: inline-block;
+    width:19px;
+    height: 19px;
+    background: #FF00FE;
+}
+.world-data-carbon-visualization{
+    width:100%;
+    height: 512px;
+    border:1px solid white;
+    margin: 3rem 0 5rem 0;
+}
+
+.world-digital-carbon-title{
+    font-size: 1.4rem;
+    font-family: "Elice Digital Baeum";
+}
+.world-digital-carbon-number{
+    font-size:3.5rem;
+    color:#FF00AA;
+    font-family: "Montserrat Alternates";
+    font-weight: 800;
+    margin:3rem 0 1rem 0;
+}
+.world-digital-carbon-unit{
+    font-size:1.3rem;
+    font-family: "NEXON Lv2 Gothic";
+    font-weight: 600;
+}
+
+.world-digital-carbon-info .same{
+    width:40px;
+    height: 40px;
+    padding:1rem;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 47px;
+    text-align: center;
+    color:black;
+    background-color:#BDBDBD;
+    margin: 5rem 0;
+    font-family: "Elice Digital Baeum";
+    font-weight: bold;
+}
+.world-metaphor{
+    justify-content: space-around;
+    width:100%;
+}
+.world-metaphor-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.world-metaphor-object{
+    font-size: 1rem;
+    font-family: "NEXON Lv2 Gothic";
+    background-color: #fff;
+    color:black;
+    padding: 0.5rem;
+}
+.world-metaphor-number{
+    font-family: "Montserrat Alternates";
+    font-weight: 800;
+    font-size:3rem;
+    color:#00AAFF;
+    margin:1.5rem 0;
+}
+.world-metaphor-unit{
+    font-size: 1.2rem;
+    font-family: "NEXON Lv2 Gothic";
+}
+.world-metaphor-img{
+    width:294px;
+    height:124px;
+    border:1px solid white;
+    margin:3rem 0 10rem 0
+}
+
+
+/* 다른 페이지 추천 section */
+.result-navigator hr{
+    width:95px;
+    height:2px;
+    background: white;
+    margin: 5rem 0;
+}
+.result-navigator-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result-navigator-title h2{
+    font-size:3.25rem;
+    text-align: center;
+    font-family: "Montserrat Alternates";
+    font-weight: 800;
+    line-height: 4.5rem;
+}
+.result-navigator-title p{
+    font-family: "NEXON Lv2 Gothic";
+    font-size: 1.4rem;
+    text-align: center;
+    margin:2rem 0;
+}
+.result-navigator-title span{
+    color:#70FF00;
+}
+.result-navigator-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:6rem 0 8rem 0;
+}
+.result-navigator-box{
+    text-align: center;
+    width:26rem;
+    height: 22rem;
+    padding:5rem 3rem;
+    margin:2%;
+    background:#252525;
+    border-radius: 5px;
+    color:white;
+    font-family: "Elice Digital Baeum";
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result-navigator-box p{
+    line-height: 2.5rem;
+}
+.result-navigator-box .navigator-btn{
+    width:70%;
+    margin-top:5rem;
+    background:#70FF00;
+    border-radius: 5px;
+    border:none;
+    padding:1rem 2rem;
+    font-family: "Elice Digital Baeum";
+    font-size: 1.1rem;
+}
+.result-navigator-box .navigator-btn:hover{
+    background:#00FFF9;
+    transition: 0.2s;
+}

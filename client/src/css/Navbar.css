@@ -1,6 +1,8 @@
 @import "./core.css";
-
 .nav-bar{
+    display: block;
+}
+.nav-container{
     width:90vw;
     position: absolute;
     top:0;

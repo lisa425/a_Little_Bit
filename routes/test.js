@@ -11,4 +11,8 @@ router.post('/',(req,res)=>{
     })
 })
 
+router.get('/result',(req,res)=>{
+ 
+})
+
 module.exports = router

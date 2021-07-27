@@ -526,9 +526,9 @@ const TestPage = (props) => {
         .then(response => {
             if(response.data.success){
                 console.log(response.data);
-                // setTimeout(()=>{
-                //     props.history.push('/test/result');
-                // },4000)
+                setTimeout(()=>{
+                    props.history.push('/test/result');
+                },4000)
             }else{
                 alert('테스트 실패');
             }
