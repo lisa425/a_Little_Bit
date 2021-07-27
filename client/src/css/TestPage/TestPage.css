@@ -122,10 +122,56 @@ h3{
 }
 .applist-btn li button{
     border:none;
+    padding: 0;
     width:100%;
     height:100%;
 }
+.netfilx-color rect,
+.youtube-color,
+.tiktok-color rect,
+.call-color rect,
+.email-color rect{
+    width:100%;
+    height: 100%;
+    fill:#FF00FE;
+}
+.facebook-color rect,
+.twitter-color rect,
+.zoom-color rect{
+    width:100%;
+    height: 100%;
+    fill:#00FFF9; 
+}
+.instagram-color,
+.call-color rect,
+.email-color rect{
+    width:100%;
+    height: 100%;
+    fill:#70FF00; 
+}
+.katalk-color rect{
+    width:100%;
+    height: 100%;
+    fill:#FAFF00; 
+}
+.katalk-color path{
+    fill:#000000;
+}
 
+.netflix-black,
+.youtube-black,
+.facebook-black,
+.twitter-black,
+.tiktok-black,
+.instagram-black,
+.katalk-black,
+.call-black,
+.zoom-black,
+.email-black{
+    width:100%;
+    height:100%;
+    fill: #000000;
+}
 
 
 .test-wrapper{

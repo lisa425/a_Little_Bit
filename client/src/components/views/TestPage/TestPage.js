@@ -3,7 +3,6 @@ import Axios from 'axios';
 import { useDispatch } from 'react-redux';
 import registerUser from '../../../_actions/user_action';
 import '../../../css/TestPage/TestPage.css';
-import NavBar from '../Navbar/Navbar';
 import {ReactComponent as Netflix } from '../../../assets/images/appIcons/Netflix/black.svg';
 import {ReactComponent as Youtube} from '../../../assets/images/appIcons/Youtube/black.svg';
 import {ReactComponent as Facebook } from '../../../assets/images/appIcons/Facebook/black.svg';
@@ -16,6 +15,17 @@ import {ReactComponent as Zoom} from '../../../assets/images/appIcons/Zoom/black
 import {ReactComponent as Email } from '../../../assets/images/appIcons/Email/black.svg';
 import {ReactComponent as Next } from '../../../assets/images/next.svg';
 import {ReactComponent as Before } from '../../../assets/images/before.svg';
+import {ReactComponent as NetflixColor } from '../../../assets/images/appIcons/Netflix/color.svg';
+import {ReactComponent as YoutubeColor} from '../../../assets/images/appIcons/Youtube/color.svg';
+import {ReactComponent as FacebookColor } from '../../../assets/images/appIcons/Facebook/color.svg';
+import {ReactComponent as TwitterColor } from '../../../assets/images/appIcons/Twitter/color.svg';
+import {ReactComponent as TiktokColor } from '../../../assets/images/appIcons/Tiktok/color.svg';
+import {ReactComponent as InstagramColor } from '../../../assets/images/appIcons/Instagram/color.svg';
+import {ReactComponent as KakaotalkColor } from '../../../assets/images/appIcons/Kakaotalk/color.svg';
+import {ReactComponent as CallColor } from '../../../assets/images/appIcons/Call/color.svg';
+import {ReactComponent as ZoomColor} from '../../../assets/images/appIcons/Zoom/color.svg';
+import {ReactComponent as EmailColor } from '../../../assets/images/appIcons/Email/color.svg';
+
 
 
 const TestPage = (props) => {
@@ -42,6 +52,159 @@ const TestPage = (props) => {
     const onLocationHandler = (event) => {
         setLocation(event.currentTarget.value)
     }
+
+    //앱 list 버튼 state 설정
+    const [netflixBtn, setNetflixBtn] = useState(false);
+    const [youtubeBtn,setYoutubeBtn] = useState(false);
+    const [facebookBtn,setFacebookBtn] = useState(false);
+    const [twitterBtn,setTwitterBtn] = useState(false);
+    const [tiktokBtn,setTiktokBtn] = useState(false);
+    const [instagramBtn,setInstagramBtn] = useState(false);
+    const [kakaoTalkBtn,setKakaoTalkBtn] = useState(false);
+    const [callBtn,setCallBtn] = useState(false);
+    const [zoomBtn,setZoomBtn] = useState(false);
+    const [emailBtn,setEmailBtn] = useState(false);
+
+    const onNetflixBtnHandler = (event) => {
+        event.preventDefault();
+        setNetflixBtn(!netflixBtn);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+    }
+    
+    const onYoutubeBtnHandler = (event) => {
+        event.preventDefault();
+        setYoutubeBtn(!youtubeBtn);
+        setNetflixBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+    }
+
+    const onFacebookBtnHandler = (event) => {
+        event.preventDefault();
+        setFacebookBtn(!facebookBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+    }
+    
+    const onTwitterBtnHandler = (event) => {
+        event.preventDefault();
+        setTwitterBtn(!twitterBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+    }
+    
+    const onTiktokBtnHandler = (event) => {
+        event.preventDefault();
+        setTiktokBtn(!tiktokBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+    }
+    
+    const onInstagramBtnHandler = (event) => {
+        event.preventDefault();
+        setInstagramBtn(!instagramBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+    }
+    
+    const onKakaoTalkBtnHandler = (event) => {
+        event.preventDefault();
+        setKakaoTalkBtn(!kakaoTalkBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+    }
+    
+    const onCallBtnHandler = (event) => {
+        event.preventDefault();
+        setCallBtn(!callBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+    }
+    
+    const onZoomBtnHandler = (event) => {
+        event.preventDefault();
+        setZoomBtn(!zoomBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setEmailBtn(false);
+    }
+    
+    const onEmailBtnHandler = (event) => {
+        event.preventDefault();
+        setEmailBtn(!emailBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+    }
+
 
     //앱 list 박스 state 설정
     const [netflixBox,setNetflixBox] = useState(false);
@@ -405,39 +568,56 @@ const TestPage = (props) => {
                             <div className="test page-3" id="get-appUseData">
                                 <h3>서비스를 클릭해 사용량을 기록해주세요</h3>
                                 <ul className="applist-btn">
-                                    <li><button type="button" id="1" onClick={onNetflixBoxHandler}>
-                                            넷플
+                                    <li>
+                                        <button type="button" onClick={onNetflixBoxHandler}>
+                                            <Netflix className={netflixBtn ? 'netfilx-color' : 'netflix-black'} onClick={onNetflixBtnHandler}/>
                                         </button>
                                     </li>
-                                    <li><button id="btn2" style={{background:'transparent'}} onClick={onYoutubeBoxHandler}>
-                                        유튭
-                                    </button></li>
-                                    <li><button id="3" onClick={onFacebookBoxHandler}>
-
-                                        {/*<Email width="48" height="48"/>*/}
-                                    </button></li>
-                                    <li><button id="4" onClick={onTwitterBoxHandler}>
-                                
-                                        {/*<Email width="48" height="48"/>*/}
-                                    </button></li>
-                                    <li><button id="5" onClick={onTiktokBoxHandler}>
-                                        {/*<Email width="48" height="48"/>*/}
-                                    </button></li>
-                                    <li><button id="6"onClick={onInstagramBoxHandler}>
-                                        {/*<Email width="48" height="48"/>*/}
-                                    </button></li>
-                                    <li><button id="7" onClick={onKakaoTalkBoxHandler}>
-                                        {/*<Email width="48" height="48"/>*/}
-                                    </button></li>
-                                    <li><button id="8" onClick={onCallBoxHandler}>
-                                        {/*<Email width="48" height="48"/>*/}
-                                    </button></li>
-                                    <li><button id="9" onClick={onZoomBoxHandler}>
-                                        {/*<Zoom width="48" height="48" fill="blue"/>*/}
-                                    </button></li>
-                                    <li><button id="10" onClick={onEmailBoxHandler}>
-                                        {/*<Email width="48" height="48"/>*/}
-                                    </button></li>
+                                    <li>
+                                        <button style={{background:'transparent'}} onClick={onYoutubeBoxHandler}>
+                                            <Youtube className={youtubeBtn ? 'youtube-color' : 'youtube-black'} onClick={onYoutubeBtnHandler}/>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button onClick={onFacebookBoxHandler}>
+                                            <Facebook className={facebookBtn ? 'facebook-color' : 'facebook-black'} onClick={onFacebookBtnHandler}/>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button onClick={onTwitterBoxHandler}>
+                                            <Twitter className={twitterBtn ? 'twitter-color' : 'twitter-black'} onClick={onTwitterBtnHandler}/>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button onClick={onTiktokBoxHandler}>
+                                            <Tiktok className={tiktokBtn ? 'tiktok-color' : 'tiktok-black'} onClick={onTiktokBtnHandler}/>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button onClick={onInstagramBoxHandler}>
+                                            <Instagram className={instagramBtn ? 'instagram-color' : 'instagram-black'} onClick={onInstagramBtnHandler}/>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button onClick={onKakaoTalkBoxHandler}>
+                                            <Kakaotalk className={kakaoTalkBtn ? 'katalk-color' : 'katalk-black'} onClick={onKakaoTalkBtnHandler}/>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button onClick={onCallBoxHandler}>
+                                            <Call className={callBtn ? 'call-color' : 'call-black'} onClick={onCallBtnHandler}/>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button onClick={onZoomBoxHandler}>
+                                            <Zoom className={zoomBtn ? 'zoom-color' : 'zoom-black'} onClick={onZoomBtnHandler}/>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button onClick={onEmailBoxHandler}>
+                                            <Email className={emailBtn ? 'email-color' : 'email-black'} onClick={onEmailBtnHandler}/>
+                                        </button>
+                                    </li>
                                 </ul>
 
                                 <div className="test-wrapper">
@@ -446,7 +626,7 @@ const TestPage = (props) => {
                                         <button className="ctrl-btn before_question" style={{visibility:'hidden'}}><Before/></button>
                                         <div className="test-content">
                                             <div className="app-title">
-                                                <Netflix width="58" height="58"/>
+                                                <NetflixColor width="58" height="58"/>
                                                 <div className="app-name">
                                                     <h5>Netflix</h5>
                                                     <p>넷플릭스</p>
@@ -479,7 +659,7 @@ const TestPage = (props) => {
 
                                         <div className="test-content">
                                             <div className="app-title">
-                                                <Youtube width="58" height="58"/>
+                                                <YoutubeColor width="58" height="58"/>
                                                 <div className="app-name">
                                                     <h5>Youtube</h5>
                                                     <p>유튜브</p>
@@ -512,7 +692,7 @@ const TestPage = (props) => {
 
                                         <div className="test-content">
                                             <div className="app-title">
-                                                <Facebook width="58" height="58"/>
+                                                <FacebookColor width="58" height="58"/>
                                                 <div className="app-name">
                                                     <h5>Facebook</h5>
                                                     <p>페이스북</p>
@@ -545,7 +725,7 @@ const TestPage = (props) => {
 
                                         <div className="test-content">
                                             <div className="app-title">
-                                                <Twitter width="58" height="58"/>
+                                                <TwitterColor width="58" height="58"/>
                                                 <div className="app-name">
                                                     <h5>Twitter</h5>
                                                     <p>트위터</p>
@@ -578,7 +758,7 @@ const TestPage = (props) => {
 
                                         <div className="test-content">
                                             <div className="app-title">
-                                                <Tiktok width="58" height="58"/>
+                                                <TiktokColor width="58" height="58"/>
                                                 <div className="app-name">
                                                     <h5>Tiktok</h5>
                                                     <p>틱톡</p>
@@ -611,7 +791,7 @@ const TestPage = (props) => {
 
                                         <div className="test-content">
                                             <div className="app-title">
-                                                <Instagram width="58" height="58"/>
+                                                <InstagramColor width="58" height="58"/>
                                                 <div className="app-name">
                                                     <h5>Instagram</h5>
                                                     <p>인스타그램</p>
@@ -644,7 +824,7 @@ const TestPage = (props) => {
 
                                         <div className="test-content">
                                             <div className="app-title">
-                                                <Kakaotalk width="58" height="58"/>
+                                                <KakaotalkColor width="58" height="58"/>
                                                 <div className="app-name">
                                                     <h5>KakaoTalk</h5>
                                                     <p>카카오톡</p>
@@ -677,7 +857,7 @@ const TestPage = (props) => {
 
                                         <div className="test-content">
                                             <div className="app-title">
-                                                <Call width="58" height="58"/>
+                                                <CallColor width="58" height="58"/>
                                                 <div className="app-name">
                                                     <h5>Call</h5>
                                                     <p>전화</p>
@@ -710,7 +890,7 @@ const TestPage = (props) => {
 
                                         <div className="test-content">
                                             <div className="app-title">
-                                                <Zoom width="58" height="58"/>
+                                                <ZoomColor width="58" height="58"/>
                                                 <div className="app-name">
                                                     <h5>Zoom</h5>
                                                     <p>줌</p>
@@ -742,7 +922,7 @@ const TestPage = (props) => {
 
                                         <div className="test-content">
                                             <div className="app-title">
-                                                <Email width="58" height="58"/>
+                                                <EmailColor width="58" height="58"/>
                                                 <div className="app-name">
                                                     <h5>E-mail</h5>
                                                     <p>이메일</p>
