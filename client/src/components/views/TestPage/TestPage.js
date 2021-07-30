@@ -25,6 +25,7 @@ import {ReactComponent as KakaotalkColor } from '../../../assets/images/appIcons
 import {ReactComponent as CallColor } from '../../../assets/images/appIcons/Call/color.svg';
 import {ReactComponent as ZoomColor} from '../../../assets/images/appIcons/Zoom/color.svg';
 import {ReactComponent as EmailColor } from '../../../assets/images/appIcons/Email/color.svg';
+import TestPixel from './TestPixel';
 
 
 
@@ -564,6 +565,7 @@ const TestPage = (props) => {
 
                 {/* page 3 : 사용량 입력 */}
                     <section className="get-info">
+                    <TestPixel/>
                         <div className="get-info-input">
                             <div className="test page-3" id="get-appUseData">
                                 <h3>서비스를 클릭해 사용량을 기록해주세요</h3>

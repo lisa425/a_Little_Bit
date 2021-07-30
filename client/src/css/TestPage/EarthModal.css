@@ -3,10 +3,13 @@
 .modal{
     display:none;
 }
+
 .earth-modal{
     width:100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    background-image:linear-gradient(black,black), url('../../assets/images/earth.png');
+    background-size: 350px;
+    background-blend-mode:saturation;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,11 +19,19 @@
     left:0;
 }
 .modal-container{
+    width:100vw;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-box{
     display: flex;
     justify-content: center;
     align-items: flex-start;
     position: relative;
-    top: 90px;
+    top:90px;
 }
 .earth-code>div{
     display: flex;
@@ -72,7 +83,7 @@
     align-items: center;
 }
 .earth-info-name>.value{
-    padding:0.2rem 0.8rem;
+    padding:0.5rem;
     font-family:"Elice Digital Baeum";
     background-color:#70FF00;
     color:black;

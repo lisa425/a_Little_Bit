@@ -34,13 +34,19 @@ const TestEarthList = () => {
     
 
     const renderEarth = Earth.map((earth,index) => {
-        let min = Math.ceil(100);
-        let max = Math.floor(1000)
-        let valueTop = Math.floor(Math.random()*(max-min)*5);
+        let min = Math.ceil(0);
+        let max = Math.floor(500)
+        let valueTop = Math.floor(Math.random()*(max-min));
         let valueLeft = Math.floor(Math.random()*(max-min));
+
+        let contentBottom = Math.floor(Math.random()*70);
+        let contentLeft = Math.floor(Math.random()*110);
+        let contentRight = Math.floor(Math.random()*80);
+
         // console.log("valueTop:"+valueTop);
         // console.log("vauleLeft:"+valueLeft);
-        return <div id={index} className="earth-list" style={{gridColumn:index, left:valueLeft, top: valueTop}}>
+        //style={{left:valuetLeft, top: valueTop}}
+        return <div id={index} className="earth-list" style={{left:contentLeft, bottom: contentBottom, right:contentRight}}>
             <div className="earth-content" key={index}>
                 <a href={`/test/earthlist/${earth._id}`}><img src={EarthImg} alt="earth image"/></a>
                 <p className="earth-index">{index+1}</p>
