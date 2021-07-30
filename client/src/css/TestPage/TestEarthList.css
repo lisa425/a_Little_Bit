@@ -8,11 +8,12 @@ html{
     color:white;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-image: url(../../assets/images/earth_background.jpg);
     background-size:40rem;
-    padding-top:10rem;
+    padding-top:6.3%;
+    overflow:scroll;
 }
  .earth-list{
     position: relative;

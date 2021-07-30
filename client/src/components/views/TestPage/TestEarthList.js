@@ -34,10 +34,14 @@ const TestEarthList = () => {
     
 
     const renderEarth = Earth.map((earth,index) => {
-        let min = Math.ceil(0);
-        let max = Math.floor(500)
+        let min = Math.ceil(-10);
+        let max = Math.floor(300)
+        let minus = Math.ceil(-10);
+        let minusmax = Math.floor(30)
+        let valueBottom = Math.floor(Math.random()*(max-min)*15);
+        let valueRight = Math.floor(Math.random()*(max-min));
+        let valueLeft = Math.floor(Math.random()*(minusmax-minus)+minus);
         let valueTop = Math.floor(Math.random()*(max-min));
-        let valueLeft = Math.floor(Math.random()*(max-min));
 
         let contentBottom = Math.floor(Math.random()*70);
         let contentLeft = Math.floor(Math.random()*110);
@@ -45,8 +49,9 @@ const TestEarthList = () => {
 
         // console.log("valueTop:"+valueTop);
         // console.log("vauleLeft:"+valueLeft);
-        //style={{left:valuetLeft, top: valueTop}}
-        return <div id={index} className="earth-list" style={{left:contentLeft, bottom: contentBottom, right:contentRight}}>
+        //style={{left:valueLeft, top: valueTop}}
+        //style={{left:contentLeft, bottom: contentBottom, right:contentRight}}
+        return <div id={index} className="earth-list" style={{left:valueRight, bottom: valueBottom, top:valueTop}}>
             <div className="earth-content" key={index}>
                 <a href={`/test/earthlist/${earth._id}`}><img src={EarthImg} alt="earth image"/></a>
                 <p className="earth-index">{index+1}</p>
