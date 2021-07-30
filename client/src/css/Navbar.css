@@ -1,6 +1,7 @@
 @import "./core.css";
 .nav-bar{
     display: block;
+    z-index:1000;
 }
 .nav-container{
     width:90vw;
@@ -22,6 +23,7 @@
     height: 20px;
     position: absolute;
     right:5.5vw;
+    z-index: 1000;
 }
 .nav-menu-icon img{
     width:26px;
@@ -55,4 +57,5 @@
 }
 .nav-menu.active{
     display:flex;
+    z-index: 1000;
 }

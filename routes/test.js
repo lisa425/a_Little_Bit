@@ -15,4 +15,19 @@ router.get('/result',(req,res)=>{
  
 })
 
+router.get('/getEarth',(req,res) => {
+    //test 기록들을 DB에서 가져와서 클라이언트에 전송
+    Test.find().exec((err,tests) => {
+        if(err) return res.status(400).send(err);
+        res.status(200).json({success:true,tests})
+    })
+})
+
+router.post('/getEarthDetail',(req,res) => {
+    //test 기록들을 DB에서 가져와서 클라이언트에 전송
+    Test.findOne({"_id":req.body.earthId}).exec((err,earthDetail) => {
+        if(err) return res.status(400).send(err);
+        res.status(200).json({success:true,earthDetail})
+    })
+})
 module.exports = router

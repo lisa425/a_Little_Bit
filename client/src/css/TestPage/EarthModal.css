@@ -1,0 +1,101 @@
+@import '../core.css';
+
+.modal{
+    display:none;
+}
+.earth-modal{
+    width:100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#70FF00;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.modal-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    top: 90px;
+}
+.earth-code>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Rany";
+    font-weight: 300;
+    font-size:20px
+}
+.earth-code>div>.code-num{
+    font-family: "Rany";
+    font-weight: 500;
+    font-size:30px;
+}
+.earth-modal img{
+    filter:grayscale(0%);
+    width:500px;
+    position: relative;
+    top: -90px;
+}
+.close-modal{
+    position: fixed;
+    right:0;
+    bottom:0;
+    margin:0;
+    background-color:#70FF00;
+    font-family: 'Montserrat Alternates';
+    font-weight: 700;
+    font-size:1.6rem;
+    border:none;
+    padding:1rem;
+}
+.earth-info div{
+    margin:0 0 2.6rem 0;
+    font-family: 'Rany';
+    font-weight: 300;
+    font-size:15px;
+    width:206px;
+}
+.earth-modal hr{
+    background-color:#70FF00;
+    height: 1px;
+    border:none;
+    width:206px;
+}
+.earth-info-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.earth-info-name>.value{
+    padding:0.2rem 0.8rem;
+    font-family:"Elice Digital Baeum";
+    background-color:#70FF00;
+    color:black;
+    font-size:1.1rem;
+}
+.earth-info-location>.value{
+    color:white;
+    font-family:"Elice Digital Baeum";
+    font-size: 1.1rem;
+}
+.earth-info-message>.value{
+    font-size:1.1rem;
+    font-family:"Elice Digital Baeum";
+    font-weight: 400;
+    color:White;
+    float: right;
+}
+.earth-info-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top:1.5rem;
+}
+.earth-info-date>.value{
+    font-size:15px;
+}

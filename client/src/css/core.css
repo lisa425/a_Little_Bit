@@ -22,6 +22,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html{
+  font-size:16px;
+}
 body {
 	line-height: 1;
 }
@@ -85,6 +88,26 @@ table {
   font-family: "Elice Digital Baeum";
   font-weight: 800;
   src:url("../assets/fonts/EliceDigitalBaeum_Bold.ttf");
+}
+@font-face{
+  font-family: "Rany";
+  font-weight: 800;
+  src:url("../assets/fonts/Rany-Bold.otf");
+}
+@font-face{
+  font-family: "Rany";
+  font-weight: 500;
+  src:url("../assets/fonts/Rany-Medium.otf");
+}
+@font-face{
+  font-family: "Rany";
+  font-weight: 400;
+  src:url("../assets/fonts/Rany.otf");
+}
+@font-face{
+  font-family: "Rany";
+  font-weight: 300;
+  src:url("../assets/fonts/Rany-Light.otf");
 }
 
 a{

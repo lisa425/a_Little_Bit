@@ -1,0 +1,36 @@
+@import '../core.css';
+
+.TestEarthList{
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/images/earth_background.jpg);
+    background-size:40rem;
+    padding:5rem;
+}
+/* .earth-list{
+    position: absolute;
+} */
+
+.earth-content{
+    position: relative;
+}
+.earth-list img{
+    filter:grayscale(100%);
+    width:300px;
+}
+.earth-list img:hover{
+    transition:0.2s ease;
+    filter:grayscale(0%);
+}
+.earth-list .earth-index{
+    position: absolute;
+    top:43.3%;
+    left:46.5%;
+    color:#70FF00;
+    font-size:1.3rem;
+    font-family: "Rany";
+    font-weight: 500;
+}
