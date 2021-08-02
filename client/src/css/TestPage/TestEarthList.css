@@ -2,6 +2,17 @@
 html{
     background: #000;
 }
+/* @keyframes earthMotion{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(10px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+} */
 .TestEarthList{
     width:100%;
     height: 100%;
@@ -17,6 +28,11 @@ html{
 }
  .earth-list{
     position: relative;
+    /* animation-name:earthMotion;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-delay: inherit; */
 } 
 
 .earth-content{
