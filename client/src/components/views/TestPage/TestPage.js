@@ -1,7 +1,5 @@
 import React,{ useEffect, useState, useRef } from 'react';
 import Axios from 'axios';
-import { useDispatch } from 'react-redux';
-import registerUser from '../../../_actions/user_action';
 import '../../../css/TestPage/TestPage.css';
 import {ReactComponent as Netflix } from '../../../assets/images/appIcons/Netflix/black.svg';
 import {ReactComponent as Youtube} from '../../../assets/images/appIcons/Youtube/black.svg';

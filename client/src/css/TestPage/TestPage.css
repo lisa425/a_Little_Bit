@@ -40,8 +40,6 @@ input[type=range]::-webkit-slider-thumb{
 }
 
 /*테스트 컨텐츠 요소*/
-.input-contents{
-}
 .input-contents .content-wrapper{
     width:100vw;
     height: 100vh;
