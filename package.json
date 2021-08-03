@@ -26,7 +26,8 @@
     "http-proxy-middleware": "^2.0.1",
     "moment": "^2.29.1",
     "mongoose": "^5.13.3",
-    "react-draggable": "^4.4.3"
+    "react-draggable": "^4.4.3",
+    "use-draggable": "^1.5.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
