@@ -52,11 +52,10 @@ const TestEarthList = () => {
                     style={{left:valueLeft, top:valueBottom}}
                 >
                     <div className="earth-content" key={index+1}>
-                        {/* <a href={`/test/earthlist/${earth._id}`}> */}
-                            <img src={EarthImg} alt="earth image"/>
-                        
-                        <p className="earth-index">{index+1}</p>
-
+                        <img src={EarthImg} alt="earth image"/>
+                        <a href={`/test/earthlist/${earth._id}`}>
+                            <p className="earth-index">{index+1}</p>
+                        </a>
                     </div>
                 </div>
             </Draggable>

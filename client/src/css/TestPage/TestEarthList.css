@@ -2,17 +2,7 @@
 html{
     background: #000;
 }
-/* @keyframes earthMotion{
-    0%{
-        transform:translateY(0px);
-    }
-    50%{
-        transform:translateY(10px);
-    }
-    100%{
-        transform:translateY(0px);
-    }
-} */
+
 .TestEarthList{
     width:100vw;
     height: 100vh;
@@ -31,30 +21,26 @@ html{
 }
  .earth-list{
     position: absolute;
-    /* animation-name:earthMotion;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-delay: inherit; */
 } 
 
 .earth-content{
     position: relative;
-}
-.earth-list img{
     filter:grayscale(100%);
-    width:300px;
 }
-.earth-list img:hover{
+.earth-content:hover{
     transition:0.2s ease;
     filter:grayscale(0%);
 }
+.earth-list img{
+    width:300px;
+}
 .earth-list .earth-index{
     position: absolute;
-    top:43.3%;
-    left:46.5%;
+    top:38.5%;
+    left:41%;
     color:#70FF00;
-    font-size:1.3rem;
+    font-size:1.5rem;
     font-family: "Rany";
     font-weight: 500;
+    padding:5%;
 }
