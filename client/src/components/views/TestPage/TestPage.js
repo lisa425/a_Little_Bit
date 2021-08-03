@@ -68,7 +68,7 @@ const TestPage = (props) => {
 
     const onNetflixBtnHandler = (event) => {
         event.preventDefault();
-        setNetflixBtn(!netflixBtn);
+        setNetflixBtn(true);
         setYoutubeBtn(false);
         setFacebookBtn(false);
         setTwitterBtn(false);
@@ -82,7 +82,7 @@ const TestPage = (props) => {
     
     const onYoutubeBtnHandler = (event) => {
         event.preventDefault();
-        setYoutubeBtn(!youtubeBtn);
+        setYoutubeBtn(true);
         setNetflixBtn(false);
         setFacebookBtn(false);
         setTwitterBtn(false);
@@ -96,7 +96,7 @@ const TestPage = (props) => {
 
     const onFacebookBtnHandler = (event) => {
         event.preventDefault();
-        setFacebookBtn(!facebookBtn);
+        setFacebookBtn(true);
         setNetflixBtn(false);
         setYoutubeBtn(false);
         setTwitterBtn(false);
@@ -110,7 +110,7 @@ const TestPage = (props) => {
     
     const onTwitterBtnHandler = (event) => {
         event.preventDefault();
-        setTwitterBtn(!twitterBtn);
+        setTwitterBtn(true);
         setNetflixBtn(false);
         setYoutubeBtn(false);
         setFacebookBtn(false);
@@ -124,7 +124,7 @@ const TestPage = (props) => {
     
     const onTiktokBtnHandler = (event) => {
         event.preventDefault();
-        setTiktokBtn(!tiktokBtn);
+        setTiktokBtn(true);
         setNetflixBtn(false);
         setYoutubeBtn(false);
         setFacebookBtn(false);
@@ -138,7 +138,7 @@ const TestPage = (props) => {
     
     const onInstagramBtnHandler = (event) => {
         event.preventDefault();
-        setInstagramBtn(!instagramBtn);
+        setInstagramBtn(true);
         setNetflixBtn(false);
         setYoutubeBtn(false);
         setFacebookBtn(false);
@@ -152,7 +152,7 @@ const TestPage = (props) => {
     
     const onKakaoTalkBtnHandler = (event) => {
         event.preventDefault();
-        setKakaoTalkBtn(!kakaoTalkBtn);
+        setKakaoTalkBtn(true);
         setNetflixBtn(false);
         setYoutubeBtn(false);
         setFacebookBtn(false);
@@ -166,7 +166,7 @@ const TestPage = (props) => {
     
     const onCallBtnHandler = (event) => {
         event.preventDefault();
-        setCallBtn(!callBtn);
+        setCallBtn(true);
         setNetflixBtn(false);
         setYoutubeBtn(false);
         setFacebookBtn(false);
@@ -180,7 +180,7 @@ const TestPage = (props) => {
     
     const onZoomBtnHandler = (event) => {
         event.preventDefault();
-        setZoomBtn(!zoomBtn);
+        setZoomBtn(true);
         setNetflixBtn(false);
         setYoutubeBtn(false);
         setFacebookBtn(false);
@@ -194,7 +194,7 @@ const TestPage = (props) => {
     
     const onEmailBtnHandler = (event) => {
         event.preventDefault();
-        setEmailBtn(!emailBtn);
+        setEmailBtn(true);
         setNetflixBtn(false);
         setYoutubeBtn(false);
         setFacebookBtn(false);
@@ -222,145 +222,162 @@ const TestPage = (props) => {
     //netflix box
     const onNetflixBoxHandler = (event) => {
         event.preventDefault();
-        setNetflixBox(!netflixBox);
-        setYoutubeBox(false)
-        setFacebookBox(false)
-        setTwitterBox(false)
-        setTiktokBox(false)
-        setInstagramBox(false)
-        setKakaoTalkBox(false)
-        setCallBox(false)
-        setZoomBox(false)
-        setEmailBox(false)
-        
+        setNetflixBox(true);
+        setYoutubeBox(false);
+        setFacebookBox(false);
+        setTwitterBox(false);
+        setTiktokBox(false);
+        setInstagramBox(false);
+        setKakaoTalkBox(false);
+        setCallBox(false);
+        setZoomBox(false);
+        setEmailBox(false);
+
+        onNetflixBtnHandler(event);
     }
     //youtube box
     const onYoutubeBoxHandler = (event) => {
         event.preventDefault();
-        setYoutubeBox(!youtubeBox);
-        setNetflixBox(false)
-        setFacebookBox(false)
-        setTwitterBox(false)
-        setTiktokBox(false)
-        setInstagramBox(false)
-        setKakaoTalkBox(false)
-        setCallBox(false)
-        setZoomBox(false)
-        setEmailBox(false)
-        
+        setYoutubeBox(true);
+        setNetflixBox(false);
+        setFacebookBox(false);
+        setTwitterBox(false);
+        setTiktokBox(false);
+        setInstagramBox(false);
+        setKakaoTalkBox(false);
+        setCallBox(false);
+        setZoomBox(false);
+        setEmailBox(false);
+
+        onYoutubeBtnHandler(event);
     }
     //facebook box
     const onFacebookBoxHandler = (event) => {
         event.preventDefault();
-        setFacebookBox(!facebookBox);
-        setNetflixBox(false)
-        setYoutubeBox(false)
-        setTwitterBox(false)
-        setTiktokBox(false)
-        setInstagramBox(false)
-        setKakaoTalkBox(false)
-        setCallBox(false)
-        setZoomBox(false)
-        setEmailBox(false)
+        setFacebookBox(true);
+        setNetflixBox(false);
+        setYoutubeBox(false);
+        setTwitterBox(false);
+        setTiktokBox(false);
+        setInstagramBox(false);
+        setKakaoTalkBox(false);
+        setCallBox(false);
+        setZoomBox(false);
+        setEmailBox(false);
+
+        onFacebookBtnHandler(event);
     }
     //twitter box
     const onTwitterBoxHandler = (event) => {
         event.preventDefault();
-        setTwitterBox(!twitterBox);
-        setNetflixBox(false)
-        setYoutubeBox(false)
-        setFacebookBox(false)
-        setTiktokBox(false)
-        setInstagramBox(false)
-        setKakaoTalkBox(false)
-        setCallBox(false)
-        setZoomBox(false)
-        setEmailBox(false)
+        setTwitterBox(true);
+        setNetflixBox(false);
+        setYoutubeBox(false);
+        setFacebookBox(false);
+        setTiktokBox(false);
+        setInstagramBox(false);
+        setKakaoTalkBox(false);
+        setCallBox(false);
+        setZoomBox(false);
+        setEmailBox(false);
+
+        onTwitterBtnHandler(event);
     }
     //tiktok box
     const onTiktokBoxHandler = (event) => {
         event.preventDefault();
-        setTiktokBox(!tiktokBox);
-        setNetflixBox(false)
-        setYoutubeBox(false)
-        setFacebookBox(false)
-        setTwitterBox(false)
-        setInstagramBox(false)
-        setKakaoTalkBox(false)
-        setCallBox(false)
-        setZoomBox(false)
-        setEmailBox(false)
+        setTiktokBox(true);
+        setNetflixBox(false);
+        setYoutubeBox(false);
+        setFacebookBox(false);
+        setTwitterBox(false);
+        setInstagramBox(false);
+        setKakaoTalkBox(false);
+        setCallBox(false);
+        setZoomBox(false);
+        setEmailBox(false);
+
+        onTiktokBtnHandler(event);
     }
     //instagram box
     const onInstagramBoxHandler = (event) => {
         event.preventDefault();
-        setInstagramBox(!instagramBox);
-        setNetflixBox(false)
-        setYoutubeBox(false)
-        setFacebookBox(false)
-        setTwitterBox(false)
-        setTiktokBox(false)
-        setKakaoTalkBox(false)
-        setCallBox(false)
-        setZoomBox(false)
-        setEmailBox(false)
+        setInstagramBox(true);
+        setNetflixBox(false);
+        setYoutubeBox(false);
+        setFacebookBox(false);
+        setTwitterBox(false);
+        setTiktokBox(false);
+        setKakaoTalkBox(false);
+        setCallBox(false);
+        setZoomBox(false);
+        setEmailBox(false);
+
+        onInstagramBtnHandler(event);
     }
     //kakao box
     const onKakaoTalkBoxHandler = (event) => {
         event.preventDefault();
-        setKakaoTalkBox(!kakaoTalkBox);
-        setNetflixBox(false)
-        setYoutubeBox(false)
-        setFacebookBox(false)
-        setTwitterBox(false)
-        setTiktokBox(false)
-        setInstagramBox(false)
-        setCallBox(false)
-        setZoomBox(false)
-        setEmailBox(false)
+        setKakaoTalkBox(true);
+        setNetflixBox(false);
+        setYoutubeBox(false);
+        setFacebookBox(false);
+        setTwitterBox(false);
+        setTiktokBox(false);
+        setInstagramBox(false);
+        setCallBox(false);
+        setZoomBox(false);
+        setEmailBox(false);
         
+        onKakaoTalkBtnHandler(event);
     }
     //call box
     const onCallBoxHandler = (event) => {
         event.preventDefault();
-        setCallBox(!callBox);
-        setNetflixBox(false)
-        setYoutubeBox(false)
-        setFacebookBox(false)
-        setTwitterBox(false)
-        setTiktokBox(false)
-        setInstagramBox(false)
-        setKakaoTalkBox(false)
-        setZoomBox(false)
-        setEmailBox(false)
+        setCallBox(true);
+        setNetflixBox(false);
+        setYoutubeBox(false);
+        setFacebookBox(false);
+        setTwitterBox(false);
+        setTiktokBox(false);
+        setInstagramBox(false);
+        setKakaoTalkBox(false);
+        setZoomBox(false);
+        setEmailBox(false);
+
+        onCallBtnHandler(event);
     }
     //zoom box
     const onZoomBoxHandler = (event) => {
         event.preventDefault();
-        setZoomBox(!zoomBox);
-        setNetflixBox(false)
-        setYoutubeBox(false)
-        setFacebookBox(false)
-        setTwitterBox(false)
-        setTiktokBox(false)
-        setInstagramBox(false)
-        setKakaoTalkBox(false)
-        setCallBox(false)
-        setEmailBox(false)
+        setZoomBox(true);
+        setNetflixBox(false);
+        setYoutubeBox(false);
+        setFacebookBox(false);
+        setTwitterBox(false);
+        setTiktokBox(false);
+        setInstagramBox(false);
+        setKakaoTalkBox(false);
+        setCallBox(false);
+        setEmailBox(false);
+
+        onZoomBtnHandler(event);
     }
     //email box
     const onEmailBoxHandler = (event) => {
         event.preventDefault();
-        setEmailBox(!emailBox);
-        setNetflixBox(false)
-        setYoutubeBox(false)
-        setFacebookBox(false)
-        setTwitterBox(false)
-        setTiktokBox(false)
-        setInstagramBox(false)
-        setKakaoTalkBox(false)
-        setCallBox(false)
-        setZoomBox(false)
+        setEmailBox(true);
+        setNetflixBox(false);
+        setYoutubeBox(false);
+        setFacebookBox(false);
+        setTwitterBox(false);
+        setTiktokBox(false);
+        setInstagramBox(false);
+        setKakaoTalkBox(false);
+        setCallBox(false);
+        setZoomBox(false);
+
+        onEmailBtnHandler(event);
     }
 
 

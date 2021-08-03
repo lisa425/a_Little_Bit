@@ -33,6 +33,9 @@ const TestEarthList = () => {
     //     setModalOpen(false);
     // }
     const targetEarth = useRef();
+    const showTargetEarthInfo = (e) => {
+        console.log(e.currentTarget)
+    }
 
     const renderEarth = Earth.map((earth,index) => {
         // 지구를 랜덤한 위치에 출력한다. 랜덤한 position 위치 값 설정
@@ -47,7 +50,8 @@ const TestEarthList = () => {
             <Draggable>
                 <div 
                     ref={targetEarth}
-                    id={index+1} 
+                    id={index} 
+                    onClick={showTargetEarthInfo}
                     className="earth-list"
                     style={{left:valueLeft, top:valueBottom}}
                 >
