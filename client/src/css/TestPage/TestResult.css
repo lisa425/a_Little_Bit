@@ -104,6 +104,15 @@
     justify-content: space-evenly;
     margin-bottom: 10rem;
 }
+.recommend-text h3 {
+    text-align: left;
+}
+.recommend-text h3 span{
+    background-color: #FF00FD;
+    color:black;
+    padding:1px 5px;
+    margin-right: 5px;
+}
 .recommend-text p{
     margin: 1rem 0 1.5rem 0;
 }
@@ -114,8 +123,8 @@
 }
 .card-navigator{
     width:180px;
-    color:#FF00FE;
-    border:1px solid #FF00FE;
+    color:#FF00FD;
+    border:1px solid #FF00FD;
     border-radius: 5px;
     background-color: rgba(0,0,0,0);
     padding: 1rem 0.8rem;
@@ -125,7 +134,7 @@
 }
 .card-navigator:hover{
     transition: 0.2s;
-    background-color: #FF00FE;
+    background-color: #FF00FD;
     color:white;
 }
 

@@ -21,7 +21,7 @@ const testSchema = mongoose.Schema({
     twitter:{
         type:Number
     },
-    tictok:{
+    tiktok:{
         type:Number
     },
     instagram:{

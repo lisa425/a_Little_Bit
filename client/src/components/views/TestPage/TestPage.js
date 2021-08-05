@@ -510,12 +510,12 @@ const TestPage = (props) => {
         setEmailDelete(false);
     }
 
-    let emailResult;
+    let emailResult = EmailCount;
     if(EmailDelete === false){
-        emailResult = EmailCount * 4;
+        emailResult = emailResult * 4;
     }
 
-    let appResult = netflixResult + youtubeResult + facebookResult + twitterResult + tiktokResult + instagramResult + kakaoTalkResult + callResult + zoomResult + emailResult;
+    let appResult = parseInt(netflixResult + youtubeResult + facebookResult + twitterResult + tiktokResult + instagramResult + kakaoTalkResult + callResult + zoomResult + emailResult);
     
 
     //테스트 제출
@@ -529,7 +529,7 @@ const TestPage = (props) => {
             youtube:youtubeResult,
             facebook:facebookResult,
             twitter:twitterResult,
-            tictok:tiktokResult,
+            tiktok:tiktokResult,
             instagram:instagramResult,
             kakaotalk:kakaoTalkResult,
             call:callResult,
@@ -564,7 +564,7 @@ const TestPage = (props) => {
                             <p>당신의 이름을 입력하세요.</p>
                             <input className="input-info" type="text" name="name" value={name} onChange={onNameHandler} />
                         </div>
-                        <button className={next ? "next-clicked" : "submit-to-next"} type="submit" onClick={onClickNext}>DONE!</button>
+                        <button className={next ? "next-clicked" : "submit-to-next"} type="submit" onClick={onClickNext}>NEXT!</button>
                     </section>
 
 
@@ -573,7 +573,7 @@ const TestPage = (props) => {
                         <div className="get-info-input">
                             <p>지금 계신 위치가 어디신가요?.</p>
                             <input className="input-info" type="text" name="name" value={location} onChange={onLocationHandler} />
-                            <button className={next2 ? "next2-clicked" : "submit-to-next" } type="submit" onClick={onClickNext2}>DONE!</button>
+                            <button className={next2 ? "next2-clicked" : "submit-to-next" } type="submit" onClick={onClickNext2}>NEXT!</button>
                         </div>
                     </section>
 
@@ -817,7 +817,7 @@ const TestPage = (props) => {
 
                                             <div className="question-box">
                                                 <div className="qna">
-                                                    <p  className="question">인스타그램 일주일에 몇 번 사용하시나요?</p>
+                                                    <p  className="question">인스타그램을 일주일에 몇 번 사용하시나요?</p>
                                                     <div className="value-box">{InstagramWeek}번</div>
                                                 </div>
                                                 <input id="question1_input" className="test-range-bar" type="range" min="0" max="7" onChange={onInstagramWeekChange} value={InstagramWeek}/>
@@ -969,7 +969,7 @@ const TestPage = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <button id="submit-test" type="submit" onClick={onSubmit}>DONE!!</button>
+                        <button id="submit-test" type="submit" onClick={onSubmit}>DONE!</button>
                     </section>
                 </div>
                 </form>

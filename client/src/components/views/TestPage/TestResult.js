@@ -4,18 +4,97 @@ import '../../../css/TestPage/TestResult.css';
 import { Link } from "react-router-dom";
 
 const TestResult = () => {
-
+    const [cookie,setCookie] = useState({});
     //test 쿠키 정보를 요청한다.
     useEffect(() => {
         Axios.get('/api/test/getResult')
         .then(response => {
             if(response.data.success){
-                console.log(response.data);
+                console.log(response.data.cookie); 
+                setCookie(response.data.cookie);
             }else{
                 alert('Getting Test Result is Fail');
             }
         })
     },[]);
+
+    //앱 사용량 합산 결과
+    const result = cookie.result;
+
+    //개별 앱 사용량 데이터의 수치만 배열로 전환
+    const appData = [
+        parseInt(cookie.netflix),
+        parseInt(cookie.youtube),
+        parseInt(cookie.facebook),
+        parseInt(cookie.twitter),
+        parseInt(cookie.tiktok),
+        parseInt(cookie.instagram),
+        parseInt(cookie.kakaotalk),
+        parseInt(cookie.call),
+        parseInt(cookie.zoom),
+        parseInt(cookie.email)
+    ]; 
+
+    console.log(appData.indexOf(3852))
+    const resultLikeCar = parseInt(cookie.result / 96);  //승용차 1km 당 탄소배출량 : 96g , 결과를 승용차에 비유해 보여준다.
+
+    //가장 많이 사용된 앱을 선별한다.
+    let maxDataIndex = appData.indexOf(Math.max.apply(null,appData));
+    let maxDataThumbnail = "";
+    let maxDataUrl = "";
+    let maxDataName = "";
+    switch(maxDataIndex){
+        case 0:
+            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
+            maxDataUrl = "/cardNews/netflix";
+            maxDataName = "넷플릭스";
+            break;
+        case 1:
+            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
+            maxDataUrl = "/cardNews/netflix";
+            maxDataName = '유튜브';
+            break;
+        case 2:
+            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
+            maxDataUrl = "/cardNews/netflix";
+            maxDataName = '페이스북';
+            break;
+        case 3:
+            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
+            maxDataUrl = "/cardNews/netflix";
+            maxDataName = '트위터';
+            break;
+        case 4:
+            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
+            maxDataUrl = "/cardNews/netflix";
+            maxDataName = '틱톡';
+            break;
+        case 5:
+            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
+            maxDataUrl = "/cardNews/netflix";
+            maxDataName = '인스타그램';
+            break;
+        case 6:
+            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
+            maxDataUrl = "/cardNews/netflix";
+            maxDataName = '카카오톡';
+            break;
+        case 7:
+            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
+            maxDataUrl = "/cardNews/netflix";
+            maxDataName = '전화';
+            break;
+        case 8:
+            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
+            maxDataUrl = "/cardNews/netflix";
+            maxDataName = '줌';
+            break;
+        case 9:
+            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
+            maxDataUrl = "/cardNews/netflix";
+            maxDataName = '이메일';
+            break;
+    }
 
     return(
         <main className="TestResult">
@@ -23,8 +102,8 @@ const TestResult = () => {
             <section className="test-result-section">
                 <article className="test-result-summary">
                     <p className="result-sum-title">당신이 <b>한 달 동안</b> 만들어낸 <b>디지털 탄소 발자국의 양</b>은</p>
-                    <p className="result-number"><span>""4,789""</span>g CO2eq</p>
-                    <p className="result-metaphor">승용차로 약 <span>""49km""</span> 만큼 이동할 수 있는 양입니다.</p>
+                    <p className="result-number"><span>{result}</span>g CO2eq</p>
+                    <p className="result-metaphor">승용차로 약 <span>{resultLikeCar}km</span> 만큼 이동할 수 있는 양입니다.</p>
                     <div className="result-metaphor-img"></div>
                 </article>
                 <article className="test-result-detail">
@@ -36,9 +115,9 @@ const TestResult = () => {
                 </article>
                 <article className="test-result-recommend">
                     <div className="recommend-text">
-                        <h3><span>""넷플릭스""</span>에서 탄소를 가장 많이 배출했네요!</h3>
-                        <p>""넷플릭스""를 보는 행동이 어째서 탄소를 발생시키는지 한 번 알아볼까요?</p>
-                        <button className="card-navigator">지금 바로 알아보기</button>
+                        <h3><span>{maxDataName}</span>에서 탄소를 가장 많이 배출했네요!</h3>
+                        <p>이 서비스를 사용하는 행동이 어째서 탄소를 발생시키는지 한 번 알아볼까요?</p>
+                        <Link to=""><button className="card-navigator">지금 바로 알아보기</button></Link>
                     </div>
                     <div className="recommend-img">
                     

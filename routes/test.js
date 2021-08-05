@@ -5,8 +5,9 @@ const { Test } = require("../models/Test");
 router.post('/',(req,res)=>{
     //test 유저 정보를 client에서 가져와 DB에 저장
     const test = new Test(req.body);
+    const maxage = 3600000 * 24 * 14 // 3600000ms 는 1시간->즉 2주를 유효기간으로 두겠다.
     res.cookie('test',test,{
-        maxAge:300000000
+        maxAge: maxage
     });
     test.save((err,doc)=>{
         if(err) return res.json({ success:false, err })
