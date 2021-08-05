@@ -131,18 +131,21 @@ h3{
     display:flex;
     flex-wrap: wrap;
     margin:3rem 10vw;
+    background:transparent;
 }
 
 .applist-btn li{
     padding:0.5rem;
     width:48px;
     height: 48px;
+    background:transparent;
 }
 .applist-btn li button{
     border:none;
     padding: 0;
     width:100%;
     height:100%;
+    background:transparent;
 }
 .netfilx-color rect,
 .youtube-color,
