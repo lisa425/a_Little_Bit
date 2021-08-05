@@ -6,7 +6,7 @@ import TestIntro from './components/views/TestPage/TestIntro';
 import TestResult from './components/views/TestPage/TestResult';
 import TestEarthList from './components/views/TestPage/TestEarthList';
 import EarthModal from './components/views/TestPage/EarthModal'
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (

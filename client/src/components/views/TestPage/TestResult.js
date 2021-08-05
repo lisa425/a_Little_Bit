@@ -1,8 +1,22 @@
 import React,{ useEffect, useState, useRef } from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestResult.css';
+import { BrowserRouter as Link } from "react-router-dom";
 
-const TestResult = (props,result) => {
+const TestResult = () => {
+
+    //test 쿠키 정보를 요청한다.
+    useEffect(() => {
+        Axios.get('/api/test/getResult')
+        .then(response => {
+            if(response.data.success){
+                console.log(response.data);
+            }else{
+                alert('Getting Test Result is Fail');
+            }
+        })
+    },[]);
+
     return(
         <main className="TestResult">
             {/* --- 테스트 결과 설명 ---*/}
@@ -125,6 +139,10 @@ const TestResult = (props,result) => {
                     <div className="result-navigator-box">
                         <p>디지털 탄소 발자국을 줄이려면<br/>무엇을 해야하나요?</p>
                         <button className="navigator-btn">알아보기</button>
+                    </div>
+                    <div className="result-navigator-box">
+                        <p>다른 사람들은 얼마나 많은<br/>디지털 탄소 발자국을 남겼을까요?</p>
+                        <Link to="/test/earthlist"><button className="navigator-btn">알아보기</button></Link>
                     </div>
                 </article>
             </section>

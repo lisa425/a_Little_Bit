@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const port = 5000;
-const { Test } = require("./models/Test");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const mongoose = require('mongoose')
@@ -22,8 +21,5 @@ app.get('/',(req,res)=>res.send('Hello World!'))
 app.use('/api/test', require('./routes/test'));
 
 
-app.get('/api/result',(req,res) => {
-    
-})
 
 app.listen(port,() => console.log(`Example app listening on port ${port}`));

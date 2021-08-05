@@ -342,23 +342,23 @@
 }
 .result-navigator-box{
     text-align: center;
-    width:26rem;
-    height: 22rem;
+    width:20rem;
+    height: 16rem;
     padding:5rem 3rem;
-    margin:2%;
+    margin:1%;
     background:#252525;
     border-radius: 5px;
     color:white;
     font-family: "Elice Digital Baeum";
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .result-navigator-box p{
-    line-height: 2.5rem;
+    line-height: 2.1rem;
 }
 .result-navigator-box .navigator-btn{
     width:70%;
@@ -372,5 +372,5 @@
 }
 .result-navigator-box .navigator-btn:hover{
     background:#00FFF9;
-    transition: 0.2s;
+    transition: 0.3s;
 }
