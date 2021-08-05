@@ -90,12 +90,6 @@
     font-size: 1.1rem;
     margin: 1.5rem 0;
 }
-.test-result-bargraph{
-    width:100%;
-    height: 600px;
-    border:1px solid #cacaca;
-    margin:5% 0;
-}
 
 .test-result-recommend{
     width:100%;

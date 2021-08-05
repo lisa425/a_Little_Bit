@@ -2,6 +2,7 @@ import React,{ useEffect, useState, useRef } from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestResult.css';
 import { Link } from "react-router-dom";
+import { BarChart,Bar,XAxis,YAxis,CartesianGrid,LabelList } from "recharts";
 
 const TestResult = () => {
     const [cookie,setCookie] = useState({});
@@ -20,6 +21,11 @@ const TestResult = () => {
 
     //앱 사용량 합산 결과
     const result = cookie.result;
+    //승용차 1km 당 탄소배출량 : 96g , 결과를 승용차에 비유해 보여준다.
+    const resultLikeCar = parseInt(cookie.result / 96);
+    const showResultCar = (carNum) => {
+        const carElement = `<img src={} alt="carIcon"/>`
+    }
 
     //개별 앱 사용량 데이터의 수치만 배열로 전환
     const appData = [
@@ -34,9 +40,52 @@ const TestResult = () => {
         parseInt(cookie.zoom),
         parseInt(cookie.email)
     ]; 
-
-    console.log(appData.indexOf(3852))
-    const resultLikeCar = parseInt(cookie.result / 96);  //승용차 1km 당 탄소배출량 : 96g , 결과를 승용차에 비유해 보여준다.
+    //그래프를 생성한다.
+    const data = [
+        {
+        name: "넷플릭스",
+        used: appData[0]
+        },
+        {
+        name: "유튜브",
+        used: appData[1]
+        },
+        {
+        name: "페이스북",
+        used: appData[2]
+        },
+        {
+        name: "트위터",
+        used: appData[3]
+        },
+        {
+        name: "틱톡",
+        used: appData[4]
+        },
+        {
+        name: "인스타그램",
+        used: appData[5]
+        },
+        {
+        name: "카카오톡",
+        used: appData[6]
+        },
+        {
+        name: "전화",
+        used: appData[7]
+        },
+        {
+        name: "줌",
+        used: appData[8]
+        },
+        {
+        name: "이메일",
+        used: appData[9]
+        }
+    ];
+    const labelFormatter = (value) => {
+        return value + 'g';
+    };
 
     //가장 많이 사용된 앱을 선별한다.
     let maxDataIndex = appData.indexOf(Math.max.apply(null,appData));
@@ -96,6 +145,7 @@ const TestResult = () => {
             break;
     }
 
+
     return(
         <main className="TestResult">
             {/* --- 테스트 결과 설명 ---*/}
@@ -110,7 +160,22 @@ const TestResult = () => {
                     <h3> 당신이 사용한 어플들은 각각 얼마만큼의 디지털 탄소 발자국을 배출했을까요? </h3>
                     <p>어플별로 발생시킨 탄소 발자국의 양을 확인해보세요!</p>
                     <div className="test-result-bargraph">
-                    
+                        <BarChart
+                            width={1000}
+                            height={600}
+                            data={data}
+                            margin={{
+                                top: 50,
+                                right: 30,
+                                left: 20,
+                                bottom: 5
+                            }}
+                            >
+                            <CartesianGrid vertical={false} style={{stroke:"rgb(70, 70, 70)"}}/>
+                            <XAxis dataKey="name" dy={13} style={{fill:"#fff",fontSize:"0.9rem"}}/>
+                            <YAxis unit={"g"} dx={-10} style={{fill:"#868887",fontSize:"0.8rem"}}/>
+                            <Bar dataKey="used" stackId="a" fill="#70FF00" barSize={40} label={{ fill:"#fff", fontSize:"0.8rem", fontWeight:"bold", position: 'top', formatter: labelFormatter, margin:'10px' }} animationBegin={2000} animationDuration={1200} animationEasing={'ease-in-out'}/>
+                        </BarChart>
                     </div>
                 </article>
                 <article className="test-result-recommend">
