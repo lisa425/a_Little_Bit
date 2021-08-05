@@ -1,7 +1,7 @@
 import React,{ useEffect, useState, useRef } from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestResult.css';
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const TestResult = () => {
 
@@ -142,7 +142,7 @@ const TestResult = () => {
                     </div>
                     <div className="result-navigator-box">
                         <p>다른 사람들은 얼마나 많은<br/>디지털 탄소 발자국을 남겼을까요?</p>
-                        <Link to="/test/earthlist"><button className="navigator-btn">알아보기</button></Link>
+                        <button className="navigator-btn"><Link to="/test/earthlist">알아보기</Link></button>
                     </div>
                 </article>
             </section>
