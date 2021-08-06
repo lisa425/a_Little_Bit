@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestPage.css';
+import {Link} from 'react-router-dom';
 import {ReactComponent as Netflix } from '../../../assets/images/appIcons/Netflix/black.svg';
 import {ReactComponent as Youtube} from '../../../assets/images/appIcons/Youtube/black.svg';
 import {ReactComponent as Facebook } from '../../../assets/images/appIcons/Facebook/black.svg';
@@ -976,7 +977,7 @@ const TestPage = () => {
                         <button className={doneBtn? "submit-test" : "submit-test-none"} id="submit-test" type="submit" onClick={onSubmit}>DONE</button>
                     </section>
                     <section className={finished?"before-result" : "before-result-none"}>
-                        <button className="go-result" type="submit">?</button>
+                        <button className="go-result" type="submit"><Link to="/test/result">?</Link></button>
                     </section>
                 </div>
                 </form>

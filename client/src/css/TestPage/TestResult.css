@@ -308,11 +308,11 @@
     font-family: "Elice Digital Baeum";
 }
 .world-digital-carbon-number{
-    font-size:3.5rem;
-    color:#FF00AA;
+    font-size:3.8rem;
+    color:#FF00FE;
     font-family: "Rany";
     font-weight: 800;
-    margin:3rem 0 1rem 0;
+    margin:2.8rem 0 1.5rem 0;
 }
 .world-digital-carbon-unit{
     font-size:1.3rem;
@@ -349,6 +349,7 @@
 .world-metaphor-object{
     font-size: 1rem;
     font-family: "NEXON Lv2 Gothic";
+    font-weight: 500;
     background-color: #fff;
     color:black;
     padding: 0.5rem;
@@ -357,12 +358,12 @@
     font-family: "Rany";
     font-weight: 800;
     font-size:3rem;
-    color:#00AAFF;
     margin:1.5rem 0;
 }
 .world-metaphor-unit{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-family: "NEXON Lv2 Gothic";
+    font-weight: bold;
 }
 .world-metaphor-img{
     width:294px;

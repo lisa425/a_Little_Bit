@@ -446,19 +446,19 @@ const TestResult = () => {
                     <div className="world-metaphor">
                         <div className="world-metaphor-content plastic">
                             <p className="world-metaphor-object">플라스틱 컵</p>
-                            <p className="world-metaphor-number">33,138,869</p>
+                            <p className="world-metaphor-number" style={{color:'#00FFF9'}}>33,138,869</p>
                             <p className="world-metaphor-unit">개</p>
                             <div className="world-metaphor-img"></div>
                         </div>
                         <div className="world-metaphor-content tree">
                             <p className="world-metaphor-object">30년생 나무</p>
-                            <p className="world-metaphor-number">84,688</p>
+                            <p className="world-metaphor-number" style={{color:'#70FF00'}}>84,688</p>
                             <p className="world-metaphor-unit">그루</p>
                             <div className="world-metaphor-img"></div>
                         </div>
                         <div className="world-metaphor-content mobility">
                             <p className="world-metaphor-object">자동차로 이동</p>
-                            <p className="world-metaphor-number">7,857,670</p>
+                            <p className="world-metaphor-number" style={{color:'#FAFF00'}}>7,857,670</p>
                             <p className="world-metaphor-unit">km</p>
                             <div className="world-metaphor-img"></div>
                         </div>
