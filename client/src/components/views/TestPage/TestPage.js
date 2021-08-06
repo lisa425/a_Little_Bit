@@ -1,4 +1,4 @@
-import React,{ useEffect, useState, useRef } from 'react';
+import React,{useState} from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestPage.css';
 import {ReactComponent as Netflix } from '../../../assets/images/appIcons/Netflix/black.svg';
@@ -27,17 +27,23 @@ import TestPixel from './TestPixel';
 
 
 
-const TestPage = (props) => {
+const TestPage = () => {
     //다음 페이지로 넘기기
-    const [next,setNext] = useState(false)
+    const [next,setNext] = useState(false);
     const onClickNext = (event) => {
         event.preventDefault();
         setNext(!next);
     }
-    const [next2,setNext2] = useState(false)
+    const [next2,setNext2] = useState(false);
     const onClickNext2 = (event) => {
         event.preventDefault();
         setNext2(!next2);
+    }
+    const [doneBtn, setDoneBtn] = useState(false);
+    const [finished,setFinished] = useState(false);
+    const onClickDone = (event) => {
+        event.preventDefault();
+        setFinished(!finished);
     }
 
     //이름 input state 설정
@@ -49,7 +55,7 @@ const TestPage = (props) => {
     //위치 input state 설정
     const [location,setLocation] = useState("");
     const onLocationHandler = (event) => {
-        setLocation(event.currentTarget.value)
+        setLocation(event.currentTarget.value);
     }
 
     //앱 list 버튼 state 설정
@@ -365,6 +371,7 @@ const TestPage = (props) => {
     const onEmailBoxHandler = (event) => {
         event.preventDefault();
         setEmailBox(true);
+        setDoneBtn(true);
         setNetflixBox(false);
         setYoutubeBox(false);
         setFacebookBox(false);
@@ -542,17 +549,13 @@ const TestPage = (props) => {
         .then(response => {
             if(response.data.success){
                 console.log(response.data);
-                setTimeout(()=>{
-                    props.history.push('/test/result');
-                },4000)
             }else{
                 alert('테스트 실패');
             }
         })
-    }
 
-    //test가 끝나면 결과 페이지로 지금 입력한 정보들을 객체로 만들어서 전달
-    //결과페이지는 (props)를 받아서 props.result, props.netflix 이런식으로 접근하자!
+        onClickDone(event);
+    }
  
     return(
         <main className="testpage">
@@ -564,22 +567,23 @@ const TestPage = (props) => {
                             <p>당신의 이름을 입력하세요.</p>
                             <input className="input-info" type="text" name="name" value={name} onChange={onNameHandler} />
                         </div>
-                        <button className={next ? "next-clicked" : "submit-to-next"} type="submit" onClick={onClickNext}>NEXT!</button>
+                        <button className={next ? "next-clicked" : "submit-to-next"} type="submit" onClick={onClickNext}>NEXT</button>
                     </section>
 
 
                 {/* page 2 : 지역 입력 */}
                     <section className={next2 ? "next2-clicked" : "get-info page-2"} id="get-location">
                         <div className="get-info-input">
-                            <p>지금 계신 위치가 어디신가요?.</p>
-                            <input className="input-info" type="text" name="name" value={location} onChange={onLocationHandler} />
-                            <button className={next2 ? "next2-clicked" : "submit-to-next" } type="submit" onClick={onClickNext2}>NEXT!</button>
+                            <p>지금 계신 위치가 어디신가요?</p>
+                            <p className="location-ex">ex)서울,한국/신비한 우리집</p>
+                            <input className="input-info" type="text" name="name" value={location} onChange={onLocationHandler}/>
+                            <button className={next2 ? "next2-clicked" : "submit-to-next" } type="submit" onClick={onClickNext2}>NEXT</button>
                         </div>
                     </section>
 
 
                 {/* page 3 : 사용량 입력 */}
-                    <section className="get-info">
+                    <section className={finished? "page3-close" : "get-info"}>
                     <TestPixel/>
                         <div className="get-info-input">
                             <div className="test page-3" id="get-appUseData">
@@ -969,11 +973,14 @@ const TestPage = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <button id="submit-test" type="submit" onClick={onSubmit}>DONE!</button>
+                        <button className={doneBtn? "submit-test" : "submit-test-none"} id="submit-test" type="submit" onClick={onSubmit}>DONE</button>
+                    </section>
+                    <section className={finished?"before-result" : "before-result-none"}>
+                        <button className="go-result" type="submit">?</button>
                     </section>
                 </div>
                 </form>
-            
+                
         </main>
     );
 };

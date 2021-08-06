@@ -3,7 +3,6 @@ import Axios from 'axios';
 import '../../../css/TestPage/TestEarthList.css';
 import EarthImg from '../../../assets/images/earth.png';
 import Draggable from "react-draggable";
-//import {Draggable,useDraggabe} from 'use-draggable';
 
 const TestEarthList = () => {
 

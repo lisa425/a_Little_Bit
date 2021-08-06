@@ -51,7 +51,7 @@
     margin:3rem 0;
 }
 .result-number{
-    font-family: "Montserrat Alternates";
+    font-family: "Rany";
     font-size:3.75rem;
     font-weight: 800;
     margin:3rem 0;
@@ -158,6 +158,70 @@
 .world-degital-section ul{
     margin-top: 3rem;
 }
+.world-degital-section ul li{
+    padding:0.5rem;
+    width:48px;
+    height: 48px;
+}
+
+/*svg color 설정*/
+.netfilx-color rect,
+.youtube-color,
+.tiktok-color rect,
+.call-color rect,
+.email-color rect{
+    width:100%;
+    height: 100%;
+    fill:#FF00FE;
+}
+.facebook-color rect,
+.twitter-color rect,
+.zoom-color rect{
+    width:100%;
+    height: 100%;
+    fill:#00FFF9; 
+}
+.instagram-color,
+.call-color rect,
+.email-color rect{
+    width:100%;
+    height: 100%;
+    fill:#70FF00; 
+}
+.katalk-color rect{
+    width:100%;
+    height: 100%;
+    fill:#FAFF00; 
+}
+.katalk-color path{
+    fill:#000000;
+}
+.netflix-white rect,
+.youtube-white,.youtube-white path:nth-child(3),
+.facebook-white rect,
+.twitter-white rect,
+.tiktok-white rect,
+.instagram-white path:nth-child(1),
+.katalk-white rect,
+.call-white rect,
+.zoom-white rect,
+.email-white rect{
+    width:100%;
+    height:100%;
+    fill: #fff;
+}
+.netflix-white path,
+.youtube-white path:nth-child(2),
+.facebook-white path,
+.twitter-white path,
+.tiktok-white path,
+.instagram-white path:nth-child(2),
+.katalk-white path,
+.call-white path,
+.zoom-white path,
+.email-white path{
+    fill:#000;
+}
 
 .world-data-info{
     width:100%;
@@ -176,7 +240,7 @@
 .world-data .carbon{
     grid-column: 2;
     font-size: 3.1rem;
-    font-family: "Montserrat Alternates";
+    font-family: "Rany";
     font-weight: 800;
     text-align: center;
 }
@@ -184,7 +248,7 @@
 .world-data .timer{
     grid-column: 1;
     font-size: 2.2rem;
-    font-family: "Montserrat Alternates";
+    font-family: "Rany";
     font-weight: 700;
 }
 
@@ -246,7 +310,7 @@
 .world-digital-carbon-number{
     font-size:3.5rem;
     color:#FF00AA;
-    font-family: "Montserrat Alternates";
+    font-family: "Rany";
     font-weight: 800;
     margin:3rem 0 1rem 0;
 }
@@ -290,7 +354,7 @@
     padding: 0.5rem;
 }
 .world-metaphor-number{
-    font-family: "Montserrat Alternates";
+    font-family: "Rany";
     font-weight: 800;
     font-size:3rem;
     color:#00AAFF;
@@ -324,7 +388,7 @@
 .result-navigator-title h2{
     font-size:3.25rem;
     text-align: center;
-    font-family: "Montserrat Alternates";
+    font-family: "Rany";
     font-weight: 800;
     line-height: 4.5rem;
 }
@@ -335,7 +399,7 @@
     margin:2rem 0;
 }
 .result-navigator-title span{
-    color:#70FF00;
+    color:#00FFF9;
 }
 .result-navigator-box-container{
     width:85vw;
@@ -367,15 +431,15 @@
 .result-navigator-box .navigator-btn{
     width:70%;
     margin-top:5rem;
-    background:#70FF00;
-    border-radius: 5px;
+    background:#00FFF9;
+    border-radius: 2px;
     border:none;
     padding:1rem 2rem;
-    font-family: "Elice Digital Baeum";
+    font-family: "Digitopia Bold";
     font-size: 1.1rem;
 }
 .result-navigator-box .navigator-btn:hover{
-    background:#00FFF9;
+    background:#00AAFF;
     transition: 0.3s;
 }
 .result-navigator-box .navigator-btn a{

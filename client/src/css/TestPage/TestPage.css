@@ -84,17 +84,23 @@ input:-webkit-autofill {
     text-align: center;
     background-color: transparent;
 }
+.location-ex{
+    margin-top:1rem;
+    font-size: 1.1rem;
+    font-family:"Elice Digital Baeum";
+    color:#868887;
+}
 .submit-to-next{
     position: fixed;
     right:0;
     bottom:0;
     margin:0;
     background-color:#70FF00;
-    font-family: 'Montserrat Alternates';
+    font-family: 'Digitopia Bold';
     font-weight: 700;
     font-size:1.6rem;
     border:none;
-    padding:1rem;
+    padding:1.3rem 1.5rem;
 }
 #get-name{
     z-index: 10;
@@ -111,8 +117,9 @@ input:-webkit-autofill {
 .next2-clicked{
     display:none;
 }
-
-
+.page3-close{
+    display: none;
+}
 .test{
     font-family: 'Elice Digital Baeum';
     width:100vw;
@@ -253,6 +260,7 @@ h3{
 .app-name h5{
     font-weight: 800;
     margin-bottom: 0.6rem;
+    font-family:"Digitopia Bold";
 }
 
 .question-box{
@@ -304,16 +312,78 @@ h3{
     color:black;
 }
 
-#submit-test{
+.submit-test{
     position: fixed;
     right:0;
     bottom:0;
     margin:0;
     background-color:#70FF00;
-    font-family: 'Montserrat Alternates';
+    font-family: 'Digitopia Bold';
     font-weight: 700;
     font-size:1.6rem;
     border:none;
-    padding:1rem;
+    padding:1.3rem 1.5rem;
     z-index: 2;
 } 
+.submit-test-none{
+    display:none;
+}
+
+
+@keyframes beforeResultBackground{
+    from{
+        background:white;
+    }
+    to{
+        background:black;
+    }
+}
+@keyframes showGoResult{
+    from{
+        background:transparent;
+        color:white;
+    }
+    to{
+        background:#70FF00;
+        color:black;
+    }
+}
+@keyframes beforeResultPixel{
+    from{
+        
+    }
+    to{
+        fill:#70FF00;
+    }
+}
+.before-result{
+    width:100vw;
+    height:100vh;
+    animation-name:beforeResultBackground;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+.before-result-none{
+    display: none;
+}
+.go-result{
+    animation-name:showGoResult;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    position: fixed;
+    color:white;
+    background-color:rgba(0,0,0,0);
+    right:0;
+    bottom:0;
+    margin:0;
+    font-family: 'Rany';
+    font-weight: 700;
+    font-size:1.6rem;
+    border:none;
+    padding:1.5rem;
+    width:155px;
+}

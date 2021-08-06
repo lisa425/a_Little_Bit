@@ -63,6 +63,26 @@
   font-weight: 300;
   src:url("../assets/fonts/Rany-Light.otf");
 }
+@font-face{
+  font-family: "Digitopia Bold";
+  font-weight: 800;
+  src:url("../assets/fonts/Digitopia-Bold.otf");
+}
+@font-face{
+  font-family: "Digitopia";
+  font-weight: 400;
+  src:url("../assets/fonts/Digitopia-Regular.otf");
+}
+@font-face{
+  font-family: "Digitopia itallikk";
+  font-weight: 400;
+  src:url("../assets/fonts/Digitopia-Italikk.otf");
+}
+@font-face{
+  font-family: "Digitopia itallikk bold";
+  font-weight: 800;
+  src:url("../assets/fonts/Digitopia-Italikk-bold.otf");
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

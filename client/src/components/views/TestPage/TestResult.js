@@ -3,6 +3,16 @@ import Axios from 'axios';
 import '../../../css/TestPage/TestResult.css';
 import { Link } from "react-router-dom";
 import { BarChart,Bar,XAxis,YAxis,CartesianGrid,LabelList } from "recharts";
+import {ReactComponent as Netflix } from '../../../assets/images/appIcons/Netflix/black.svg';
+import {ReactComponent as Youtube} from '../../../assets/images/appIcons/Youtube/black.svg';
+import {ReactComponent as Facebook } from '../../../assets/images/appIcons/Facebook/black.svg';
+import {ReactComponent as Twitter } from '../../../assets/images/appIcons/Twitter/black.svg';
+import {ReactComponent as Tiktok } from '../../../assets/images/appIcons/Tiktok/black.svg';
+import {ReactComponent as Instagram } from '../../../assets/images/appIcons/Instagram/black.svg';
+import {ReactComponent as Kakaotalk } from '../../../assets/images/appIcons/Kakaotalk/black.svg';
+import {ReactComponent as Call } from '../../../assets/images/appIcons/Call/black.svg';
+import {ReactComponent as Zoom} from '../../../assets/images/appIcons/Zoom/black.svg';
+import {ReactComponent as Email } from '../../../assets/images/appIcons/Email/black.svg';
 
 const TestResult = () => {
     const [cookie,setCookie] = useState({});
@@ -146,6 +156,181 @@ const TestResult = () => {
     }
 
 
+    /* 전 세계 트래픽 디지털 탄소 배출량 설명 */
+    //앱 리스트 버튼 -> 추후 컴포넌트로 뺄 것.
+    const [netflixBtn, setNetflixBtn] = useState(false);
+    const [youtubeBtn,setYoutubeBtn] = useState(false);
+    const [facebookBtn,setFacebookBtn] = useState(false);
+    const [twitterBtn,setTwitterBtn] = useState(false);
+    const [tiktokBtn,setTiktokBtn] = useState(false);
+    const [instagramBtn,setInstagramBtn] = useState(false);
+    const [kakaoTalkBtn,setKakaoTalkBtn] = useState(false);
+    const [callBtn,setCallBtn] = useState(false);
+    const [zoomBtn,setZoomBtn] = useState(false);
+    const [emailBtn,setEmailBtn] = useState(false);
+
+    //전세계 디지털 탄소발자국의 양을 설정
+    const [carbonFootprint,setCarbonFootPrint] = useState(762194);
+
+    const onNetflixBtnHandler = (event) => {
+        event.preventDefault();
+        setNetflixBtn(!netflixBtn);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint(647);
+    }
+    const onYoutubeBtnHandler = (event) => {
+        event.preventDefault();
+        setYoutubeBtn(!youtubeBtn);
+        setNetflixBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint(3000);
+    }
+
+    const onFacebookBtnHandler = (event) => {
+        event.preventDefault();
+        setFacebookBtn(!facebookBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint(150);
+    }
+    
+    const onTwitterBtnHandler = (event) => {
+        event.preventDefault();
+        setTwitterBtn(!twitterBtn);       
+         setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint(511);
+    }
+    
+    const onTiktokBtnHandler = (event) => {
+        event.preventDefault();
+        setTiktokBtn(!tiktokBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint(393);
+    }
+    
+    const onInstagramBtnHandler = (event) => {
+        event.preventDefault();
+        setInstagramBtn(!instagramBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint(402);
+    }
+    
+    const onKakaoTalkBtnHandler = (event) => {
+        event.preventDefault();
+        setKakaoTalkBtn(!kakaoTalkBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint();
+    }
+    
+    const onCallBtnHandler = (event) => {
+        event.preventDefault();
+        setCallBtn(!callBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint();
+    }
+    
+    const onZoomBtnHandler = (event) => {
+        event.preventDefault();
+        setZoomBtn(!zoomBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint(1729);
+    }
+    
+    const onEmailBtnHandler = (event) => {
+        event.preventDefault();
+        setEmailBtn(!emailBtn);
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setKakaoTalkBtn(false);
+        setCallBtn(false);
+        setZoomBtn(false);
+
+        setCarbonFootPrint(752000);
+    }
+
     return(
         <main className="TestResult">
             {/* --- 테스트 결과 설명 ---*/}
@@ -182,7 +367,7 @@ const TestResult = () => {
                     <div className="recommend-text">
                         <h3><span>{maxDataName}</span>에서 탄소를 가장 많이 배출했네요!</h3>
                         <p>이 서비스를 사용하는 행동이 어째서 탄소를 발생시키는지 한 번 알아볼까요?</p>
-                        <Link to=""><button className="card-navigator">지금 바로 알아보기</button></Link>
+                        <Link to=""><button className="card-navigator">Let's GO!</button></Link>
                     </div>
                     <div className="recommend-img">
                     
@@ -198,36 +383,49 @@ const TestResult = () => {
                 </div>
                 <ul>
                     <li>
+                        <Netflix className={netflixBtn ? 'netfilx-color' : 'netflix-white'} onClick={onNetflixBtnHandler}/>
+                    </li>
 
-                    </li>
                     <li>
-                        
+                        <Youtube className={youtubeBtn ? 'youtube-color' : 'youtube-white'} onClick={onYoutubeBtnHandler}/>
                     </li>
+
                     <li>
-                        
+                        <Facebook className={facebookBtn ? 'facebook-color' : 'facebook-white'} onClick={onFacebookBtnHandler}/>
                     </li>
+
                     <li>
-                        
+                        <Twitter className={twitterBtn ? 'twitter-color' : 'twitter-white'} onClick={onTwitterBtnHandler}/>
                     </li>
-                    v
+
                     <li>
-                        
+                        <Tiktok className={tiktokBtn ? 'tiktok-color' : 'tiktok-white'} onClick={onTiktokBtnHandler}/>
                     </li>
+
                     <li>
-                        
+                        <Instagram className={instagramBtn ? 'instagram-color' : 'instagram-white'} onClick={onInstagramBtnHandler}/>
                     </li>
-                    v
+
                     <li>
-                        
+                        <Kakaotalk className={kakaoTalkBtn ? 'katalk-color' : 'katalk-white'} onClick={onKakaoTalkBtnHandler}/>
                     </li>
+
                     <li>
-                        
+                        <Call className={callBtn ? 'call-color' : 'call-white'} onClick={onCallBtnHandler}/>
+                    </li>
+
+                    <li>
+                        <Zoom className={zoomBtn ? 'zoom-color' : 'zoom-white'} onClick={onZoomBtnHandler}/>
+                    </li>
+
+                    <li>
+                        <Email className={emailBtn ? 'email-color' : 'email-white'} onClick={onEmailBtnHandler}/>
                     </li>
                 </ul>
                 <article className="world-data-info">
                     <div className="world-data">
                         <div className="timer">01:00:00</div>
-                        <div className="carbon">1729kg</div>
+                        <div className="carbon">{carbonFootprint}kg</div>
                         <div className="unit">
                             <span><div id="kg1"></div> 1kg</span>
                             <span><div id="kg50"></div> 50kg</span>
@@ -278,15 +476,15 @@ const TestResult = () => {
                 <article className="result-navigator-box-container">
                     <div className="result-navigator-box">
                         <p>디지털 탄소 발자국은<br/>어떻게 해로운 영향을 끼치나요?</p>
-                        <button className="navigator-btn">알아보기</button>
+                        <button className="navigator-btn">go</button>
                     </div>
                     <div className="result-navigator-box">
                         <p>디지털 탄소 발자국을 줄이려면<br/>무엇을 해야하나요?</p>
-                        <button className="navigator-btn">알아보기</button>
+                        <button className="navigator-btn">go</button>
                     </div>
                     <div className="result-navigator-box">
                         <p>다른 사람들은 얼마나 많은<br/>디지털 탄소 발자국을 남겼을까요?</p>
-                        <button className="navigator-btn"><Link to="/test/earthlist">알아보기</Link></button>
+                        <button className="navigator-btn"><Link to="/test/earthlist">go</Link></button>
                     </div>
                 </article>
             </section>
