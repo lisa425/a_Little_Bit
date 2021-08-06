@@ -24,13 +24,7 @@ const TestEarthList = () => {
         }
     },[]);
 
-    // const [modal,setModalOpen] = useState(false);
-    // const openModal = () => {
-    //     setModalOpen(true);
-    // }
-    // const closeModal = () => {
-    //     setModalOpen(false);
-    // }
+    
     const targetEarth = useRef();
     const showTargetEarthInfo = (e) => {
         console.log(e.currentTarget)

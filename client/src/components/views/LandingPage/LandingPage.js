@@ -7,10 +7,6 @@ import NavBar from '../Navbar/Navbar';
 //import StartPage from './DataTest/StartPage';
 
 const LandingPage = () => {
-    useEffect(() => {
-        axios.get('api/hello')
-        .then(response => console.log(response.data))
-    },[])
     return(
         <div className="Mainpage">
             <img className="main_title" src={maintitle} alt="logo"/>
