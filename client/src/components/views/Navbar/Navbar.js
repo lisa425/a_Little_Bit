@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import {ReactComponent as Logo } from '../../../assets/images/logo.svg';
 import menuIcon from "../../../assets/images/menu_icon.png";
 
-const NavBar = (props) => {
+const NavBar = ({match}) => {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
     const closeSidebar = () => setSidebar(false);
 
-    console.log(props.location);
+    const currentUrl = window.location.pathname;
 
     
     return(

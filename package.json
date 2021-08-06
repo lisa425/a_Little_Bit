@@ -28,6 +28,7 @@
     "moment": "^2.29.1",
     "mongoose": "^5.13.3",
     "react-draggable": "^4.4.3",
+    "react-router": "^5.2.0",
     "recharts": "^2.0.10",
     "use-draggable": "^1.5.2"
   },
