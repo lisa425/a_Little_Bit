@@ -24,6 +24,12 @@ const TestEarthList = () => {
         }
     },[]);
 
+   
+    // useEffect(()=>{
+    //     Axios.post('/api/test/getEarthDetail',variab)
+    // })
+    
+
     
     const targetEarth = useRef();
     const showTargetEarthInfo = (e) => {

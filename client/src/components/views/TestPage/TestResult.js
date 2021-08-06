@@ -13,6 +13,7 @@ import {ReactComponent as Kakaotalk } from '../../../assets/images/appIcons/Kaka
 import {ReactComponent as Call } from '../../../assets/images/appIcons/Call/black.svg';
 import {ReactComponent as Zoom} from '../../../assets/images/appIcons/Zoom/black.svg';
 import {ReactComponent as Email } from '../../../assets/images/appIcons/Email/black.svg';
+import {ReactComponent as Minicar } from '../../../assets/images/resultIcons/minicar.svg';
 
 const TestResult = () => {
     const [cookie,setCookie] = useState({});
@@ -33,9 +34,23 @@ const TestResult = () => {
     const result = cookie.result;
     //승용차 1km 당 탄소배출량 : 96g , 결과를 승용차에 비유해 보여준다.
     const resultLikeCar = parseInt(cookie.result / 96);
-    const showResultCar = (carNum) => {
-        const carElement = `<img src={} alt="carIcon"/>`
+    let carArray = [];
+    const setCarArray = () => {
+        for (let i = 0; i < resultLikeCar; i++){
+            carArray.push(i);
+        }
+        return carArray;
     }
+
+    setCarArray();
+
+    const showResultCar = carArray.map((minicar,index) => {
+        console.log("hihihihi,",minicar);
+        return(
+            <Minicar />
+        )
+    })
+    
 
     //개별 앱 사용량 데이터의 수치만 배열로 전환
     const appData = [
@@ -104,53 +119,53 @@ const TestResult = () => {
     let maxDataName = "";
     switch(maxDataIndex){
         case 0:
-            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
-            maxDataUrl = "/cardNews/netflix";
+            maxDataThumbnail = "../../../assets/images/cardNews/netflix.jpg";
+            maxDataUrl = "/cardnews/netflix";
             maxDataName = "넷플릭스";
             break;
         case 1:
-            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
-            maxDataUrl = "/cardNews/netflix";
+            maxDataThumbnail = "../../../assets/images/cardNews/youtube.jpg";
+            maxDataUrl = "/cardnews/youtube";
             maxDataName = '유튜브';
             break;
         case 2:
-            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
-            maxDataUrl = "/cardNews/netflix";
+            maxDataThumbnail = "../../../assets/images/cardNews/facebook.jpg";
+            maxDataUrl = "/cardnews/facebook";
             maxDataName = '페이스북';
             break;
         case 3:
-            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
-            maxDataUrl = "/cardNews/netflix";
+            maxDataThumbnail = "../../../assets/images/cardNews/twitter.jpg";
+            maxDataUrl = "/cardnews/twitter";
             maxDataName = '트위터';
             break;
         case 4:
-            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
-            maxDataUrl = "/cardNews/netflix";
+            maxDataThumbnail = "../../../assets/images/cardNews/tiktok.jpg";
+            maxDataUrl = "/cardnews/tiktok";
             maxDataName = '틱톡';
             break;
         case 5:
-            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
-            maxDataUrl = "/cardNews/netflix";
+            maxDataThumbnail = "../../../assets/images/cardNews/instagram.jpg";
+            maxDataUrl = "/cardnews/instagram";
             maxDataName = '인스타그램';
             break;
         case 6:
-            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
-            maxDataUrl = "/cardNews/netflix";
+            maxDataThumbnail = "../../../assets/images/cardNews/kakaotalk.jpg";
+            maxDataUrl = "/cardnews/kakaotalk";
             maxDataName = '카카오톡';
             break;
         case 7:
-            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
-            maxDataUrl = "/cardNews/netflix";
+            maxDataThumbnail = "../../../assets/images/cardNews/call.jpg";
+            maxDataUrl = "/cardnews/call";
             maxDataName = '전화';
             break;
         case 8:
-            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
-            maxDataUrl = "/cardNews/netflix";
+            maxDataThumbnail = "../../../assets/images/cardNews/zoom.jpg";
+            maxDataUrl = "/cardnews/zoom";
             maxDataName = '줌';
             break;
         case 9:
-            maxDataThumbnail = "../../../assetsimages/cardNews/netflix.jpg";
-            maxDataUrl = "/cardNews/netflix";
+            maxDataThumbnail = "../../../assets/images/cardNews/email.jpg";
+            maxDataUrl = "/cardnews/email";
             maxDataName = '이메일';
             break;
     }
@@ -169,7 +184,7 @@ const TestResult = () => {
     const [zoomBtn,setZoomBtn] = useState(false);
     const [emailBtn,setEmailBtn] = useState(false);
 
-    //전세계 디지털 탄소발자국의 양을 설정
+    //전세계 디지털 탄소발자국의 양을 설정, 초기값은 전체 수치인 762,194
     const [carbonFootprint,setCarbonFootPrint] = useState(762194);
 
     const onNetflixBtnHandler = (event) => {
@@ -339,7 +354,7 @@ const TestResult = () => {
                     <p className="result-sum-title">당신이 <b>한 달 동안</b> 만들어낸 <b>디지털 탄소 발자국의 양</b>은</p>
                     <p className="result-number"><span>{result}</span>g CO2eq</p>
                     <p className="result-metaphor">승용차로 약 <span>{resultLikeCar}km</span> 만큼 이동할 수 있는 양입니다.</p>
-                    <div className="result-metaphor-img"></div>
+                    <div className="result-metaphor-img">{showResultCar}</div>
                 </article>
                 <article className="test-result-detail">
                     <h3> 당신이 사용한 어플들은 각각 얼마만큼의 디지털 탄소 발자국을 배출했을까요? </h3>
@@ -367,10 +382,10 @@ const TestResult = () => {
                     <div className="recommend-text">
                         <h3><span>{maxDataName}</span>에서 탄소를 가장 많이 배출했네요!</h3>
                         <p>이 서비스를 사용하는 행동이 어째서 탄소를 발생시키는지 한 번 알아볼까요?</p>
-                        <Link to=""><button className="card-navigator">Let's GO!</button></Link>
+                        <Link to={maxDataUrl}><button className="card-navigator">Let's GO!</button></Link>
                     </div>
                     <div className="recommend-img">
-                    
+                        <img src={maxDataThumbnail} alt="card news Thumbnail"/>
                     </div>
                 </article>
             </section>
