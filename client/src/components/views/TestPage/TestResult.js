@@ -2,7 +2,8 @@ import React,{ useEffect, useState, useRef } from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestResult.css';
 import { Link } from "react-router-dom";
-import { BarChart,Bar,XAxis,YAxis,CartesianGrid,LabelList } from "recharts";
+import { BarChart,Bar,XAxis,YAxis,CartesianGrid } from "recharts";
+import { useSpring,animated } from 'react-spring';
 import {ReactComponent as Netflix } from '../../../assets/images/appIcons/Netflix/black.svg';
 import {ReactComponent as Youtube} from '../../../assets/images/appIcons/Youtube/black.svg';
 import {ReactComponent as Facebook } from '../../../assets/images/appIcons/Facebook/black.svg';
@@ -45,9 +46,9 @@ const TestResult = () => {
     setCarArray();
 
     const showResultCar = carArray.map((minicar,index) => {
-        console.log("hihihihi,",minicar);
+        let delay = index/50;
         return(
-            <Minicar />
+            <Minicar style={{animationDelay:delay+'s'}}/>
         )
     })
     
@@ -170,7 +171,6 @@ const TestResult = () => {
             break;
     }
 
-
     /* 전 세계 트래픽 디지털 탄소 배출량 설명 */
     //앱 리스트 버튼 -> 추후 컴포넌트로 뺄 것.
     const [netflixBtn, setNetflixBtn] = useState(false);
@@ -185,7 +185,7 @@ const TestResult = () => {
     const [emailBtn,setEmailBtn] = useState(false);
 
     //전세계 디지털 탄소발자국의 양을 설정, 초기값은 전체 수치인 762,194
-    const [carbonFootprint,setCarbonFootPrint] = useState(762194);
+    const [carbonFootprint,setCarbonFootPrint] = useState('762,194');
 
     const onNetflixBtnHandler = (event) => {
         event.preventDefault();
@@ -200,7 +200,7 @@ const TestResult = () => {
         setZoomBtn(false);
         setEmailBtn(false);
 
-        setCarbonFootPrint(647);
+        setCarbonFootPrint("647");
     }
     const onYoutubeBtnHandler = (event) => {
         event.preventDefault();
@@ -215,7 +215,7 @@ const TestResult = () => {
         setZoomBtn(false);
         setEmailBtn(false);
 
-        setCarbonFootPrint(3000);
+        setCarbonFootPrint("3000");
     }
 
     const onFacebookBtnHandler = (event) => {
@@ -231,7 +231,7 @@ const TestResult = () => {
         setZoomBtn(false);
         setEmailBtn(false);
 
-        setCarbonFootPrint(150);
+        setCarbonFootPrint("150");
     }
     
     const onTwitterBtnHandler = (event) => {
@@ -247,7 +247,7 @@ const TestResult = () => {
         setZoomBtn(false);
         setEmailBtn(false);
 
-        setCarbonFootPrint(511);
+        setCarbonFootPrint("511");
     }
     
     const onTiktokBtnHandler = (event) => {
@@ -263,7 +263,7 @@ const TestResult = () => {
         setZoomBtn(false);
         setEmailBtn(false);
 
-        setCarbonFootPrint(393);
+        setCarbonFootPrint("393");
     }
     
     const onInstagramBtnHandler = (event) => {
@@ -279,7 +279,7 @@ const TestResult = () => {
         setZoomBtn(false);
         setEmailBtn(false);
 
-        setCarbonFootPrint(402);
+        setCarbonFootPrint("402");
     }
     
     const onKakaoTalkBtnHandler = (event) => {
@@ -327,7 +327,7 @@ const TestResult = () => {
         setCallBtn(false);
         setEmailBtn(false);
 
-        setCarbonFootPrint(1729);
+        setCarbonFootPrint("1729");
     }
     
     const onEmailBtnHandler = (event) => {
@@ -343,9 +343,12 @@ const TestResult = () => {
         setCallBtn(false);
         setZoomBtn(false);
 
-        setCarbonFootPrint(752000);
+        setCarbonFootPrint("752,000");
     }
-
+    const worldProps = useSpring({val:762194,from:{val:0}});
+    const plasticProps = useSpring({val:33138869,from:{val:0}});
+    const treeProps = useSpring({val:84688,from:{val:0}});
+    const carProps = useSpring({val:7857670,from:{val:0}});
     return(
         <main className="TestResult">
             {/* --- 테스트 결과 설명 ---*/}
@@ -455,25 +458,42 @@ const TestResult = () => {
                 </article>
                 <article className="world-digital-carbon-info">
                     <p className="world-digital-carbon-title"><b>전 세계</b>에서 <b>1분간</b> 발생하는 <b>디지털 탄소 발자국의 양</b>은</p>
-                    <p className="world-digital-carbon-number">762,194kg</p>
+                    <p className="world-digital-carbon-number">
+                        <animated.span className="number">
+                            {worldProps.val.interpolate(val=>Math.floor(val).toLocaleString('en-US'))}
+                        </animated.span>
+                        kg
+                    </p>
                     <p className="world-digital-carbon-unit">CO2 eq</p>
                     <div class="same">=</div>
                     <div className="world-metaphor">
                         <div className="world-metaphor-content plastic">
                             <p className="world-metaphor-object">플라스틱 컵</p>
-                            <p className="world-metaphor-number" style={{color:'#00FFF9'}}>33,138,869</p>
+                            <p className="world-metaphor-number" style={{color:'#00FFF9'}}>
+                                <animated.span className="number">
+                                    {plasticProps.val.interpolate(val=>Math.floor(val).toLocaleString('en-US'))}
+                                </animated.span>
+                            </p>
                             <p className="world-metaphor-unit">개</p>
                             <div className="world-metaphor-img"></div>
                         </div>
                         <div className="world-metaphor-content tree">
                             <p className="world-metaphor-object">30년생 나무</p>
-                            <p className="world-metaphor-number" style={{color:'#70FF00'}}>84,688</p>
+                            <p className="world-metaphor-number" style={{color:'#70FF00'}}>
+                                <animated.span className="number">
+                                    {treeProps.val.interpolate(val=>Math.floor(val).toLocaleString('en-US'))}
+                                </animated.span>
+                            </p>
                             <p className="world-metaphor-unit">그루</p>
                             <div className="world-metaphor-img"></div>
                         </div>
                         <div className="world-metaphor-content mobility">
                             <p className="world-metaphor-object">자동차로 이동</p>
-                            <p className="world-metaphor-number" style={{color:'#FAFF00'}}>7,857,670</p>
+                            <p className="world-metaphor-number" style={{color:'#FAFF00'}}>
+                                <animated.span className="number">
+                                    {carProps.val.interpolate(val=>Math.floor(val).toLocaleString('en-US'))}
+                                </animated.span>
+                            </p>
                             <p className="world-metaphor-unit">km</p>
                             <div className="world-metaphor-img"></div>
                         </div>

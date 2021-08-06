@@ -29,6 +29,7 @@
     "mongoose": "^5.13.3",
     "react-draggable": "^4.4.3",
     "react-router": "^5.2.0",
+    "react-spring": "^9.2.4",
     "recharts": "^2.0.10",
     "use-draggable": "^1.5.2"
   },
