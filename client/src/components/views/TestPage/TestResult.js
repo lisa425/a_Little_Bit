@@ -345,10 +345,9 @@ const TestResult = () => {
 
         setCarbonFootPrint("752,000");
     }
-    const worldProps = useSpring({val:762194,from:{val:0}});
-    const plasticProps = useSpring({val:33138869,from:{val:0}});
-    const treeProps = useSpring({val:84688,from:{val:0}});
-    const carProps = useSpring({val:7857670,from:{val:0}});
+    const plasticProps = useSpring({val:33138869,from:{val:100000}});
+    const treeProps = useSpring({val:84688,from:{val:1000}});
+    const carProps = useSpring({val:7857670,from:{val:1000000}});
     return(
         <main className="TestResult">
             {/* --- 테스트 결과 설명 ---*/}
@@ -385,7 +384,7 @@ const TestResult = () => {
                     <div className="recommend-text">
                         <h3><span>{maxDataName}</span>에서 탄소를 가장 많이 배출했네요!</h3>
                         <p>이 서비스를 사용하는 행동이 어째서 탄소를 발생시키는지 한 번 알아볼까요?</p>
-                        <Link to={maxDataUrl}><button className="card-navigator">Let's GO!</button></Link>
+                        <Link to="/cardnews"><button className="card-navigator">Let's GO!</button></Link>
                     </div>
                     <div className="recommend-img">
                         <img src={maxDataThumbnail} alt="card news Thumbnail"/>
@@ -459,10 +458,7 @@ const TestResult = () => {
                 <article className="world-digital-carbon-info">
                     <p className="world-digital-carbon-title"><b>전 세계</b>에서 <b>1분간</b> 발생하는 <b>디지털 탄소 발자국의 양</b>은</p>
                     <p className="world-digital-carbon-number">
-                        <animated.span className="number">
-                            {worldProps.val.interpolate(val=>Math.floor(val).toLocaleString('en-US'))}
-                        </animated.span>
-                        kg
+                        762,194kg
                     </p>
                     <p className="world-digital-carbon-unit">CO2 eq</p>
                     <div class="same">=</div>

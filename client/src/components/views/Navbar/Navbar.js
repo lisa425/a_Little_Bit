@@ -25,12 +25,12 @@ const NavBar = ({match}) => {
                             <p className="kr-menu">디지털 사용량 테스트</p></Link>
                         </li>
 
-                        <li><Link to="/test/earthlist" onClick={closeSidebar}>
+                        <li><Link to="" onClick={closeSidebar}>
                             <p className="en-menu">Future of earth</p>
                             <p className="kr-menu">지구의 미래?</p></Link>
                         </li>
 
-                        <li><Link to="" onClick={closeSidebar}>
+                        <li><Link to="/cardnews" onClick={closeSidebar}>
                             <p className="en-menu">Fun facts</p>
                             <p className="kr-menu">카드 뉴스</p></Link>
                         </li>
