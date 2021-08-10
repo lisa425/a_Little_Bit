@@ -59,7 +59,7 @@
     position: relative;
     font-size:1.75rem;
     font-family: "Elice Digital Baeum";
-    margin:3rem 0;
+    margin:6rem 0 3rem 0;
     animation-name: fadeInAnimation;
     opacity: 0;
     animation-delay:0.1s;
@@ -426,7 +426,7 @@
     width:95px;
     height:2px;
     background: white;
-    margin: 5rem 0;
+    margin: 5rem 0 8rem 0;
 }
 .result-navigator-title{
     display: flex;
@@ -440,6 +440,7 @@
     font-family: "Rany";
     font-weight: 800;
     line-height: 4.5rem;
+    margin-top: 5rem;
 }
 .result-navigator-title p{
     font-family: "NEXON Lv2 Gothic";

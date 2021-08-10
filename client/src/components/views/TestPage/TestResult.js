@@ -7,6 +7,8 @@ import { useSpring,animated } from 'react-spring';
 import Tree from './animation/Tree';
 import Plastic from './animation/Plastic';
 import Car from './animation/Car';
+import {ReactComponent as Symbol1} from '../../../assets/images/symbols/symbol.svg'
+import {ReactComponent as Symbol2} from '../../../assets/images/symbols/symbol2.svg'
 import {ReactComponent as Netflix } from '../../../assets/images/appIcons/Netflix/black.svg';
 import {ReactComponent as Youtube} from '../../../assets/images/appIcons/Youtube/black.svg';
 import {ReactComponent as Facebook } from '../../../assets/images/appIcons/Facebook/black.svg';
@@ -354,6 +356,7 @@ const TestResult = () => {
             {/* --- 테스트 결과 설명 ---*/}
             <section className="test-result-section">
                 <article className="test-result-summary">
+                    <Symbol2 />
                     <p className="result-sum-title">당신이 <b>한 달 동안</b> 만들어낸 <b>디지털 탄소 발자국의 양</b>은</p>
                     <p className="result-number"><span>{result}</span>g CO2eq</p>
                     <p className="result-metaphor">승용차로 약 <span>{resultLikeCar}km</span> 만큼 이동할 수 있는 양입니다.</p>
@@ -501,8 +504,9 @@ const TestResult = () => {
             {/* --- 다른 페이지 소개 & 이동 ---*/}
             <section className="result-navigator">
                 <hr/>
+                <Symbol1/>
                 <article className="result-navigator-title">
-                    <h2><span>a Little</span> ha<span>bit</span> makes Big impacts</h2>
+                    <h2>a L<span>i</span>ttle hab<span>i</span>t makes Big <span>i</span>mpacts</h2>
                     <p>"나 하나쯤이야"라고 생각한 사람들의 <span>작은 습관</span>들이 모여 지구에 <span>큰 영향</span>을 끼치고 있습니다.</p>
                 </article>
                 <article className="result-navigator-box-container">
