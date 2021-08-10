@@ -1,0 +1,37 @@
+@keyframes falling{
+    from{
+        top:-97%;
+    }
+    to{
+        top:0%;
+    }
+}
+.icon-animation{
+    width:294px;
+    height:150px;
+    display:flex;
+}
+.iconline{
+    position: relative;
+    top: -95%;
+    width:calc(100%/10);
+    animation-name: falling;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+
+.iconline-2,
+.iconline-6,
+.iconline-8{
+    animation-duration: 4.6s;
+}
+.iconline-4,
+.iconline-10{
+    animation-duration: 5.2s;
+}
+
+.icon-img{
+    width:80%;
+    margin:1px;
+}

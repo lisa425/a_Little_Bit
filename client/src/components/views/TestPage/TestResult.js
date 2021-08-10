@@ -4,6 +4,9 @@ import '../../../css/TestPage/TestResult.css';
 import { Link } from "react-router-dom";
 import { BarChart,Bar,XAxis,YAxis,CartesianGrid } from "recharts";
 import { useSpring,animated } from 'react-spring';
+import Tree from './animation/Tree';
+import Plastic from './animation/Plastic';
+import Car from './animation/Car';
 import {ReactComponent as Netflix } from '../../../assets/images/appIcons/Netflix/black.svg';
 import {ReactComponent as Youtube} from '../../../assets/images/appIcons/Youtube/black.svg';
 import {ReactComponent as Facebook } from '../../../assets/images/appIcons/Facebook/black.svg';
@@ -15,6 +18,15 @@ import {ReactComponent as Call } from '../../../assets/images/appIcons/Call/blac
 import {ReactComponent as Zoom} from '../../../assets/images/appIcons/Zoom/black.svg';
 import {ReactComponent as Email } from '../../../assets/images/appIcons/Email/black.svg';
 import {ReactComponent as Minicar } from '../../../assets/images/resultIcons/minicar.svg';
+import netflix from '../../../assets/images/cardNews/cardNewsThumbnail/netflix.jpg';
+import youtube from '../../../assets/images/cardNews/cardNewsThumbnail/youtube.jpg';
+import facebook from '../../../assets/images/cardNews/cardNewsThumbnail/facebook.jpg';
+import twitter from '../../../assets/images/cardNews/cardNewsThumbnail/twitter.jpg';
+import instagram from '../../../assets/images/cardNews/cardNewsThumbnail/instagram.jpg';
+import kakaotalk from '../../../assets/images/cardNews/cardNewsThumbnail/kakaotalk.jpg';
+import email from '../../../assets/images/cardNews/cardNewsThumbnail/email.jpg';
+import zoom from '../../../assets/images/cardNews/cardNewsThumbnail/zoom.jpg';
+import datacenter from '../../../assets/images/cardNews/cardNewsThumbnail/datacenter.jpg';
 
 const TestResult = () => {
     const [cookie,setCookie] = useState({});
@@ -116,57 +128,46 @@ const TestResult = () => {
     //가장 많이 사용된 앱을 선별한다.
     let maxDataIndex = appData.indexOf(Math.max.apply(null,appData));
     let maxDataThumbnail = "";
-    let maxDataUrl = "";
     let maxDataName = "";
     switch(maxDataIndex){
         case 0:
-            maxDataThumbnail = "../../../assets/images/cardNews/netflix.jpg";
-            maxDataUrl = "/cardnews/netflix";
+            maxDataThumbnail = netflix;
             maxDataName = "넷플릭스";
             break;
         case 1:
-            maxDataThumbnail = "../../../assets/images/cardNews/youtube.jpg";
-            maxDataUrl = "/cardnews/youtube";
+            maxDataThumbnail = youtube;
             maxDataName = '유튜브';
             break;
         case 2:
-            maxDataThumbnail = "../../../assets/images/cardNews/facebook.jpg";
-            maxDataUrl = "/cardnews/facebook";
+            maxDataThumbnail = facebook;
             maxDataName = '페이스북';
             break;
         case 3:
-            maxDataThumbnail = "../../../assets/images/cardNews/twitter.jpg";
-            maxDataUrl = "/cardnews/twitter";
+            maxDataThumbnail = twitter;
             maxDataName = '트위터';
             break;
         case 4:
-            maxDataThumbnail = "../../../assets/images/cardNews/tiktok.jpg";
-            maxDataUrl = "/cardnews/tiktok";
+            maxDataThumbnail = datacenter;
             maxDataName = '틱톡';
             break;
         case 5:
-            maxDataThumbnail = "../../../assets/images/cardNews/instagram.jpg";
-            maxDataUrl = "/cardnews/instagram";
+            maxDataThumbnail = instagram;
             maxDataName = '인스타그램';
             break;
         case 6:
-            maxDataThumbnail = "../../../assets/images/cardNews/kakaotalk.jpg";
-            maxDataUrl = "/cardnews/kakaotalk";
+            maxDataThumbnail = kakaotalk;
             maxDataName = '카카오톡';
             break;
         case 7:
-            maxDataThumbnail = "../../../assets/images/cardNews/call.jpg";
-            maxDataUrl = "/cardnews/call";
+            maxDataThumbnail = datacenter;
             maxDataName = '전화';
             break;
         case 8:
-            maxDataThumbnail = "../../../assets/images/cardNews/zoom.jpg";
-            maxDataUrl = "/cardnews/zoom";
+            maxDataThumbnail = zoom;
             maxDataName = '줌';
             break;
         case 9:
-            maxDataThumbnail = "../../../assets/images/cardNews/email.jpg";
-            maxDataUrl = "/cardnews/email";
+            maxDataThumbnail = email;
             maxDataName = '이메일';
             break;
     }
@@ -471,7 +472,7 @@ const TestResult = () => {
                                 </animated.span>
                             </p>
                             <p className="world-metaphor-unit">개</p>
-                            <div className="world-metaphor-img"></div>
+                            <div className="world-metaphor-img"><Plastic /></div>
                         </div>
                         <div className="world-metaphor-content tree">
                             <p className="world-metaphor-object">30년생 나무</p>
@@ -481,7 +482,7 @@ const TestResult = () => {
                                 </animated.span>
                             </p>
                             <p className="world-metaphor-unit">그루</p>
-                            <div className="world-metaphor-img"></div>
+                            <div className="world-metaphor-img"><Tree /></div>
                         </div>
                         <div className="world-metaphor-content mobility">
                             <p className="world-metaphor-object">자동차로 이동</p>
@@ -491,7 +492,7 @@ const TestResult = () => {
                                 </animated.span>
                             </p>
                             <p className="world-metaphor-unit">km</p>
-                            <div className="world-metaphor-img"></div>
+                            <div className="world-metaphor-img"><Car /></div>
                         </div>
                     </div>
                 </article>

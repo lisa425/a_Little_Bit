@@ -156,7 +156,10 @@
 .recommend-img{
     width:15rem;
     height: 15rem;
-    border:1px solid white;
+}
+.recommend-img img{
+    width:100%;
+    height:100%;
 }
 .card-navigator{
     width:180px;
@@ -410,9 +413,11 @@
 }
 .world-metaphor-img{
     width:294px;
-    height:124px;
-    border:1px solid white;
-    margin:3rem 0 10rem 0
+    height:150px;
+    overflow: hidden;
+    margin:3rem 0 10rem 0;
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, rgba(0,0,0,0.8) 60%);
+    mask-image: linear-gradient(to top, transparent 0%, rgba(0,0,0,0.8) 60%);
 }
 
 
