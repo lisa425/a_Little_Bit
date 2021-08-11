@@ -384,45 +384,25 @@ const TestResult = () => {
                     <p>앱 아이콘을 클릭하고 전 세계 트래픽이 발생시키는 디지털 탄소 발자국의 양을 확인하세요</p>
                 </div>
                 <ul>
-                    <li>
-                        <Netflix className={netflixBtn ? 'netflix-white' : 'netflix-color'} onClick={onNetflixBtnHandler}/>
-                    </li>
+                    <li><Netflix className={netflixBtn ? 'netflix-white' : 'netflix-color'} onClick={onNetflixBtnHandler}/></li>
 
-                    <li>
-                        <Youtube className={youtubeBtn ? 'youtube-white' : 'youtube-color'} onClick={onYoutubeBtnHandler}/>
-                    </li>
+                    <li><Youtube className={youtubeBtn ? 'youtube-white' : 'youtube-color'} onClick={onYoutubeBtnHandler}/></li>
 
-                    <li>
-                        <Facebook className={facebookBtn ? 'facebook-white' : 'facebook-color'} onClick={onFacebookBtnHandler}/>
-                    </li>
+                    <li><Facebook className={facebookBtn ? 'facebook-white' : 'facebook-color'} onClick={onFacebookBtnHandler}/></li>
 
-                    <li>
-                        <Twitter className={twitterBtn ? 'twitter-white' : 'twitter-color'} onClick={onTwitterBtnHandler}/>
-                    </li>
+                    <li><Twitter className={twitterBtn ? 'twitter-white' : 'twitter-color'} onClick={onTwitterBtnHandler}/></li>
 
-                    <li>
-                        <Tiktok className={tiktokBtn ? 'tiktok-white' : 'tiktok-color'} onClick={onTiktokBtnHandler}/>
-                    </li>
+                    <li><Tiktok className={tiktokBtn ? 'tiktok-white' : 'tiktok-color'} onClick={onTiktokBtnHandler}/></li>
 
-                    <li>
-                        <Instagram className={instagramBtn ? 'instagram-white' : 'instagram-color'} onClick={onInstagramBtnHandler}/>
-                    </li>
+                    <li><Instagram className={instagramBtn ? 'instagram-white' : 'instagram-color'} onClick={onInstagramBtnHandler}/></li>
 
-                    <li>
-                        <Message className={messageBtn ? 'message-white' : 'message-color'} onClick={onMessageBtnHandler}/>
-                    </li>
+                    <li><Message className={messageBtn ? 'message-white' : 'message-color'} onClick={onMessageBtnHandler}/></li>
 
-                    <li>
-                        <Search className={searchBtn ? 'search-white' : 'search-color'} onClick={onSearchBtnHandler}/>
-                    </li>
+                    <li><Search className={searchBtn ? 'search-white' : 'search-color'} onClick={onSearchBtnHandler}/></li>
 
-                    <li>
-                        <Zoom className={zoomBtn ? 'zoom-white' : 'zoom-color'} onClick={onZoomBtnHandler}/>
-                    </li>
+                    <li><Zoom className={zoomBtn ? 'zoom-white' : 'zoom-color'} onClick={onZoomBtnHandler}/></li>
 
-                    <li>
-                        <Email className={emailBtn ? 'email-white' : 'email-color'} onClick={onEmailBtnHandler}/>
-                    </li>
+                    <li><Email className={emailBtn ? 'email-white' : 'email-color'} onClick={onEmailBtnHandler}/></li>
                 </ul>
                 <article className="world-data-info">
                     <div className="world-data">

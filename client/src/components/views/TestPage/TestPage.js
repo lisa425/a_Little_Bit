@@ -499,6 +499,7 @@ const TestPage = () => {
     //Zoom input state 설정
     const [ZoomWeek, setZoomWeek] = useState(0);
     const [ZoomDay, setZoomDay] = useState(0);
+    const [ZoomOn, setZoomOn] = useState(false);
     const onZoomWeekChange = (e) => {
         /*input1의 value를 변화시킨다.*/
         setZoomWeek(e.currentTarget.value);
@@ -507,7 +508,21 @@ const TestPage = () => {
         /*input2의 value를 변화시킨다.*/
         setZoomDay(event.currentTarget.value);
     }
-    const zoomResult = ZoomWeek * ZoomDay * 8.3;
+    const notZoomOn = (e) => {
+        e.preventDefault();
+        setZoomOn(true);
+    }
+    const yesZoomOn = (e) => {
+        e.preventDefault();
+        setZoomOn(false);
+    }
+    let zoomResult;
+    if(ZoomOn){
+        //카메라를 끈다면
+        zoomResult = ZoomWeek * ZoomDay * 8.3 * 0.04;
+    }else{
+        zoomResult = ZoomWeek * ZoomDay * 8.3;
+    }
 
     //email input state 설정
     const [EmailCount, setEmailCount] = useState(0);
@@ -519,10 +534,16 @@ const TestPage = () => {
         e.preventDefault();
         setEmailDelete(false);
     }
-
-    let emailResult = EmailCount;
-    if(EmailDelete === false){
-        emailResult = emailResult * 4;
+    const yesEmailDelete = (e) => {
+        e.preventDefault();
+        setEmailDelete(true);
+    }
+    let emailResult;
+    if(EmailDelete){
+        emailResult = EmailCount;
+    }else{
+        //이메일을 주기적으로 지우지 않는다면
+        emailResult = EmailCount * 4;
     }
 
     let appResult = parseInt(netflixResult + youtubeResult + facebookResult + twitterResult + tiktokResult + instagramResult + kakaoTalkResult + callResult + zoomResult + emailResult);
@@ -937,6 +958,16 @@ const TestPage = () => {
                                                 </div>
                                                 <input id="question2_input" className="test-range-bar" type="range" min="0" max="24" onChange={onZoomDayChange} value={ZoomDay}/>
                                             </div>
+
+                                            <div className="question-box">
+                                                <div className="qna">
+                                                    <p className="question">회의에 접속할 때 카메라를 키는 편인가요?</p>
+                                                    <div>
+                                                        <input className="btn-sm-cyan" name="zoom" type="button" value="예" onClick={yesZoomOn}/>
+                                                        <input className="btn-sm-cyan" name="zoom" type="button" value="아니오" onClick={notZoomOn}/>
+                                                    </div>
+                                                </div>  
+                                            </div>
                                         </div>
                                         <button className="ctrl-btn next_question" onClick={onEmailBoxHandler}><Next/></button>
                                     </article>
@@ -966,8 +997,8 @@ const TestPage = () => {
                                                 <div className="qna">
                                                     <p className="question">읽은 메일을 평소 지우는 편이신가요?</p>
                                                     <div>
-                                                        <input className="btn-sm" name="email" type="button" value="예"/>
-                                                        <input className="btn-sm" name="email" type="button" value="아니오" onClick={notEmailDelete}/>
+                                                        <input className="btn-sm-green" name="email" type="button" value="예" onClick={yesEmailDelete}/>
+                                                        <input className="btn-sm-green" name="email" type="button" value="아니오" onClick={notEmailDelete}/>
                                                     </div>
                                                 </div>  
                                             </div>

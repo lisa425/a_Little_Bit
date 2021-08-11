@@ -310,7 +310,7 @@ h3{
     width:100%;
 }
 
-.btn-sm{
+.btn-sm-green{
     font-family: 'Elice Digital Baeum';
     font-size: 1em;
     padding:0.5em;
@@ -320,12 +320,31 @@ h3{
     width:70px;
     border:none;
 }
-.btn-sm:hover{
+.btn-sm-green:hover{
     background-color:#70FF00;
     color:black;
 }
-.btn-sm:focus{
+.btn-sm-green:focus{
     background-color:#70FF00;
+    color:black;
+}
+
+.btn-sm-cyan{
+    font-family: 'Elice Digital Baeum';
+    font-size: 1em;
+    padding:0.5em;
+    border-radius: 5px;
+    background-color:black;
+    color:white;
+    width:70px;
+    border:none;
+}
+.btn-sm-cyan:hover{
+    background-color:#00FFF9;
+    color:black;
+}
+.btn-sm-cyan:focus{
+    background-color:#00FFF9;
     color:black;
 }
 
