@@ -1,14 +1,23 @@
 import React, { useState} from 'react';
+import '../../../css/TestPage/TestPixel.css';
 
-const TestPixel = (props) => {
+//앱 range바의 값을 곱한 숫자를 전달받고 색깔도 숫자로 전달받기?
+const TestPixel = (appState,color) => {
     const [pixel, setPixel] = useState(1)
-    const randomPosition = Math.floor(Math.random()*(1-44));
-    const renderPixel = () => {
+    const randomPositionColumn = Math.floor(Math.random()*(1-66));
+    const randomPositionRow = Math.floor(Math.random()*(1-37));
+    const appColor = ['#FAFF00','#FF00FE','#70FF00','#00FFF9']; //노랑,핑크,초록,블루 순
 
+
+    const renderPixel = () => {
+        //map
+        return(
+            <div class="test-pixel-item" style={{gridColumn:randomPositionColumn,gridRow:randomPositionRow,backgroundColor:appColor}}></div>
+        )
     }
     return (
-        <div className="test-pixel">
-
+        <div className="test-pixel-grid-container">
+            {renderPixel}
         </div>
     );
 }

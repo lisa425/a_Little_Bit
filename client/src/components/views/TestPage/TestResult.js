@@ -4,9 +4,13 @@ import '../../../css/TestPage/TestResult.css';
 import { Link } from "react-router-dom";
 import { BarChart,Bar,XAxis,YAxis,CartesianGrid } from "recharts";
 import { useSpring,animated } from 'react-spring';
+//애니메이션,그래픽 요소
 import Tree from './animation/Tree';
 import Plastic from './animation/Plastic';
 import Car from './animation/Car';
+import WorldDataGraphic from './DataGraphic/WorldDataGraphic';
+import TestPixel from './TestPixel';
+//svg 아이콘 버튼 파일
 import {ReactComponent as Symbol1} from '../../../assets/images/symbols/symbol.svg'
 import {ReactComponent as Symbol2} from '../../../assets/images/symbols/symbol2.svg'
 import {ReactComponent as Netflix } from '../../../assets/images/appIcons/Netflix/black.svg';
@@ -20,6 +24,7 @@ import {ReactComponent as Call } from '../../../assets/images/appIcons/Call/blac
 import {ReactComponent as Zoom} from '../../../assets/images/appIcons/Zoom/black.svg';
 import {ReactComponent as Email } from '../../../assets/images/appIcons/Email/black.svg';
 import {ReactComponent as Minicar } from '../../../assets/images/resultIcons/minicar.svg';
+//카드뉴스 썸네일 이미지
 import netflix from '../../../assets/images/cardNews/cardNewsThumbnail/netflix.jpg';
 import youtube from '../../../assets/images/cardNews/cardNewsThumbnail/youtube.jpg';
 import facebook from '../../../assets/images/cardNews/cardNewsThumbnail/facebook.jpg';
@@ -455,9 +460,7 @@ const TestResult = () => {
                             <span><div id="kg100000"></div> 100000kg</span>
                         </div>
                     </div>
-                    <div className="world-data-carbon-visualization">
-
-                    </div>
+                    <WorldDataGraphic />
                 </article>
                 <article className="world-digital-carbon-info">
                     <p className="world-digital-carbon-title"><b>전 세계</b>에서 <b>1분간</b> 발생하는 <b>디지털 탄소 발자국의 양</b>은</p>
@@ -524,6 +527,7 @@ const TestResult = () => {
                     </div>
                 </article>
             </section>
+            <TestPixel />
         </main>
     )
 }

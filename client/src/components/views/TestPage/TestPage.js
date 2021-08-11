@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestPage.css';
 import {Link} from 'react-router-dom';
+import TestPixel from './TestPixel';
+//app Icons
 import {ReactComponent as Netflix } from '../../../assets/images/appIcons/Netflix/black.svg';
 import {ReactComponent as Youtube} from '../../../assets/images/appIcons/Youtube/black.svg';
 import {ReactComponent as Facebook } from '../../../assets/images/appIcons/Facebook/black.svg';
@@ -24,7 +26,7 @@ import {ReactComponent as KakaotalkColor } from '../../../assets/images/appIcons
 import {ReactComponent as CallColor } from '../../../assets/images/appIcons/Call/color.svg';
 import {ReactComponent as ZoomColor} from '../../../assets/images/appIcons/Zoom/color.svg';
 import {ReactComponent as EmailColor } from '../../../assets/images/appIcons/Email/color.svg';
-import TestPixel from './TestPixel';
+
 
 
 
@@ -560,6 +562,7 @@ const TestPage = () => {
  
     return(
         <main className="testpage">
+                <TestPixel/>
                 <form className="input-contents slider">
                 {/* page 1 : 이름 입력 */}
                 <div className="content-wrapper">
@@ -585,7 +588,7 @@ const TestPage = () => {
 
                 {/* page 3 : 사용량 입력 */}
                     <section className={finished? "page3-close" : "get-info"}>
-                    <TestPixel/>
+                
                         <div className="get-info-input">
                             <div className="test page-3" id="get-appUseData">
                                 <h3>서비스를 클릭해 사용량을 기록해주세요</h3>

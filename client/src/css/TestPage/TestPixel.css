@@ -1,11 +1,16 @@
-.test-pixel{
+.test-pixel-grid-container{
     width:100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(44,1fr);
-    grid-template-rows: repeat(24,1fr);
+    grid-template-columns: repeat(66,30px);
+    grid-template-rows: repeat(37,30px);
     position: absolute;
     top:0;
-    z-index: 1;
     left:0;
+    
+}
+.test-pixel-item{
+    background-color:#FAFF00;
+    grid-column: 13;
+    grid-row:17;
 }
