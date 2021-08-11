@@ -1,3 +1,6 @@
+!!!!이때는 svg의 display를 none으로 설정!
+
+
 import React,{ useEffect, useState, useRef } from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestResult.css';

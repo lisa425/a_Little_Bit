@@ -10,7 +10,7 @@ const TestPixel = (appState,color) => {
 
 
     const renderPixel = () => {
-        //map
+        //reduce:누적값 이용
         return(
             <div class="test-pixel-item" style={{gridColumn:randomPositionColumn,gridRow:randomPositionRow,backgroundColor:appColor}}></div>
         )

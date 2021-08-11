@@ -1,3 +1,5 @@
+!!!!이때는 svg의 display를 block으로 설정!
+
 import React,{ useEffect, useState, useRef } from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestResult.css';
@@ -182,19 +184,19 @@ const TestResult = () => {
 
     /* 전 세계 트래픽 디지털 탄소 배출량 설명 */
     //앱 리스트 버튼 -> 추후 컴포넌트로 뺄 것.
-    const [netflixBtn, setNetflixBtn] = useState(true);
-    const [youtubeBtn,setYoutubeBtn] = useState(true);
-    const [facebookBtn,setFacebookBtn] = useState(true);
-    const [twitterBtn,setTwitterBtn] = useState(true);
-    const [tiktokBtn,setTiktokBtn] = useState(true);
-    const [instagramBtn,setInstagramBtn] = useState(true);
-    const [messageBtn,setMessageBtn] = useState(true);
-    const [searchBtn,setSearchBtn] = useState(true);
-    const [zoomBtn,setZoomBtn] = useState(true);
-    const [emailBtn,setEmailBtn] = useState(true);
+    const [netflixBtn, setNetflixBtn] = useState(false);
+    const [youtubeBtn,setYoutubeBtn] = useState(false);
+    const [facebookBtn,setFacebookBtn] = useState(false);
+    const [twitterBtn,setTwitterBtn] = useState(false);
+    const [tiktokBtn,setTiktokBtn] = useState(false);
+    const [instagramBtn,setInstagramBtn] = useState(false);
+    const [messageBtn,setMessageBtn] = useState(false);
+    const [searchBtn,setSearchBtn] = useState(false);
+    const [zoomBtn,setZoomBtn] = useState(false);
+    const [emailBtn,setEmailBtn] = useState(false);
 
     //전세계 디지털 탄소발자국의 양을 설정, 초기값은 전체 수치인 762,194
-    const [carbonFootprint,setCarbonFootPrint] = useState(0);
+    const [carbonFootprint,setCarbonFootPrint] = useState(762194);
 
     //데이터 그래픽의 아이디를 가져온다.
     const world_netflix_data =  document.querySelector('#netflix');
@@ -220,7 +222,16 @@ const TestResult = () => {
         }else{
             world_netflix_data.style.display="block";
             setCarbonFootPrint(carbonFootprint+647);
-        }    
+        }
+        // setYoutubeBtn(false);
+        // setFacebookBtn(false);
+        // setTwitterBtn(false);
+        // setTiktokBtn(false);
+        // setInstagramBtn(false);
+        // setMessageBtn(false);
+        // setSearchBtn(false);
+        // setZoomBtn(false);
+        // setEmailBtn(false);        
     }
     const onYoutubeBtnHandler = (event) => {
         event.preventDefault();
@@ -232,6 +243,15 @@ const TestResult = () => {
             world_youtube_data.style.display="block";
             setCarbonFootPrint(carbonFootprint+3000);
         }
+        // setNetflixBtn(false);
+        // setFacebookBtn(false);
+        // setTwitterBtn(false);
+        // setTiktokBtn(false);
+        // setInstagramBtn(false);
+        // setMessageBtn(false);
+        // setCallBtn(false);
+        // setZoomBtn(false);
+        // setEmailBtn(false);
     }
 
     const onFacebookBtnHandler = (event) => {
@@ -244,6 +264,7 @@ const TestResult = () => {
             world_facebook_data.style.display="block";
             setCarbonFootPrint(carbonFootprint+150);
         }
+
     }
     
     const onTwitterBtnHandler = (event) => {
@@ -256,6 +277,15 @@ const TestResult = () => {
             world_twitter_data.style.display="block";
             setCarbonFootPrint(carbonFootprint+511);
         }  
+        // setNetflixBtn(false);
+        // setYoutubeBtn(false);
+        // setFacebookBtn(false);
+        // setTiktokBtn(false);
+        // setInstagramBtn(false);
+        // setMessageBtn(false);
+        // setCallBtn(false);
+        // setZoomBtn(false);
+        // setEmailBtn(false);
     }
     
     const onTiktokBtnHandler = (event) => {
@@ -268,6 +298,15 @@ const TestResult = () => {
             world_tiktok_data.style.display="block";
             setCarbonFootPrint(carbonFootprint+393);
         }
+        // setNetflixBtn(false);
+        // setYoutubeBtn(false);
+        // setFacebookBtn(false);
+        // setTwitterBtn(false);
+        // setInstagramBtn(false);
+        // setMessageBtn(false);
+        // setCallBtn(false);
+        // setZoomBtn(false);
+        // setEmailBtn(false);
     }
     
     const onInstagramBtnHandler = (event) => {
@@ -280,6 +319,16 @@ const TestResult = () => {
             world_instagram_data.style.display="block";
             setCarbonFootPrint(carbonFootprint+402);
         }
+        // setNetflixBtn(false);
+        // setYoutubeBtn(false);
+        // setFacebookBtn(false);
+        // setTwitterBtn(false);
+        // setTiktokBtn(false);
+        // setMessageBtn(false);
+        // setCallBtn(false);
+        // setZoomBtn(false);
+        // setEmailBtn(false);
+
     }
     
     const onMessageBtnHandler = (event) => {
@@ -292,6 +341,15 @@ const TestResult = () => {
             world_message_data.style.display="block";
             setCarbonFootPrint(carbonFootprint+213);
         }
+        // setNetflixBtn(false);
+        // setYoutubeBtn(false);
+        // setFacebookBtn(false);
+        // setTwitterBtn(false);
+        // setTiktokBtn(false);
+        // setInstagramBtn(false);
+        // setCallBtn(false);
+        // setZoomBtn(false);
+        // setEmailBtn(false);
     }
     
     const onSearchBtnHandler = (event) => {
@@ -304,6 +362,15 @@ const TestResult = () => {
             world_search_data.style.display="block";
             setCarbonFootPrint(carbonFootprint+3149);
         }
+        // setNetflixBtn(false);
+        // setYoutubeBtn(false);
+        // setFacebookBtn(false);
+        // setTwitterBtn(false);
+        // setTiktokBtn(false);
+        // setInstagramBtn(false);
+        // setMessageBtn(false);
+        // setZoomBtn(false);
+        // setEmailBtn(false);
     }
     
     const onZoomBtnHandler = (event) => {
@@ -316,6 +383,15 @@ const TestResult = () => {
             world_zoom_data.style.display="block";
             setCarbonFootPrint(carbonFootprint+1729);
         }
+        // setNetflixBtn(false);
+        // setYoutubeBtn(false);
+        // setFacebookBtn(false);
+        // setTwitterBtn(false);
+        // setTiktokBtn(false);
+        // setInstagramBtn(false);
+        // setMessageBtn(false);
+        // setSearchBtn(false);
+        // setEmailBtn(false);
     }
     
     const onEmailBtnHandler = (event) => {
@@ -328,6 +404,15 @@ const TestResult = () => {
             world_email_data.style.display="block";
             setCarbonFootPrint(carbonFootprint+752000);
         }
+        // setNetflixBtn(false);
+        // setYoutubeBtn(false);
+        // setFacebookBtn(false);
+        // setTwitterBtn(false);
+        // setTiktokBtn(false);
+        // setInstagramBtn(false);
+        // setMessageBtn(false);
+        // setSearchBtn(false);
+        // setZoomBtn(false);
     }
     const plasticProps = useSpring({val:33138869,from:{val:100000}});
     const treeProps = useSpring({val:84688,from:{val:1000}});
@@ -427,7 +512,7 @@ const TestResult = () => {
                 <article className="world-data-info">
                     <div className="world-data">
                         <div className="timer">01:00:00</div>
-                        <div className="carbon">{carbonFootprint.toLocaleString('en-US')}kg</div>
+                        <div className="carbon">{carbonFootprint}kg</div>
                         <div className="unit">
                             <span><div id="kg1"></div> 1kg</span>
                             <span><div id="kg50"></div> 50kg</span>

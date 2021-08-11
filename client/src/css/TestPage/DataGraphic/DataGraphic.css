@@ -1,9 +1,0 @@
-.world-data-carbon-visualization{
-    /* width:100%;
-    height: 512px; */
-    border:1px solid white;
-    margin: 3rem 0 5rem 0;
-    display: grid;
-    grid-template-rows: repeat(22,21px);
-    grid-template-columns: repeat(49,21px);
-}

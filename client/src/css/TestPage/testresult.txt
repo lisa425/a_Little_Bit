@@ -182,19 +182,19 @@ const TestResult = () => {
 
     /* 전 세계 트래픽 디지털 탄소 배출량 설명 */
     //앱 리스트 버튼 -> 추후 컴포넌트로 뺄 것.
-    const [netflixBtn, setNetflixBtn] = useState(true);
-    const [youtubeBtn,setYoutubeBtn] = useState(true);
-    const [facebookBtn,setFacebookBtn] = useState(true);
-    const [twitterBtn,setTwitterBtn] = useState(true);
-    const [tiktokBtn,setTiktokBtn] = useState(true);
-    const [instagramBtn,setInstagramBtn] = useState(true);
-    const [messageBtn,setMessageBtn] = useState(true);
-    const [searchBtn,setSearchBtn] = useState(true);
-    const [zoomBtn,setZoomBtn] = useState(true);
-    const [emailBtn,setEmailBtn] = useState(true);
+    const [netflixBtn, setNetflixBtn] = useState(false);
+    const [youtubeBtn,setYoutubeBtn] = useState(false);
+    const [facebookBtn,setFacebookBtn] = useState(false);
+    const [twitterBtn,setTwitterBtn] = useState(false);
+    const [tiktokBtn,setTiktokBtn] = useState(false);
+    const [instagramBtn,setInstagramBtn] = useState(false);
+    const [messageBtn,setMessageBtn] = useState(false);
+    const [searchBtn,setSearchBtn] = useState(false);
+    const [zoomBtn,setZoomBtn] = useState(false);
+    const [emailBtn,setEmailBtn] = useState(false);
 
     //전세계 디지털 탄소발자국의 양을 설정, 초기값은 전체 수치인 762,194
-    const [carbonFootprint,setCarbonFootPrint] = useState(0);
+    const [carbonFootprint,setCarbonFootPrint] = useState('762,194');
 
     //데이터 그래픽의 아이디를 가져온다.
     const world_netflix_data =  document.querySelector('#netflix');
@@ -211,123 +211,286 @@ const TestResult = () => {
 
     const onNetflixBtnHandler = (event) => {
         event.preventDefault();
-        console.log(netflixBtn);
-        setNetflixBtn(!netflixBtn);
-        console.log(netflixBtn);
-        if(netflixBtn==false){
-            world_netflix_data.style.display="none";
-            setCarbonFootPrint(carbonFootprint-647);
-        }else{
-            world_netflix_data.style.display="block";
-            setCarbonFootPrint(carbonFootprint+647);
-        }    
+        setNetflixBtn(true);
+        world_netflix_data.style.display="block";
+
+        world_youtube_data.style.display="none";
+        world_facebook_data.style.display="none";
+        world_twitter_data.style.display="none";
+        world_tiktok_data.style.display="none";
+        world_instagram_data.style.display="none";
+        world_message_data.style.display="none";
+        world_search_data.style.display="none";
+        world_zoom_data.style.display="none";
+        world_email_data.style.display="none";
+        
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setMessageBtn(false);
+        setSearchBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint("647");
+
+        
     }
     const onYoutubeBtnHandler = (event) => {
         event.preventDefault();
-        setYoutubeBtn(!youtubeBtn);
-        if(youtubeBtn==false){
-            world_youtube_data.style.display="none";
-            setCarbonFootPrint(carbonFootprint-3000);
-        }else{
-            world_youtube_data.style.display="block";
-            setCarbonFootPrint(carbonFootprint+3000);
-        }
+        setYoutubeBtn(true);
+        world_youtube_data.style.display="block";
+
+        world_netflix_data.style.display="none";
+        world_facebook_data.style.display="none";
+        world_twitter_data.style.display="none";
+        world_tiktok_data.style.display="none";
+        world_instagram_data.style.display="none";
+        world_message_data.style.display="none";
+        world_search_data.style.display="none";
+        world_zoom_data.style.display="none";
+        world_email_data.style.display="none";
+        
+        setNetflixBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setMessageBtn(false);
+        setSearchBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint("3000");
+
+        
     }
 
     const onFacebookBtnHandler = (event) => {
         event.preventDefault();
-        setFacebookBtn(!facebookBtn);
-        if(facebookBtn==false){
-            world_facebook_data.style.display="none";
-            setCarbonFootPrint(carbonFootprint-150);
-        }else{
-            world_facebook_data.style.display="block";
-            setCarbonFootPrint(carbonFootprint+150);
-        }
+        setFacebookBtn(true);
+        world_facebook_data.style.display="block";
+
+        world_youtube_data.style.display="none";
+        world_netflix_data.style.display="none";
+        world_twitter_data.style.display="none";
+        world_tiktok_data.style.display="none";
+        world_instagram_data.style.display="none";
+        world_message_data.style.display="none";
+        world_search_data.style.display="none";
+        world_zoom_data.style.display="none";
+        world_email_data.style.display="none";
+        
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setMessageBtn(false);
+        setSearchBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint("150");
     }
     
     const onTwitterBtnHandler = (event) => {
         event.preventDefault();
-        setTwitterBtn(!twitterBtn);  
-        if(twitterBtn==false){
-            world_twitter_data.style.display="none";
-            setCarbonFootPrint(carbonFootprint-511);
-        }else{
-            world_twitter_data.style.display="block";
-            setCarbonFootPrint(carbonFootprint+511);
-        }  
+        setTwitterBtn(true);  
+        world_twitter_data.style.display="block";
+
+        world_youtube_data.style.display="none";
+        world_facebook_data.style.display="none";
+        world_netflix_data.style.display="none";
+        world_tiktok_data.style.display="none";
+        world_instagram_data.style.display="none";
+        world_message_data.style.display="none";
+        world_search_data.style.display="none";
+        world_zoom_data.style.display="none";
+        world_email_data.style.display="none";
+        
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setMessageBtn(false);
+        setSearchBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint("511");
     }
     
     const onTiktokBtnHandler = (event) => {
         event.preventDefault();
-        setTiktokBtn(!tiktokBtn);
-        if(tiktokBtn==false){
-            world_tiktok_data.style.display="none";
-            setCarbonFootPrint(carbonFootprint-393);
-        }else{
-            world_tiktok_data.style.display="block";
-            setCarbonFootPrint(carbonFootprint+393);
-        }
+        setTiktokBtn(true);
+        world_tiktok_data.style.display="block";
+
+        world_youtube_data.style.display="none";
+        world_facebook_data.style.display="none";
+        world_twitter_data.style.display="none";
+        world_netflix_data.style.display="none";
+        world_instagram_data.style.display="none";
+        world_message_data.style.display="none";
+        world_search_data.style.display="none";
+        world_zoom_data.style.display="none";
+        world_email_data.style.display="none";
+        
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setInstagramBtn(false);
+        setMessageBtn(false);
+        setSearchBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint("393");
     }
     
     const onInstagramBtnHandler = (event) => {
         event.preventDefault();
-        setInstagramBtn(!instagramBtn);
-        if(instagramBtn==false){
-            world_instagram_data.style.display="none";
-            setCarbonFootPrint(carbonFootprint-402);
-        }else{
-            world_instagram_data.style.display="block";
-            setCarbonFootPrint(carbonFootprint+402);
-        }
+        setInstagramBtn(true);
+        world_instagram_data.style.display="block";
+
+        world_youtube_data.style.display="none";
+        world_facebook_data.style.display="none";
+        world_twitter_data.style.display="none";
+        world_tiktok_data.style.display="none";
+        world_netflix_data.style.display="none";
+        world_message_data.style.display="none";
+        world_search_data.style.display="none";
+        world_zoom_data.style.display="none";
+        world_email_data.style.display="none";
+        
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setMessageBtn(false);
+        setSearchBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint("402");
     }
     
     const onMessageBtnHandler = (event) => {
         event.preventDefault();
-        setMessageBtn(!messageBtn);
-        if(messageBtn==false){
-            world_message_data.style.display="none";
-            setCarbonFootPrint(carbonFootprint-213);
-        }else{
-            world_message_data.style.display="block";
-            setCarbonFootPrint(carbonFootprint+213);
-        }
+        setMessageBtn(true);
+        
+        world_message_data.style.display="block";
+
+        world_youtube_data.style.display="none";
+        world_facebook_data.style.display="none";
+        world_twitter_data.style.display="none";
+        world_tiktok_data.style.display="none";
+        world_instagram_data.style.display="none";
+        world_netflix_data.style.display="none";
+        world_search_data.style.display="none";
+        world_zoom_data.style.display="none";
+        world_email_data.style.display="none";
+        
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setSearchBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint();
     }
     
     const onSearchBtnHandler = (event) => {
         event.preventDefault();
-        setSearchBtn(!searchBtn);
-        if(searchBtn==false){
-            world_search_data.style.display="none";
-            setCarbonFootPrint(carbonFootprint-3149);
-        }else{
-            world_search_data.style.display="block";
-            setCarbonFootPrint(carbonFootprint+3149);
-        }
+        setSearchBtn(true);
+        world_search_data.style.display="block";
+
+        world_youtube_data.style.display="none";
+        world_facebook_data.style.display="none";
+        world_twitter_data.style.display="none";
+        world_tiktok_data.style.display="none";
+        world_instagram_data.style.display="none";
+        world_message_data.style.display="none";
+        world_netflix_data.style.display="none";
+        world_zoom_data.style.display="none";
+        world_email_data.style.display="none";
+        
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setMessageBtn(false);
+        setZoomBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint();
     }
     
     const onZoomBtnHandler = (event) => {
         event.preventDefault();
-        setZoomBtn(!zoomBtn);
-        if(zoomBtn==false){
-            world_zoom_data.style.display="none";
-            setCarbonFootPrint(carbonFootprint-1729);
-        }else{
-            world_zoom_data.style.display="block";
-            setCarbonFootPrint(carbonFootprint+1729);
-        }
+        setZoomBtn(true);
+        world_zoom_data.style.display="block";
+
+        world_youtube_data.style.display="none";
+        world_facebook_data.style.display="none";
+        world_twitter_data.style.display="none";
+        world_tiktok_data.style.display="none";
+        world_instagram_data.style.display="none";
+        world_message_data.style.display="none";
+        world_search_data.style.display="none";
+        world_netflix_data.style.display="none";
+        world_email_data.style.display="none";
+        
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setMessageBtn(false);
+        setSearchBtn(false);
+        setEmailBtn(false);
+
+        setCarbonFootPrint("1729");
     }
     
     const onEmailBtnHandler = (event) => {
         event.preventDefault();
-        setEmailBtn(!emailBtn);
-        if(emailBtn==false){
-            world_email_data.style.display="none";
-            setCarbonFootPrint(carbonFootprint-752000);
-        }else{
-            world_email_data.style.display="block";
-            setCarbonFootPrint(carbonFootprint+752000);
-        }
+        setEmailBtn(true);
+        world_email_data.style.display="block";
+
+        world_youtube_data.style.display="none";
+        world_facebook_data.style.display="none";
+        world_twitter_data.style.display="none";
+        world_tiktok_data.style.display="none";
+        world_instagram_data.style.display="none";
+        world_message_data.style.display="none";
+        world_search_data.style.display="none";
+        world_zoom_data.style.display="none";
+        world_netflix_data.style.display="none";
+        
+        setNetflixBtn(false);
+        setYoutubeBtn(false);
+        setFacebookBtn(false);
+        setTwitterBtn(false);
+        setTiktokBtn(false);
+        setInstagramBtn(false);
+        setMessageBtn(false);
+        setSearchBtn(false);
+        setZoomBtn(false);
+
+        setCarbonFootPrint("752,000");
     }
     const plasticProps = useSpring({val:33138869,from:{val:100000}});
     const treeProps = useSpring({val:84688,from:{val:1000}});
@@ -385,49 +548,49 @@ const TestResult = () => {
                 </div>
                 <ul>
                     <li>
-                        <Netflix className={netflixBtn ? 'netflix-white' : 'netflix-color'} onClick={onNetflixBtnHandler}/>
+                        <Netflix className={netflixBtn ? 'netflix-color' : 'netflix-white'} onClick={onNetflixBtnHandler}/>
                     </li>
 
                     <li>
-                        <Youtube className={youtubeBtn ? 'youtube-white' : 'youtube-color'} onClick={onYoutubeBtnHandler}/>
+                        <Youtube className={youtubeBtn ? 'youtube-color' : 'youtube-white'} onClick={onYoutubeBtnHandler}/>
                     </li>
 
                     <li>
-                        <Facebook className={facebookBtn ? 'facebook-white' : 'facebook-color'} onClick={onFacebookBtnHandler}/>
+                        <Facebook className={facebookBtn ? 'facebook-color' : 'facebook-white'} onClick={onFacebookBtnHandler}/>
                     </li>
 
                     <li>
-                        <Twitter className={twitterBtn ? 'twitter-white' : 'twitter-color'} onClick={onTwitterBtnHandler}/>
+                        <Twitter className={twitterBtn ? 'twitter-color' : 'twitter-white'} onClick={onTwitterBtnHandler}/>
                     </li>
 
                     <li>
-                        <Tiktok className={tiktokBtn ? 'tiktok-white' : 'tiktok-color'} onClick={onTiktokBtnHandler}/>
+                        <Tiktok className={tiktokBtn ? 'tiktok-color' : 'tiktok-white'} onClick={onTiktokBtnHandler}/>
                     </li>
 
                     <li>
-                        <Instagram className={instagramBtn ? 'instagram-white' : 'instagram-color'} onClick={onInstagramBtnHandler}/>
+                        <Instagram className={instagramBtn ? 'instagram-color' : 'instagram-white'} onClick={onInstagramBtnHandler}/>
                     </li>
 
                     <li>
-                        <Message className={messageBtn ? 'message-white' : 'message-color'} onClick={onMessageBtnHandler}/>
+                        <Message className={messageBtn ? 'message-color' : 'message-white'} onClick={onMessageBtnHandler}/>
                     </li>
 
                     <li>
-                        <Search className={searchBtn ? 'search-white' : 'search-color'} onClick={onSearchBtnHandler}/>
+                        <Search className={searchBtn ? 'search-color' : 'search-white'} onClick={onSearchBtnHandler}/>
                     </li>
 
                     <li>
-                        <Zoom className={zoomBtn ? 'zoom-white' : 'zoom-color'} onClick={onZoomBtnHandler}/>
+                        <Zoom className={zoomBtn ? 'zoom-color' : 'zoom-white'} onClick={onZoomBtnHandler}/>
                     </li>
 
                     <li>
-                        <Email className={emailBtn ? 'email-white' : 'email-color'} onClick={onEmailBtnHandler}/>
+                        <Email className={emailBtn ? 'email-color' : 'email-white'} onClick={onEmailBtnHandler}/>
                     </li>
                 </ul>
                 <article className="world-data-info">
                     <div className="world-data">
                         <div className="timer">01:00:00</div>
-                        <div className="carbon">{carbonFootprint.toLocaleString('en-US')}kg</div>
+                        <div className="carbon">{carbonFootprint}kg</div>
                         <div className="unit">
                             <span><div id="kg1"></div> 1kg</span>
                             <span><div id="kg50"></div> 50kg</span>

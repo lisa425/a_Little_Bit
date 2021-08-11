@@ -213,10 +213,10 @@
 }
 
 /*svg color 설정*/
-.netfilx-color rect,
+.netflix-color rect,
 .youtube-color,
 .tiktok-color rect,
-.call-color rect,
+.search-color rect,
 .email-color rect{
     width:100%;
     height: 100%;
@@ -230,18 +230,18 @@
     fill:#00FFF9; 
 }
 .instagram-color,
-.call-color rect,
+.search-color rect,
 .email-color rect{
     width:100%;
     height: 100%;
     fill:#70FF00; 
 }
-.katalk-color rect{
+.message-color rect{
     width:100%;
     height: 100%;
     fill:#FAFF00; 
 }
-.katalk-color path{
+.message-color path{
     fill:#000000;
 }
 .netflix-white rect,
@@ -250,8 +250,8 @@
 .twitter-white rect,
 .tiktok-white rect,
 .instagram-white path:nth-child(1),
-.katalk-white rect,
-.call-white rect,
+.message-white rect,
+.search-white rect,
 .zoom-white rect,
 .email-white rect{
     width:100%;
@@ -264,8 +264,8 @@
 .twitter-white path,
 .tiktok-white path,
 .instagram-white path:nth-child(2),
-.katalk-white path,
-.call-white path,
+.message-white path,
+.search-white path,
 .zoom-white path,
 .email-white path{
     fill:#000;
@@ -345,6 +345,15 @@
     background: #FF00FE;
 }
 
+.world-data-carbon-visualization{
+    background-image: radial-gradient(#444 20%, transparent 0), radial-gradient(#444 20%, transparent 0);
+    background-position: 0 0, 2px 2px;
+    background-size: 4px 4px;
+    margin: 3rem 0 5rem 0;
+    display: grid;
+    grid-template-rows: repeat(22,21px);
+    grid-template-columns: repeat(49,21px);
+}
 
 .world-digital-carbon-title{
     font-size: 1.4rem;
