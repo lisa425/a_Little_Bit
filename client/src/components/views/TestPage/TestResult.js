@@ -52,6 +52,7 @@ const TestResult = () => {
 
     //앱 사용량 합산 결과
     const result = cookie.result;
+    //앱 사용량 픽셀 배경:TestPixel
     //승용차 1km 당 탄소배출량 : 96g , 결과를 승용차에 비유해 보여준다.
     const resultLikeCar = parseInt(cookie.result / 96);
     let carArray = [];

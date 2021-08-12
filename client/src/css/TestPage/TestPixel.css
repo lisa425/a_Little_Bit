@@ -1,9 +1,8 @@
 .test-pixel-grid-container{
     width:100vw;
-    height: 100vh;
     display: grid;
     grid-template-columns: repeat(66,30px);
-    grid-template-rows: repeat(37,30px);
+    grid-template-rows: repeat(45,30px);
     position: absolute;
     top:0;
     left:0;

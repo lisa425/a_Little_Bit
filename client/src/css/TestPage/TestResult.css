@@ -351,7 +351,7 @@
     background-size: 4px 4px;
     margin: 3rem 0 5rem 0;
     display: grid;
-    grid-template-rows: repeat(22,21px);
+    grid-template-rows: repeat(60,21px);
     grid-template-columns: repeat(49,21px);
 }
 
