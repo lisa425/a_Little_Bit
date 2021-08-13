@@ -588,6 +588,7 @@ const TestPage = () => {
     const yesZoomOn = (e) => {
         e.preventDefault();
         setZoomOn(false);
+        WeekPixel('zoom',ZoomWeek*4);
     }
     let zoomResult;
     if(ZoomOn){
@@ -1088,7 +1089,7 @@ const TestPage = () => {
                         <button className={doneBtn? "submit-test" : "submit-test-none"} id="submit-test" type="submit" onClick={onSubmit}>DONE</button>
                     </section>
                     <section className={finished?"before-result" : "before-result-none"}>
-                        <button className="go-result" type="submit"><Link to="/test/result">?</Link></button>
+                        <Link to="/test/result"><button className="go-result" type="submit">?</button></Link>
                     </section>
                 </div>
                 </form>
