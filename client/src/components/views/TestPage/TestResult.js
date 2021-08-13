@@ -9,7 +9,7 @@ import Tree from './animation/Tree';
 import Plastic from './animation/Plastic';
 import Car from './animation/Car';
 import {ReactComponent as Datasvg} from '../../../assets/images/resultIcons/dataGraphic.svg';
-import TestPixel from './TestPixel';
+import TestResultPixel from './TestResultPixel';
 //svg 아이콘 버튼 파일
 import {ReactComponent as Symbol1} from '../../../assets/images/symbols/symbol.svg'
 import {ReactComponent as Symbol2} from '../../../assets/images/symbols/symbol2.svg'
@@ -52,7 +52,7 @@ const TestResult = () => {
 
     //앱 사용량 합산 결과
     const result = cookie.result;
-    //앱 사용량 픽셀 배경:TestPixel
+    //앱 사용량 픽셀 배경:TestResultPixel
     //승용차 1km 당 탄소배출량 : 96g , 결과를 승용차에 비유해 보여준다.
     const resultLikeCar = parseInt(cookie.result / 96);
     let carArray = [];
@@ -215,7 +215,7 @@ const TestResult = () => {
         console.log(netflixBtn);
         setNetflixBtn(!netflixBtn);
         console.log(netflixBtn);
-        if(netflixBtn==false){
+        if(netflixBtn===false){
             world_netflix_data.style.display="none";
             setCarbonFootPrint(carbonFootprint-647);
         }else{
@@ -226,7 +226,7 @@ const TestResult = () => {
     const onYoutubeBtnHandler = (event) => {
         event.preventDefault();
         setYoutubeBtn(!youtubeBtn);
-        if(youtubeBtn==false){
+        if(youtubeBtn===false){
             world_youtube_data.style.display="none";
             setCarbonFootPrint(carbonFootprint-3000);
         }else{
@@ -238,7 +238,7 @@ const TestResult = () => {
     const onFacebookBtnHandler = (event) => {
         event.preventDefault();
         setFacebookBtn(!facebookBtn);
-        if(facebookBtn==false){
+        if(facebookBtn===false){
             world_facebook_data.style.display="none";
             setCarbonFootPrint(carbonFootprint-150);
         }else{
@@ -250,7 +250,7 @@ const TestResult = () => {
     const onTwitterBtnHandler = (event) => {
         event.preventDefault();
         setTwitterBtn(!twitterBtn);  
-        if(twitterBtn==false){
+        if(twitterBtn===false){
             world_twitter_data.style.display="none";
             setCarbonFootPrint(carbonFootprint-511);
         }else{
@@ -262,7 +262,7 @@ const TestResult = () => {
     const onTiktokBtnHandler = (event) => {
         event.preventDefault();
         setTiktokBtn(!tiktokBtn);
-        if(tiktokBtn==false){
+        if(tiktokBtn===false){
             world_tiktok_data.style.display="none";
             setCarbonFootPrint(carbonFootprint-393);
         }else{
@@ -274,7 +274,7 @@ const TestResult = () => {
     const onInstagramBtnHandler = (event) => {
         event.preventDefault();
         setInstagramBtn(!instagramBtn);
-        if(instagramBtn==false){
+        if(instagramBtn===false){
             world_instagram_data.style.display="none";
             setCarbonFootPrint(carbonFootprint-402);
         }else{
@@ -286,7 +286,7 @@ const TestResult = () => {
     const onMessageBtnHandler = (event) => {
         event.preventDefault();
         setMessageBtn(!messageBtn);
-        if(messageBtn==false){
+        if(messageBtn===false){
             world_message_data.style.display="none";
             setCarbonFootPrint(carbonFootprint-213);
         }else{
@@ -298,7 +298,7 @@ const TestResult = () => {
     const onSearchBtnHandler = (event) => {
         event.preventDefault();
         setSearchBtn(!searchBtn);
-        if(searchBtn==false){
+        if(searchBtn===false){
             world_search_data.style.display="none";
             setCarbonFootPrint(carbonFootprint-3149);
         }else{
@@ -310,7 +310,7 @@ const TestResult = () => {
     const onZoomBtnHandler = (event) => {
         event.preventDefault();
         setZoomBtn(!zoomBtn);
-        if(zoomBtn==false){
+        if(zoomBtn===false){
             world_zoom_data.style.display="none";
             setCarbonFootPrint(carbonFootprint-1729);
         }else{
@@ -322,7 +322,7 @@ const TestResult = () => {
     const onEmailBtnHandler = (event) => {
         event.preventDefault();
         setEmailBtn(!emailBtn);
-        if(emailBtn==false){
+        if(emailBtn===false){
             world_email_data.style.display="none";
             setCarbonFootPrint(carbonFootprint-752000);
         }else{
@@ -369,7 +369,7 @@ const TestResult = () => {
                 <article className="test-result-recommend">
                     <div className="recommend-text">
                         <h3><span>{maxDataName}</span>에서 탄소를 가장 많이 배출했네요!</h3>
-                        <p>이 서비스를 사용하는 행동이 어째서 탄소를 발생시키는지 한 번 알아볼까요?</p>
+                        <p>해당 서비스들이 어떻게 탄소를 발생시키는지 한 번 알아볼까요?</p>
                         <Link to="/cardnews"><button className="card-navigator">Let's GO!</button></Link>
                     </div>
                     <div className="recommend-img">
@@ -486,7 +486,7 @@ const TestResult = () => {
                     </div>
                 </article>
             </section>
-            <TestPixel />
+            {TestResultPixel(result,2)}
         </main>
     )
 }

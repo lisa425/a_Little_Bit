@@ -2,7 +2,6 @@ import React,{useState} from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestPage.css';
 import {Link} from 'react-router-dom';
-import TestPixel from './TestPixel';
 //app Icons
 import {ReactComponent as Netflix } from '../../../assets/images/appIcons/Netflix/black.svg';
 import {ReactComponent as Youtube} from '../../../assets/images/appIcons/Youtube/black.svg';
@@ -583,7 +582,7 @@ const TestPage = () => {
  
     return(
         <main className="testpage">
-                <TestPixel/>
+                
                 <form className="input-contents slider">
                 {/* page 1 : 이름 입력 */}
                 <div className="content-wrapper">

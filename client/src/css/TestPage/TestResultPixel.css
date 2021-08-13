@@ -2,14 +2,9 @@
     width:100vw;
     display: grid;
     grid-template-columns: repeat(66,30px);
-    grid-template-rows: repeat(45,30px);
+    grid-template-rows: repeat(48,30px);
     position: absolute;
     top:0;
     left:0;
-    
-}
-.test-pixel-item{
-    background-color:#FAFF00;
-    grid-column: 13;
-    grid-row:17;
+    overflow: hidden;
 }

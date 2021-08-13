@@ -15,6 +15,7 @@
     width:100vw;
     color:white;
     padding-top:20vh;
+    overflow: hidden;
 }
 
 
@@ -350,9 +351,18 @@
     background-position: 0 0, 2px 2px;
     background-size: 4px 4px;
     margin: 3rem 0 5rem 0;
-    display: grid;
-    grid-template-rows: repeat(60,21px);
-    grid-template-columns: repeat(49,21px);
+}
+@keyframes pixelShow{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.world-data-carbon-visualization svg *{
+    animation-name: pixelShow;
+    animation-duration: 0.1s;
 }
 
 .world-digital-carbon-title{
