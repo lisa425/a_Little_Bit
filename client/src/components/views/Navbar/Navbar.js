@@ -25,7 +25,7 @@ const NavBar = ({match}) => {
                             <p className="kr-menu">디지털 사용량 테스트</p></Link>
                         </li>
 
-                        <li><Link to="" onClick={closeSidebar}>
+                        <li><Link to="/explain" onClick={closeSidebar}>
                             <p className="en-menu">Future of earth</p>
                             <p className="kr-menu">지구의 미래?</p></Link>
                         </li>
@@ -35,7 +35,7 @@ const NavBar = ({match}) => {
                             <p className="kr-menu">카드 뉴스</p></Link>
                         </li>
 
-                        <li><Link to="" onClick={closeSidebar}>
+                        <li><Link to="/actionplan" onClick={closeSidebar}>
                             <p className="en-menu">Action plan</p>
                             <p className="kr-menu">액션 플랜</p></Link>
                         </li>

@@ -3,77 +3,123 @@ import '../../../css/ActionPlanPage/ActionPlanPage.css';
 import PolarBear from '../../../assets/images/actionplans/bear_img.png';
 import Turtle from '../../../assets/images/actionplans/action_plan_turtle.jpg';
 import Panda from '../../../assets/images/actionplans/action_plan_panda.jpg';
-import {ReactComponent as Next } from '../../../assets/images/next.svg';
-import {ReactComponent as Before } from '../../../assets/images/before.svg';
-import {ReactComponent as Cloud } from '../../../assets/images/actionplans/actionplanicon/cloud.svg';
-import {ReactComponent as Kakaotalk } from '../../../assets/images/actionplans/actionplanicon/kakaotalk.svg';
-import {ReactComponent as Email } from '../../../assets/images/actionplans/actionplanicon/email.svg';
-import {ReactComponent as SNS } from '../../../assets/images/actionplans/actionplanicon/instagram.svg';
-import {ReactComponent as Netflix} from '../../../assets/images/actionplans/actionplanicon/netflix.svg';
-import {ReactComponent as Zoom } from '../../../assets/images/actionplans/actionplanicon/zoom.svg';
+import { ReactComponent as Next } from '../../../assets/images/next.svg';
+import { ReactComponent as Before } from '../../../assets/images/before.svg';
+import { ReactComponent as Cloud } from '../../../assets/images/actionplans/actionplanicon/cloud.svg';
+import { ReactComponent as Kakaotalk } from '../../../assets/images/actionplans/actionplanicon/kakaotalk.svg';
+import { ReactComponent as Email } from '../../../assets/images/actionplans/actionplanicon/email.svg';
+import { ReactComponent as SNS } from '../../../assets/images/actionplans/actionplanicon/instagram.svg';
+import { ReactComponent as Netflix} from '../../../assets/images/actionplans/actionplanicon/netflix.svg';
+import { ReactComponent as Zoom } from '../../../assets/images/actionplans/actionplanicon/zoom.svg';
+import { ReactComponent as ActionPlanPixel } from '../../../assets/images/actionplans/ActionPlan_pixel5.svg';
 
 const ActionPlanPage = () => {
-    const [pixel,setPixel] = useState(0)
-    const actionPlanHandler = (carbon) => {
-        let newPixel = carbon * pixel;
-        setPixel(newPixel);
-    } 
-
-    // const pixelContainer = document.querySelector('#action-plan-pixel-grid-container');
-    // const DayPixel = (appname,day) => {
-    //     //기존의 state값에 따른 day픽셀을 제거한다.
-    //     const oldDayPixel = document.getElementsByClassName(`day-pixel-${appname}`);
-    //     for(let i=0;i<oldDayPixel.length;i++){
-    //         pixelContainer.removeChild(oldDayPixel[i]);
-    //     }
-
-    //     //map을 위한 배열 생성
-    //     let DayPixelCounter = [];
-    //     for(let i=0;i<day;i++){
-    //         DayPixelCounter.push(i);
-    //     }
-        
-    //     //pixel을 dom에 추가
-    //     const renderDayPixel = DayPixelCounter.map((index) => {
-    //         let randomPositionColumn = Math.floor(Math.random()*66-1);
-    //         let randomPositionRow = Math.floor(Math.random()*48-1);
-    //         const DayMosaicPixel = document.createElement('div')
-            
-    //         DayMosaicPixel.style.gridColumn=randomPositionColumn;
-    //         DayMosaicPixel.style.gridRow=randomPositionRow;
-    //         DayMosaicPixel.classList.add(`day-pixel-${appname}`);
-    //         pixelContainer.appendChild(DayMosaicPixel);
-    //     })
-    //     return {renderDayPixel}
+    // let actionPlanArray = [];
+    // for(let i=0;i<(65*36);i++){
+    //     actionPlanArray.push(i);
     // }
-
-    // const WeekPixel = (appname,week) => {
-    //     //기존의 state값에 따른 week픽셀을 제거한다.
-    //     const oldWeekPixel = document.getElementsByClassName(`week-pixel-${appname}`);
-    //     for(let i=0;i<oldWeekPixel.length;i++){
-    //         pixelContainer.removeChild(oldWeekPixel[i]);
+    // const renderPixel = actionPlanArray.map((index) => {
+    //     let randomPositionColumn = Math.floor(Math.random()*66-1);
+    //     let randomPositionRow = Math.floor(Math.random()*38);
+    //     console.log(index);
+    //     let classname;
+    //     if(index>1500){
+    //         classname = "fill-pixel";
+    //     }else if(index>700){
+    //         classname = "mosaic-pixel";
+    //     }else{
+    //         classname = "dot-pixel";
     //     }
+    //     return (
+    //         <div className={classname} style={{gridColumn:randomPositionColumn,gridRow:randomPositionRow}}></div>
+    //     )
+    // })
 
-    //     //map을 위한 배열 생성,1~7의 수는 실제 보이는 픽셀 수가 적어서 한달 기준으로 4를 곱한다.
-    //     let WeekPixelCounter = [];
-    //     for(let i=0;i<(week*4);i++){
-    //         WeekPixelCounter.push(i);
-    //     }
-        
-    //     //pixel을 dom에 추가
-    //     const renderWeekPixel = WeekPixelCounter.map((index) => {
-    //         let randomPositionColumn = Math.floor(Math.random()*66-1);
-    //         let randomPositionRow = Math.floor(Math.random()*48-1);
-    //         const WeekMosaicPixel = document.createElement('div')
-            
-    //         WeekMosaicPixel.style.gridColumn=randomPositionColumn;
-    //         WeekMosaicPixel.style.gridRow=randomPositionRow;
-    //         WeekMosaicPixel.classList.add(`week-pixel-${appname}`);
+    const netflix_pixel =  document.querySelector('#netflix');
+    const messenger_pixel =  document.querySelector('#messenger');
+    const brightness_pixel =  document.querySelector('#brightness');
+    const emaillist_pixel =  document.querySelector('#emaillist');
+    const sns_pixel =  document.querySelector('#sns');
+    const smartphone_pixel=  document.querySelector('#smartphone');
+    const energymode_pixel =  document.querySelector('#energymode');
+    const wifi_pixel =  document.querySelector('#wifi');
+    const zoom_pixel =  document.querySelector('#zoom');
+    const darkmode_pixel =  document.querySelector('#darkmode');
+    const emailfile_pixel =  document.querySelector('#emailfile');
+    const cloud_pixel =  document.querySelector('#cloud');
 
-    //         pixelContainer.appendChild(WeekMosaicPixel);
-    //     })
-    //     return {renderWeekPixel}
-    // }
+
+    const [VideoAction,setVideoAction] = useState(false);
+    const onVideoActionHandler = (event) => {
+        setVideoAction(!VideoAction);
+        if(VideoAction === false){
+            if(netflix_pixel.classList.contains('show-pixel')){
+                netflix_pixel.classList.remove('show-pixel')
+            }
+            netflix_pixel.classList.add('hide-pixel');
+        }else{
+            if(netflix_pixel.classList.contains('hide-pixel')){
+                netflix_pixel.classList.remove('hide-pixel');
+            }
+            netflix_pixel.classList.add('show-pixel');
+        }
+    }
+
+    const [SnsAction,setSnsAction] = useState(false);
+    const onSnsActionHandler = (event) => {
+        setSnsAction(!SnsAction);
+    }
+
+    const [CloudAction,setCloudAction] = useState(false);
+    const onCloudActionHandler = (event) => {
+        setCloudAction(!CloudAction);
+    }
+
+    const [MessengerAction,setMessengerAction] = useState(false);
+    const onMessangerActionHandler = (event) => {
+        setMessengerAction(!MessengerAction);
+    }
+
+    const [ZoomAction,setZoomAction] = useState(false);
+    const onZoomActionHandler = (event) => {
+        setZoomAction(!ZoomAction);
+    }
+
+    const [EmailListAction,setEmailListAction] = useState(false);
+    const onEmailListActionHandler = (event) => {
+        setEmailListAction(!EmailListAction);
+    }
+
+    const [WifiAction,setWifiAction] = useState(false);
+    const onWifiActionHandler = (event) => {
+        setWifiAction(!WifiAction);
+    }
+
+    const [DarkModeAction,setDarkModeAction] = useState(false);
+    const onDarkModeActionHandler = (event) => {
+        setDarkModeAction(!DarkModeAction);
+    }
+
+    const [EnergyModeAction,setEnergyModeAction] = useState(false);
+    const onEnergyModeActionHandler = (event) => {
+        setEnergyModeAction(!EnergyModeAction);
+    }
+
+    const [BrightnessAction,setBrightnessAction] = useState(false);
+    const onBrightnessActionHandler = (event) => {
+        setBrightnessAction(!BrightnessAction);
+    }
+
+    const [SmartphoneAction,setSmartphoneAction] = useState(false);
+    const onSmartphoneActionHandler = (event) => {
+        setSmartphoneAction(!SmartphoneAction);
+    }
+
+    const [EmailFileAction,setEmailFileAction] = useState(false);
+    const onEmailFileActionHandler = (event) => {
+        setEmailFileAction(!EmailFileAction);
+    }
+
 
     return(
         <main className="ActionPlan">
@@ -81,6 +127,10 @@ const ActionPlanPage = () => {
                 <img src={PolarBear} alt="북극곰(polar bear image)"/>
                 <img src={Panda} alt="판다(panda image)"/>
                 <img src={Turtle} alt="바다거북이(sea turtle image)"/>
+            </div>
+            <div id="actionplan-pixel-container">
+                <ActionPlanPixel />
+                {/* {renderPixel} */}
             </div>
             <div className="background-img-handler">
                 <button className="image-handler"><Before/></button>
@@ -91,45 +141,87 @@ const ActionPlanPage = () => {
                 <p>함께 실천할 액션 플랜을 선택해, 나의 선택이 만들어내는 긍정적인 영향을 확인해보세요.</p>
                 <div className="actionplan-list-container">
                     <ul className="actionplan-list">
-                        <li className="actionplan-item">
+                        <li className={VideoAction?"actionplan-item-active":"actionplan-item"} onClick={onVideoActionHandler}>
                             <div className="item-wrapper">
                                 <Netflix />
-                                <span>고화질 -> 표준 화질 설정하기</span>
+                                <span>고화질 대신 표준 화질 설정</span>
                             </div>
                             <hr/>
                         </li>
-                        <li className="actionplan-item">
+                        <li className={SnsAction?"actionplan-item-active":"actionplan-item"} onClick={onSnsActionHandler}>
                             <div className="item-wrapper">
                                 <SNS />
-                                <span>SNS 알람 차단 설정하기</span>
+                                <span>SNS 알람 차단 설정</span>
                             </div>
                             <hr/>
                         </li>
-                        <li className="actionplan-item">
+                        <li className={CloudAction?"actionplan-item-active":"actionplan-item"} onClick={onCloudActionHandler}>
                             <div className="item-wrapper">
                                 <Cloud />
-                                <span>자동 클라우드 백업 해제하기</span>
+                                <span>자동 클라우드 백업 해제</span>
                             </div>
                             <hr/>
                         </li>
-                        <li className="actionplan-item">
+                        <li className={MessengerAction?"actionplan-item-active":"actionplan-item"} onClick={onMessangerActionHandler}>
                             <div className="item-wrapper">
                                 <Kakaotalk />
-                                <span>캐시 주기적 삭제하기</span>
+                                <span>메신저 캐시 주기적 삭제</span>
                             </div>
                             <hr/>
                         </li>
-                        <li className="actionplan-item">
+                        <li className={ZoomAction?"actionplan-item-active":"actionplan-item"} onClick={onZoomActionHandler}>
                             <div className="item-wrapper">
                                 <Zoom />
-                                <span>줌 비디오 끄기</span>
+                                <span>화상회의 중 비디오 끄기</span>
                             </div>
                             <hr/>
                         </li>
-                        <li className="actionplan-item">
+                        <li className={EmailListAction?"actionplan-item-active":"actionplan-item"} onClick={onEmailListActionHandler}>
                             <div className="item-wrapper">
                                 <Email />
-                                <span>메일 스팸함 비우기</span>
+                                <span>메일 스팸함 정리</span>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li className={WifiAction?"actionplan-item-active":"actionplan-item"} onClick={onWifiActionHandler}>
+                            <div className="item-wrapper">
+                                <Email />
+                                <span>데이터 대신 Wi-Fi 사용</span>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li className={DarkModeAction?"actionplan-item-active":"actionplan-item"} onClick={onDarkModeActionHandler}>
+                            <div className="item-wrapper">
+                                <Email />
+                                <span>다크 모드 설정</span>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li className={EnergyModeAction?"actionplan-item-active":"actionplan-item"} onClick={onEnergyModeActionHandler}>
+                            <div className="item-wrapper">
+                                <Email />
+                                <span>에너지 절약 모드 설정</span>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li className={BrightnessAction?"actionplan-item-active":"actionplan-item"} onClick={onBrightnessActionHandler}>
+                            <div className="item-wrapper">
+                                <Email />
+                                <span>화면 밝기 낮추기</span>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li className={SmartphoneAction?"actionplan-item-active":"actionplan-item"} onClick={onSmartphoneActionHandler}>
+                            <div className="item-wrapper">
+                                <Email />
+                                <span>스마트폰 확인 빈도 수 줄이기</span>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li className={EmailFileAction?"actionplan-item-active":"actionplan-item"} onClick={onEmailFileActionHandler}>
+                            <div className="item-wrapper">
+                                <Email />
+                                <span>메일 첨부파일 링크로 대체하기</span>
                             </div>
                             <hr/>
                         </li>

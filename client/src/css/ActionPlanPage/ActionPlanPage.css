@@ -95,3 +95,87 @@
     background:white;
     opacity:0.5;
 }
+/*action plan list button active*/
+.actionplan-item-active{
+    width:90%;
+    color:black;
+    font-family: 'NEXON Lv2 Gothic';
+    font-size: 1.2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2rem;
+    padding-left: 10%;
+    background-color:white;
+}
+.actionplan-item-active svg{
+    fill:black;
+    margin-right: 1rem;
+}
+.actionplan-item-active .item-wrapper{
+    display: flex;
+    align-items: center;
+}
+.actionplan-item-active hr{
+    margin: 2rem 0 0;
+    width:100%;
+    border:0;
+    height:1px;
+    background:white;
+    opacity:0.5;
+}
+
+@keyframes pixelHide{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#actionplan-pixel-container{
+    width:100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(65,30px);
+    grid-template-rows: repeat(36,30px);
+    position: absolute;
+    bottom:0;
+    left:0;
+    overflow: hidden;
+}
+/* #netflix,
+#messenger,
+#brightness,
+#emaillist,
+#sns,
+#smartphone,
+#energymode,
+#wifi,
+#zoom,
+#darkmode,
+#emailfile,
+#cloud{
+    opacity:1;
+} */
+.hide-pixel{
+    opacity:0;
+}
+.show-pixel{
+    opacity:1;
+}
+#actionplan-pixel-container .fill-pixel{
+    background:#70FF00;
+}
+#actionplan-pixel-container .mosaic-pixel{
+    background-image: url('../../assets/images/pixels/mosaic_pixel_green\(30x30\).svg')
+}
+#actionplan-pixel-container .dot-pixel{
+    background-image: url('../../assets/images/pixels/dot-pixel.svg')
+}
+
+/* .actionplan-pixel svg *{
+    animation-name: pixelHide;
+    animation-duration: 0.1s;
+} */
