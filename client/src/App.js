@@ -7,6 +7,8 @@ import TestResult from './components/views/TestPage/TestResult';
 import TestEarthList from './components/views/TestPage/TestEarthList';
 import EarthModal from './components/views/TestPage/EarthModal'
 import CardNewsPage from './components/views/CardNewsPage/CardNewsPage'
+import ActionPlanPage from './components/views/ActionPlanPage/ActionPlanPage'
+import DataCenterPage from './components/views/DataCenterPage/DataCenterPage'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -23,6 +25,10 @@ function App() {
           <Route exact path="/test/earthlist/:earthId" component={EarthModal} />
 
           <Route exact path="/cardnews" component={CardNewsPage} />
+
+          <Route exact path="/actionplan" component={ActionPlanPage} />
+
+          <Route exact path="/explain" component={DataCenterPage} />
         </Switch>
     </Router>
   );

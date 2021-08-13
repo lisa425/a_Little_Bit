@@ -142,7 +142,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 .recommend-text h3 {
     text-align: left;
@@ -442,7 +442,7 @@
     width:95px;
     height:2px;
     background: white;
-    margin: 5rem 0 8rem 0;
+    margin-bottom:8rem;
 }
 .result-navigator-title{
     display: flex;
@@ -493,6 +493,9 @@
 }
 .result-navigator-box p{
     line-height: 2.1rem;
+}
+.result-navigator-box a{
+    width:100%;
 }
 .result-navigator-box .navigator-btn{
     width:70%;

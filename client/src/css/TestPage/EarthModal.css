@@ -7,7 +7,7 @@
 .earth-modal{
     width:100vw;
     height: 100vh;
-    background-image:linear-gradient(black,black), url('../../assets/images/earth.png');
+    background-image:linear-gradient(black,black), url('../../assets/images/earth/earth.png');
     background-size: 350px;
     background-blend-mode:saturation;
     display: flex;

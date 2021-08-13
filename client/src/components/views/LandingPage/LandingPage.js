@@ -4,7 +4,6 @@ import { Route,Link } from 'react-router-dom';
 import '../../../css/LandingPage/LandingPage.css';
 import maintitle from '../../../assets/images/main_title.gif';
 import NavBar from '../Navbar/Navbar';
-//import StartPage from './DataTest/StartPage';
 
 const LandingPage = () => {
     return(

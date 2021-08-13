@@ -1,7 +1,7 @@
 import React,{ useEffect, useState, useRef } from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestEarthList.css';
-import EarthImg from '../../../assets/images/earth.png';
+import EarthImg from '../../../assets/images/earth/earth.png';
 import Draggable from "react-draggable";
 
 const TestEarthList = () => {

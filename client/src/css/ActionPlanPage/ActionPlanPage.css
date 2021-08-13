@@ -1,0 +1,97 @@
+@import '../core.css';
+
+.ActionPlan{
+    overflow: hidden;
+    width:100vw;
+    height:100vh;
+}
+
+.ActionPlan .background-img-container{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    overflow:hidden;
+}
+.ActionPlan .background-img-container img{
+    width:100%;
+    height:100%;
+}
+.ActionPlan .background-img-handler{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100vh;
+}
+.image-handler{
+    margin:2rem;
+    background-color: black;
+    border-radius: 2px;
+    padding:0.5rem 1rem;
+    border:none;
+}
+.ActionPlan .actionplan-contents{
+    color:white;
+    position: absolute;
+    top:0;
+    left:0;
+    height:85vh;
+    padding-top:15vh;
+    padding-left:13vw;
+}
+
+.ActionPlan .actionplan-contents h2{
+    font-family: 'Rany';
+    font-weight: 800;
+    font-size:1.9rem;
+}
+
+.ActionPlan .actionplan-contents p{
+    font-family: 'NEXON Lv2 Gothic';
+    font-size:1rem;
+    margin:1rem 0;
+}
+.ActionPlan .actionplan-contents .actionplan-list-container{
+    height: 564px;
+    width:400px;
+    background-color:rgba(0,0,0,0.8);
+    position: fixed;
+    bottom: 0;
+    overflow: scroll;
+}
+.ActionPlan .actionplan-contents .actionplan-list{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ActionPlan .actionplan-contents .actionplan-list .actionplan-item{
+    width:80%;
+    color:white;
+    font-family: 'NEXON Lv2 Gothic';
+    font-size: 1.2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+.ActionPlan .actionplan-contents .actionplan-list .actionplan-item svg{
+    fill:white;
+    margin-right: 1rem;
+}
+.ActionPlan .actionplan-contents .actionplan-list .actionplan-item .item-wrapper{
+    display: flex;
+    align-items: center;
+}
+.ActionPlan .actionplan-contents .actionplan-list .actionplan-item hr{
+    margin: 2rem 0 0;
+    width:100%;
+    border:0;
+    height:1px;
+    background:white;
+    opacity:0.5;
+}

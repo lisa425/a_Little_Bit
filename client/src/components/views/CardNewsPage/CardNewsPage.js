@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import '../../../css/CardNewsPage/CardNewsPage.css'
 import {ReactComponent as CardNewsPixel} from '../../../assets/images/cardNews/cardnews_pixel.svg';
-import earth from '../../../assets/images/earth.png'
+import earth from '../../../assets/images/earth/earth.png'
 // import netflix from '../../../assets/images/cardNews/netflix.gif';
 // import youtube from '../../../assets/images/cardNews/youtube.gif';
 // import facebook from '../../../assets/images/cardNews/facebook.gif';
