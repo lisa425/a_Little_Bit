@@ -60,6 +60,63 @@ const TestPage = () => {
         setLocation(event.currentTarget.value);
     }
 
+    //test pixel 인터랙션
+    const pixelContainer = document.querySelector('#test-pixel-grid-container');
+    const DayPixel = (appname,day) => {
+        //기존의 state값에 따른 day픽셀을 제거한다.
+        const oldDayPixel = document.getElementsByClassName(`day-pixel-${appname}`);
+        for(let i=0;i<oldDayPixel.length;i++){
+            pixelContainer.removeChild(oldDayPixel[i]);
+        }
+
+        //map을 위한 배열 생성
+        let DayPixelCounter = [];
+        for(let i=0;i<day;i++){
+            DayPixelCounter.push(i);
+        }
+        
+        //pixel을 dom에 추가
+        const renderDayPixel = DayPixelCounter.map((index) => {
+            let randomPositionColumn = Math.floor(Math.random()*66-1);
+            let randomPositionRow = Math.floor(Math.random()*48-1);
+            const DayMosaicPixel = document.createElement('div')
+            
+            DayMosaicPixel.style.gridColumn=randomPositionColumn;
+            DayMosaicPixel.style.gridRow=randomPositionRow;
+            DayMosaicPixel.classList.add(`day-pixel-${appname}`);
+            pixelContainer.appendChild(DayMosaicPixel);
+        })
+        return {renderDayPixel}
+    }
+
+    const WeekPixel = (appname,week) => {
+        //기존의 state값에 따른 week픽셀을 제거한다.
+        const oldWeekPixel = document.getElementsByClassName(`week-pixel-${appname}`);
+        for(let i=0;i<oldWeekPixel.length;i++){
+            pixelContainer.removeChild(oldWeekPixel[i]);
+        }
+
+        //map을 위한 배열 생성,1~7의 수는 실제 보이는 픽셀 수가 적어서 한달 기준으로 4를 곱한다.
+        let WeekPixelCounter = [];
+        for(let i=0;i<(week*4);i++){
+            WeekPixelCounter.push(i);
+        }
+        
+        //pixel을 dom에 추가
+        const renderWeekPixel = WeekPixelCounter.map((index) => {
+            let randomPositionColumn = Math.floor(Math.random()*66-1);
+            let randomPositionRow = Math.floor(Math.random()*48-1);
+            const WeekMosaicPixel = document.createElement('div')
+            
+            WeekMosaicPixel.style.gridColumn=randomPositionColumn;
+            WeekMosaicPixel.style.gridRow=randomPositionRow;
+            WeekMosaicPixel.classList.add(`week-pixel-${appname}`);
+
+            pixelContainer.appendChild(WeekMosaicPixel);
+        })
+        return {renderWeekPixel}
+    }
+
     //앱 list 버튼 state 설정
     const [netflixBtn, setNetflixBtn] = useState(false);
     const [youtubeBtn,setYoutubeBtn] = useState(false);
@@ -389,17 +446,18 @@ const TestPage = () => {
 
 
 
-
     //netflix input state 설정
     const [NetflixWeek, setNetflixWeek] = useState(0);
     const [NetflixDay, setNetflixDay] = useState(0);
     const onNetflixWeekChange = (e) => {
         /*input1의 value를 변화시킨다.*/
         setNetflixWeek(e.currentTarget.value);
+        WeekPixel('netflix',NetflixWeek);
     }
     const onNetflixDayChange = (e) => {
         /*input2의 value를 변화시킨다.*/
         setNetflixDay(e.currentTarget.value);
+        DayPixel('netflix',NetflixDay)
     }
     const netflixResult = NetflixWeek * NetflixDay * 100;
 
@@ -409,10 +467,12 @@ const TestPage = () => {
     const onYoutubeWeekChange = (e) => {
         /*input1의 value를 변화시킨다.*/
         setYoutubeWeek(e.currentTarget.value);
+        WeekPixel('youtube',YoutubeWeek);
     }
     const onYoutubeDayChange = (e) => {
         /*input2의 value를 변화시킨다.*/
         setYoutubeDay(e.currentTarget.value);
+        DayPixel('youtube',YoutubeDay)
     }
 
     const youtubeResult = YoutubeWeek * YoutubeDay * 6;
@@ -423,10 +483,12 @@ const TestPage = () => {
     const onFacebookWeekChange = (e) => {
         /*input1의 value를 변화시킨다.*/
         setFacebookWeek(e.currentTarget.value);
+        WeekPixel('facebook',FacebookWeek);
     }
     const onFacebookDayChange = (e) => {
         /*input2의 value를 변화시킨다.*/
         setFacebookDay(e.currentTarget.value);
+        DayPixel('facebook',FacebookDay)
     }
     const facebookResult = FacebookWeek * FacebookDay * 1.5;
 
@@ -436,10 +498,12 @@ const TestPage = () => {
     const onTwitterWeekChange = (e) => {
         /*input1의 value를 변화시킨다.*/
         setTwitterWeek(e.currentTarget.value);
+        WeekPixel('twitter',TwitterWeek);
     }
     const onTwitterDayChange = (e) => {
         /*input2의 value를 변화시킨다.*/
         setTwitterDay(e.currentTarget.value);
+        DayPixel('twitter',TwitterDay);
     }
     const twitterResult = TwitterWeek * TwitterDay * 1.2;
 
@@ -449,10 +513,12 @@ const TestPage = () => {
     const onTiktokWeekChange = (e) => {
         /*input1의 value를 변화시킨다.*/
         setTiktokWeek(e.currentTarget.value);
+        WeekPixel('tiktok',TiktokWeek);
     }
     const onTiktokDayChange = (e) => {
         /*input2의 value를 변화시킨다.*/
         setTiktokDay(e.currentTarget.value);
+        DayPixel('tiktok',TiktokDay);
     }
     const tiktokResult = TiktokWeek * TiktokDay * 6;
 
@@ -462,10 +528,12 @@ const TestPage = () => {
     const onInstagramWeekChange = (e) => {
         /*input1의 value를 변화시킨다.*/
         setInstagramWeek(e.currentTarget.value);
+        WeekPixel('instagram',InstagramWeek);
     }
     const onInstagramDayChange = (e) => {
         /*input2의 value를 변화시킨다.*/
         setInstagramDay(e.currentTarget.value);
+        DayPixel('instagram',InstagramDay)
     }
     const instagramResult = InstagramWeek * InstagramDay * 1.5;
 
@@ -475,10 +543,12 @@ const TestPage = () => {
     const onKakaoTalkWeekChange = (e) => {
         /*input1의 value를 변화시킨다.*/
         setKakaoTalkWeek(e.currentTarget.value);
+        WeekPixel('kakaotalk',KakaoTalkWeek);
     }
     const onKakaoTalkDayChange = (e) => {
         /*input2의 value를 변화시킨다.*/
         setKakaoTalkDay(e.currentTarget.value);
+        DayPixel('kakaotalk',KakaoTalkDay);
     }
     const kakaoTalkResult = KakaoTalkWeek * KakaoTalkDay * 1;
 
@@ -488,10 +558,12 @@ const TestPage = () => {
     const onCallWeekChange = (e) => {
         /*input1의 value를 변화시킨다.*/
         setCallWeek(e.currentTarget.value);
+        WeekPixel('call',CallWeek);
     }
     const onCallDayChange = (e) => {
         /*input2의 value를 변화시킨다.*/
         setCallDay(e.currentTarget.value);
+        DayPixel('call',CallDay);
     }
     const callResult = CallWeek * CallDay * 3.6;
 
@@ -502,10 +574,12 @@ const TestPage = () => {
     const onZoomWeekChange = (e) => {
         /*input1의 value를 변화시킨다.*/
         setZoomWeek(e.currentTarget.value);
+        WeekPixel('zoom',ZoomWeek);
     }
     const onZoomDayChange = (event) => {
         /*input2의 value를 변화시킨다.*/
         setZoomDay(event.currentTarget.value);
+        DayPixel('zoom',ZoomDay);
     }
     const notZoomOn = (e) => {
         e.preventDefault();
@@ -528,14 +602,17 @@ const TestPage = () => {
     const [EmailDelete, setEmailDelete] = useState(true);
     const onEmailCountChange = (e) => {
         setEmailCount(e.currentTarget.value);
+        WeekPixel('email',(EmailCount/100));
     }
     const notEmailDelete = (e) => {
         e.preventDefault();
         setEmailDelete(false);
+        WeekPixel('email',((EmailCount/100)*4));
     }
     const yesEmailDelete = (e) => {
         e.preventDefault();
         setEmailDelete(true);
+        WeekPixel('email',(EmailCount/100))
     }
     let emailResult;
     if(EmailDelete){
@@ -545,6 +622,7 @@ const TestPage = () => {
         emailResult = EmailCount * 4;
     }
 
+    
     let appResult = parseInt(netflixResult + youtubeResult + facebookResult + twitterResult + tiktokResult + instagramResult + kakaoTalkResult + callResult + zoomResult + emailResult);
     
 
@@ -582,7 +660,7 @@ const TestPage = () => {
  
     return(
         <main className="testpage">
-                
+                <div id="test-pixel-grid-container"></div>
                 <form className="input-contents slider">
                 {/* page 1 : 이름 입력 */}
                 <div className="content-wrapper">

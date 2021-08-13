@@ -1,4 +1,4 @@
-.test-pixel-grid-container{
+.result-pixel-grid-container{
     width:100vw;
     display: grid;
     grid-template-columns: repeat(66,30px);

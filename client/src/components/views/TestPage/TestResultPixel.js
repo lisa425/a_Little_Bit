@@ -34,10 +34,9 @@ const TestResultPixel = (data,color) => {
     })
 
     return (
-        <div className="test-pixel-grid-container">
+        <div className="result-pixel-grid-container">
             {renderMosaicPixel}
             {renderFillPixel}
-            {/* <MosaicPixel style={{gridColumn:randomPositionColumn,gridRow:randomPositionRow,fill:appColor[color]}}/> */}
         </div>
     );
 }

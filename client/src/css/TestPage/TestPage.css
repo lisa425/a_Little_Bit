@@ -139,9 +139,9 @@ input:-webkit-autofill {
 }
 .test{
     font-family: 'Elice Digital Baeum';
-    width:100vw;
+    width: 1000px;
     height: 100vh;
-    background-color:white;
+    background-color: rgba(255,255,255,0.7);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -153,7 +153,6 @@ h3{
 }
 .applist-btn{
     display:flex;
-    flex-wrap: wrap;
     margin:3rem 10vw;
     background:transparent;
 }
@@ -220,7 +219,6 @@ h3{
 
 
 .test-wrapper{
-    width: 85vw;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -425,4 +423,61 @@ h3{
 }
 .go-result a{
     color:black;
+}
+
+#test-pixel-grid-container{
+    width:100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(65,30px);
+    grid-template-rows: repeat(36,30px);
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+}
+
+#test-pixel-grid-container .day-pixel-netflix,
+#test-pixel-grid-container .day-pixel-youtube,
+#test-pixel-grid-container .day-pixel-tiktok{
+    background-image:url('../../assets/images/pixels/mosaic_pixel_pink\(30x30\).svg');
+}
+
+#test-pixel-grid-container .day-pixel-facebook,
+#test-pixel-grid-container .day-pixel-twitter,
+#test-pixel-grid-container .day-pixel-zoom{
+    background-image:url('../../assets/images/pixels/mosaic_pixel_cyan\(30x30\).svg');
+}
+
+#test-pixel-grid-container .day-pixel-instagram,
+#test-pixel-grid-container .day-pixel-email,
+#test-pixel-grid-container .day-pixel-call{
+    background-image:url('../../assets/images/pixels/mosaic_pixel_green\(30x30\).svg');
+}
+
+#test-pixel-grid-container .day-pixel-kakaotalk{
+    fill:#FAFF00;
+    background-image:url('../../assets/images/pixels/mosaic_pixel_yellow\(30x30\).svg');
+}
+
+#test-pixel-grid-container .week-pixel-netflix,
+#test-pixel-grid-container .week-pixel-youtube,
+#test-pixel-grid-container .week-pixel-tiktok{
+    background-color:#FF00FE;
+}
+
+#test-pixel-grid-container .week-pixel-facebook,
+#test-pixel-grid-container .week-pixel-twitter,
+#test-pixel-grid-container .week-pixel-zoom{
+    background-color:#00FFF9;
+}
+
+#test-pixel-grid-container .week-pixel-instagram,
+#test-pixel-grid-container .week-pixel-email,
+#test-pixel-grid-container .week-pixel-call{
+    background-color:#70FF00;
+}
+
+#test-pixel-grid-container .week-pixel-kakaotalk{
+    background-color:#FAFF00;
 }
