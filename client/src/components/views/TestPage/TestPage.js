@@ -71,7 +71,7 @@ const TestPage = () => {
 
         //map을 위한 배열 생성
         let DayPixelCounter = [];
-        for(let i=0;i<day;i++){
+        for(let i=0;i<day*4;i++){
             DayPixelCounter.push(i);
         }
         

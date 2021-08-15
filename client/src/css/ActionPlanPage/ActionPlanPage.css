@@ -30,7 +30,7 @@
     margin:2rem;
     background-color: black;
     border-radius: 2px;
-    padding:0.5rem 1rem;
+    padding:0.9rem 1.2rem;
     border:none;
 }
 .ActionPlan .actionplan-contents{
@@ -136,8 +136,11 @@
 }
 #actionplan-pixel-container{
     width:100vw;
-    height: 100vh;
-    display: grid;
+    height: 75vh;
+    margin-top:25vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     grid-template-columns: repeat(65,30px);
     grid-template-rows: repeat(36,30px);
     position: absolute;
@@ -145,6 +148,8 @@
     left:0;
     overflow: hidden;
 }
+
+
 /* #netflix,
 #messenger,
 #brightness,
@@ -167,12 +172,18 @@
 }
 #actionplan-pixel-container .fill-pixel{
     background:#70FF00;
+    width:36px;
+    height: 36px;
 }
 #actionplan-pixel-container .mosaic-pixel{
-    background-image: url('../../assets/images/pixels/mosaic_pixel_green\(30x30\).svg')
+    background-image: url('../../assets/images/pixels/mosaic_pixel_green\(30x30\).svg');
+    width:36px;
+    height: 36px;
 }
 #actionplan-pixel-container .dot-pixel{
-    background-image: url('../../assets/images/pixels/dot-pixel.svg')
+    background-image: url('../../assets/images/pixels/dot-pixel.svg');
+    width:36px;
+    height: 36px;
 }
 
 /* .actionplan-pixel svg *{
