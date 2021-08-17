@@ -8,6 +8,7 @@ import TestEarthList from './components/views/TestPage/TestEarthList';
 import EarthModal from './components/views/TestPage/EarthModal'
 import CardNewsPage from './components/views/CardNewsPage/CardNewsPage'
 import ActionPlanPage from './components/views/ActionPlanPage/ActionPlanPage'
+import ActionPlanEnding from './components/views/ActionPlanPage/ActionPlanEnding'
 import DataCenterPage from './components/views/DataCenterPage/DataCenterPage'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/cardnews" component={CardNewsPage} />
 
           <Route exact path="/actionplan" component={ActionPlanPage} />
+          <Route exact path="/actionplan/ending" component={ActionPlanEnding} />
 
           <Route exact path="/explain" component={DataCenterPage} />
         </Switch>

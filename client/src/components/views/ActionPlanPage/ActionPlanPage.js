@@ -1,4 +1,5 @@
 import React,{useState,useRef} from 'react';
+import { Link } from "react-router-dom";
 import '../../../css/ActionPlanPage/ActionPlanPage.css';
 //background img
 import PolarBear from '../../../assets/images/actionplans/bear_img.png';
@@ -182,11 +183,16 @@ const ActionPlanPage = () => {
     const backImgObject = {1:PolarBear,2:Turtle,3:Panda}
     const [background,setBackground] = useState(1);
     const [backImg,setBackImg] = useState(backImgObject[background]);
+    const [nextBtn,setNextBtn] = useState(false);
     const onNextBackgroundHandler = (event) =>{
-        if(background==3){
+        if(background===3){
+            setNextBtn(false);
             setBackImg(backImgObject[1]);
             setBackground(1);
         }else{
+            if(background===2){
+                setNextBtn(true);
+            }
             setBackImg(backImgObject[background+1]);
             setBackground(background+1);
         }
@@ -306,8 +312,9 @@ const ActionPlanPage = () => {
                     </ul>
                 </div>
             </article>
+            <Link to="/actionplan/ending"><button className={nextBtn?"next-btn":"next-btn-none"}>next</button></Link>
         </main>
     )
 }
 
-export default ActionPlanPage
+export default ActionPlanPage;

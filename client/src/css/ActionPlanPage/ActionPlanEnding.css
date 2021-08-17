@@ -1,0 +1,86 @@
+@import '../core.css';
+.ActionPlanEnding{
+    width:100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ask-withus{
+    background-image:url('../../assets/images/actionplans/monitor_frame.svg');
+    width:1092px;
+    height:524px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.hide{
+    display: none;
+}
+.ask-title{
+    color:white;
+    padding:0 8%;
+}
+.ask-title h2{
+    font-family: 'Elice Digital Baeum';
+    font-weight: 400;
+    font-size:4.3rem;
+}
+.ask-title h3{
+    font-family: 'Elice Digital Baeum';
+    font-weight: 400;
+    font-size:2.7rem;
+    margin:1.7rem 0;
+}
+.select-btn{
+    padding:8%;
+}
+.select-btn .yes-btn,
+.select-btn .no-btn{
+    width:442px;
+    padding:1rem 0;
+    font-family: 'Digitopia Bold';
+    font-size:2.3rem;
+}
+.yes-btn{
+    margin-right: 1rem;
+    background-color:rgba(139, 255, 50, 1);
+    border:1px dashed #ffffff;
+    color:black;
+}
+.yes-btn:hover{
+    background-color:#70FF00;
+}
+.no-btn{
+    margin-right: 1rem;
+    background-color:transparent;
+    border:1px dashed #ffffff;
+    color:white;
+}
+.no-btn:hover{
+    background-color:#70FF00;
+    color:black;
+}
+
+@keyframes glitch{
+    0%{
+        opacity:100%;
+    }
+    99%{
+        opacity:100%;
+    }
+    100%{
+        opacity: 0%;
+        display:none;
+    }
+}
+.glitch-motion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:glitch 2.9s forwards;
+}
+.glitch-motion img{
+    width:100vw;
+}
