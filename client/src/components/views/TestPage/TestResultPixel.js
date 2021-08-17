@@ -4,7 +4,12 @@ import {ReactComponent as MosaicPixel} from '../../../assets/images/pixels/mosai
 
 //앱 range바의 값을 곱한 숫자를 전달받고 색깔도 숫자로 전달받기?
 const TestResultPixel = (data,color) => {
-    const appColor = ['#FAFF00','#FF00FE','#70FF00','#00FFF9']; //0:노랑,1:핑크,2:초록,3:블루
+    const appColor = {
+        'yellow':'#FAFF00',
+        'pink':'#FF00FE',
+        'green':'#70FF00',
+        'blue':'#00FFF9'
+        }; //0:노랑,1:핑크,2:초록,3:블루
     
     let MosaicPixelNum = data % 100;
     let FillPixelNum = Math.floor(data / 100);

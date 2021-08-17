@@ -136,13 +136,13 @@
 }
 #actionplan-pixel-container{
     width:100vw;
-    height: 75vh;
-    margin-top:25vh;
-    display: flex;
+    height: 95vh;
+    /* margin-top:25vh; */
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
     grid-template-columns: repeat(65,30px);
-    grid-template-rows: repeat(36,30px);
+    grid-template-rows: repeat(36,30px); */
     position: absolute;
     bottom:0;
     left:0;

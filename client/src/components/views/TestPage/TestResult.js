@@ -212,9 +212,7 @@ const TestResult = () => {
 
     const onNetflixBtnHandler = (event) => {
         event.preventDefault();
-        console.log(netflixBtn);
         setNetflixBtn(!netflixBtn);
-        console.log(netflixBtn);
         if(netflixBtn===false){
             world_netflix_data.style.display="none";
             setCarbonFootPrint(carbonFootprint-647);
@@ -486,7 +484,7 @@ const TestResult = () => {
                     </div>
                 </article>
             </section>
-            {TestResultPixel(result,2)}
+            {TestResultPixel(result,'green')}
         </main>
     )
 }

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useRef} from 'react';
 import '../../../css/ActionPlanPage/ActionPlanPage.css';
 import PolarBear from '../../../assets/images/actionplans/bear_img.png';
 import Turtle from '../../../assets/images/actionplans/action_plan_turtle.jpg';
@@ -11,7 +11,7 @@ import { ReactComponent as Email } from '../../../assets/images/actionplans/acti
 import { ReactComponent as SNS } from '../../../assets/images/actionplans/actionplanicon/instagram.svg';
 import { ReactComponent as Netflix} from '../../../assets/images/actionplans/actionplanicon/netflix.svg';
 import { ReactComponent as Zoom } from '../../../assets/images/actionplans/actionplanicon/zoom.svg';
-//import { ReactComponent as ActionPlanPixel } from '../../../assets/images/actionplans/ActionPlan_pixel5.svg';
+import { ReactComponent as ActionPlanPixel } from '../../../assets/images/actionplans/ActionPlan_pixel.svg';
 
 const ActionPlanPage = () => {
     //그리드 갯수만큼 배열 생성 
@@ -23,10 +23,8 @@ const ActionPlanPage = () => {
     const checkExist = (row,col) => {
         existPositionArray.find(object => {
             if(object.column === col & object.row === row){
-                console.log('yes 중복')
                 return true;
             }else{
-                console.log('no 중복')
                 return false;
             }
         })
@@ -52,7 +50,6 @@ const ActionPlanPage = () => {
         let classListArray = ['fill-pixel','dot-pixel','mosaic-pixel']
         
         let random_class = Math.floor(Math.random()*3);
-        console.log(random_class)
 
         let classname = classListArray[random_class];
         // if(index>1000 && position.row>6){
@@ -69,34 +66,32 @@ const ActionPlanPage = () => {
 
     
 
-    const netflix_pixel =  document.querySelector('#netflix');
-    const messenger_pixel =  document.querySelector('#messenger');
-    const brightness_pixel =  document.querySelector('#brightness');
-    const emaillist_pixel =  document.querySelector('#emaillist');
-    const sns_pixel =  document.querySelector('#sns');
-    const smartphone_pixel=  document.querySelector('#smartphone');
-    const energymode_pixel =  document.querySelector('#energymode');
-    const wifi_pixel =  document.querySelector('#wifi');
-    const zoom_pixel =  document.querySelector('#zoom');
-    const darkmode_pixel =  document.querySelector('#darkmode');
-    const emailfile_pixel =  document.querySelector('#emailfile');
-    const cloud_pixel =  document.querySelector('#cloud');
+    // const netflix_pixel=document.getElementById('#netflix');
+    // const messenger_pixel =  document.getElementById('#messenger');
+    // const brightness_pixel =  document.getElementById('#brightness');
+    // const emaillist_pixel =  document.getElementById('#emaillist');
+    // const sns_pixel =  document.getElementById('#sns');
+    // const smartphone_pixel=  document.getElementById('#smartphone');
+    // const energymode_pixel =  document.getElementById('#energymode');
+    // const wifi_pixel =  document.getElementById('#wifi');
+    // const zoom_pixel =  document.getElementById('#zoom');
+    // const darkmode_pixel =  document.getElementById('#darkmode');
+    // const emailfile_pixel =  document.getElementById('#emailfile');
+    // const cloud_pixel =  document.getElementById('#cloud');
 
+    const netflix_pixel = useRef()
 
     const [VideoAction,setVideoAction] = useState(false);
     const onVideoActionHandler = (event) => {
         setVideoAction(!VideoAction);
-        // if(VideoAction === false){
-        //     if(netflix_pixel.classList.contains('show-pixel')){
-        //         netflix_pixel.classList.remove('show-pixel')
-        //     }
-        //     netflix_pixel.classList.add('hide-pixel');
-        // }else{
-        //     if(netflix_pixel.classList.contains('hide-pixel')){
-        //         netflix_pixel.classList.remove('hide-pixel');
-        //     }
-        //     netflix_pixel.classList.add('show-pixel');
-        // }
+        console.log(netflix_pixel)
+        if(VideoAction){ 
+            console.log(VideoAction)
+            netflix_pixel.style.display="none"
+        }else{
+            console.log(VideoAction)
+            netflix_pixel.style.display="block" 
+        }
     }
 
     const [SnsAction,setSnsAction] = useState(false);
@@ -163,8 +158,8 @@ const ActionPlanPage = () => {
                 <img src={Turtle} alt="바다거북이(sea turtle image)"/>
             </div>
             <div id="actionplan-pixel-container">
-                {/* <ActionPlanPixel /> */}
-                {renderPixel}
+                <ActionPlanPixel /> 
+                {/* {renderPixel} */}
             </div>
             <div className="background-img-handler">
                 <button className="image-handler"><Before/></button>
