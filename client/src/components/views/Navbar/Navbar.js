@@ -1,8 +1,8 @@
 import React,{ useState } from 'react';
 import '../../../css/Navbar.css';
 import { Link } from 'react-router-dom';
-import {ReactComponent as Logo } from '../../../assets/images/logo.svg';
-import menuIcon from "../../../assets/images/menu_icon.png";
+import {ReactComponent as Logo } from '../../../assets/images/navbar/logo.svg';
+import menuIcon from "../../../assets/images/navbar/menu_icon.svg";
 
 const NavBar = ({match}) => {
     const [sidebar, setSidebar] = useState(false);

@@ -1,6 +1,6 @@
 <svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="ActionPlan_pixel" clip-path="url(#clip0)">
-<g id="energymode" style="display:block;">
+<g id="energymode">
 <g id="fill_pixel">
 <path d="M35 560H70V595H35V560Z" fill="#70FF00"/>
 <path d="M245 490H280V525H245V490Z" fill="#70FF00"/>
@@ -750,7 +750,7 @@
 <path d="M628 908H631V911H628V908Z" fill="#70FF00" fill-opacity="0.5"/>
 </g>
 </g>
-<g id="messenger" style="display:block;">
+<g id="messenger">
 <g id="fill_pixel_2">
 <path d="M210 770H245V805H210V770Z" fill="#70FF00"/>
 <path d="M245 840H280V875H245V840Z" fill="#70FF00"/>
@@ -1724,7 +1724,7 @@
 <path d="M313 488H316V491H313V488Z" fill="#70FF00" fill-opacity="0.5"/>
 </g>
 </g>
-<g id="wifi" style="display:block;">
+<g id="wifi">
 <g id="fill_pixel_3">
 <path d="M70 210H105V245H70V210Z" fill="#70FF00"/>
 <path d="M105 280H140V315H105V280Z" fill="#70FF00"/>
@@ -3090,7 +3090,7 @@
 <path d="M733 558H736V561H733V558Z" fill="#70FF00" fill-opacity="0.5"/>
 </g>
 </g>
-<g id="emaillist" style="display:block;">
+<g id="emaillist">
 <g id="fill_pixel_4">
 <path d="M70 525H105V560H70V525Z" fill="#70FF00"/>
 <path d="M70 665H105V700H70V665Z" fill="#70FF00"/>
@@ -3944,7 +3944,7 @@
 <path d="M803 558H806V561H803V558Z" fill="#70FF00" fill-opacity="0.5"/>
 </g>
 </g>
-<g id="cloud" style="display:block;">
+<g id="cloud">
 <g id="fill_pixel_5">
 <path d="M350 420H385V455H350V420Z" fill="#70FF00"/>
 <path d="M595 315H630V350H595V315Z" fill="#70FF00"/>
@@ -5724,7 +5724,7 @@
 <path d="M488 1083H491V1086H488V1083Z" fill="#70FF00" fill-opacity="0.5"/>
 </g>
 </g>
-<g id="darkmode" style="display:block;">
+<g id="darkmode">
 <g id="fill_pixel_6">
 <path d="M0 280H35V315H0V280Z" fill="#70FF00"/>
 <path d="M70 385H105V420H70V385Z" fill="#70FF00"/>
@@ -7282,7 +7282,7 @@
 <path d="M873 908H876V911H873V908Z" fill="#70FF00" fill-opacity="0.5"/>
 </g>
 </g>
-<g id="smartphone" style="display:block;">
+<g id="smartphone">
 <g id="fill_pixel_7">
 <path d="M105 665H140V700H105V665Z" fill="#70FF00"/>
 <path d="M245 735H280V770H245V735Z" fill="#70FF00"/>
@@ -8476,7 +8476,7 @@
 <path d="M1013 558H1016V561H1013V558Z" fill="#70FF00" fill-opacity="0.5"/>
 </g>
 </g>
-<g id="brightness" style="display:block;">
+<g id="brightness">
 <g id="fill_pixel_8">
 <path d="M0 385H35V420H0V385Z" fill="#70FF00"/>
 <path d="M70 420H105V455H70V420Z" fill="#70FF00"/>
@@ -9354,7 +9354,7 @@
 <path d="M1013 663H1016V666H1013V663Z" fill="#70FF00" fill-opacity="0.5"/>
 </g>
 </g>
-<g id="netflix" style="display:block;">
+<g id="netflix">
 <g id="fill_pixel_9">
 <path d="M35 490H70V525H35V490Z" fill="#70FF00"/>
 <path d="M245 420H280V455H245V420Z" fill="#70FF00"/>
@@ -10511,7 +10511,7 @@
 <path d="M1048 768H1051V771H1048V768Z" fill="#70FF00" fill-opacity="0.5"/>
 </g>
 </g>
-<g id="zoom" style="display:block;">
+<g id="zoom">
 <g id="fill_pixel_10">
 <path d="M140 630H175V665H140V630Z" fill="#70FF00"/>
 <path d="M175 490H210V525H175V490Z" fill="#70FF00"/>
@@ -12095,7 +12095,7 @@
 <path d="M1013 943H1016V946H1013V943Z" fill="#70FF00" fill-opacity="0.5"/>
 </g>
 </g>
-<g id="emailfile" style="display:block;">
+<g id="emailfile">
 <g id="fill_pixel_11">
 <path d="M1610 980H1645V1015H1610V980Z" fill="#70FF00"/>
 <path d="M1680 595H1715V630H1680V595Z" fill="#70FF00"/>
@@ -13424,7 +13424,7 @@
 <path d="M978 978H981V981H978V978Z" fill="#70FF00" fill-opacity="0.5"/>
 </g>
 </g>
-<g id="sns" style="display:block;">
+<g id="sns">
 <g id="fill_pixel_12">
 <path d="M245 595H280V630H245V595Z" fill="#70FF00"/>
 <path d="M315 455H350V490H315V455Z" fill="#70FF00"/>

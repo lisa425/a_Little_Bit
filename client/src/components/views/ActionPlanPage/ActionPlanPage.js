@@ -1,8 +1,8 @@
 import React,{useState,useRef} from 'react';
 import '../../../css/ActionPlanPage/ActionPlanPage.css';
 import PolarBear from '../../../assets/images/actionplans/bear_img.png';
-import Turtle from '../../../assets/images/actionplans/action_plan_turtle.jpg';
-import Panda from '../../../assets/images/actionplans/action_plan_panda.jpg';
+import Turtle from '../../../assets/images/actionplans/turtle_img.png';
+import Panda from '../../../assets/images/actionplans/panda_img.png';
 import { ReactComponent as Next } from '../../../assets/images/next.svg';
 import { ReactComponent as Before } from '../../../assets/images/before.svg';
 import { ReactComponent as Cloud } from '../../../assets/images/actionplans/actionplanicon/cloud.svg';
@@ -11,7 +11,7 @@ import { ReactComponent as Email } from '../../../assets/images/actionplans/acti
 import { ReactComponent as SNS } from '../../../assets/images/actionplans/actionplanicon/instagram.svg';
 import { ReactComponent as Netflix} from '../../../assets/images/actionplans/actionplanicon/netflix.svg';
 import { ReactComponent as Zoom } from '../../../assets/images/actionplans/actionplanicon/zoom.svg';
-import { ReactComponent as ActionPlanPixel } from '../../../assets/images/actionplans/ActionPlan_pixel.svg';
+import { ReactComponent as ActionPlanPixel } from '../../../assets/images/actionplans/ActionPlan_pixel2.svg';
 
 const ActionPlanPage = () => {
     //그리드 갯수만큼 배열 생성 
@@ -79,19 +79,21 @@ const ActionPlanPage = () => {
     // const emailfile_pixel =  document.getElementById('#emailfile');
     // const cloud_pixel =  document.getElementById('#cloud');
 
-    const netflix_pixel = useRef()
+    const actionplan_pixel = useRef();
 
     const [VideoAction,setVideoAction] = useState(false);
     const onVideoActionHandler = (event) => {
         setVideoAction(!VideoAction);
-        console.log(netflix_pixel)
-        if(VideoAction){ 
-            console.log(VideoAction)
-            netflix_pixel.style.display="none"
-        }else{
-            console.log(VideoAction)
-            netflix_pixel.style.display="block" 
-        }
+        // const netflix_pixel = actionplan_pixel.current.getElementById('netflix');
+        // console.log(netflix_pixel)
+        // if(VideoAction){ 
+        //     console.log(VideoAction)
+           
+        //     netflix_pixel.style.display="none"
+        // }else{
+        //     console.log(VideoAction)
+        //     netflix_pixel.style.display="block" 
+        // }
     }
 
     const [SnsAction,setSnsAction] = useState(false);
@@ -149,21 +151,31 @@ const ActionPlanPage = () => {
         setEmailFileAction(!EmailFileAction);
     }
 
+    const backImgObject = {1:PolarBear,2:Turtle,3:Panda}
+    const [background,setBackground] = useState(1);
+    const [backImg,setBackImg] = useState(backImgObject[background]);
+    const onNextBackgroundHandler = (event) =>{
+        if(background==3){
+            setBackImg(backImgObject[1]);
+            setBackground(1);
+
+        }else{
+            setBackImg(backImgObject[background+1]);
+            setBackground(background+1);
+        }
+    }
 
     return(
         <main className="ActionPlan">
             <div className="background-img-container">
-                <img src={PolarBear} alt="북극곰(polar bear image)"/>
-                <img src={Panda} alt="판다(panda image)"/>
-                <img src={Turtle} alt="바다거북이(sea turtle image)"/>
+                <img src={backImg} alt="북극곰(polar bear image)"/>
             </div>
             <div id="actionplan-pixel-container">
-                <ActionPlanPixel /> 
+                <ActionPlanPixel ref={actionplan_pixel}/> 
                 {/* {renderPixel} */}
             </div>
             <div className="background-img-handler">
-                <button className="image-handler"><Before/></button>
-                <button className="image-handler"><Next/></button>
+                <button className="image-handler" onClick={onNextBackgroundHandler}><Next/></button>
             </div>
             <article className="actionplan-contents">
                 <h2>Action Plan</h2>
