@@ -37,4 +37,15 @@ router.post('/getEarthDetail',(req,res) => {
         res.status(200).json({success:true,earthDetail})
     })
 })
+
+router.post('/getmessage',(req,res) => {
+    const userid = req.body._id;
+    const message = req.body.message;
+    Test.findOne({"_id":userid}).exec((err,mytest)=>{
+        mytest.message = message;
+        mytest.save();
+        if(err) return res.status(400).send(err);
+        res.status(200).json({success:true,mytest,message});
+    });
+})
 module.exports = router

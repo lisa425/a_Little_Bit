@@ -28,6 +28,23 @@ const TestEarthList = () => {
         })
     },[]);
 
+    //message 내용 저장
+    const userMessage = useRef();
+    const submitTicket = () => {
+        const newMessage = {
+            message:userMessage.current.value,
+            _id:cookie._id
+        };
+        Axios.post('/api/test/getmessage',newMessage)
+        .then(response => {
+            if(response.data.success){
+                console.log(response.data);
+            }else{
+                alert('테스트 실패');
+            }
+        })
+    }
+    
    
     // useEffect(()=>{
     //     Axios.post('/api/test/getEarthDetail',variab)
@@ -110,7 +127,7 @@ const TestEarthList = () => {
                         </div>
                     </div>
                     <div className="message">
-                        <textarea placeholder="Type your message!"></textarea>
+                        <textarea placeholder="Type your message!" ref={userMessage}></textarea>
                     </div>
                     <div className="created_at">
                         <div className="date">
@@ -123,7 +140,7 @@ const TestEarthList = () => {
                             <span>{moment(cookie.createdAt).format("HH:mm:ss")}</span>
                         </div>
                     </div>
-                    <button className="take">Take your<span><Arrow/></span>Planet!</button>
+                    <button className="take" onClick={submitTicket}>Take your<span><Arrow/></span>Planet!</button>
                 </article>
             </section>
             {renderEarth}
