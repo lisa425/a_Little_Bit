@@ -42,7 +42,6 @@ const TestResult = () => {
         Axios.get('/api/test/getResult')
         .then(response => {
             if(response.data.success){
-                console.log(response.data.cookie); 
                 setCookie(response.data.cookie);
             }else{
                 alert('Getting Test Result is Fail');
@@ -480,7 +479,7 @@ const TestResult = () => {
                     </div>
                     <div className="result-navigator-box">
                         <p>다른 사람들은 얼마나 많은<br/>디지털 탄소 발자국을 남겼을까요?</p>
-                        <Link to="/test/earthlist"><button className="navigator-btn">go</button></Link>
+                        <Link to="/guestbook"><button className="navigator-btn">go</button></Link>
                     </div>
                 </article>
             </section>

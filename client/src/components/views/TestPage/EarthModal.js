@@ -57,7 +57,7 @@ const EarthModal = (props) => {
                     </div>
                 </section>
             </div>
-            <Link to="/test/earthlist"><button id="closeModal" className="close-modal" type="button">Back</button></Link>
+            <Link to="/guestbook"><button id="closeModal" className="close-modal" type="button">Back</button></Link>
         </div>
         </div>
     )

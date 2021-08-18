@@ -22,8 +22,9 @@ function App() {
           <Route exact path="/testintro" component={TestIntro} />
           <Route exact path="/test" component={TestPage} />
           <Route exact path="/test/result" component={TestResult} />
-          <Route exact path="/test/earthlist" component={TestEarthList} />
-          <Route exact path="/test/earthlist/:earthId" component={EarthModal} />
+
+          <Route exact path="/guestbook" component={TestEarthList} />
+          <Route exact path="/guestbook/:earthId" component={EarthModal} />
 
           <Route exact path="/cardnews" component={CardNewsPage} />
 

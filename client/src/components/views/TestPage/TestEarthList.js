@@ -1,13 +1,19 @@
 import React,{ useEffect, useState, useRef } from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestEarthList.css';
+import "../../../css/TestPage/EarthModal.css";
 import EarthImg from '../../../assets/images/earth/earth.png';
 import Draggable from "react-draggable";
+import moment from 'moment';
+import { Link } from "react-router-dom";
+import {ReactComponent as Arrow} from '../../../assets/images/earth/Arrow.svg'
+import {ReactComponent as EarthIcon} from '../../../assets/images/earth/earth_icon.svg'
 
 const TestEarthList = () => {
 
     //지구 리스트
     const [Earth,setEarth] = useState([]);
+    const [cookie,setCookie] = useState({});
 
     useEffect(() => {
         Axios.get('/api/test/getEarth')
@@ -15,13 +21,11 @@ const TestEarthList = () => {
             if(response.data.success){
                 console.log(response.data);
                 setEarth(response.data.tests);
+                setCookie(response.data.cookie);
             }else{
                 alert('Test get fail');
             }
         })
-        return () => {
-
-        }
     },[]);
 
    
@@ -31,9 +35,23 @@ const TestEarthList = () => {
     
 
     
+    const [earthModal,setEarthModal] = useState(false);
     const targetEarth = useRef();
-    const showTargetEarthInfo = (e) => {
-        console.log(e.currentTarget)
+    const showTargetEarthInfo = (e,num) => {
+        <Modal earth={e} index={num} modal={earthModal}/>
+        //const variable = {earthId:e.current.earth_id};
+        
+
+        // Axios.post('/api/test/getEarthDetail',variable)
+        // .then(response => {
+        //     if(response.data.success){
+        //         console.log(response.data);
+        //         setEarthDetail(response.data.earthDetail);
+
+        //     }else{
+        //         alert('fail');
+        //     }
+        // });
     }
 
     const renderEarth = Earth.map((earth,index) => {
@@ -50,15 +68,16 @@ const TestEarthList = () => {
                 <div 
                     ref={targetEarth}
                     id={index} 
-                    onClick={showTargetEarthInfo}
                     className="earth-list"
                     style={{left:valueLeft, top:valueBottom}}
                 >
-                    <div className="earth-content" key={index+1}>
+                    <div className="earth-content" key={index+1} onClick={showTargetEarthInfo(earth,index)}>
                         <img src={EarthImg} alt="earth image"/>
-                        <a href={`/test/earthlist/${earth._id}`}>
+                        {/* <button onClick={}> */}
+                        <a href={`/guestbook/${earth._id}`}>
                             <p className="earth-index">{index+1}</p>
-                        </a>
+                         </a>
+                        {/* </button> */}
                     </div>
                 </div>
             </Draggable>
@@ -67,8 +86,85 @@ const TestEarthList = () => {
 
     return(
         <main className="TestEarthList">
-                {renderEarth}
+            <section className="guestbook">
+                <h1>Guest book</h1>
+                <p>지구에게 하고싶은 말을 적어주세요!</p>
+                <article className="earth-ticket">
+                    <h3 className="title">
+                        <span>Code</span>
+                        <span>01</span>
+                    </h3>
+                    <div className="name">
+                        <span>Name</span>
+                        <span>{cookie.name}</span>
+                    </div>
+                    <div className="location">
+                        <span>Location</span>
+                        <span>{cookie.location}</span>
+                    </div>
+                    <div className="result">
+                        <EarthIcon />
+                        <div className="result-data">
+                            <span>{cookie.result}kg</span>
+                            <span>CO2 eq</span>
+                        </div>
+                    </div>
+                    <div className="message">
+                        <textarea placeholder="Type your message!"></textarea>
+                    </div>
+                    <div className="created_at">
+                        <div className="date">
+                            <span>Date /</span>
+                            <span>{moment(cookie.createdAt).format("YY/MM/DD")}</span>
+                        </div>
+                        <hr/>
+                        <div className="time">
+                            <span>Time /</span>
+                            <span>{moment(cookie.createdAt).format("HH:mm:ss")}</span>
+                        </div>
+                    </div>
+                    <button className="take">Take your<span><Arrow/></span>Planet!</button>
+                </article>
+            </section>
+            {renderEarth}
         </main>
+    )
+}
+
+const Modal = (props) => {
+    return(
+        <div className='earth-modal'>
+            <div className="modal-container">
+                <div className="modal-box">
+                    <section className="earth-code">
+                        <div><span>Code</span> <span className="code-num">{props.index}</span></div>
+                        <hr/>
+                    </section>
+
+                    <img src={EarthImg} alt="earth image"/>
+
+                    <section className="earth-info">
+                        <div className="earth-info-name">
+                            <span>Name</span> <span className="value">{props.earth.name}</span>
+                        </div>
+                        <div className="earth-info-location">
+                            <p>Location</p>
+                            <hr/>
+                            <p className="value">{props.earth.location}</p>
+                        </div>
+                        <div className="earth-info-message">
+                            <p>Message</p>
+                            <hr/>
+                            <p className="value">"신기하ㅏ당"</p>
+                        </div>
+                        <div className="earth-info-date">
+                            <span>Date</span> <span className="value created-at">{moment(props.earth.createdAt).format("YYYY.MM.DD HH:mm:ss")}</span>
+                        </div>
+                    </section>
+                </div>
+                <Link to="/guestbook"><button id="closeModal" className="close-modal" type="button">Back</button></Link>
+            </div>
+        </div>
     )
 }
 

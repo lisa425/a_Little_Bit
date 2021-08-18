@@ -7,9 +7,10 @@
 .earth-modal{
     width:100vw;
     height: 100vh;
-    background-image:linear-gradient(black,black), url('../../assets/images/earth/earth.png');
+    /* background-image:linear-gradient(black,black), url('../../assets/images/earth/earth.png');
     background-size: 350px;
-    background-blend-mode:saturation;
+    background-blend-mode:saturation; */
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,6 +18,10 @@
     position: absolute;
     top:0;
     left:0;
+    z-index: 100;
+}
+.hide-earth-modal{
+    display:none;
 }
 .modal-container{
     width:100vw;

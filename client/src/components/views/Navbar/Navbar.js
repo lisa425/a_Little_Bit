@@ -40,7 +40,7 @@ const NavBar = ({match}) => {
                             <p className="kr-menu">액션 플랜</p></Link>
                         </li>
 
-                        <li><Link to="/test/earthlist" onClick={closeSidebar}>
+                        <li><Link to="/guestbook" onClick={closeSidebar}>
                             <p className="en-menu">Guest book</p>
                             <p className="kr-menu">방명록</p></Link>
                         </li>
