@@ -15,10 +15,9 @@
     justify-content: center;
     align-items: center;
     color:#70FF00;
-    position: absolute;
+    position: fixed;
     top:0;
     left:0;
-    z-index: 100;
 }
 .hide-earth-modal{
     display:none;
@@ -69,18 +68,21 @@
     border:none;
     padding:1rem;
 }
+.earth-info {
+    width:250px;
+}
 .earth-info div{
     margin:0 0 2.6rem 0;
     font-family: 'Rany';
     font-weight: 300;
-    font-size:15px;
-    width:206px;
+    font-size:1.1rem;
+    width:100%;
 }
 .earth-modal hr{
     background-color:#70FF00;
     height: 1px;
     border:none;
-    width:206px;
+    width:100%;
 }
 .earth-info-name{
     display: flex;
@@ -98,6 +100,18 @@
     color:white;
     font-family:"Elice Digital Baeum";
     font-size: 1.1rem;
+    width:100%;
+    max-height: 50px;
+    line-height: 1.5rem;
+    word-break: normal;
+    word-wrap:break-word;
+    white-space: normal;
+    overflow:scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+.earth-info-location>.value::-webkit-scrollbar{
+    display:none;
 }
 .earth-info-message>.value{
     font-size:1.1rem;
@@ -105,6 +119,18 @@
     font-weight: 400;
     color:White;
     float: right;
+    width:100%;
+    max-height: 180px;
+    line-height: 1.5rem;
+    word-break: normal;
+    word-wrap:break-word;
+    white-space: normal;
+    overflow:scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+.earth-info-message>.value::-webkit-scrollbar{
+    display:none;
 }
 .earth-info-date{
     display: flex;

@@ -18,7 +18,6 @@ const EarthModal = (props) => {
             if(response.data.success){
                 console.log(response.data);
                 setEarthDetail(response.data.earthDetail);
-
             }else{
                 alert('fail');
             }
@@ -32,7 +31,7 @@ const EarthModal = (props) => {
             <div className="modal-container">
             <div className="modal-box">
                 <section className="earth-code">
-                    <div><span>Code</span> <span className="code-num">{earthDetail.index}</span></div>
+                    <div><span>Code</span> <span className="code-num">78</span></div>
                     <hr/>
                 </section>
 

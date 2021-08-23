@@ -74,10 +74,12 @@ html{
     grid-row:3;
     width:85%;
     display:flex;
+    height: 100%;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
 }
+
 .earth-ticket .name span:nth-child(1),
 .earth-ticket .location span:nth-child(1){
     border:1px solid rgba(0, 0, 0, 0.7);
@@ -91,7 +93,19 @@ html{
     font-family: 'Elice Digital Baeum';
     font-weight: 400;
     font-size:0.9rem;
+    width:131px;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    max-height:100%;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+.earth-ticket .name span:nth-child(2)::-webkit-scrollbar,
+.earth-ticket .location span:nth-child(2)::-webkit-scrollbar{
+    display: none;
+}
+
 .earth-ticket .result{
     grid-row:4;
     display: flex;
@@ -123,6 +137,9 @@ html{
     height: 100%;
     display:flex;
     justify-content: center;
+    font-size: 1rem;
+    font-family: 'Elice Digital Baeum';
+    font-weight: 400;
 }
 .earth-ticket .message .message-text{
     width:100%;
@@ -135,6 +152,12 @@ html{
     align-items: flex-start;
     overflow:scroll;
     font-size: 0.9rem;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    line-height: 1.5rem;
+}
+.earth-ticket .message .message-text::-webkit-scrollbar{
+    display:none;
 }
 .earth-ticket .message .textarea{
     width:100%;
@@ -229,4 +252,5 @@ html{
     font-family: "Rany";
     font-weight: 500;
     padding:5%;
+    cursor: pointer;
 }

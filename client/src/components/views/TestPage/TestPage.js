@@ -668,7 +668,7 @@ const TestPage = () => {
                     <section className={next ? "next-clicked" : "get-info page-1"} id="get-name">
                         <div className="get-info-input">
                             <p>당신의 이름을 입력하세요.</p>
-                            <input className="input-info" type="text" name="name" value={name} onChange={onNameHandler} />
+                            <input className="input-info" type="text" name="name" value={name} onChange={onNameHandler} maxLength='10'/>
                         </div>
                         <button className={next ? "next-clicked" : "submit-to-next"} type="submit" onClick={onClickNext}>NEXT</button>
                     </section>
@@ -679,7 +679,7 @@ const TestPage = () => {
                         <div className="get-info-input">
                             <p>지금 계신 위치가 어디신가요?</p>
                             <p className="location-ex">ex)서울,한국/신비한 우리집</p>
-                            <input className="input-info" type="text" name="name" value={location} onChange={onLocationHandler}/>
+                            <input className="input-info" type="text" name="name" value={location} onChange={onLocationHandler} maxLength='50'/>
                             <button className={next2 ? "next2-clicked" : "submit-to-next" } type="submit" onClick={onClickNext2}>NEXT</button>
                         </div>
                     </section>

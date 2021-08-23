@@ -2,14 +2,15 @@ import React,{ useEffect, useState, useRef } from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestEarthList.css';
 import "../../../css/TestPage/EarthModal.css";
+import EarthModal from "./EarthModal";
 import EarthImg from '../../../assets/images/earth/earth.png';
 import Draggable from "react-draggable";
 import moment from 'moment';
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router,Link } from "react-router-dom";
 import {ReactComponent as Arrow} from '../../../assets/images/earth/Arrow.svg'
 import {ReactComponent as EarthIcon} from '../../../assets/images/earth/earth_icon.svg'
 
-const TestEarthList = () => {
+const TestEarthList = (props) => {
 
     //지구 리스트
     const [Earth,setEarth] = useState([]);
@@ -52,39 +53,42 @@ const TestEarthList = () => {
         myTest.message = newMessage.message;
         setIsMessage(true);
         setSubmit(true);
+        props.history.push(`/guestbook/${myTest._id}`)
+    }
+    const alreadySubmit = () => {
+        alert('이미 제출된 티켓입니다.');
     }
 
-    
-    const [earthModal,setEarthModal] = useState(false);
-    const targetEarth = useRef();
-    const showEarthModal = (e,num) => {
-        
+    const [isOpenModal,setIsOpenModal]=useState(false);
+    const showModal = (id) => {
+        // let earthId = id;
+        // return <EarthModal earthId={earthId}/>
+        // let index = event.currentTarget.id;
+        // let target_modal = document.querySelector(`#earth_modal_${index}`);
+        // target_modal.classList.remove('hide');
+        // target_modal.classList.add('earth-modal');
+        // console.log(target_modal);
     }
-
     const renderEarth = Earth.map((earth,index) => {
         // 지구를 랜덤한 위치에 출력한다. 랜덤한 position 위치 값 설정
         let min = Math.ceil(-10);
         let max = Math.floor(3000);
         let valueBottom = Math.floor(Math.random()*(max-min)*2);
         let valueLeft = Math.floor(Math.random()*(max-min)/2);
-        let valueTop = Math.floor(Math.random()*(max-min));
-        //style={{left:valueLeft, bottom: valueBottom, top:valueTop}}
 
         return(
             <Draggable>
                 <div 
-                    ref={targetEarth}
-                    id={index} 
                     className="earth-list"
                     style={{left:valueLeft, top:valueBottom}}
+                    key={index+1}
+                    // onClick={showModal}
                 >
-                    <div className="earth-content" key={index+1}>
+                    <div className="earth-content">
                         <img src={EarthImg} alt="earth image"/>
-                        <button onClick={showEarthModal(earth,index)}>
-                        {/* <a href={`/guestbook/${earth._id}`}> */}
-                            <p className="earth-index">{index+1}</p>
-                         {/* </a> */}
-                        </button>
+                        <a href={`/guestbook/${earth._id}`}>
+                            <p id={index+1} className="earth-index">{index+1}</p>
+                        </a>
                     </div>
                 </div>
             </Draggable>
@@ -118,7 +122,7 @@ const TestEarthList = () => {
                     </div>
                     <div className="message">
                         <div className={isMessage?"message-text":"hide"}>{myTest.message}</div>
-                        <textarea className={isMessage?"hide":"textarea"} placeholder="Type your message!" ref={userMessage}></textarea>
+                        <textarea className={isMessage?"hide":"textarea"} placeholder="Type your message!" ref={userMessage} maxLength='150'></textarea>
                     </div>
                     <div className="created_at">
                         <div className="date">
@@ -131,7 +135,7 @@ const TestEarthList = () => {
                             <span>{moment(myTest.createdAt).format("HH:mm:ss")}</span>
                         </div>
                     </div>
-                    <button className="take" onClick={submit?"":submitTicket}>Take your<span><Arrow/></span>Planet!</button>
+                    <button className="take" onClick={submit?alreadySubmit:submitTicket}>Take your<span><Arrow/></span>Planet!</button>
                 </article>
             </section>
             {renderEarth}
