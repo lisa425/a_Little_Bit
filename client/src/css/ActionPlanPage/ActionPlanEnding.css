@@ -34,6 +34,12 @@
     font-size:2.7rem;
     margin:1.7rem 0;
 }
+@keyframes blink{
+    50%{
+        color:black;
+        background-color:#70FF00;
+    }
+}
 .select-btn{
     padding:8%;
 }
@@ -43,25 +49,21 @@
     padding:1rem 0;
     font-family: 'Digitopia Bold';
     font-size:2.3rem;
-}
-.yes-btn{
-    margin-right: 1rem;
-    background-color:rgba(139, 255, 50, 1);
-    border:1px dashed #ffffff;
-    color:black;
-}
-.yes-btn:hover{
-    background-color:#70FF00;
-}
-.no-btn{
     margin-right: 1rem;
     background-color:transparent;
     border:1px dashed #ffffff;
     color:white;
 }
+.yes-btn{
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: step-end;
+}
+.yes-btn:hover,
 .no-btn:hover{
-    background-color:#70FF00;
     color:black;
+    background-color:#70FF00;
 }
 
 @keyframes glitch{
@@ -74,7 +76,7 @@
     }
     100%{
         opacity: 0%;
-        display:none;
+        visibility: hidden;
     }
 }
 .glitch-motion{
@@ -103,9 +105,9 @@
 .noEnding,
 .yesEnding{
     z-index:1;
-    animation-name: showEnding;
+    /* animation-name: showEnding;
     animation-delay: 2.8s;
-    animation-duration: 0.5s;
+    animation-duration: 0.5s; */
     display:flex;
     justify-content: center;
     align-items: center;
@@ -120,10 +122,6 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    width:100%;
-    height: 100%;
-}
-.yes-ending-box{
     background-image:url('../../assets/images/earth/earth.png');
     background-size: auto 562px;
     background-repeat: no-repeat;
@@ -142,18 +140,25 @@
     background-color:#000;
     color:#70FF00;
 }
-.no-ending-box{
-    background-image:url('http://drive.google.com/uc?export=view&id=1eJZvSfT7V6gXXJjWXIcQ12_20MBvQ44o');
+.no-ending-box a{
+    z-index: 3;
 }
 .back-btn{
-    
+    width:350px;
+    height: 70px;
+    font-family: 'Digitopia Bold';
+    font-size: 1.5rem;
+    color:#000;
+    background: #70FF00;
+    border:none;
+    cursor: pointer;
 }
 
 @keyframes showHomeBtn{
     0%{
         opacity: 0;
     }
-    80%{
+    99%{
         opacity: 0.5%;
     }
     100%{
@@ -161,8 +166,7 @@
     }
 }
 .home-btn{
-    opacity: 1;
-    animation: showHomeBtn 1s 5s forwards;
+    animation: showHomeBtn 6s forwards;
     position: fixed;
     color:black;
     background-color:#70FF00;

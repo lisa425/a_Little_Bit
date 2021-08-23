@@ -17,12 +17,16 @@ const ActionPlanEnding = () => {
         console.log(Answer);
     }
 
+    const reload = () => {
+        window.location.reload();
+    }
+
     const showEnding = (answer) => {
         if(answer){
             return(
                 <article className="yesEnding">
                     <div className="yes-ending-box">
-                        <p><span>지구</span>를<span>변화</span>시키는<br/>
+                        <p><span>지구</span>를 <span>변화</span>시키는<br/>
                         <span>609</span>번째<br/>당신의 선택</p>
                     </div>
                     <Link to="/"><button className="home-btn">Home</button></Link>
@@ -32,7 +36,7 @@ const ActionPlanEnding = () => {
             return(
                 <article className="noEnding">
                     <div className="no-ending-box">
-                        <Link to="/actionplan/ending"><button className="back-btn">back</button></Link>
+                        <button className="back-btn" onClick={reload}>← back</button>
                     </div>
                 </article>
             );
