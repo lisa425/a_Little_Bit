@@ -9,22 +9,17 @@ import { Link } from "react-router-dom";
 const EarthModal = (props) => {
     const earthId = props.match.params.earthId;
     const variable = {earthId:earthId};
-
-
     const [earthDetail, setEarthDetail] = useState([])
     useEffect(()=>{
         Axios.post('/api/test/getEarthDetail',variable)
         .then(response => {
             if(response.data.success){
-                console.log(response.data);
                 setEarthDetail(response.data.earthDetail);
             }else{
                 alert('fail');
             }
         });
     },[]);
-
-    console.log(earthDetail);
     
     return(
         <div className='earth-modal'>

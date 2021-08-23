@@ -9,6 +9,7 @@ import moment from 'moment';
 import { BrowserRouter as Router,Link } from "react-router-dom";
 import {ReactComponent as Arrow} from '../../../assets/images/earth/Arrow.svg'
 import {ReactComponent as EarthIcon} from '../../../assets/images/earth/earth_icon.svg'
+import {ReactComponent as Search} from '../../../assets/images/earth/search.svg';
 
 const TestEarthList = (props) => {
 
@@ -53,22 +54,22 @@ const TestEarthList = (props) => {
         myTest.message = newMessage.message;
         setIsMessage(true);
         setSubmit(true);
-        props.history.push(`/guestbook/${myTest._id}`)
+        props.history.push(`/guestbook/${myTest._id}`);
     }
     const alreadySubmit = () => {
         alert('이미 제출된 티켓입니다.');
     }
 
-    const [isOpenModal,setIsOpenModal]=useState(false);
-    const showModal = (id) => {
-        // let earthId = id;
-        // return <EarthModal earthId={earthId}/>
-        // let index = event.currentTarget.id;
-        // let target_modal = document.querySelector(`#earth_modal_${index}`);
-        // target_modal.classList.remove('hide');
-        // target_modal.classList.add('earth-modal');
-        // console.log(target_modal);
+    //search earth
+    const searchValue = useRef();
+    const onSearchSubmit = (e) => {
+        e.preventDefault();
+        let keyword = searchValue.current.value;
+        console.log(keyword);
+
     }
+
+  
     const renderEarth = Earth.map((earth,index) => {
         // 지구를 랜덤한 위치에 출력한다. 랜덤한 position 위치 값 설정
         let min = Math.ceil(-10);
@@ -139,6 +140,10 @@ const TestEarthList = (props) => {
                 </article>
             </section>
             {renderEarth}
+            <form method="get" onsubmit={onSearchSubmit} className="search-form">
+                <input type="text" name="searchText" ref={searchValue} placeholder="find yours !" />
+                <button type="submit" onClick={onSearchSubmit}><Search/></button>
+            </form>
         </main>
     )
 }

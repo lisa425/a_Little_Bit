@@ -38,9 +38,10 @@ router.get('/getEarth',(req,res) => {
 
 router.post('/getEarthDetail',(req,res) => {
     //개별 test 기록의 정보를 DB에서 가져와서 클라이언트에 전송
+    const cookie = req.cookies.test;
     Test.findOne({"_id":req.body.earthId}).exec((err,earthDetail) => {
         if(err) return res.status(400).send(err);
-        res.status(200).json({success:true,earthDetail})
+        res.status(200).json({success:true,earthDetail,cookie})
     })
 })
 

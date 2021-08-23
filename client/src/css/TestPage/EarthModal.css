@@ -37,6 +37,9 @@
     position: relative;
     top:90px;
 }
+.earth-code{
+    width:150px;
+}
 .earth-code>div{
     display: flex;
     justify-content: space-between;

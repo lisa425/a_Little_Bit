@@ -254,3 +254,41 @@ html{
     padding:5%;
     cursor: pointer;
 }
+
+.TestEarthList .search-form{
+    position: fixed;
+    bottom:0;
+    left:0;
+    z-index: 100;
+    width:300px;
+    height:72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:white;
+    padding:0 3%;
+  
+}
+.TestEarthList .search-form input{
+    width:87%;
+    height:100%;
+    background:white;
+    font-size: 1.4rem;
+    font-family: 'Elice Digital Baeum';
+    font-weight: 400;
+    border:none;
+    padding:0;
+}
+.TestEarthList .search-form input:focus{
+    outline: none;
+}
+.TestEarthList .search-form input::placeholder{
+    color:#333;
+    font-family: 'Digitopia';
+}
+.TestEarthList .search-form button{
+    position:absolute;
+    right:1rem;
+    background:transparent;
+    border:none;
+}
