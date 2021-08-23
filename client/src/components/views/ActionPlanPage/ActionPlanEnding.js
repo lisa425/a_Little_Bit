@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import '../../../css/ActionPlanPage/ActionPlanEnding.css';
 import glitch from '../../../assets/images/actionplans/glitch.gif';
+import { Link } from "react-router-dom";
 
 const ActionPlanEnding = () => {
     const [Answer,setAnswer] = useState(true);
@@ -9,22 +10,32 @@ const ActionPlanEnding = () => {
     const selectYesBtn = (e) => {
         setAnswer(true);
         setClick(true);
-        showEnding(Answer);
-        
     }
     const selectNoBtn = (e) => {
         setAnswer(false);
         setClick(true);
         console.log(Answer);
-        showEnding(Answer);
-        
     }
 
     const showEnding = (answer) => {
         if(answer){
-            return;
+            return(
+                <article className="yesEnding">
+                    <div className="yes-ending-box">
+                        <p><span>지구</span>를<span>변화</span>시키는<br/>
+                        <span>609</span>번째<br/>당신의 선택</p>
+                    </div>
+                    <Link to="/"><button className="home-btn">Home</button></Link>
+                </article>
+            );
         }else{
-            return;
+            return(
+                <article className="noEnding">
+                    <div className="no-ending-box">
+                        <Link to="/actionplan/ending"><button className="back-btn">back</button></Link>
+                    </div>
+                </article>
+            );
         }
     }
     return(
@@ -42,7 +53,7 @@ const ActionPlanEnding = () => {
             <section className={click? "glitch-motion" : "hide"}>
                 <img src={glitch} alt="earth glitch motion"/>
             </section>
-            {showEnding}
+            {showEnding(Answer)}
         </main>
     )
 }

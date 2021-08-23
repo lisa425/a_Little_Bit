@@ -22,12 +22,18 @@ router.get('/getResult',(req,res)=>{
 
 router.get('/getEarth',(req,res) => {
     //test 기록들을 DB에서 가져와서 클라이언트에 전송
+    //cookie를 기준으로 나의 테스트 정보를 전송 
     const cookie = req.cookies.test;
-    //티켓 요소를 넣을 경우 쿠키도 함께 전송!
+    const userid = cookie._id;
+    let mytest = {};
+    Test.findById(userid,function(err,test){
+        mytest = test;
+    });
     Test.find().exec((err,tests) => {
         if(err) return res.status(400).send(err);
-        res.status(200).json({success:true,tests,cookie})
-    })
+        res.status(200).json({success:true,tests,cookie,mytest})
+    });
+    
 })
 
 router.post('/getEarthDetail',(req,res) => {
@@ -41,6 +47,7 @@ router.post('/getEarthDetail',(req,res) => {
 router.post('/getmessage',(req,res) => {
     const userid = req.body._id;
     const message = req.body.message;
+    //쿠키를 기준으로 나의 테스트 내용을 찾아 메세지를 저장
     Test.findOne({"_id":userid}).exec((err,mytest)=>{
         mytest.message = message;
         mytest.save();

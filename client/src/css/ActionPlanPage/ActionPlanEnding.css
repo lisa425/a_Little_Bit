@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    z-index:3;
 }
 .hide{
     display: none;
@@ -66,6 +67,7 @@
 @keyframes glitch{
     0%{
         opacity:100%;
+        display: flex;
     }
     99%{
         opacity:100%;
@@ -76,11 +78,102 @@
     }
 }
 .glitch-motion{
-    display: flex;
     justify-content: center;
     align-items: center;
     animation:glitch 2.9s forwards;
+    z-index:2;
 }
 .glitch-motion img{
     width:100vw;
+}
+
+@keyframes showEnding{
+    0%{
+        opacity:0;
+        display:none;
+    }
+    99%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+        display:flex;
+    }
+}
+.noEnding,
+.yesEnding{
+    z-index:1;
+    animation-name: showEnding;
+    animation-delay: 2.8s;
+    animation-duration: 0.5s;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height: 100vh;
+}
+.no-ending-box,
+.yes-ending-box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100%;
+}
+.yes-ending-box{
+    background-image:url('../../assets/images/earth/earth.png');
+    background-size: auto 562px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:#fff;
+    font-family: 'Elice Digital Baeum';
+    font-weight: 600;
+    font-size:1.9rem;
+    width:1000px;
+    height: 562px;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.yes-ending-box span{
+    background-color:#000;
+    color:#70FF00;
+}
+.no-ending-box{
+    background-image:url('http://drive.google.com/uc?export=view&id=1eJZvSfT7V6gXXJjWXIcQ12_20MBvQ44o');
+}
+.back-btn{
+    
+}
+
+@keyframes showHomeBtn{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0.5%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.home-btn{
+    opacity: 1;
+    animation: showHomeBtn 1s 5s forwards;
+    position: fixed;
+    color:black;
+    background-color:#70FF00;
+    right:0;
+    bottom:0;
+    margin:0;
+    font-family: 'Digitopia Bold';
+    font-size:1.6rem;
+    border:none;
+    padding:1.5rem;
+    width:155px;
+    z-index:5;
+    display: inline;
 }

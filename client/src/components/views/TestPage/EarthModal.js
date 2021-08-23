@@ -50,7 +50,7 @@ const EarthModal = (props) => {
                     <div className="earth-info-message">
                         <p>Message</p>
                         <hr/>
-                        <p className="value">"신기하ㅏ당"</p>
+                        <p className="value">{earthDetail.message}</p>
                     </div>
                     <div className="earth-info-date">
                         <span>Date</span> <span className="value created-at">{moment(earthDetail.createdAt).format("YYYY.MM.DD HH:mm:ss")}</span>
