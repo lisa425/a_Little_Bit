@@ -23,3 +23,6 @@ app.use('/api/test', require('./routes/test'));
 
 
 app.listen(port,() => console.log(`Example app listening on port ${port}`));
+
+//https://wellbell.tistory.com/43 
+//commit test...
