@@ -1,7 +1,7 @@
 import React,{ useEffect, useState, useRef } from 'react';
 import Axios from 'axios';
-import '../../../css/TestPage/TestEarthList.css';
-import "../../../css/TestPage/EarthModal.css";
+import '../../../css/GuestBookPage/TestEarthList.css';
+import "../../../css/GuestBookPage/EarthModal.css";
 import EarthModal from "./EarthModal";
 import EarthImg from '../../../assets/images/earth/earth.png';
 import Draggable from "react-draggable";
@@ -50,12 +50,13 @@ const TestEarthList = (props) => {
             }else{
                 alert('테스트 실패');
             }
-        })
+        }).catch(err=>console.log(err));
         myTest.message = newMessage.message;
         setIsMessage(true);
         setSubmit(true);
         props.history.push(`/guestbook/${myTest._id}`);
     }
+
     const alreadySubmit = () => {
         alert('이미 제출된 티켓입니다.');
     }
@@ -66,7 +67,6 @@ const TestEarthList = (props) => {
         e.preventDefault();
         let keyword = searchValue.current.value;
         console.log(keyword);
-
     }
 
   

@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react';
-import "../../../css/TestPage/EarthModal.css";
+import "../../../css/GuestBookPage/EarthModal.css";
 import EarthImg from '../../../assets/images/earth/earth.png';
 import TestEarthList from './TestEarthList';
 import Axios from 'axios';

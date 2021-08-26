@@ -4,8 +4,8 @@ import NavBar from './components/views/Navbar/Navbar';
 import TestPage from './components/views/TestPage/TestPage';
 import TestIntro from './components/views/TestPage/TestIntro';
 import TestResult from './components/views/TestPage/TestResult';
-import TestEarthList from './components/views/TestPage/TestEarthList';
-import EarthModal from './components/views/TestPage/EarthModal'
+import TestEarthList from './components/views/GuestBookPage/TestEarthList';
+import EarthModal from './components/views/GuestBookPage/EarthModal'
 import CardNewsPage from './components/views/CardNewsPage/CardNewsPage'
 import ActionPlanPage from './components/views/ActionPlanPage/ActionPlanPage'
 import ActionPlanEnding from './components/views/ActionPlanPage/ActionPlanEnding'
