@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "backend": "nodemon index.js",
+    "frontend": "npm run start --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
   },
@@ -13,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/lisa425/a_Little_Bit.git"
   },
-  "author": "chaewon Im",
+  "author": "Im Chaewon",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lisa425/a_Little_Bit/issues"
