@@ -134,3 +134,11 @@ table {
 a{
   text-decoration: none;
 }
+
+@media screen and (max-width:480px){
+    html{
+      font-size:14px;
+      font-family: "NEXON Lv2 Gothic";
+      font-weight: 400;
+  }
+}

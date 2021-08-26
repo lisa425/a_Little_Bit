@@ -4,13 +4,25 @@
     color: white;
     margin:10% 10% 0 10%;
 }
+.cardNews-none-scroll{
+    margin:10% 10% 0 10%;
+    overflow:hidden;
+    height:100vh;
+}
 
-.cardNews h2{
+.cardNews h2,
+.cardNews-none-scroll h2{
     font-family: 'Rany';
     font-size:1.9rem;
     font-weight: bold;
 }
-.cardNews p{
+.cardNews .subtitle,
+.cardNews-none-scroll .subtitle{
+    display: flex;
+    align-items: center;
+}
+.cardNews .subtitle p,
+.cardNews-none-scroll .subtitle p{
     font-family: "NEXON Lv2 Gothic";
     font-size:1rem;
     font-weight: 400;
@@ -18,30 +30,30 @@
     margin:1rem 0 2rem 0;
 }
 
-.cardNews .cardnews-container{
+.cardnews-container{
     display: flex;
     flex-wrap: wrap;
     width:100%;
     margin-top:3rem;
 }
 
-.cardNews .cardnews-item{
+.cardnews-item{
     width:calc(100%/5.5);
     margin:0.5%;
     background-color:transparent;
 }
-.cardNews .cardnews-item img{
+.cardnews-item img{
     width:100%;
     object-fit: cover;
     cursor: pointer;
 }
-.cardNews .card-news-pixel{
+.card-news-pixel{
     position: fixed;
     bottom:-2px;
     right:0;
     z-index: -10;
 }
-.cardNews .cardnews-modal{
+.cardnews-modal{
     position: absolute;
     top:0;
     left:0;
@@ -52,20 +64,142 @@
     justify-content: center;
     align-items: center;
 }
-.cardNews .cardnews-modal img{
+.cardnews-modal img{
     width:40%;
     object-fit: cover;
 }
-.cardNews .cardnews-modal button{
+.cardnews-modal .next-btn,
+.cardnews-modal .prev-btn{
     background-color:#fff;
     border-radius: 2px;
     padding:0.9rem 1.15rem;
     margin:0 5rem;
     border:none;
+    cursor: pointer;
 }
-.cardNews .cardnews-modal svg path{
+.cardnews-modal svg path{
     fill:#000;
 }
 .hide{
     display:none;
+}
+/* .cardNews .back-btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 160px;
+    height: 70px;
+    padding:0 1rem;
+    font-family: 'Digitopia Bold';
+    font-size: 1.5rem;
+    color: #000;
+    background: #70FF00;
+    border: none;
+    cursor: pointer;
+} */
+
+@media screen and (min-width:481px) and (max-width:768px){
+    .cardNews{
+        margin: 15% 5% 30% 5%;
+        width:90vw;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cardNews .subtitle{
+        flex-direction: column;
+        align-items: flex-start;
+        width:100%;
+        margin:1rem 0;
+    }
+    .cardNews h2{
+        font-size: 1.8rem;
+    }
+    .cardNews h2,
+    .cardNews .subtitle p{
+        margin:0.1rem 3%;
+    }
+    .cardnews-container{
+        margin-top:1rem;
+    }
+    .cardnews-item{
+        width:49%;
+        margin:0 0.5% 0 0.5%;
+    }
+    .cardnews-modal{
+        min-height: 100vh;
+        height:auto;
+    }
+    .cardnews-modal img{
+        width:60%;
+    }
+    .cardnews-modal .next-btn,
+    .cardnews-modal .prev-btn{
+        z-index: 20;
+        margin:0;
+        position:fixed;
+    }
+    .cardnews-modal .next-btn{
+        top:45vh;
+        right:1vw;
+    }
+    .cardnews-modal .prev-btn{
+        top:45vh;
+        left:1vw;
+    }
+}
+
+@media screen and (max-width:480px){
+    .cardNews{
+        margin: 25% 2.5% 30% 2.5%;
+        width:95vw;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cardNews-none-scroll{
+        height: 95vh;
+    }
+    .cardNews .subtitle{
+        flex-direction: column;
+        align-items: flex-start;
+        width:100%;
+        margin:1rem 0;
+    }
+    .cardNews h2{
+        font-size: 1.8rem;
+    }
+    .cardNews h2,
+    .cardNews .subtitle p{
+        margin:0.1rem 3%;
+    }
+    .cardnews-container{
+        margin-top:1rem;
+    }
+    .cardnews-item{
+        width:49%;
+        margin:0 0.5% 0 0.5%;
+    }
+    .cardnews-modal{
+        min-height: 100vh;
+        height:auto;
+        touch-action: none;
+    }
+    .cardnews-modal img{
+        width:100%;
+    }
+    .cardnews-modal .next-btn,
+    .cardnews-modal .prev-btn{
+        z-index: 20;
+        margin:0;
+        position:fixed;
+    }
+    .cardnews-modal .next-btn{
+        top:45vh;
+        right:1vw;
+    }
+    .cardnews-modal .prev-btn{
+        top:45vh;
+        left:1vw;
+    }
 }
