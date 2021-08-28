@@ -71,6 +71,7 @@
     justify-content: center;
     align-items: flex-start;
     padding-top: 2rem;
+    cursor: pointer;
 }
 .ActionPlan .actionplan-contents .actionplan-list .actionplan-item svg{
     fill:white;
@@ -101,6 +102,7 @@
     padding-top: 2rem;
     padding-left: 10%;
     background-color:white;
+    cursor: pointer;
 }
 .actionplan-item-active svg{
     fill:black;
