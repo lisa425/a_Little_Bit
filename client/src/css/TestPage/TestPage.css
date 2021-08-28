@@ -41,16 +41,7 @@ input[type=range]::-webkit-slider-thumb{
 #kakaotalk input[type=range]::-webkit-slider-thumb{
     background:#FAFF00;
 }
-/*NavBar view 수정*/
-/* svg{
-    fill:black;
-}
-.nav-bar .nav-menu-icon{
-    display:none;
-} */
-.nav-bar a:nth-child(1){
-    width:150px;
-}
+
 .testpage{
     background-color:white;
     width:100vw;
