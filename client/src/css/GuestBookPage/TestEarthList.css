@@ -99,6 +99,8 @@ html{
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    text-align: right;
+    height: 1.1rem;
 }
 .earth-ticket .name span:nth-child(2)::-webkit-scrollbar,
 .earth-ticket .location span:nth-child(2)::-webkit-scrollbar{

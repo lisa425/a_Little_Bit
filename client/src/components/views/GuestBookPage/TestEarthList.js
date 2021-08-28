@@ -140,7 +140,7 @@ const TestEarthList = (props) => {
                 </article>
             </section>
             {renderEarth}
-            <form method="get" onsubmit={onSearchSubmit} className="search-form">
+            <form method="get" onSubmit={onSearchSubmit} className="search-form">
                 <input type="text" name="searchText" ref={searchValue} placeholder="find yours !" />
                 <button type="submit" onClick={onSearchSubmit}><Search/></button>
             </form>
