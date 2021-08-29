@@ -29,11 +29,22 @@ router.get('/getEarth',(req,res) => {
     Test.findById(userid,function(err,test){
         mytest = test;
     });
-    Test.find().exec((err,tests) => {
+    Test.find().sort({_id:1}).exec((err,tests) => {
         if(err) return res.status(400).send(err);
         res.status(200).json({success:true,tests,cookie,mytest})
     });
-    
+})
+
+router.post('/searchEarth',(req,res) => {
+    //클라이언트에서 검색한 이름 키워드로 DB에서 지구를 검색
+    const name = req.body.keyword;
+    console.log("hihihi!");
+    console.log(name)
+    Test.find({name:new RegExp(name)})
+    .exec((err,searchList) => {
+        if(err) return res.status(400).send(err);
+        res.status(200).json({success:true,searchList})
+    });
 })
 
 router.post('/getEarthDetail',(req,res) => {

@@ -47,7 +47,7 @@ const testSchema = mongoose.Schema({
         maxlength:150
     }
 },{timestamps:true})
-testSchema.index({'name':'text',createdAt:1});
+testSchema.index({'name':'text','createdAt':1});
 const Test = mongoose.model('Test',testSchema);
 
 module.exports = { Test }

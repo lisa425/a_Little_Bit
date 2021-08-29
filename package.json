@@ -28,6 +28,7 @@
     "http-proxy-middleware": "^2.0.1",
     "moment": "^2.29.1",
     "mongoose": "^5.13.3",
+    "qs": "^6.10.1",
     "react-draggable": "^4.4.3",
     "react-router": "^5.2.0",
     "react-spring": "^9.2.4",

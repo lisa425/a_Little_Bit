@@ -1,4 +1,5 @@
 import React,{ useEffect, useState, useRef } from 'react';
+import qs from 'qs';
 import Axios from 'axios';
 import '../../../css/GuestBookPage/TestEarthList.css';
 import "../../../css/GuestBookPage/EarthModal.css";
@@ -65,8 +66,15 @@ const TestEarthList = (props) => {
     const searchValue = useRef();
     const onSearchSubmit = (e) => {
         e.preventDefault();
-        let keyword = searchValue.current.value;
-        console.log(keyword);
+        let keyword = { keyword : searchValue.current.value };
+        Axios.post('/api/test/searchEarth',keyword)
+        .then(response => {
+            if(response.data.success){
+                console.log("검색결과: ",response.data);
+            }else{
+                alert('Test search is fail');
+            }
+        })
     }
 
   
@@ -140,7 +148,7 @@ const TestEarthList = (props) => {
                 </article>
             </section>
             {renderEarth}
-            <form method="get" onSubmit={onSearchSubmit} className="search-form">
+            <form method="post" action="/api/test/searchEarth" onSubmit={onSearchSubmit} className="search-form">
                 <input type="text" name="searchText" ref={searchValue} placeholder="find yours !" />
                 <button type="submit" onClick={onSearchSubmit}><Search/></button>
             </form>
