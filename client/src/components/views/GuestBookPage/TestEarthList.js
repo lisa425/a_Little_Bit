@@ -70,7 +70,8 @@ const TestEarthList = (props) => {
         Axios.post('/api/test/searchEarth',keyword)
         .then(response => {
             if(response.data.success){
-                console.log("검색결과: ",response.data);
+                console.log("검색결과: ",response.data.searchList);
+                setEarth(response.data.searchList);
             }else{
                 alert('Test search is fail');
             }
