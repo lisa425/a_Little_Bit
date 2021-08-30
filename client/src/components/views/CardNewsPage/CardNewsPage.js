@@ -1,6 +1,5 @@
 import React,{useState,useEffect,useRef} from 'react';
 import '../../../css/CardNewsPage/CardNewsPage.css'
-import {ReactComponent as CardNewsPixel} from '../../../assets/images/cardNews/cardnews_pixel.svg';
 import {ReactComponent as Next } from '../../../assets/images/next.svg';
 import {ReactComponent as Before } from '../../../assets/images/before.svg';
 import instagram from '../../../assets/images/cardNews/cardNewsFile/instagram.gif'

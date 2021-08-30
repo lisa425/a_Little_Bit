@@ -26,12 +26,6 @@ router.get('/getEarth',(req,res) => {
     const cookie = req.cookies.test;
     const userid = cookie._id;
     let mytest = {};
-    // const count = [];
-    // Test.countDocuments({},function(err,counter){
-    //     console.log(counter);
-    //     count.push(counter)
-    //     //도큐먼트 전체 수 + 1 하면 인덱스 될거같은데..
-    // });
     Test.findById(userid,function(err,test){
         mytest = test;
     });

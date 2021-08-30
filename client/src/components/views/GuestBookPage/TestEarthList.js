@@ -1,5 +1,4 @@
 import React,{ useEffect, useState, useRef } from 'react';
-import qs from 'qs';
 import Axios from 'axios';
 import '../../../css/GuestBookPage/TestEarthList.css';
 import "../../../css/GuestBookPage/EarthModal.css";
@@ -7,7 +6,6 @@ import EarthModal from "./EarthModal";
 import EarthImg from '../../../assets/images/earth/earth.png';
 import Draggable from "react-draggable";
 import moment from 'moment';
-import { BrowserRouter as Router,Link } from "react-router-dom";
 import {ReactComponent as Arrow} from '../../../assets/images/earth/Arrow.svg'
 import {ReactComponent as EarthIcon} from '../../../assets/images/earth/earth_icon.svg'
 import {ReactComponent as Search} from '../../../assets/images/earth/search.svg';

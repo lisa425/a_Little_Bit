@@ -11,9 +11,6 @@
 .earth-modal{
     width:100vw;
     height: 100vh;
-    /* background-image:linear-gradient(black,black), url('../../assets/images/earth/earth.png');
-    background-size: 350px;
-    background-blend-mode:saturation; */
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
