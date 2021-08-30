@@ -66,7 +66,7 @@
     bottom:0;
     margin:0;
     background-color:#70FF00;
-    font-family: 'Montserrat Alternates';
+    font-family: 'Digitopia Bold';
     font-weight: 700;
     font-size:1.6rem;
     border:none;
@@ -145,3 +145,138 @@
 .earth-info-date>.value{
     font-size:15px;
 }
+
+/*----모바일 ver----*/
+@media screen and (max-width:480px){
+    .earth-modal-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .modal-container {
+        height: 90vh;
+        padding: 5vh 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .modal-box{
+        width:90%;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        height: 80vh;
+        top:0;
+        overflow-y:scroll;
+        -ms-overflow-style: none; 
+        scrollbar-width: none;
+    }
+    .modal-box::-webkit-scrollbar{
+        display:none;
+    }
+    .earth-modal img{
+        width: 80vw;
+        top:0;
+    }
+
+    .earth-info{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .earth-info div{
+        width:70%;
+        font-size: 1rem;
+        margin: 0 0 2rem 0;
+    }
+    .earth-info .value{
+        text-align: right;
+        font-size: 1rem;
+    }
+    .earth-info-message>.value{
+        max-height: 80px;
+    }
+    .earth-info-date{
+        padding-top:0;
+    }
+
+    .close-modal{
+        position: fixed;
+        left: auto;
+        right: auto;
+        width: 90%;
+        bottom: 2vh;
+    }
+}
+
+/*----태블릿 ver----*/
+@media screen and (min-width:481px) and (max-width:800px){
+    .earth-modal-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width:100vw;
+    }
+    .modal-container {
+        height: 90vh;
+        padding: 5vh 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .modal-box{
+        width:90%;
+        height: 90%;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        top:0;
+        overflow-y:scroll;
+        -ms-overflow-style: none; 
+        scrollbar-width: none;
+    }
+    .modal-box::-webkit-scrollbar{
+        display:none;
+    }
+    .earth-modal img{
+        width: 50vw;
+        top:0;
+    }
+
+    .earth-info{
+        width:60%;
+        height: 32vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .earth-info div{
+        font-size: 1.2rem;
+        margin: 0 0 2.5rem 0;
+    }
+    .earth-info .value{
+        text-align: right;
+        font-size: 1rem;
+    }
+    .earth-info-message>.value{
+        max-height: 80px;
+    }
+    .earth-info-date{
+        padding-top:0;
+    }
+
+    .close-modal{
+        position: fixed;
+        left: 20%;
+        right: auto;
+        top:auto;
+        width: 60%;
+        bottom: 5vh;
+    }
+}
+

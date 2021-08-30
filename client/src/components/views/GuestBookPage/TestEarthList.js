@@ -136,7 +136,7 @@ const TestEarthList = (props) => {
             <section className="guestbook">
                 <h1>Guest book</h1>
                 <p>지구에게 하고싶은 말을 적어주세요!</p>
-                {!isMessage && <article className="earth-ticket">
+                <article className="earth-ticket">
                     <h3 className="title">
                         <span>Code</span>
                         <span>{earthIdArray.length}</span>
@@ -172,7 +172,7 @@ const TestEarthList = (props) => {
                         </div>
                     </div>
                     <button className="take" onClick={submit?alreadySubmit:submitTicket}>Take your<span><Arrow/></span>Planet!</button>
-                </article>}
+                </article>
             </section>
 
             {/* rendering earth */}
