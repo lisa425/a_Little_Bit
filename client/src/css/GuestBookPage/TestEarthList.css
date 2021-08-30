@@ -294,3 +294,21 @@ html{
     background:transparent;
     border:none;
 }
+
+@media screen and (min-width:481px) and (max-width:768px){
+}
+
+@media screen and (max-width:480px){
+    .TestEarthList{
+        flex-direction: column;
+    }
+    .guestbook{
+        left:auto;
+        top:auto;
+        bottom:-50vh;
+    }
+    .guestbook h1,
+    .guestbook p{
+        display: none;
+    }
+}
