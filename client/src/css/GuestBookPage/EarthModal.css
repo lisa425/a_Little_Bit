@@ -4,6 +4,10 @@
     display:none;
 }
 
+.earth-modal-wrap{
+    z-index: 1000;
+}
+
 .earth-modal{
     width:100vw;
     height: 100vh;

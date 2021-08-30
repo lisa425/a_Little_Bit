@@ -74,7 +74,6 @@ const CardNewsPage = () => {
                     <button className="back-btn" onClick={onClickBack}>back</button>
                 </div>
             )}
-            {/* <CardNewsPixel className="card-news-pixel"/> */}
         </main>
     )
 }

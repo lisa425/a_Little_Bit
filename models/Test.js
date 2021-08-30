@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 
 const testSchema = mongoose.Schema({
+    count:{
+        type:Number
+    },
     name:{
         type:String,
         maxlength: 50
@@ -47,7 +50,8 @@ const testSchema = mongoose.Schema({
         maxlength:150
     }
 },{timestamps:true})
-testSchema.index({'name':'text','createdAt':1});
+
+testSchema.index({'count':1,'name':'text','createdAt':1});
 const Test = mongoose.model('Test',testSchema);
 
 module.exports = { Test }

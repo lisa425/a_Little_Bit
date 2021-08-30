@@ -1,13 +1,11 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect} from 'react';
 import "../../../css/GuestBookPage/EarthModal.css";
 import EarthImg from '../../../assets/images/earth/earth.png';
-import TestEarthList from './TestEarthList';
 import Axios from 'axios';
 import moment from 'moment';
-import { Link } from "react-router-dom";
 
 const EarthModal = (props) => {
-    const earthId = props.match.params.earthId;
+    const earthId = props.id;
     const variable = {earthId:earthId};
     const [earthDetail, setEarthDetail] = useState([])
     useEffect(()=>{
@@ -21,12 +19,13 @@ const EarthModal = (props) => {
         });
     },[]);
     
+    let earthIndex = parseInt(props.index);
     return(
         <div className='earth-modal'>
             <div className="modal-container">
             <div className="modal-box">
                 <section className="earth-code">
-                    <div><span>Code</span> <span className="code-num">78</span></div>
+                    <div><span>Code</span> <span className="code-num">{earthIndex+1}</span></div>
                     <hr/>
                 </section>
 
@@ -51,7 +50,6 @@ const EarthModal = (props) => {
                     </div>
                 </section>
             </div>
-            <Link to="/guestbook"><button id="closeModal" className="close-modal" type="button">Back</button></Link>
         </div>
         </div>
     )
