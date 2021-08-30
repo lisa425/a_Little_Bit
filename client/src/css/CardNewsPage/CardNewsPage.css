@@ -1,13 +1,27 @@
 @import '../core.css';
 
-.cardNews{
-    color: white;
-    margin:10% 10% 0 10%;
-}
+.cardNews,
 .cardNews-none-scroll{
-    margin:10% 10% 0 10%;
+    color: white;
+    padding:14vh 10% 0 10%;
+    background-image: url('../../assets/images/cardNews/cardnews_pixel.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:0;
+}
+.cardNews{
+    min-height:86vh;
+}
+/* .card-news-pixel{
+    position: fixed;
+    bottom:-2px;
+    right:0;
+    z-index: -10;
+} */
+.cardNews-none-scroll{
     overflow:hidden;
-    height:100vh;
+    height:86vh;
 }
 
 .cardNews h2,
@@ -47,12 +61,7 @@
     object-fit: cover;
     cursor: pointer;
 }
-.card-news-pixel{
-    position: fixed;
-    bottom:-2px;
-    right:0;
-    z-index: -10;
-}
+
 .cardnews-modal{
     position: absolute;
     top:0;
@@ -83,7 +92,8 @@
 .hide{
     display:none;
 }
-/* .cardNews .back-btn{
+.cardNews .cardnews-modal .back-btn,
+.cardNews-none-scroll .cardnews-modal .back-btn{
     position: absolute;
     bottom: 0;
     right: 0;
@@ -96,11 +106,11 @@
     background: #70FF00;
     border: none;
     cursor: pointer;
-} */
+}
 
 @media screen and (min-width:481px) and (max-width:768px){
     .cardNews{
-        margin: 15% 5% 30% 5%;
+        padding: 15% 5% 30% 5%;
         width:90vw;
         display:flex;
         flex-direction: column;
@@ -141,24 +151,38 @@
     }
     .cardnews-modal .next-btn{
         top:45vh;
-        right:1vw;
+        right:7vw;
     }
     .cardnews-modal .prev-btn{
         top:45vh;
-        left:1vw;
+        left:7vw;
+    }
+    .cardNews .cardnews-modal .back-btn,
+    .cardNews-none-scroll .cardnews-modal .back-btn{
+        position: absolute;
+        bottom: 15vh;
+        right: 20%;
+        width: 60%;
+        padding-top:3px;
+        font-family: 'Digitopia Bold';
+        font-size: 1.5rem;
+        color: #000;
+        background: #70FF00;
+        border: none;
+        cursor: pointer;
     }
 }
 
 @media screen and (max-width:480px){
     .cardNews{
-        margin: 25% 2.5% 30% 2.5%;
+        padding: 25% 2.5% 30% 2.5%;
         width:95vw;
         display:flex;
         flex-direction: column;
         align-items: flex-start;
     }
     .cardNews-none-scroll{
-        height: 95vh;
+        height: 86vh;
     }
     .cardNews .subtitle{
         flex-direction: column;
@@ -202,4 +226,20 @@
         top:45vh;
         left:1vw;
     }
+    .cardNews .cardnews-modal .back-btn,
+    .cardNews-none-scroll .cardnews-modal .back-btn{
+        position: absolute;
+        bottom: 8vh;
+        right: 5vw;
+        width: 90%;
+        height: 55px;
+        padding-top:3px;
+        font-family: 'Digitopia Bold';
+        font-size: 1.5rem;
+        color: #000;
+        background: #70FF00;
+        border: none;
+        cursor: pointer;
+    }
+
 }

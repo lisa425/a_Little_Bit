@@ -24,7 +24,7 @@ const TestEarthList = (props) => {
         Axios.get('/api/test/getEarth')
         .then(response => {
             if(response.data.success){
-                console.log(response.data);
+                console.log(response.data.tests[1].createdAt.index);
                 setEarth(response.data.tests);
                 setMyTest(response.data.mytest);
                 if(response.data.mytest.message == undefined){
@@ -32,7 +32,7 @@ const TestEarthList = (props) => {
                     setSubmit(false);
                 }
             }else{
-                alert('Test get fail');
+                console.log('Test get fail');
             }
         })
     },[]);
@@ -49,7 +49,7 @@ const TestEarthList = (props) => {
             if(response.data.success){
                 console.log('success submit message');
             }else{
-                alert('테스트 실패');
+                console.log('submit message is fail');
             }
         }).catch(err=>console.log(err));
         myTest.message = newMessage.message;
@@ -70,10 +70,9 @@ const TestEarthList = (props) => {
         Axios.post('/api/test/searchEarth',keyword)
         .then(response => {
             if(response.data.success){
-                console.log("검색결과: ",response.data.searchList);
                 setEarth(response.data.searchList);
             }else{
-                alert('Test search is fail');
+                console.log('Test search is fail');
             }
         })
     }

@@ -5,6 +5,11 @@ const { Test } = require("../models/Test");
 router.post('/',(req,res)=>{
     //test 유저 정보를 client에서 가져와 DB에 저장
     const test = new Test(req.body);
+    // Test.countDocuments({},function(err,counter){
+    //     console.log(counter);
+    //     test.index = counter;
+    //     //도큐먼트 전체 수 + 1 하면 인덱스 될거같은데..
+    // });
     const maxage = 3600000 * 24 * 14 // 3600000ms 는 1시간->즉 2주를 유효기간으로 두겠다.
     res.cookie('test',test,{
         maxAge: maxage
@@ -26,10 +31,11 @@ router.get('/getEarth',(req,res) => {
     const cookie = req.cookies.test;
     const userid = cookie._id;
     let mytest = {};
+
     Test.findById(userid,function(err,test){
         mytest = test;
     });
-    Test.find().sort({_id:1}).exec((err,tests) => {
+    Test.find().exec((err,tests) => {
         if(err) return res.status(400).send(err);
         res.status(200).json({success:true,tests,cookie,mytest})
     });
@@ -39,6 +45,7 @@ router.post('/searchEarth',(req,res) => {
     //클라이언트에서 검색한 이름 키워드로 DB에서 지구를 검색
     const name = req.body.keyword;
     Test.find({name:new RegExp(name)})
+    .lean()
     .exec((err,searchList) => {
         if(err) return res.status(400).send(err);
         res.status(200).json({success:true,searchList})

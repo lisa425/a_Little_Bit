@@ -236,6 +236,7 @@ html{
 .earth-content{
     position: relative;
     filter:grayscale(100%);
+    cursor: pointer;
 }
 .earth-content:hover{
     transition:0.2s ease;

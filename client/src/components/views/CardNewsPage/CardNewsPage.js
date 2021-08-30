@@ -35,18 +35,13 @@ const CardNewsPage = () => {
             (index) => (((index - 1)%images.length)+images.length)%images.length
         );
     };
-    const onClickOutside = (e) => {
-        // setDisplayModal(false); --> 백버튼일 때는 얘만 있으면 된다.
-        if (e.target.localName !== "button" && e.target.localName !== "svg" && e.target.localName !== "path"){
-            setDisplayModal(false);
-            bodyRef.current.className="cardNews";
-        }else{
-            return;
-        }
+    const onClickBack = (e) => {
+        bodyRef.current.className="cardNews";
+        setDisplayModal(false);
     };
 
     const showModal = (e) => {
-        bodyRef.current.className=bodyRef.current.className+"-none-scroll";
+        bodyRef.current.className="cardNews-none-scroll";
         setIndex(e.currentTarget.id);
         setDisplayModal(true);
     };
@@ -72,14 +67,14 @@ const CardNewsPage = () => {
                 {renderCardNews}
             </div>
             {displayModal && (
-                <div className="cardnews-modal" ref={modalRef} onClick={onClickOutside}>
+                <div className="cardnews-modal" ref={modalRef}>
                     <button className="prev-btn" onClick={prev}><Before /></button>
                     <img src={images[index]}/>
                     <button className="next-btn" onClick={next}><Next /></button>
-                    {/* <button className="back-btn" onClick={onClickOutside}>back</button> */}
+                    <button className="back-btn" onClick={onClickBack}>back</button>
                 </div>
             )}
-            <CardNewsPixel className="card-news-pixel"/>
+            {/* <CardNewsPixel className="card-news-pixel"/> */}
         </main>
     )
 }
