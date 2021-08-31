@@ -359,9 +359,7 @@ html{
     .earth-list img{
         width:250px;
     }
-    .earth-content{
-        filter:grayscale(0%);
-    }
+    
     .TestEarthList .search-form{
         z-index: 0;
         left:auto;
