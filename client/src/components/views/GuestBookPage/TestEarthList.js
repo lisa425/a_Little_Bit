@@ -131,7 +131,7 @@ const TestEarthList = (props) => {
                 >
                     <div className="earth-content">
                         <img src={EarthImg} alt="earth image"/>
-                        <p id={index} className="earth-index" onClick={showModal}>{index+1}</p>
+                        <button id={index} className="earth-index" onClick={showModal}>{index+1}</button>
                     </div>
                 </div>
             </Draggable>
@@ -234,10 +234,11 @@ const TestEarthList = (props) => {
             )}
 
             {/* search form */}
+            {isMessage && 
             <form method="post" action="/api/test/searchEarth" onSubmit={onSearchSubmit} className="search-form">
                 <input type="text" name="searchText" ref={searchValue} placeholder="find yours !" />
                 <button type="submit" onClick={onSearchSubmit}><Search/></button>
-            </form>
+            </form>}
         </main>
     )
 }

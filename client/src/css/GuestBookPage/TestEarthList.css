@@ -251,6 +251,7 @@ html{
     transition:0.2s ease;
     filter:grayscale(0%);
 }
+
 .earth-list img{
     width:300px;
 }
@@ -264,6 +265,8 @@ html{
     font-weight: 500;
     padding:5%;
     cursor: pointer;
+    background: none;
+    border:none;
 }
 
 .TestEarthList .search-form{
@@ -325,7 +328,9 @@ html{
         bottom:-50vh;
         align-items: center;
     }
-    .guestbook h1,
+    .guestbook h1{
+        font-size: 1rem;
+    }
     .guestbook p{
         display: none;
     }
@@ -351,11 +356,25 @@ html{
     .open-arrow{
         transform: rotate(180deg);
     }
+    .earth-list img{
+        width:250px;
+    }
+    .earth-content{
+        filter:grayscale(0%);
+    }
     .TestEarthList .search-form{
         z-index: 0;
         left:auto;
-        right:0;
-        width:40%;
-        font-size: 1rem;
+        right:auto;
+        width:90%;
+        height: 7vh;
+        bottom:1%;
+    }
+    .TestEarthList .search-form input{
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    .TestEarthList .search-form button{
+        right:5px;
     }
 }
