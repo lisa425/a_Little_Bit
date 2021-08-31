@@ -79,6 +79,7 @@ const TestEarthList = (props) => {
 
     //message 내용 저장
     const userMessage = useRef();
+    const ticketRef = useRef();
     const submitTicket = () => {
         const newMessage = {
             message:userMessage.current.value,
@@ -96,12 +97,19 @@ const TestEarthList = (props) => {
         setIsMessage(true);
         setSubmit(true);
         setDisplayMyModal(true);
+        ticketRef.current.style.display = "none";
     }
 
     const alreadySubmit = () => {
         alert('이미 제출된 티켓입니다.');
     }
 
+    //티켓 오픈 이벤트
+    const openTicket = useRef();
+    const openTicketHandler = (e) => {
+        openTicket.current.style.display="none";
+        ticketRef.current.style.bottom="15vh";
+    }
 
     // 지구를 랜덤한 위치에 출력한다. 
     const renderEarth = Earth.map((earth,index) => {
@@ -133,10 +141,11 @@ const TestEarthList = (props) => {
     return(
         <main className="TestEarthList">
             {/* ticket form */}
-            <section className="guestbook">
+            <section className="guestbook" ref={ticketRef}>
                 <h1>Guest book</h1>
                 <p>지구에게 하고싶은 말을 적어주세요!</p>
-                <article className="earth-ticket">
+                <button className="open-ticket" ref={openTicket} onClick={openTicketHandler}><Arrow className="open-arrow"/></button>
+                {!isMessage && <article className="earth-ticket">
                     <h3 className="title">
                         <span>Code</span>
                         <span>{earthIdArray.length}</span>
@@ -172,7 +181,7 @@ const TestEarthList = (props) => {
                         </div>
                     </div>
                     <button className="take" onClick={submit?alreadySubmit:submitTicket}>Take your<span><Arrow/></span>Planet!</button>
-                </article>
+                </article>}
             </section>
 
             {/* rendering earth */}
