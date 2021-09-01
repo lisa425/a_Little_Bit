@@ -1,18 +1,30 @@
 @import "../core.css";
 
 .Mainpage{
-  background-image: url('../../assets/images/main_background.png');
+  /* background-image: url('../../assets/images/main_background.png'); */
   width:100vw;
   height: 100vh;
+  background:transparent;
   background-size: cover;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.Mainpage .back-video{
+    width:100vw;
+    height: 100vh;
+    overflow:hidden;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+    top:0;
+    left:0;
+}
 
 .main_title{
     width:60%;
+    z-index: 1;
 }
 
 .start-btn{
@@ -25,6 +37,7 @@
     background:rgba(0,0,0,0);
     border:1px solid white;
     border-radius: 5px;
+    z-index: 1;
 }
 
 a{

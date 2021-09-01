@@ -83,6 +83,11 @@
   font-weight: 800;
   src:url("../assets/fonts/Digitopia-Italikk-bold.otf");
 }
+@font-face{
+  font-family: "Digital Numbers";
+  font-weight: 500;
+  src:url("../assets/fonts/DigitalNumbers-Regular.woff");
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

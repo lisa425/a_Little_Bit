@@ -1,0 +1,15 @@
+@import "../core.css";
+
+.timer{
+    color:white;
+    font-family: 'Digital Numbers';
+    font-size: 0.9rem;
+    padding:0.7rem 0;
+    z-index: 1;
+}
+@media screen and (max-width:768px){
+   .timer{
+       font-size: 0.8rem;
+       padding:0.5rem 0;
+   }
+}

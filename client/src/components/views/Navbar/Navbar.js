@@ -3,6 +3,7 @@ import '../../../css/Navbar.css';
 import { Link } from 'react-router-dom';
 import {ReactComponent as Logo } from '../../../assets/images/navbar/logo.svg';
 import menuIcon from "../../../assets/images/navbar/menu_icon.svg";
+import Timer from '../Timer/Timer';
 
 const NavBar = ({match}) => {
     const [sidebar, setSidebar] = useState(false);
@@ -15,9 +16,12 @@ const NavBar = ({match}) => {
     return(
         <nav className="nav-bar">
             <div className="nav-container">
-                <Link to="/">
-                    <Logo className="nav-logo" fill="white"/>
-                </Link>
+                <div className="nav-left">
+                    <Link to="/">
+                        <Logo className="nav-logo" fill="white"/>
+                    </Link>
+                    <Timer />
+                </div>
                 <ul className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                         <h1 className="menu-title">menu</h1>
                         <li><Link to="/testintro" onClick={closeSidebar}>
