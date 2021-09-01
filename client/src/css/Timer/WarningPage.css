@@ -1,0 +1,103 @@
+@import "../core.css";
+
+@keyframes blink{
+    50%{
+        color:black;
+        background-color:#70FF00;
+    }
+}
+
+.warning{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100vw;
+    height: 100vh;
+    background-image: url('../../assets/images/warning/warning.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.warning-modal{
+    width:650px;
+    height: 250px;
+    background-image: url('../../assets/images/warning/warning_modal.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.warning-text{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:#00FFF9;
+}
+.warning-text *{
+    margin:1.3rem;
+}
+.warning-text h2{
+    font-family: "Digitopia itallikk bold" !important;
+    font-size:3.4rem !important;
+}
+.warning-text p{
+    line-height: 1.5rem;
+}
+.warning-btn{
+    font-family: 'Digitopia Bold';
+    font-size:1.5rem;
+    background-color:transparent;
+    border:1px dashed #ffffff;
+    color:white;
+    width:229px;
+    height: 50px;
+    margin-top:1rem;
+}
+.warning-btn:hover{
+    background-color: #70FF00;
+    color:#000;
+}
+
+@media screen and (max-width:1024px) and (min-width:665px){
+    .warning-btn{
+        animation-name: blink;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-timing-function: step-end;
+    }
+}
+
+@media screen and (max-width:665px){
+    .warning-modal{
+        width:100vw;
+        height: 100vh;
+        background-image: none;
+        background-color:rgba(0,0,0,0.8);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+    }
+    .warning-text{
+        flex-direction: column;
+    }
+    .warning-text *{
+        margin:0.5rem;
+        text-align: center;
+    }
+    .warning-btn{
+        background-color: #70FF00;
+        color:black;
+        width:90vw;
+        margin-top:2.3rem;
+    }
+}

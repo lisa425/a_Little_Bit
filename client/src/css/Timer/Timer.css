@@ -1,11 +1,12 @@
 @import "../core.css";
-
+.countdown{
+    z-index: 10;
+}
 .timer{
     color:white;
     font-family: 'Digital Numbers';
     font-size: 0.9rem;
     padding:0.7rem 0;
-    z-index: 1;
 }
 @media screen and (max-width:768px){
    .timer{
