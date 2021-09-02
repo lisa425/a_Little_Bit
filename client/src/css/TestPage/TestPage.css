@@ -233,6 +233,9 @@ h3{
     border-radius:4px;
     color:#FFF;
 }
+.test-next-btn{
+    display: none;
+}
 .before_question{
     margin-right: 5vw;
 }
@@ -551,23 +554,43 @@ h3{
     .index-6, .index-7, .index-8, .index-9, .index-10{
         align-items: flex-start;
         position: relative;
+        justify-content: center;
+        flex-direction: column;
     }
     .ctrl-btn{
         background: transparent;
+        width:20px;
+        height: 48px;
     }
     .ctrl-btn svg path{
         fill:black;
     }
     .before_question{
-        position: fixed;
-        left:10px;
+        position: absolute;
+        top:0;
+        left:0;
     }
     .next_question{
-        position: fixed;
-        right:10px;
+        position: absolute;
+        top:0;
+        right:0;
     }
     .button-answer{
         margin:10% 0;
+    }
+    .test-next-btn{
+        display: inline-block;
+        position: fixed;
+        left: auto;
+        right: auto;
+        width: 90%;
+        bottom: 2vh;
+        padding: 1rem 0;
+        background-color:black;
+        border:none;
+        color:white;
+        font-family: 'Digitopia Bold';
+        font-size:1.3rem;
     }
     
 }

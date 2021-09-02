@@ -774,6 +774,7 @@ const TestPage = () => {
                                             </div>
                                         </div>
                                         <button className="ctrl-btn next_question" onClick={onYoutubeBoxHandler}><Next/></button>
+                                        <button className="test-next-btn" onClick={onYoutubeBoxHandler}>next</button>
                                     </article>
 
 
@@ -807,6 +808,7 @@ const TestPage = () => {
                                             </div>
                                         </div>
                                         <button className="ctrl-btn next_question" onClick={onFacebookBoxHandler}><Next/></button>
+                                        <button className="test-next-btn" onClick={onFacebookBoxHandler}>next</button>
                                     </article>
 
 
@@ -840,6 +842,7 @@ const TestPage = () => {
                                             </div>
                                         </div>
                                         <button className="ctrl-btn next_question" onClick={onTwitterBoxHandler}><Next/></button>
+                                        <button className="test-next-btn" onClick={onTwitterBoxHandler}>next</button>
                                     </article>
 
 
@@ -873,6 +876,7 @@ const TestPage = () => {
                                             </div>
                                         </div>
                                         <button className="ctrl-btn next_question" onClick={onTiktokBoxHandler}><Next/></button>
+                                        <button className="test-next-btn" onClick={onTiktokBoxHandler}>next</button>
                                     </article>
 
 
@@ -906,6 +910,7 @@ const TestPage = () => {
                                             </div>
                                         </div>
                                         <button className="ctrl-btn next_question" onClick={onInstagramBoxHandler}><Next/></button>
+                                        <button className="test-next-btn" onClick={onInstagramBoxHandler}>next</button>
                                     </article>
 
 
@@ -939,6 +944,7 @@ const TestPage = () => {
                                             </div>
                                         </div>
                                         <button className="ctrl-btn next_question" onClick={onKakaoTalkBoxHandler}><Next/></button>
+                                        <button className="test-next-btn" onClick={onKakaoTalkBoxHandler}>next</button>
                                     </article>
 
 
@@ -972,6 +978,7 @@ const TestPage = () => {
                                             </div>
                                         </div>
                                         <button className="ctrl-btn next_question" onClick={onCallBoxHandler}><Next/></button>
+                                        <button className="test-next-btn" onClick={onCallBoxHandler}>next</button>
                                     </article>
 
 
@@ -1005,6 +1012,7 @@ const TestPage = () => {
                                             </div>
                                         </div>
                                         <button className="ctrl-btn next_question" onClick={onZoomBoxHandler}><Next/></button>
+                                        <button className="test-next-btn" onClick={onZoomBoxHandler}>next</button>
                                     </article>
 
 
@@ -1048,6 +1056,7 @@ const TestPage = () => {
                                             </div>
                                         </div>
                                         <button className="ctrl-btn next_question" onClick={onEmailBoxHandler}><Next/></button>
+                                        <button className="test-next-btn" onClick={onEmailBoxHandler}>next</button>
                                     </article>
 
                                     {/* ===== Email ===== */}
@@ -1082,11 +1091,12 @@ const TestPage = () => {
                                             </div>
                                         </div>
                                         <button className="ctrl-btn next_question" style={{visibility:'hidden'}}><Next/></button>
+                                        <button className={doneBtn? "submit-test" : "submit-test-none"} id="submit-test" type="submit" onClick={onSubmit}>DONE</button>
                                     </article>
                                 </div>
                             </div>
                         </div>
-                        <button className={doneBtn? "submit-test" : "submit-test-none"} id="submit-test" type="submit" onClick={onSubmit}>DONE</button>
+                        
                     </section>
                     <section className={finished?"before-result" : "before-result-none"}>
                         <Link to="/test/result"><button className="go-result" type="submit">?</button></Link>
