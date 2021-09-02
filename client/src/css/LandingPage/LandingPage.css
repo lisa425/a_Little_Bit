@@ -23,8 +23,11 @@
 }
 
 .main_title{
-    width:60%;
+    width:40vw;
+    height:15vw;
+    margin-bottom:5vh;
     z-index: 1;
+    fill:white;
 }
 
 .start-btn{
@@ -47,12 +50,12 @@ a{
 
 @media screen and (max-width:1024px) and (min-width:768px){
     .main_title{
-        width:90%;
+        width:50vw;
     }
 }
 
 @media screen and (max-width:768px){
     .main_title{
-        width:100%;
+        width:70vw;
     }
 }
