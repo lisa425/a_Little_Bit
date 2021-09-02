@@ -1040,7 +1040,7 @@ const TestPage = () => {
                                             <div className="question-box">
                                                 <div className="qna">
                                                     <p className="question">회의에 접속할 때 카메라를 키는 편인가요?</p>
-                                                    <div>
+                                                    <div className="button-answer"> 
                                                         <input className="btn-sm-cyan" name="zoom" type="button" value="예" onClick={yesZoomOn}/>
                                                         <input className="btn-sm-cyan" name="zoom" type="button" value="아니오" onClick={notZoomOn}/>
                                                     </div>
@@ -1074,7 +1074,7 @@ const TestPage = () => {
                                             <div className="question-box">
                                                 <div className="qna">
                                                     <p className="question">읽은 메일을 평소 지우는 편이신가요?</p>
-                                                    <div>
+                                                    <div className="button-answer">
                                                         <input className="btn-sm-green" name="email" type="button" value="예" onClick={yesEmailDelete}/>
                                                         <input className="btn-sm-green" name="email" type="button" value="아니오" onClick={notEmailDelete}/>
                                                     </div>

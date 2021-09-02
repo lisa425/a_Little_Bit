@@ -473,3 +473,101 @@ h3{
 #test-pixel-grid-container .week-pixel-kakaotalk{
     background-color:#FAFF00;
 }
+@media screen and (min-width:481px) and (max-width:1024px){
+    .test-content{
+        width:60vw;
+    }
+    .question-box{
+        font-size:0.9rem;
+    }
+    .value-box{
+        width:70px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .test{
+        width:100vw;
+        justify-content: flex-start;
+        padding-top:6vh;
+    }
+    .submit-to-next,
+    .submit-test{
+        position: fixed;
+        left: auto;
+        right: auto;
+        width: 90%;
+        bottom: 2vh;
+        padding: 1rem 0;
+    }
+    .get-info .input-info{
+        width:80vw;
+    }
+    .applist-btn{
+        margin:2rem 0;
+        width:100vw;
+        overflow-x: scroll;
+        /* flex-wrap: wrap;
+        margin:3rem 0;
+        justify-content: flex-start;
+        width:300px; */
+    }
+    .applist-btn li{
+        padding:0.5rem;
+        width:48px;
+        height:48px;
+    }
+    .applist-btn li button{
+        width:48px;
+        height:48px;
+    }
+    .test-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:90vw;
+    }
+    .app-title{
+        margin-bottom: 7%;
+    }
+    .app-title svg{
+        width:48px;
+        height:48px;
+    }
+    .question-box{
+        margin:3% 0;
+    }
+    .qna{
+        flex-direction: column;
+        font-size:0.9rem;
+    }
+    .value-box{
+        margin:30px 0 0 0;
+    }
+    .test-range-bar{
+        width:90vw;
+    }
+    .index-1, .index-2, .index-3, .index-4, .index-5, 
+    .index-6, .index-7, .index-8, .index-9, .index-10{
+        align-items: flex-start;
+        position: relative;
+    }
+    .ctrl-btn{
+        background: transparent;
+    }
+    .ctrl-btn svg path{
+        fill:black;
+    }
+    .before_question{
+        position: fixed;
+        left:10px;
+    }
+    .next_question{
+        position: fixed;
+        right:10px;
+    }
+    .button-answer{
+        margin:10% 0;
+    }
+    
+}
