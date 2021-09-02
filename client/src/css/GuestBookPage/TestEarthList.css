@@ -34,7 +34,7 @@ html{
     font-family: 'Rany';
     font-weight: 800;
 }
-.guestbook p{
+.guestbook>p{
     margin:1rem 0;
 }
 
@@ -55,6 +55,22 @@ html{
     justify-items: center;
     color:black;
     margin-top:1rem;
+    position: relative;
+}
+.earth-ticket .prevent-ticket{
+    position: absolute;
+    top:0;
+    left:0;
+    width:271px;
+    height: 513px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0,0,0,0.8);
+    color:white;
+    line-height: 2rem;
+    border-radius: 8px;
+    font-size: 1.25rem;
 }
 .earth-ticket .title{
     grid-row:1;
@@ -328,10 +344,10 @@ html{
         bottom:-50vh;
         align-items: center;
     }
-    .guestbook h1{
-        font-size: 1rem;
+    .guestbook>h1{
+        display: none;
     }
-    .guestbook p{
+    .guestbook>p{
         display: none;
     }
     @keyframes arrow{

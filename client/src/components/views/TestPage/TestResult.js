@@ -35,14 +35,19 @@ import email from '../../../assets/images/cardNews/cardNewsThumbnail/email.jpg';
 import zoom from '../../../assets/images/cardNews/cardNewsThumbnail/zoom.jpg';
 import datacenter from '../../../assets/images/cardNews/cardNewsThumbnail/datacenter.jpg';
 
-const TestResult = () => {
+const TestResult = (props) => {
     const [cookie,setCookie] = useState({});
     //test 쿠키 정보를 요청한다.
     useEffect(() => {
         Axios.get('/api/test/getResult')
         .then(response => {
             if(response.data.success){
-                setCookie(response.data.cookie);
+                if(response.data.cookie == undefined){
+                    alert('테스트를 진행하세요!');
+                    props.history.push('/testintro');
+                }else{
+                    setCookie(response.data.cookie);
+                }
             }else{
                 alert('Getting Test Result is Fail');
             }

@@ -19,17 +19,26 @@ const TestEarthList = (props) => {
     const [submit,setSubmit] = useState(true)
     const [displayModal,setDisplayModal] = useState(false);
     const [displayMyModal,setDisplayMyModal] = useState(false);
+    const [isCookie,setIsCookie] = useState(true);
+
     useEffect(() => {
         Axios.get('/api/test/getEarth')
         .then(response => {
             if(response.data.success){
-                setEarth(response.data.tests);
-                setMyTest(response.data.mytest);
-                if(response.data.mytest.message == undefined){
+                if(response.data.cookie == undefined){
                     setIsMessage(false);
-                    setSubmit(false);
+                    setIsCookie(false);
+                    setEarth(response.data.tests);
                 }else{
-                    setIsMessage(true);
+                    setIsCookie(true);
+                    setEarth(response.data.tests);
+                    setMyTest(response.data.mytest);
+                    if(response.data.mytest.message == undefined){
+                        setIsMessage(false);
+                        setSubmit(false);
+                    }else{
+                        setIsMessage(true);
+                    }
                 }
             }else{
                 console.log('Test get fail');
@@ -145,7 +154,13 @@ const TestEarthList = (props) => {
                 <h1>Guest book</h1>
                 <p>지구에게 하고싶은 말을 적어주세요!</p>
                 <button className="open-ticket" ref={openTicket} onClick={openTicketHandler}><Arrow className="open-arrow"/></button>
-                {!isMessage && <article className="earth-ticket">
+                {!isMessage && 
+                <article className="earth-ticket">
+                    {!isCookie && 
+                        <div className="prevent-ticket">
+                            <p>사용량 테스트를 마치고<br/>방명록을 작성해 주세요!</p>
+                        </div>
+                    }
                     <h3 className="title">
                         <span>Code</span>
                         <span>{earthIdArray.length}</span>

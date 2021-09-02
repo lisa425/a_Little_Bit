@@ -23,12 +23,22 @@ router.get('/getResult',(req,res)=>{
 router.get('/getEarth',(req,res) => {
     //test 기록들을 DB에서 가져와서 클라이언트에 전송
     //cookie를 기준으로 나의 테스트 정보를 전송 
-    const cookie = req.cookies.test;
-    const userid = cookie._id;
+    let cookie = {};
+    let userid = '';
     let mytest = {};
-    Test.findById(userid,function(err,test){
+
+    if(req.cookies.test !== undefined){
+        cookie = req.cookies.test;
+        userid = cookie._id;
+        Test.findById(userid,function(err,test){
         mytest = test;
     });
+    }else{
+        cookie = undefined;
+        userid = undefined;
+        mytest = undefined;
+    }
+    
     Test.find().exec((err,tests) => {
         if(err) return res.status(400).send(err);
         res.status(200).json({success:true,tests,cookie,mytest})

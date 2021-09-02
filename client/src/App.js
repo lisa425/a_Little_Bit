@@ -11,8 +11,19 @@ import ActionPlanPage from './components/views/ActionPlanPage/ActionPlanPage'
 import ActionPlanEnding from './components/views/ActionPlanPage/ActionPlanEnding'
 import DataCenterPage from './components/views/DataCenterPage/DataCenterPage'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React,{ useEffect, useState, useRef } from 'react';
 
 function App() {
+  // const [isLoading,setIsLoading] = useState(true);
+
+  // useEffect(()=>{
+  //   fetch("/api")
+  //   .then((response) => {
+  //     setIsLoading(false);
+  //   });
+  // })
+  
+  //if(isLoading) return <h1 style={{color:"gray"}}>Loading...</h1>;
   return (
     <Router>
         <NavBar />

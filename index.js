@@ -20,7 +20,6 @@ mongoose.connect(config.mongoURI,{
 .then(()=>console.log('mongoDB is connected'))
 .catch(err=>console.log(err))
 
-
 app.use('/api/test', require('./routes/test'));
 
 
