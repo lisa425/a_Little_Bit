@@ -503,6 +503,13 @@ h3{
         bottom: 2vh;
         padding: 1rem 0;
     }
+    .go-result{
+        right: auto;
+        width: 90vw;
+        bottom: 2vh;
+        left: 5vw;
+        padding: 1rem 0;
+    }
     .get-info .input-info{
         width:80vw;
     }
