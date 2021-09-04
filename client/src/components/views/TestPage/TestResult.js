@@ -347,8 +347,8 @@ const TestResult = (props) => {
                     <div className="result-metaphor-img">{showResultCar}</div>
                 </article>
                 <article className="test-result-detail">
-                    <h3> 당신이 사용한 어플들은 각각 얼마만큼의 디지털 탄소 발자국을 배출했을까요? </h3>
-                    <p>어플별로 발생시킨 탄소 발자국의 양을 확인해보세요!</p>
+                    <h3> 당신이 사용한 어플들은 <br className="mobile-br"/>각각 얼마만큼의 <br className="mobile-br"/>디지털 탄소 발자국을 <br className="mobile-br"/>배출했을까요? </h3>
+                    <p>어플별로 발생시킨 <br className="mobile-br"/>탄소 발자국의 양을 확인해보세요!</p>
                     <div className="test-result-bargraph">
                         <BarChart
                             width={1000}
@@ -370,8 +370,8 @@ const TestResult = (props) => {
                 </article>
                 <article className="test-result-recommend">
                     <div className="recommend-text">
-                        <h3><span>{maxDataName}</span>에서 탄소를 가장 많이 배출했네요!</h3>
-                        <p>해당 서비스들이 어떻게 탄소를 발생시키는지 한 번 알아볼까요?</p>
+                        <h3><span>{maxDataName}</span>에서 <br className="mobile-br"/>탄소를 가장 많이 배출했네요!</h3>
+                        <p>해당 서비스들이 어째서 <br className="mobile-br"/>탄소를 발생시키는지 한 번 알아볼까요?</p>
                         <Link to="/cardnews"><button className="card-navigator">Let's GO!</button></Link>
                     </div>
                     <div className="recommend-img">
@@ -383,8 +383,8 @@ const TestResult = (props) => {
             {/* --- 전세계의 데이터 발생량과 디지털 탄소발자국 설명 ---*/}
             <section className="world-degital-section">
                 <div className="world-degital-title">
-                    <h3>전 세계의 사람들이 디지털 기기를 1분 동안 사용할 때 발생하는<br/>디지털 탄소 발자국의 양은 얼마나 될까요?</h3>
-                    <p>앱 아이콘을 클릭하고 전 세계 트래픽이 발생시키는 디지털 탄소 발자국의 양을 확인하세요</p>
+                    <h3>전 세계의 사람들이 서비스를 <br className="mobile-br"/>1분 동안 사용할 때 발생하는<br/>디지털 탄소 발자국의 양은 얼마나 될까요?</h3>
+                    <p>앱 아이콘을 클릭하고 전 세계 트래픽이 발생시키는 <br className="mobile-br"/>디지털 탄소 발자국의 양을 확인하세요</p>
                 </div>
                 <ul>
                     <li><Netflix className={netflixBtn ? 'netflix-white' : 'netflix-color'} onClick={onNetflixBtnHandler}/></li>
@@ -424,7 +424,7 @@ const TestResult = (props) => {
                     </div>
                 </article>
                 <article className="world-digital-carbon-info">
-                    <p className="world-digital-carbon-title"><b>전 세계</b>에서 <b>1분간</b> 발생하는 <b>디지털 탄소 발자국의 양</b>은</p>
+                    <p className="world-digital-carbon-title"><b>전 세계</b>에서 <b>1분간</b> 발생하는 <br className="mobile-br"/><b>디지털 탄소 발자국의 양</b>은</p>
                     <p className="world-digital-carbon-number">
                         762,194kg
                     </p>
@@ -471,7 +471,7 @@ const TestResult = (props) => {
                 <Symbol1/>
                 <article className="result-navigator-title">
                     <h2>a L<span>i</span>ttle hab<span>i</span>t makes Big <span>i</span>mpacts</h2>
-                    <p>"나 하나쯤이야"라고 생각한 사람들의 <span>작은 습관</span>들이 모여 지구에 <span>큰 영향</span>을 끼치고 있습니다.</p>
+                    <p>"나 하나쯤이야"라고 생각한 <br className="mobile-br"/>사람들의 <span>작은 습관</span>들이 모여 <br className="mobile-br"/>지구에 <span>큰 영향</span>을 끼치고 있습니다.</p>
                 </article>
                 <article className="result-navigator-box-container">
                     <div className="result-navigator-box">

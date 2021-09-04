@@ -17,6 +17,9 @@
     padding-top:20vh;
     overflow: hidden;
 }
+.mobile-br{
+    display: none;
+}
 
 
 /* 섹션 정렬*/
@@ -155,6 +158,7 @@
 }
 .recommend-text p{
     margin: 1rem 0 1.5rem 0;
+    line-height: 1.5rem;
 }
 .recommend-img{
     width:15rem;
@@ -194,7 +198,9 @@
 }
 
 .world-degital-title p{
+    line-height: 1.5rem;
     margin: 1rem 0;
+    text-align: center;
 }
 
 .world-metaphor,
@@ -282,7 +288,7 @@
 }
 
 .world-data{
-    width:90%;
+    width:100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top:2rem;
@@ -297,9 +303,8 @@
 
 .world-data .timer{
     grid-column: 1;
-    font-size: 2.2rem;
-    font-family: "Rany";
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .world-data .unit{
@@ -408,6 +413,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width:30%;
 }
 .world-metaphor-object{
     font-size: 1rem;
@@ -464,6 +470,8 @@
     font-size: 1.4rem;
     text-align: center;
     margin:2rem 0;
+    line-height: 2.2rem;
+
 }
 .result-navigator-title span{
     color:#00FFF9;
@@ -514,4 +522,348 @@
 }
 .result-navigator-box .navigator-btn a{
     color:black;
+}
+/*navvar color!*/
+.nav-logo{
+    fill:white;
+    visibility: visible;
+}
+.timer{
+    color:white;
+    visibility: visible;
+}
+@media screen and (max-width:1024px) and (min-width:769px){
+    .world-metaphor-img{
+        width:100%;
+    }
+}
+@media screen and (max-width:768px) and (min-width:481px){
+    .TestResult{
+        padding-top:10vh;
+    }
+    .result-sum-title{
+        width:20rem;
+        text-align: center;
+        line-height: 2.5rem;
+    }
+    .result-number{
+        font-size: 3rem;
+    }
+    .result-number span{
+        font-size: 5.5rem;
+    }
+    .test-result-detail h3{
+        width:26rem;
+    }
+
+    .test-result-recommend{
+        flex-direction: column;
+        position: relative;
+        margin-top:5rem;
+        align-items: center;
+    }
+    .recommend-img{
+        width:50%;
+        height: auto;
+    }
+    .card-navigator{
+        position: absolute;
+        left: 0;
+        bottom: -40px;
+        width:100%;
+    }
+    .recommend-text h3{
+        width:15rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .recommend-text p{
+        width:18rem;
+        text-align: center;
+        margin:1rem 0 2.7rem 0
+    }
+
+    .world-degital-title h3 .mobile-br{
+        display: inline;
+    }
+    .world-degital-title h3{
+        font-size: 22px;
+    }
+    .world-degital-title p .mobile-br{
+        display: inline;
+    }
+    .world-data{
+        width:110%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .world-degital-section ul li{
+        padding: 0.2rem;
+    }
+    
+    .world-data .timer{
+        font-size: 1rem;
+    }
+    .world-data .unit{
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        background-color: #2F3130;
+        border-radius: 3px;
+    }
+    .unit span{
+        margin-top:4px;
+        margin-bottom:4px;
+    }
+    .world-data-carbon-visualization svg{
+        width:95vw;
+        height:42.5vw;
+    }
+    .world-digital-carbon-title{
+        width:17rem;
+        text-align: center;
+        line-height: 2.3rem;
+    }
+    .world-metaphor-number{
+        font-size: 2rem;
+        margin:1rem;
+    }
+    .world-metaphor-img{
+        width:100%;
+    }
+
+    /*result*/
+    .result-navigator-title p{
+        width:32rem;
+    }
+    .result-navigator-box-container{
+        width:100%;
+        flex-direction: column;
+        margin:1rem 0 4rem 0;
+    }
+    .result-navigator-box{
+        width:80%;
+        height:20rem;
+        padding: 0;
+        margin:10px;
+    }
+    .result-navigator-box p{
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    .result-navigator-box .navigator-btn{
+        margin-top:2.5rem;
+        width:10rem;
+    }
+}
+@media screen and (max-width:550px) and (min-width:481px){
+    .world-degital-section ul{
+        width:350px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .world-degital-section ul li{
+        padding: 0.5rem;
+    }
+    .world-metaphor{
+        flex-direction: column;
+    }
+    .world-metaphor-content{
+        width:90%;
+    }
+    .world-metaphor-img{
+        margin:3rem 0 3rem 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:480px){
+    .mobile-br{
+        display: inline;
+    }
+    .TestResult .test-result-section,
+    .TestResult .world-degital-section{
+        width:90vw;
+    }
+    /*result section*/
+    .TestResult{
+        padding-top:110px;
+    }
+    .TestResult .test-result-section article{
+        width:100%;
+        padding: 0;
+    }
+    .test-result-summary>svg{
+        width:117px;
+        height:117px;
+    }
+    .result-sum-title{
+        text-align: center;
+        width:15rem;
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+        margin:3rem 0 2rem 0;
+    }
+    .result-number{
+        font-size: 1.7rem;
+        margin:1rem 0;
+    }
+    .result-number span{
+        font-size:3.5rem;
+    }
+    .result-metaphor{
+        width:13rem;
+        text-align: center;
+        line-height: 2rem;
+        font-weight: 500;
+        font-size:1rem;
+    }
+    .result-metaphor-img{
+        width:90vw;
+    }
+    .result-metaphor-img svg{
+        width:8%;
+        height:10%;
+    }
+    .TestResult h3{
+        font-size: 20px;
+        text-align: left;
+    }
+    .test-result-detail{
+        align-items: flex-start;
+    }
+    .test-result-detail p{
+        line-height: 1.7rem;
+    }
+    .recharts-wrapper{
+        width:95vw;
+    }
+    .test-result-recommend{
+        flex-direction: column;
+        position: relative;
+        margin-top:5rem;
+        align-items: flex-start;
+    }
+    .recommend-img{
+        width:100%;
+        height: auto;
+    }
+    .card-navigator{
+        position: absolute;
+        left: 0;
+        bottom: -60px;
+        width:100%;
+    }
+    /*world data section*/
+    .world-degital-section ul{
+        width:100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .world-digital-carbon-title{
+        line-height: 2rem;
+        width:16rem;
+        text-align: center;
+    } 
+    .world-degital-title{
+        align-items: flex-start;
+    }
+    .world-degital-title h3{
+        font-size:19.5px;
+        line-height: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    .world-degital-title p{
+        font-size: 1rem;
+        text-align: left;
+    }
+    .world-metaphor{
+        flex-direction: column;
+    }
+    .world-metaphor-content{
+        width:90%;
+    }
+    .world-metaphor-img{
+        width:100%;
+        margin:3rem 0 3rem 0
+    }
+    .world-data .timer{
+        font-size: 1.8rem;
+    }
+    .world-data .carbon{
+        margin:1.5rem 0;
+    }
+    .world-data .unit{
+        margin:0 0 7vw 0;
+        justify-content: center;
+        padding: 1rem;
+        background-color: #2F3130;
+        border-radius: 3px;
+    }
+    .world-data-carbon-visualization{
+        transform: rotate(90deg);
+        transform-origin: bottom top;
+        position: relative;
+        top:100px;
+        margin:0;
+    }
+    .world-data-carbon-visualization svg{
+        width:70vh;
+        height:95vw;
+    }
+    .world-data{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .world-digital-carbon-info{
+        margin-top: 78vw;
+    }
+
+    /*result navigator*/
+    .result-navigator{
+        width:80vw;
+        align-items: flex-start !important;
+    }
+    .result-navigator svg{
+        width:117px;
+        height: 117px;
+    }
+    .result-navigator hr{
+        margin-top:4rem
+    }
+    .result-navigator-title{
+        align-items: flex-start;
+    }
+    .result-navigator-title h2{
+        text-align: left;
+        margin-top:3rem;
+        font-size: 3.4rem;
+    }
+    .result-navigator-title p{
+        text-align: left;
+        font-weight: 500;
+    }
+    .result-navigator-box-container{
+        width:100%;
+        flex-direction: column;
+        margin:1rem 0 4rem 0;
+    }
+    .result-navigator-box{
+        width:100%;
+        height:80vw;
+        padding: 0;
+        margin:10px;
+    }
+    .result-navigator-box p{
+        font-size: 4.3vw;
+        line-height: 7.5vw;
+    }
+    .result-navigator-box .navigator-btn{
+        margin-top:2rem;
+    }
+    
 }
