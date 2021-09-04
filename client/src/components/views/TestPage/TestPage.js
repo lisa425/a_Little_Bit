@@ -117,6 +117,7 @@ const TestPage = () => {
         return {renderWeekPixel}
     }
 
+    
     //앱 list 버튼 state 설정
     const [netflixBtn, setNetflixBtn] = useState(false);
     const [youtubeBtn,setYoutubeBtn] = useState(false);
@@ -937,7 +938,7 @@ const TestPage = () => {
 
                                             <div className="question-box">
                                                 <div className="qna">
-                                                    <p className="question">일주일에 몇 개의 게시물과 스토리를 업로드하시나요?</p>
+                                                    <p className="question">일주일에 몇 개의 콘텐츠를 업로드하시나요?</p>
                                                     <div className="value-box">{InstagramDay}개</div>
                                                 </div>
                                                 <input id="question2_input" className="test-range-bar" type="range" min="0" max="24" onChange={onInstagramDayChange} value={InstagramDay}/>
@@ -1045,7 +1046,7 @@ const TestPage = () => {
                                                 <input id="question2_input" className="test-range-bar" type="range" min="0" max="24" onChange={onZoomDayChange} value={ZoomDay}/>
                                             </div>
 
-                                            <div className="question-box">
+                                            <div className="question-box zoom-camera">
                                                 <div className="qna">
                                                     <p className="question">회의에 접속할 때 카메라를 키는 편인가요?</p>
                                                     <div className="button-answer"> 

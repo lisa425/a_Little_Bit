@@ -139,9 +139,10 @@ input:-webkit-autofill {
     justify-content: center;
     align-items: center;
 }
-h3{
+.test h3{
     font-size:1.3rem;
     margin:0 auto;
+    display: block;
 }
 .applist-btn{
     display:flex;
@@ -476,6 +477,16 @@ h3{
 #test-pixel-grid-container .week-pixel-kakaotalk{
     background-color:#FAFF00;
 }
+/*navvar color!*/
+.nav-logo{
+    fill:black;
+}
+.timer{
+    color:black;
+}
+
+
+
 @media screen and (min-width:481px) and (max-width:1024px){
     .test-content{
         width:60vw;
@@ -489,19 +500,32 @@ h3{
 }
 
 @media screen and (max-width:480px){
+    
     .test{
         width:100vw;
         justify-content: flex-start;
-        padding-top:6vh;
+        padding-top:80px;
     }
-    .submit-to-next,
-    .submit-test{
+    .test h3{
+        font-size: 1.1rem;
+        margin:1rem 0 1.5rem 0;
+    }
+    .submit-to-next{
         position: fixed;
         left: auto;
         right: auto;
-        width: 90%;
+        width: 90vw;
         bottom: 2vh;
         padding: 1rem 0;
+    }
+    .submit-test{
+        position: static;
+        width:90vw;
+        left: auto;
+        right: auto;
+        padding: 1rem 0;
+        display: block;
+        margin-top:2rem;
     }
     .go-result{
         right: auto;
@@ -513,8 +537,12 @@ h3{
     .get-info .input-info{
         width:80vw;
     }
+    .app-name{
+        font-size: 1.3rem;
+        margin-left: 0.8rem;
+    }
     .applist-btn{
-        margin:2rem 0;
+        margin:0 0 1.5rem 0;
         width:100vw;
         overflow-x: scroll;
         /* flex-wrap: wrap;
@@ -523,18 +551,23 @@ h3{
         width:300px; */
     }
     .applist-btn li{
-        padding:0.5rem;
-        width:48px;
-        height:48px;
+        padding:0.3rem;
+        width:12vw;
+        height:12vw;
     }
     .applist-btn li button{
-        width:48px;
-        height:48px;
+        width:12vw;
+        height:12vw;
+    }
+    .applist-btn li button svg{
+        width:100%;
+        height: 100%;
     }
     .test-content{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         width:90vw;
     }
     .app-title{
@@ -552,14 +585,14 @@ h3{
         font-size:0.9rem;
     }
     .value-box{
-        margin:30px 0 0 0;
+        margin:3.5vh 0 0 0;
     }
     .test-range-bar{
         width:90vw;
     }
     .index-1, .index-2, .index-3, .index-4, .index-5, 
     .index-6, .index-7, .index-8, .index-9, .index-10{
-        align-items: flex-start;
+        align-items: center;
         position: relative;
         justify-content: center;
         flex-direction: column;
@@ -583,15 +616,16 @@ h3{
         right:0;
     }
     .button-answer{
-        margin:10% 0;
+        margin:10% 0 0 0;
     }
     .test-next-btn{
         display: inline-block;
-        position: fixed;
+        margin-top:2rem;
+        /* position: fixed;
         left: auto;
-        right: auto;
-        width: 90%;
-        bottom: 2vh;
+        right: auto; */
+        width: 90vw;
+        /* bottom: 1vh; */
         padding: 1rem 0;
         background-color:black;
         border:none;
@@ -599,5 +633,27 @@ h3{
         font-family: 'Digitopia Bold';
         font-size:1.3rem;
     }
-    
+}
+
+@media screen and (max-height:680px){
+    .test {
+        padding-top:0;
+        justify-content: center;
+    }
+    .zoom-camera{
+        display: none;
+    }
+    .test-wrapper{
+        margin-top:0;
+    }
+    .test-next-btn{
+        margin-top:3vh;
+    }
+    /*navvar color!*/
+    .nav-logo{
+        visibility: hidden;
+    }
+    .timer{
+        visibility: hidden;
+    }
 }
