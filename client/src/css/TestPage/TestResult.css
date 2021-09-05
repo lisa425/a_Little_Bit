@@ -737,9 +737,7 @@
     }
     .test-result-detail p{
         line-height: 1.7rem;
-    }
-    .recharts-wrapper{
-        width:95vw;
+        margin:1.5rem 0 0 0;
     }
     .test-result-recommend{
         flex-direction: column;
@@ -757,9 +755,26 @@
         bottom: -60px;
         width:100%;
     }
+    /*graph mobile*/
+    .recharts-wrapper{
+        left:-80px;
+    }
+    .recharts-wrapper .recharts-yAxis{
+        display: none;
+    }
+    .recharts-wrapper .recharts-xAxis{
+        display: flex;
+        align-items: flex-start;
+    }
+    .recharts-wrapper .recharts-xAxis .recharts-cartesian-axis-tick-value {
+        writing-mode: vertical-rl;
+    }
+    .recharts-wrapper .recharts-xAxis .recharts-cartesian-axis-tick-value tspan{
+        margin-top:1rem;
+   }
     /*world data section*/
     .world-degital-section ul{
-        width:100%;
+        width:310px;
         flex-wrap: wrap;
         justify-content: space-between;
     }

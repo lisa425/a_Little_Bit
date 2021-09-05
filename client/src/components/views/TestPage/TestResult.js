@@ -52,7 +52,27 @@ const TestResult = (props) => {
                 alert('Getting Test Result is Fail');
             }
         })
+
+
     },[]);
+
+    //screen size
+    const size = useWindowSize();
+    const graphSize = () => {
+        if(size.width > 1000){
+            console.log("web:",size.width);
+            return 1000;
+        }else if(size.width < 481){
+            let mobilesize = size.width+70;
+            console.log("mobile:",size.width);
+            return mobilesize;
+        }else{
+            let tabsize = size.width - 50;
+            console.log("tab:",size.width);
+            return tabsize;
+        }
+    }
+
 
     //앱 사용량 합산 결과
     const result = cookie.result;
@@ -351,7 +371,7 @@ const TestResult = (props) => {
                     <p>어플별로 발생시킨 <br className="mobile-br"/>탄소 발자국의 양을 확인해보세요!</p>
                     <div className="test-result-bargraph">
                         <BarChart
-                            width={1000}
+                            width={graphSize()}
                             height={600}
                             data={data}
                             margin={{
@@ -362,8 +382,8 @@ const TestResult = (props) => {
                             }}
                             >
                             <CartesianGrid vertical={false} style={{stroke:"rgb(70, 70, 70)"}}/>
-                            <XAxis dataKey="name" dy={13} style={{fill:"#fff",fontSize:"0.9rem"}}/>
-                            <YAxis unit={"g"} dx={-10} style={{fill:"#868887",fontSize:"0.8rem"}}/>
+                            <XAxis dataKey="name" dy={13} style={{fill:"#fff",fontSize:"0.7rem"}}/>
+                            <YAxis unit={"g"} dx={-10} style={{fill:"#868887",fontSize:"0.6rem"}}/>
                             <Bar dataKey="used" stackId="a" fill="#70FF00" barSize={40} label={{ fill:"#fff", fontSize:"0.8rem", fontWeight:"bold", position: 'top', formatter: labelFormatter, margin:'10px' }} animationBegin={2000} animationDuration={1200} animationEasing={'ease-in-out'}/>
                         </BarChart>
                     </div>
@@ -491,6 +511,32 @@ const TestResult = (props) => {
             {TestResultPixel(result,'green')}
         </main>
     )
+}
+
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+  useEffect(() => {
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
 }
 
 export default TestResult;
