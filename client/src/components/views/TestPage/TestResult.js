@@ -2,7 +2,7 @@ import React,{ useEffect, useState, useRef } from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestResult.css';
 import { Link } from "react-router-dom";
-import { BarChart,Bar,XAxis,YAxis,CartesianGrid } from "recharts";
+import { BarChart,Bar,XAxis,YAxis,CartesianGrid,ResponsiveContainer,LabelList } from "recharts";
 import { useSpring,animated } from 'react-spring';
 //애니메이션,그래픽 요소
 import Tree from './animation/Tree';
@@ -58,18 +58,11 @@ const TestResult = (props) => {
 
     //screen size
     const size = useWindowSize();
-    const graphSize = () => {
-        if(size.width > 1000){
-            console.log("web:",size.width);
-            return 1000;
-        }else if(size.width < 481){
-            let mobilesize = size.width+70;
-            console.log("mobile:",size.width);
-            return mobilesize;
+    const xAxisAlign = () => {
+        if(size.width < 481){
+            return "start";
         }else{
-            let tabsize = size.width - 50;
-            console.log("tab:",size.width);
-            return tabsize;
+            return "middle";
         }
     }
 
@@ -370,22 +363,23 @@ const TestResult = (props) => {
                     <h3> 당신이 사용한 어플들은 <br className="mobile-br"/>각각 얼마만큼의 <br className="mobile-br"/>디지털 탄소 발자국을 <br className="mobile-br"/>배출했을까요? </h3>
                     <p>어플별로 발생시킨 <br className="mobile-br"/>탄소 발자국의 양을 확인해보세요!</p>
                     <div className="test-result-bargraph">
-                        <BarChart
-                            width={graphSize()}
-                            height={600}
-                            data={data}
-                            margin={{
-                                top: 50,
-                                right: 30,
-                                left: 20,
-                                bottom: 5
-                            }}
-                            >
-                            <CartesianGrid vertical={false} style={{stroke:"rgb(70, 70, 70)"}}/>
-                            <XAxis dataKey="name" dy={13} style={{fill:"#fff",fontSize:"0.7rem"}}/>
-                            <YAxis unit={"g"} dx={-10} style={{fill:"#868887",fontSize:"0.6rem"}}/>
-                            <Bar dataKey="used" stackId="a" fill="#70FF00" barSize={40} label={{ fill:"#fff", fontSize:"0.8rem", fontWeight:"bold", position: 'top', formatter: labelFormatter, margin:'10px' }} animationBegin={2000} animationDuration={1200} animationEasing={'ease-in-out'}/>
-                        </BarChart>
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart
+                                // width={graphSize()}
+                                // width={1000}
+                                // height={600}
+                                data={data}
+                                margin={{
+                                    top: 50,
+                                    bottom: 5
+                                }}
+                                >
+                                <CartesianGrid vertical={false} style={{stroke:"rgb(70, 70, 70)"}}/>
+                                <XAxis textAnchor={xAxisAlign()} height={85} dataKey="name" dy={10} sclaeToFit="true" verticalAnchor= "start" interval={0} style={{fill:"#fff",fontSize:"0.7rem"}}/>
+                                <YAxis unit={"g"} dx={-10} style={{fill:"#868887",fontSize:"0.6rem"}}/>
+                                <Bar dataKey="used" stackId="a" fill="#70FF00" barSize={40} label={{ fill:"#fff", fontSize:"0.8rem", fontWeight:"medium", position: 'top', formatter: labelFormatter, margin:'10px' }} animationBegin={2000} animationDuration={1200} animationEasing={'ease-in-out'}/>
+                            </BarChart>
+                        </ResponsiveContainer>
                     </div>
                 </article>
                 <article className="test-result-recommend">

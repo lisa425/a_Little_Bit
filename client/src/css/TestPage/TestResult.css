@@ -139,7 +139,10 @@
     font-size: 1.1rem;
     margin: 1.5rem 0;
 }
-
+.test-result-bargraph{
+    width:1000px;
+    height:600px;
+}
 .test-result-recommend{
     width:100%;
     display: flex;
@@ -536,6 +539,10 @@
     .world-metaphor-img{
         width:100%;
     }
+    .test-result-bargraph{
+        width:700px;
+        height:500px;
+    }
 }
 @media screen and (max-width:768px) and (min-width:481px){
     .TestResult{
@@ -552,6 +559,9 @@
     .result-number span{
         font-size: 5.5rem;
     }
+    .test-result-summary{
+        margin-bottom: 0;
+    }
     .test-result-detail h3{
         width:26rem;
     }
@@ -559,7 +569,6 @@
     .test-result-recommend{
         flex-direction: column;
         position: relative;
-        margin-top:5rem;
         align-items: center;
     }
     .recommend-img{
@@ -571,6 +580,10 @@
         left: 0;
         bottom: -40px;
         width:100%;
+    }
+    .test-result-bargraph{
+        width:90vw;
+        height:500px;
     }
     .recommend-text h3{
         width:15rem;
@@ -756,22 +769,22 @@
         width:100%;
     }
     /*graph mobile*/
+    .test-result-bargraph{
+        width:100vw;
+        height:66vh;
+    }
+    .recharts-cartesian-grid{
+        width:100%;
+    }
     .recharts-wrapper{
-        left:-80px;
+        left:-50px;
     }
     .recharts-wrapper .recharts-yAxis{
         display: none;
     }
-    .recharts-wrapper .recharts-xAxis{
-        display: flex;
-        align-items: flex-start;
-    }
     .recharts-wrapper .recharts-xAxis .recharts-cartesian-axis-tick-value {
-        writing-mode: vertical-rl;
+        writing-mode: vertical-lr;
     }
-    .recharts-wrapper .recharts-xAxis .recharts-cartesian-axis-tick-value tspan{
-        margin-top:1rem;
-   }
     /*world data section*/
     .world-degital-section ul{
         width:310px;
