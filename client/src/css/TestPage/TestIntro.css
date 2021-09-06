@@ -27,7 +27,7 @@ body{
     overflow:hidden;
     background-color: black;
 }
-h1{
+.start-page h1{
     font-size:10vw;
     font-family: "Montserrat Alternates";
     font-weight: 700;
@@ -50,15 +50,53 @@ h1{
     animation-duration:30s;
 }
 
-.without{
+.intro-text{
     display: flex;
     align-items: center;
     color:white;
+    position: absolute;
+    right: 10vw;
+    top:43vh;
 }
-.without p{
+.intro-text p{
     font-family: "NEXON Lv2 Gothic";
     font-weight: 400;
     margin:5%;
     font-size: 1vw;
-    line-height: 2rem;
+    line-height: 2vw;
+    width:20vw;
+}
+
+@media screen and (max-width:1024px){
+    .start-page{
+    }
+    .start-page h1{
+        font-size:11vw;
+        margin:2vw 0;
+    }
+    .intro-text{
+        position: inherit;
+        margin:5vw auto;
+    }
+    .intro-text p{
+        width:40vw;
+        font-size: 2vw;
+        line-height: 4vw;
+        margin:0;
+    }
+}
+
+@media screen and (max-width:480px){
+    .start-page h1{
+        font-size:15vw;
+    }
+    .intro-text{
+        margin:10vw auto;
+    }
+    .intro-text p{
+        width:60vw;
+        font-size: 3vw;
+        line-height: 6vw;
+        margin:0;
+    }
 }
