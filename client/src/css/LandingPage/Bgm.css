@@ -1,0 +1,42 @@
+@import '../core.css';
+
+@keyframes blink-audio{
+    0%{
+        bottom:0;
+    }
+    50%{
+        background:rgba(255,255,255,0.5);
+        bottom:10px;
+    }
+}
+.bgm{
+    position: absolute;
+    bottom:40px;
+    right:50px;
+    z-index:1;
+}
+.bgm .bgm-button{
+    position: absolute;
+    bottom:0;
+    right:0;
+    animation-name: blink-audio;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    width:60px;
+    height: 60px;
+    border-radius: 100px;
+    border:1px solid white;
+    background: transparent;
+    color:white;
+}
+.bgm .bgm-audio{
+    display: none;
+}
+
+@media screen and (max-width:480px){
+    .bgm{
+        bottom:30px;
+        right:40px;
+    }
+}

@@ -1,5 +1,6 @@
 //import './App.css';
 import LandingPage from './components/views/LandingPage/LandingPage';
+import Bgm from './components/views/LandingPage/Bgm';
 import NavBar from './components/views/Navbar/Navbar';
 import TestPage from './components/views/TestPage/TestPage';
 import TestIntro from './components/views/TestPage/TestIntro';
@@ -26,6 +27,7 @@ function App() {
   //if(isLoading) return <h1 style={{color:"gray"}}>Loading...</h1>;
   return (
     <Router>
+        <Bgm />
         <NavBar />
         <Switch>
           <Route exact path="/" component={LandingPage} />

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Route,Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../../../css/TestPage/TestIntro.css';
-import NavBar from '../Navbar/Navbar';
 import introNext from '../../../assets/images/introNext.svg'
 
 const StartPage = () => {
