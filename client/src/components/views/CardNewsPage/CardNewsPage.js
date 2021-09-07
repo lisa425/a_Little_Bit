@@ -49,7 +49,7 @@ const CardNewsPage = () => {
 
     const renderCardNews = images.map((cardnews,index) => {
         return(
-            <div className="cardnews-item">
+            <div className="cardnews-item" key={index}>
                 <img ref={cardNewsRef} id={index} src={cardnews} onClick={showModal}/>
             </div>
         )

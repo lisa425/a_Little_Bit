@@ -27,14 +27,14 @@ const TestResultPixel = (data,color) => {
         let randomPositionColumn = Math.floor(Math.random()*66-1);
         let randomPositionRow = Math.floor(Math.random()*48-1);
         return( 
-            <MosaicPixel class="result-mosaic-pixel"style={{gridColumn:randomPositionColumn,gridRow:randomPositionRow,fill:appColor[color],opacity:'0.3'}}/>
+            <MosaicPixel key={index} className="result-mosaic-pixel" style={{gridColumn:randomPositionColumn,gridRow:randomPositionRow,fill:appColor[color],opacity:'0.3'}}/>
         )
     })
     const renderFillPixel = FillPixelCounter.map((fillPixel,index) => {
         let randomPositionColumn = Math.floor(Math.random()*66-1);
         let randomPositionRow = Math.floor(Math.random()*48-1);
         return( 
-            <div class="result-fill-pixel" style={{gridColumn:randomPositionColumn,gridRow:randomPositionRow,backgroundColor:appColor[color],opacity:'0.3'}}></div>
+            <div key={index} className="result-fill-pixel" style={{gridColumn:randomPositionColumn,gridRow:randomPositionRow,backgroundColor:appColor[color],opacity:'0.3'}}></div>
         )
     })
 

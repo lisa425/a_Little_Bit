@@ -132,13 +132,12 @@ const TestEarthList = (props) => {
         earthIdArray.push(earth._id);
 
         return(
-            <Draggable>
+            <Draggable key={index}>
                 <div 
                     className="earth-list"
                     style={{left:valueLeft, top:valueBottom}}
-                    key={index+1}
                 >
-                    <div className="earth-content">
+                    <div className="earth-content" >
                         <img src={EarthImg} alt="earth image"/>
                         <button id={index} className="earth-index" onClick={showModal}>{index+1}</button>
                     </div>

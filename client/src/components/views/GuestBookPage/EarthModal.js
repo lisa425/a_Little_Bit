@@ -25,7 +25,10 @@ const EarthModal = (props) => {
             <div className="modal-container">
             <div className="modal-box">
                 <section className="earth-code">
-                    <div><span>Code</span> <span className="code-num">{earthIndex+1}</span></div>
+                    <div>
+                        <span>Code</span> 
+                        <span className="code-num">{earthIndex+1}</span>
+                    </div>
                     <hr/>
                 </section>
 

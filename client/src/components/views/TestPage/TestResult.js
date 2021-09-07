@@ -85,7 +85,7 @@ const TestResult = (props) => {
     const showResultCar = carArray.map((minicar,index) => {
         let delay = index/50;
         return(
-            <Minicar style={{animationDelay:delay+'s'}}/>
+            <Minicar key={index} style={{animationDelay:delay+'s'}}/>
         )
     })
     

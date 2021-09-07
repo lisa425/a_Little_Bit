@@ -31,7 +31,7 @@ const NavBar = ({match}) => {
 
                         <li><Link to="/explain" onClick={closeSidebar}>
                             <p className="en-menu">Future of earth</p>
-                            <p className="kr-menu">지구의 미래?</p></Link>
+                            <p className="kr-menu">지구의 미래</p></Link>
                         </li>
 
                         <li><Link to="/cardnews" onClick={closeSidebar}>

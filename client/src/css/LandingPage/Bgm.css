@@ -7,13 +7,13 @@
 }
 @keyframes moving{
     50%{
-        bottom:110px;
+        bottom:95px;
     }
 }
 .bgm{
-    position: absolute;
-    bottom:100px;
-    right:110px;
+    position: fixed;
+    bottom:85px;
+    left:50px;
     z-index:1;
     animation-name: moving;
     animation-iteration-count: infinite;
@@ -21,6 +21,9 @@
     animation-timing-function: linear;
 }
 .bgm .bgm-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     animation-name: blink-audio;
     animation-iteration-count: infinite;
@@ -39,8 +42,8 @@
 
 @media screen and (max-width:480px){
     .bgm{
-        bottom:90px;
-        right:80px;
+        bottom:85px;
+        left:30px;
     }
     .bgm .bgm-button{
         width:50px;
