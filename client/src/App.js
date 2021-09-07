@@ -1,4 +1,4 @@
-//import './App.css';
+// import './App.css';
 import LandingPage from './components/views/LandingPage/LandingPage';
 import Bgm from './components/views/LandingPage/Bgm';
 import NavBar from './components/views/Navbar/Navbar';

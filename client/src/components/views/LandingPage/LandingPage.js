@@ -8,8 +8,9 @@ const LandingPage = () => {
     return(
         <div className="Mainpage">
             <Logo className="main_title"/>
-            {/* <img className="main_title" src={Logo} alt="logo"/> */}
-            <button className="start-btn"><Link to="/testintro">start</Link></button>
+            <button className="start-btn">
+                <Link to="/testintro">start</Link>
+            </button>
             <div className="video-area">
                 <video className="back-video" autoPlay muted loop>
                     <source src={mainvideo} type="video/mp4"/>

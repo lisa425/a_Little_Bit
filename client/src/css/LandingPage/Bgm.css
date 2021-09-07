@@ -1,28 +1,31 @@
 @import '../core.css';
 
 @keyframes blink-audio{
-    0%{
-        bottom:0;
-    }
     50%{
         background:rgba(255,255,255,0.5);
-        bottom:10px;
+    }
+}
+@keyframes moving{
+    50%{
+        bottom:110px;
     }
 }
 .bgm{
     position: absolute;
-    bottom:40px;
-    right:50px;
+    bottom:100px;
+    right:110px;
     z-index:1;
+    animation-name: moving;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
 }
 .bgm .bgm-button{
     position: absolute;
-    bottom:0;
-    right:0;
     animation-name: blink-audio;
     animation-iteration-count: infinite;
     animation-duration: 2s;
-    animation-timing-function: linear;
+    animation-timing-function: step-end;
     width:60px;
     height: 60px;
     border-radius: 100px;
@@ -36,7 +39,11 @@
 
 @media screen and (max-width:480px){
     .bgm{
-        bottom:30px;
-        right:40px;
+        bottom:90px;
+        right:80px;
+    }
+    .bgm .bgm-button{
+        width:50px;
+        height:50px;
     }
 }

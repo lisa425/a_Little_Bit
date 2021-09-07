@@ -33,6 +33,7 @@
     position: absolute;
     right:5.5vw;
     z-index: 1000;
+    padding: 0;
 }
 .nav-menu-icon img{
     width:26px;
