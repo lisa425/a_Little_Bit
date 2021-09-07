@@ -14,7 +14,6 @@ const ActionPlanEnding = () => {
     const selectNoBtn = (e) => {
         setAnswer(false);
         setClick(true);
-        console.log(Answer);
     }
 
     const reload = () => {

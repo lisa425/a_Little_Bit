@@ -184,12 +184,7 @@ const ActionPlanPage = () => {
     const [background,setBackground] = useState(1);
     const [backImg,setBackImg] = useState(backImgObject[background]);
     const [nextBtn,setNextBtn] = useState(false);
-
-    // if(VideoAction && BrightnessAction && CloudAction && DarkModeAction && EmailFileAction && EmailListAction && EnergyModeAction && MessengerAction && SmartphoneAction && SnsAction && WifiAction && ZoomAction){
-    //     console.log('bye');
-    //     setNextBtn(true);
-    // }
-
+    
     const onNextBackgroundHandler = (event) =>{
         if(background===3){
             setNextBtn(false);
