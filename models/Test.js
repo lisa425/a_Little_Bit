@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 
 const testSchema = mongoose.Schema({
+    count:{
+        type:Number
+    },
     name:{
         type:String,
         maxlength: 50

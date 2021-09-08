@@ -2,22 +2,30 @@ const express = require('express');
 const router = express.Router();
 const { Test } = require("../models/Test");
 
+let count = 0;
 router.post('/',(req,res)=>{
     //test 유저 정보를 client에서 가져와 DB에 저장
     const test = new Test(req.body);
+    count++
+    test.count = count;
     const maxage = 3600000 * 24 * 14 // 3600000ms 는 1시간->즉 2주를 유효기간으로 두겠다.
     res.cookie('test',test,{
         maxAge: maxage
     });
     test.save((err,doc)=>{
         if(err) return res.json({ success:false, err })
-        return res.status(200).json({ success:true })
+        return res.status(200).json({ success:true,test })
     })
 })
 
 router.get('/getResult',(req,res)=>{
     const cookie = req.cookies.test;
     res.status(200).json({success:true,cookie})
+})
+
+router.get('/getCount',(req,res)=>{
+    const count = req.cookies.test.count;
+    res.status(200).json({success:true,count})
 })
 
 router.get('/getEarth',(req,res) => {

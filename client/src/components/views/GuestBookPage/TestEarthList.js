@@ -49,18 +49,11 @@ const TestEarthList = (props) => {
 
     //Modal을 세팅한다. 기록별 정보를 모달로 전달 
     //내 정보 모달은...따로 정보를 전달한다..
-
     const earthIdArray = [];
-    const [index,setIndex] = useState(0);
     const [earthId,setEarthId] = useState('');
 
-    const setModalInfo = (num) => {
-        setEarthId(earthIdArray[num]);
-        setIndex(num)
-    }
     const showModal = (e) => {
-        let targetIndex = e.currentTarget.id;
-        setModalInfo(targetIndex);
+        setEarthId(earthIdArray[e.currentTarget.id]);
         setDisplayModal(true);
     }
     const closeModal = () => {
@@ -128,7 +121,7 @@ const TestEarthList = (props) => {
         let valueBottom = Math.floor(Math.random()*(max-min)*2);
         let valueLeft = Math.floor(Math.random()*(max-min)/2);
 
-        //id를 따로 저장
+        //id를 배열에 저장
         earthIdArray.push(earth._id);
 
         return(
@@ -139,7 +132,7 @@ const TestEarthList = (props) => {
                 >
                     <div className="earth-content" >
                         <img src={EarthImg} alt="earth image"/>
-                        <button id={index} className="earth-index" onClick={showModal}>{index+1}</button>
+                        <button id={index} className="earth-index" onClick={showModal}>{earth.count}</button>
                     </div>
                 </div>
             </Draggable>
@@ -162,7 +155,7 @@ const TestEarthList = (props) => {
                     }
                     <h3 className="title">
                         <span>Code</span>
-                        <span>{earthIdArray.length}</span>
+                        <span>{myTest.count}</span>
                     </h3>
                     <div className="name">
                         <span>Name</span>
@@ -204,7 +197,7 @@ const TestEarthList = (props) => {
             {/* display modals */}
             {displayModal && (
                 <div className="earth-modal-wrap">
-                    <EarthModal id={earthId} index={index} classsname='earth-modal' />
+                    <EarthModal id={earthId} classsname='earth-modal' />
                     <button id="closeModal" className="close-modal" type="button" onClick={closeModal}>Back</button>
                 </div>
             )}
@@ -216,7 +209,7 @@ const TestEarthList = (props) => {
                         <div className="modal-container">
                         <div className="modal-box">
                             <section className="earth-code">
-                                <div><span>Code</span> <span className="code-num">{earthIdArray.length}</span></div>
+                                <div><span>Code</span> <span className="code-num">{myTest.count}</span></div>
                                 <hr/>
                             </section>
 

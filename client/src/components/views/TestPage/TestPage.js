@@ -651,7 +651,7 @@ const TestPage = () => {
         Axios.post('/api/test',variables)
         .then(response => {
             if(response.data.success){
-                console.log('테스트 제출 성공!');
+                console.log(response.data);
             }else{
                 console.log('테스트 실패');
             }

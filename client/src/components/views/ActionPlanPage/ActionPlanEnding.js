@@ -1,9 +1,28 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import '../../../css/ActionPlanPage/ActionPlanEnding.css';
 import glitch from '../../../assets/images/actionplans/glitch.gif';
 import { Link } from "react-router-dom";
+import Axios from 'axios';
 
 const ActionPlanEnding = () => {
+
+    const [count,setCount] = useState(0);
+
+    //test 쿠키 정보를 요청한다.
+    useEffect(() => {
+        Axios.get('/api/test/getCount')
+        .then(response => {
+            if(response.data.success){
+                setCount(response.data.count);
+                console.log(count);
+            }else{
+                alert('Getting count is Fail');
+            }
+        })
+
+
+    },[]);
+
     const [Answer,setAnswer] = useState(true);
     const [click,setClick] = useState(false);
 
@@ -26,7 +45,7 @@ const ActionPlanEnding = () => {
                 <article className="yesEnding">
                     <div className="yes-ending-box">
                         <p><span>지구</span>를 <span>변화</span>시키는<br/>
-                        <span>609</span>번째<br/>당신의 선택</p>
+                        <span>{count}</span>번째<br/>당신의 선택</p>
                     </div>
                     <Link to="/guestbook"><button className="home-btn">Guestbook</button></Link>
                 </article>

@@ -19,7 +19,6 @@ const EarthModal = (props) => {
         });
     },[]);
     
-    let earthIndex = parseInt(props.index);
     return(
         <div className='earth-modal'>
             <div className="modal-container">
@@ -27,7 +26,7 @@ const EarthModal = (props) => {
                 <section className="earth-code">
                     <div>
                         <span>Code</span> 
-                        <span className="code-num">{earthIndex+1}</span>
+                        <span className="code-num">{earthDetail.count}</span>
                     </div>
                     <hr/>
                 </section>
