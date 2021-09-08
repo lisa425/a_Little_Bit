@@ -22,6 +22,7 @@
     width:100vw;
     position: absolute;
     z-index: 0;
+    filter:grayscale(100%) brightness(80%);
 }
 
 .main_title{

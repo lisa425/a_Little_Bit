@@ -3,7 +3,7 @@
 @keyframes blink{
     50%{
         color:black;
-        background-color:#70FF00;
+        background-color:#FF00FE;
     }
 }
 
@@ -39,7 +39,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    color:#00FFF9;
+    color:#FF00FE;
 }
 .warning-text *{
     margin:1.3rem;
@@ -62,7 +62,7 @@
     margin-top:1rem;
 }
 .warning-btn:hover{
-    background-color: #70FF00;
+    background-color: #FF00FE;
     color:#000;
 }
 
@@ -95,7 +95,7 @@
         text-align: center;
     }
     .warning-btn{
-        background-color: #70FF00;
+        background-color: #FF00FE;
         color:black;
         width:90vw;
         margin-top:2.3rem;
