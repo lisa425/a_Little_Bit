@@ -13,7 +13,7 @@ const Bgm = () => {
     return(
         <div className="bgm" ref={audioRef}>
             <button className="bgm-button" onClick={audioPlay}><img src={musicIcon} alt="play music"/></button>
-            <audio id="audio" className="bgm-audio" autoPlay>
+            <audio id="audio" className="bgm-audio">
                 <source src={bgm} />
             </audio>
         </div>
