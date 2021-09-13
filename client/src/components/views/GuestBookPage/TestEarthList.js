@@ -25,7 +25,7 @@ const TestEarthList = (props) => {
         Axios.get('/api/test/getEarth')
         .then(response => {
             if(response.data.success){
-                if(response.data.cookie == undefined){
+                if(response.data.cookie === undefined){
                     setIsMessage(false);
                     setIsCookie(false);
                     setEarth(response.data.tests);
@@ -33,7 +33,7 @@ const TestEarthList = (props) => {
                     setIsCookie(true);
                     setEarth(response.data.tests);
                     setMyTest(response.data.mytest);
-                    if(response.data.mytest.message == undefined){
+                    if(response.data.mytest.message === undefined){
                         setIsMessage(false);
                         setSubmit(false);
                     }else{
@@ -131,7 +131,7 @@ const TestEarthList = (props) => {
                     style={{left:valueLeft, top:valueBottom}}
                 >
                     <div className="earth-content" >
-                        <img src={EarthImg} alt="earth image"/>
+                        <img src={EarthImg} alt="earth"/>
                         <button id={index} className="earth-index" onClick={showModal}>{earth.count}</button>
                     </div>
                 </div>

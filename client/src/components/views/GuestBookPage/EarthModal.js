@@ -31,7 +31,7 @@ const EarthModal = (props) => {
                     <hr/>
                 </section>
 
-                <img src={EarthImg} alt="earth image"/>
+                <img src={EarthImg} alt="earth"/>
 
                 <section className="earth-info">
                     <div className="earth-info-name">

@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useRef} from 'react';
+import React,{useState,useRef} from 'react';
 import '../../../css/CardNewsPage/CardNewsPage.css'
 import {ReactComponent as Next } from '../../../assets/images/next.svg';
 import {ReactComponent as Before } from '../../../assets/images/before.svg';
@@ -50,7 +50,7 @@ const CardNewsPage = () => {
     const renderCardNews = images.map((cardnews,index) => {
         return(
             <div className="cardnews-item" key={index}>
-                <img ref={cardNewsRef} id={index} src={cardnews} onClick={showModal}/>
+                <img ref={cardNewsRef} id={index} src={cardnews} onClick={showModal} alt="cardnews thumbnail"/>
             </div>
         )
     });
@@ -68,7 +68,7 @@ const CardNewsPage = () => {
             {displayModal && (
                 <div className="cardnews-modal" ref={modalRef}>
                     <button className="prev-btn" onClick={prev}><Before /></button>
-                    <img src={images[index]}/>
+                    <img src={images[index]} alt="cardnews"/>
                     <button className="next-btn" onClick={next}><Next /></button>
                     <button className="back-btn" onClick={onClickBack}>back</button>
                 </div>

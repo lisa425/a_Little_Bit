@@ -9,9 +9,6 @@ const NavBar = ({match}) => {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
     const closeSidebar = () => setSidebar(false);
-
-    const currentUrl = window.location.pathname;
-
     
     return(
         <nav className="nav-bar">

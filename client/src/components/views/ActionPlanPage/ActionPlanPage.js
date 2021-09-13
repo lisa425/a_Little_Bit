@@ -202,7 +202,7 @@ const ActionPlanPage = () => {
     return(
         <main className="ActionPlan">
             <div className="background-img-container">
-                <img src={backImg} alt="북극곰(polar bear image)"/>
+                <img src={backImg} alt="북극곰(polar bear)"/>
             </div>
             <div id="actionplan-pixel-container">
                 <ZoomPixel ref={zoom_pixel}/>

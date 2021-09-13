@@ -1,8 +1,8 @@
-import React,{ useEffect, useState, useRef } from 'react';
+import React,{ useEffect, useState} from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestResult.css';
 import { Link } from "react-router-dom";
-import { BarChart,Bar,XAxis,YAxis,CartesianGrid,ResponsiveContainer,LabelList } from "recharts";
+import { BarChart,Bar,XAxis,YAxis,CartesianGrid,ResponsiveContainer} from "recharts";
 import { useSpring,animated } from 'react-spring';
 //애니메이션,그래픽 요소
 import Tree from './animation/Tree';
@@ -42,7 +42,7 @@ const TestResult = (props) => {
         Axios.get('/api/test/getResult')
         .then(response => {
             if(response.data.success){
-                if(response.data.cookie == undefined){
+                if(response.data.cookie === undefined){
                     alert('테스트를 진행하세요!');
                     props.history.push('/testintro');
                 }else{
