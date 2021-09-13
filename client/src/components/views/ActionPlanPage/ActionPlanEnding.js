@@ -14,7 +14,6 @@ const ActionPlanEnding = () => {
         .then(response => {
             if(response.data.success){
                 setCount(response.data.count);
-                console.log(count);
             }else{
                 alert('Getting count is Fail');
             }

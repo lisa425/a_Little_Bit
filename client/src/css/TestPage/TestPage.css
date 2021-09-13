@@ -523,8 +523,9 @@ input:-webkit-autofill {
     
     .test{
         width:100vw;
-        justify-content: flex-start;
-        padding-top:80px;
+        justify-content: center;
+        /* justify-content: flex-start;
+        padding-top:80px; */
     }
     .test h3{
         font-size: 1.1rem;
@@ -562,9 +563,15 @@ input:-webkit-autofill {
         margin-left: 0.8rem;
     }
     .applist-btn{
-        margin:0 0 1.5rem 0;
-        width:100vw;
-        overflow-x: scroll;
+        margin:0 0 2rem 0;
+        width:72%;
+        flex-wrap: wrap;
+        /* width:100vw;
+        overflow-x: scroll; */
+
+
+
+
         /* flex-wrap: wrap;
         margin:3rem 0;
         justify-content: flex-start;
@@ -655,10 +662,13 @@ input:-webkit-autofill {
     }
 }
 
-@media screen and (max-height:680px){
+@media screen and (max-width:330px){
     .test {
-        padding-top:0;
-        justify-content: center;
+        /* padding-top:0;
+        justify-content: center; */
+    }
+    .applist-btn{
+        width:75%;
     }
     .zoom-camera{
         display: none;

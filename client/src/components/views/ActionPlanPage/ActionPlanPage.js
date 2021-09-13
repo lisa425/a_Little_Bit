@@ -1,4 +1,4 @@
-import React,{useState,useRef} from 'react';
+import React,{useState,useRef,useEffect} from 'react';
 import { Link } from "react-router-dom";
 import '../../../css/ActionPlanPage/ActionPlanPage.css';
 //background img
@@ -199,8 +199,29 @@ const ActionPlanPage = () => {
         }
     }
 
+    const [isMobile,setIsMobile] = useState(false);
+    // const preventMobile = () => {
+    //     if(window.innerWidth <= 768){
+    //         setIsMobile(true);
+    //     }else return;
+    // }
+
+    useEffect(() => {
+        if(window.innerWidth <= 768){
+            setIsMobile(true);
+            console.log(window.innerWidth);
+        }else{
+            setIsMobile(false);
+        }
+    },[]);
+
     return(
         <main className="ActionPlan">
+            {isMobile && 
+                <div className="mobile-prevent">
+                    <p>웹에서 이용 가능한 페이지 입니다.</p>
+                </div>
+            }
             <div className="background-img-container">
                 <img src={backImg} alt="북극곰(polar bear)"/>
             </div>
