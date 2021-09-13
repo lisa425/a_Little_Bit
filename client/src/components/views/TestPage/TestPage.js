@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useRef} from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestPage.css';
 import {Link} from 'react-router-dom';
@@ -84,6 +84,7 @@ const TestPage = () => {
             DayMosaicPixel.style.gridColumn=randomPositionColumn;
             DayMosaicPixel.style.gridRow=randomPositionRow;
             DayMosaicPixel.classList.add(`day-pixel-${appname}`);
+
             pixelContainer.appendChild(DayMosaicPixel);
         })
         return {renderDayPixel}
@@ -115,6 +116,11 @@ const TestPage = () => {
             pixelContainer.appendChild(WeekMosaicPixel);
         })
         return {renderWeekPixel}
+    }
+
+    const textPixelGrid = useRef();
+    const changePixelColor = () => {
+        textPixelGrid.current.id = "change-pixel-color";
     }
 
     
@@ -658,11 +664,14 @@ const TestPage = () => {
         })
 
         onClickDone(event);
+        setTimeout(function(){
+            changePixelColor();
+        },1000);
     }
  
     return(
         <main className="testpage">
-                <div id="test-pixel-grid-container"></div>
+                <div id="test-pixel-grid-container" ref={textPixelGrid}></div>
                 <form className="input-contents slider">
                 {/* page 1 : 이름 입력 */}
                 <div className="content-wrapper">

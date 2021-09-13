@@ -1,10 +1,12 @@
-import React,{useRef,useEffect} from 'react'
+import React,{useState,useRef,useEffect} from 'react'
 import '../../../css/DataCenterPage/DataCenterPage.css';
 
 const DataCenterPage = () => {
-    let yOffset = 0;
-    let prevScrollHeight = 0;
-    let currentScene = 0;
+    const [yOffset,setYOffset] = useState(0);
+    const [prevScrollHeight,setPrevScrollHeight] = useState(0);
+    const [currentScene,setCurrentScene] = useState(0);
+
+    console.log(currentScene);
     const article = useRef(); //스크롤 컨텐츠 영역을 감싸는 article
     const scroll_section_0 = useRef();
     const scroll_section_1 = useRef();
@@ -70,49 +72,58 @@ const DataCenterPage = () => {
 		}
     ]
 
-
     const setLayout = () => {
         for(let i=0; i<sceneInfo.length; i++){
             sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
             sceneInfo[i].objs.container.current.style.height = `${sceneInfo[i].scrollHeight}px`;
         }
-        
-        yOffset = window.pageYOffset;
+
+        setYOffset(window.pageYOffset);
+
 		let totalScrollHeight = 0;
+
 		for(let i = 0; i<sceneInfo.length; i++){
 			totalScrollHeight += sceneInfo[i].scrollHeight;
 			if(totalScrollHeight >= yOffset){
-				currentScene = i;
+				setCurrentScene(i);
 				break;
 			}
 		}
-        
-        article.current.id = `show-scene-${currentScene}`
     }
 
     const scrollLoop = () => {
-        prevScrollHeight = 0;
+        setYOffset(window.pageYOffset);
+
         for(let i = 0; i < currentScene; i++){
-			prevScrollHeight += sceneInfo[i].scrollHeight;
+			setPrevScrollHeight(prevScrollHeight + sceneInfo[i].scrollHeight);
 		}
-		if(yOffset > prevScrollHeight+sceneInfo[currentScene].scrollHeight){
-			currentScene++;
+
+        let newScene = currentScene;
+
+		if(yOffset > prevScrollHeight){
+            newScene += 1
+			setCurrentScene(newScene);
+            
 		}
 		if(yOffset < prevScrollHeight){
 			if(currentScene === 0) return; //바운스 효과로 인해 마이너스가 되는 것 방지
-			currentScene--;
+            newScene -= 1
+			setCurrentScene(newScene);
 		}
 
-        article.current.id = `show-scene-${currentScene}`
     }
 
+
     useEffect(() => {
-        window.addEventListener('resize',setLayout);
-        window.addEventListener('scroll',()=>{
-		yOffset = window.pageYOffset;
-		scrollLoop();
-	})
-	window.addEventListener('load',setLayout);
+        window.addEventListener('resize', setLayout);
+        window.addEventListener('scroll', scrollLoop);
+	    window.addEventListener('load', setLayout);
+
+        return () => {
+            window.removeEventListener('resize', setLayout);
+            window.removeEventListener('scroll', scrollLoop);
+            window.removeEventListener('load', setLayout);
+        }
     },[]);
 
     return(
@@ -124,8 +135,8 @@ const DataCenterPage = () => {
                 </h5>
             </header>
 
-            <article className="contents" ref={article}>
-                <section className="scroll-section" id="scroll-section-0" ref={scroll_section_0}>
+            <article className="contents" id={`show-scene-${currentScene}`}>
+                <section className="scroll-section" id='scroll-section-0' ref={scroll_section_0}>
                     <div className="sticky-elem center-text">
                         <p className="impact-text">
                             디지털 탄소 발자국은<br/>

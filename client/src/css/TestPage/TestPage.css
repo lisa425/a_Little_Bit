@@ -378,14 +378,7 @@ input:-webkit-autofill {
         color:black;
     }
 }
-@keyframes beforeResultPixel{
-    from{
-        
-    }
-    to{
-        fill:#70FF00;
-    }
-}
+
 .before-result{
     width:100vw;
     height:100vh;
@@ -421,7 +414,8 @@ input:-webkit-autofill {
     color:black;
 }
 
-#test-pixel-grid-container{
+#test-pixel-grid-container,
+#change-pixel-color{
     width:100vw;
     height: 100vh;
     display: grid;
@@ -452,7 +446,6 @@ input:-webkit-autofill {
 }
 
 #test-pixel-grid-container .day-pixel-kakaotalk{
-    fill:#FAFF00;
     background-image:url('../../assets/images/pixels/mosaic_pixel_yellow\(30x30\).svg');
 }
 
@@ -477,6 +470,33 @@ input:-webkit-autofill {
 #test-pixel-grid-container .week-pixel-kakaotalk{
     background-color:#FAFF00;
 }
+
+#change-pixel-color .day-pixel-netflix,
+#change-pixel-color .day-pixel-youtube,
+#change-pixel-color .day-pixel-tiktok,
+#change-pixel-color .day-pixel-facebook,
+#change-pixel-color .day-pixel-twitter,
+#change-pixel-color .day-pixel-zoom
+#change-pixel-color .day-pixel-instagram,
+#change-pixel-color .day-pixel-email,
+#change-pixel-color .day-pixel-call,
+#change-pixel-color .day-pixel-kakaotalk{
+    background-image:url('../../assets/images/pixels/mosaic_pixel_green\(30x30\).svg');
+}
+
+#change-pixel-color .week-pixel-kakaotalk,
+#change-pixel-color .week-pixel-instagram,
+#change-pixel-color .week-pixel-email,
+#change-pixel-color .week-pixel-call,
+#change-pixel-color .week-pixel-facebook,
+#change-pixel-color .week-pixel-twitter,
+#change-pixel-color .week-pixel-zoom,
+#change-pixel-color .week-pixel-netflix,
+#change-pixel-color .week-pixel-youtube,
+#change-pixel-color .week-pixel-tiktok{
+    background-color:#70FF00;
+}
+
 /*navvar color!*/
 .nav-logo{
     fill:black;
