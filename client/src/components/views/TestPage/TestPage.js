@@ -1,4 +1,4 @@
-import React,{useState,useRef} from 'react';
+import React,{useState,useRef,useEffect} from 'react';
 import Axios from 'axios';
 import '../../../css/TestPage/TestPage.css';
 import {Link} from 'react-router-dom';
@@ -668,6 +668,8 @@ const TestPage = () => {
             changePixelColor();
         },1000);
     }
+
+    
  
     return(
         <main className="testpage">

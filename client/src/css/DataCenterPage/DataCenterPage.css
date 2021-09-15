@@ -12,6 +12,7 @@
 }
 .DataCenterPage .contents{
     max-width:1024px;
+    width:100%;
     margin:0 auto;
 }
 .DataCenterPage p{
@@ -21,7 +22,7 @@
     font-size: 1.5rem;
 }
 .DataCenterPage .impact-text{
-    font-size:1.8rem;
+    font-size:2.7vh;
 }
 
 .DataCenterPage .title{
@@ -42,9 +43,9 @@
     line-height: 1.5em;
 }
 .DataCenterPage .scroll-section{
-    padding-top:50vh;
+    /* padding-top:50vh; */
     width:100%;
-    border:3px solid red;
+    /* height:0; */
 }
 .DataCenterPage .center-text{
     justify-content: center;
@@ -54,35 +55,72 @@
 }
 .DataCenterPage .left-text{
     justify-content: flex-start;
+    transform: translateX(-250px);
 }
 .DataCenterPage .right-text{
     justify-content: flex-end;
+    transform: translateX(350px);
+}
+#scene2 .left-text{
+    transform: translate(-250px,-150px);
+}
+#scene1 .right-text{
+     transform: translateX(385px);
+}
+#scene2 .right-text{
+    transform: translate(350px,150px);
+}
+#scene2_img{
+    transform: translateY(15.4vh);
 }
 
 #scroll-section-1{
     display:flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Digitopia itallikk bold'
+    font-family: 'Digitopia itallikk bold';
 }
 
 #scroll-section-1 .wifi-icon{
-    margin:0 29px
+    margin:0 29px;
+    transform: translate(-0.55vh,20px);
 }
 
 .sticky-elem{
-	display: none;
+	display:flex;
+    justify-content: center;
+    align-items: center;
 	top:0;
 	left:0;
 	width:100%;
 }
 
-#show-scene-0 #scroll-section-0 .sticky-elem,
+.earth-graphic-img{
+    position: absolute;
+    transform: translate(-80px,20px);
+}
+#scene4 .side-info{
+    position: absolute;
+    left: -50px;
+}
+#scene4 .side-info:nth-child(2){
+    top: -250px;
+    font-size: 0.8rem;
+}
+#scene4 .side-info:nth-child(1){
+    top: -350px;
+}
+#scene4 .data_info_btn{
+    position: absolute;
+    left:-18px;
+}
+
+/* #show-scene-0 #scroll-section-0 .sticky-elem,
 #show-scene-1 #scroll-section-1 .sticky-elem,
 #show-scene-2 #scroll-section-2 .sticky-elem,
 #show-scene-3 #scroll-section-3 .sticky-elem{
     display:flex;
-}
+} */
 
 .DataCenterPage .action-plan-nav{
     display: flex;

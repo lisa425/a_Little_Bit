@@ -563,19 +563,21 @@ input:-webkit-autofill {
         margin-left: 0.8rem;
     }
     .applist-btn{
-        margin:0 0 2rem 0;
+        margin:0 0 4vh 0;
         width:72%;
         flex-wrap: wrap;
         /* width:100vw;
-        overflow-x: scroll; */
-
-
-
+        overflow-x: scroll;
+        -ms-overflow-style: none; 
+        scrollbar-width: none; */
 
         /* flex-wrap: wrap;
         margin:3rem 0;
         justify-content: flex-start;
         width:300px; */
+    }
+    .applist-btn::-webkit-scrollbar{
+        display: none;
     }
     .applist-btn li{
         padding:0.3rem;
@@ -681,9 +683,9 @@ input:-webkit-autofill {
     }
     /*navvar color!*/
     .nav-logo{
-        visibility: hidden;
+        visibility: hidden !important;
     }
     .timer{
-        visibility: hidden;
+        visibility: hidden !important;
     }
 }
