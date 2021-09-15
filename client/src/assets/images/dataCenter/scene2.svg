@@ -1,4 +1,5 @@
-<svg width="423" height="858" viewBox="0 0 423 858" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="423" height="1190" viewBox="0 0 423 1190" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="scene2">
 <g id="scene02">
 <g id="Group 1893">
 <g id="Devices / Apple / iPhone 12 Pro Max">
@@ -107,5 +108,7 @@
 </g>
 </g>
 </g>
+</g>
+<line id="line03" x1="210.5" y1="1190" x2="210.5" y2="858" stroke="white"/>
 </g>
 </svg>

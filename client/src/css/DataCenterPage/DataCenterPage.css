@@ -61,6 +61,24 @@
     justify-content: flex-end;
     transform: translateX(350px);
 }
+
+.DataCenterPage .phone-img{
+    width:auto;
+    height:80vh;
+}
+.DataCenterPage .phone-img-lg{
+    width:auto;
+    height:110vh;
+}
+.DataCenterPage .phone-img-sm{
+    width:auto;
+    height:70vh;
+}
+.pixel-img{
+    width:100vw;
+    height:auto;
+}
+
 #scene2 .left-text{
     transform: translate(-250px,-150px);
 }
@@ -86,7 +104,7 @@
     transform: translate(-0.55vh,20px);
 }
 
-.sticky-elem{
+.DataCenterPage .sticky-elem{
 	display:flex;
     justify-content: center;
     align-items: center;
@@ -95,37 +113,40 @@
 	width:100%;
 }
 
-.earth-graphic-img{
+.DataCenterPage .earth-graphic-img{
     position: absolute;
     transform: translate(-80px,20px);
+    width:auto;
+    height:100vh;
 }
 #scene4 .side-info{
     position: absolute;
     left: -50px;
 }
-#scene4 .side-info:nth-child(2){
+#scene4 .info-btn{
     top: -250px;
     font-size: 0.8rem;
 }
-#scene4 .side-info:nth-child(1){
-    top: -350px;
+#scene4 .info{
+    top: -330px;
+    font-size: 1.2rem;
 }
 #scene4 .data_info_btn{
     position: absolute;
     left:-18px;
 }
 
-.scene-outro{
+.DataCenterPage .scene-outro{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.scene-outro p{
+.DataCenterPage .scene-outro p{
     text-align: center;
     vertical-align:top;
     height:3rem;
 }
-.scene-outro img{
+.DataCenterPage .scene-outro img{
     transform: translateY(50px);
 }
 
@@ -166,4 +187,85 @@
     width:253px;
     height:60px;
     margin-top:52px;
+}
+
+@media (max-width:1023px){
+    .DataCenterPage{
+        margin:11vh 5vw;
+        width:90vw;
+    }
+    .DataCenterPage .title h1{
+        font-size:1.2rem;
+    }
+    .DataCenterPage .title h5{
+        font-size:0.8rem;
+    }
+    .DataCenterPage p:not(.impact-text){
+        font-size:1rem;
+    }
+
+    .DataCenterPage .sticky-elem{
+        flex-direction: column;
+        width:100vw;
+        transform: translateY(50px);
+    }
+    #scene1 .right-text{
+        transform:translate(0,-300px);
+    }
+    #scene2 .left-text{
+        transform:translate(-150px,-300px);
+    }
+    #scene2 .right-text{
+        transform:translate(150px,320px);
+    }
+    .DataCenterPage .impact-text{
+        font-size:2vh;
+    }
+
+    .DataCenterPage .phone-img{
+        width:auto;
+        height:50vh;
+    }
+    #scene2_img {
+        transform: translateY(10vh);
+    }
+    .DataCenterPage .phone-img-lg{
+        width:auto;
+        height:70vh;
+    }
+    .DataCenterPage .phone-img-sm{
+        width:auto;
+        height:45vh;
+    }
+    .pixel-img{
+        width:auto;
+        height:100vh;
+        object-fit: cover;
+    }
+    .DataCenterPage .earth-graphic-img{
+        position: absolute;
+        transform: translate(-40px,10px);
+        width:auto;
+        height:75vh;
+    }
+
+    #scroll-section-1 .wifi-icon {
+        margin: 0;
+        transform:translate(-0.65vw,-20vh);
+        width:50vw;
+    }
+
+    .DataCenterPage .right-text{
+        transform: translate(0,-260px);
+    }
+
+}
+
+@media (max-width:480px){
+    .DataCenterPage .impact-text{
+        font-size:1.1rem;
+        /* padding:1rem;
+        background: rgba(0,0,0,0.7);
+        text-align: center; */
+    }
 }

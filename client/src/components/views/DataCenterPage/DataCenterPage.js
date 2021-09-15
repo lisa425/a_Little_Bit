@@ -3,9 +3,9 @@ import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveI
 import '../../../css/DataCenterPage/DataCenterPage.css';
 import scene0 from '../../../assets/images/dataCenter/scene0.svg'
 import scene1 from '../../../assets/images/dataCenter/scene1.svg'
-import scene2 from '../../../assets/images/dataCenter/scene02.svg'
-import scene3 from '../../../assets/images/dataCenter/scene032.svg'
-import scene4 from '../../../assets/images/dataCenter/scene04.svg'
+import scene2 from '../../../assets/images/dataCenter/scene2.svg'
+import scene3 from '../../../assets/images/dataCenter/scene3.svg'
+import scene4 from '../../../assets/images/dataCenter/scene4.svg'
 import data_info_btn from '../../../assets/images/dataCenter/data_info_btn.svg'
 import scene5 from '../../../assets/images/dataCenter/scene5.svg'
 import scene6 from '../../../assets/images/dataCenter/scene6.svg'
@@ -17,6 +17,14 @@ const DataCenterPage = () => {
     const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
     const FadeUp = batch(Fade(), Move(), Sticky());
 
+    const [dataCenterInfo,setDataCenterInfo] = useState(false);
+    const showDataCenterInfo = () => {
+        setDataCenterInfo(true);
+    }
+    const hideDataCenterInfo = () => {
+        setDataCenterInfo(false);
+    }
+
     return(
         <main className="DataCenterPage">
             <header className="title">
@@ -26,11 +34,11 @@ const DataCenterPage = () => {
                 </h5>
             </header>
             <article className="contents">
-                <ScrollContainer id="scroll-section-0">
+                <ScrollContainer id="scroll-section-0" style={{width:'100%'}}>
                     <ScrollPage page={0} style={{width:'100%'}}>
                         <Animator animation={batch(Fade(), Sticky())} style={{width:'100%'}}>
                             <div className="sticky-elem">
-                                <img src={scene0} alt="scene0" style={{width:'auto',height:'80vh'}}/>
+                                <img className="phone-img" src={scene0} alt="scene0"/>
                             </div>
                         </Animator>
                         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -5))} style={{width:'100%'}}>
@@ -46,7 +54,7 @@ const DataCenterPage = () => {
                     <ScrollPage page={1} className="scroll-section" style={{width:'100%'}}>
                         <Animator animation={batch(Fade(), Sticky())} style={{width:'100%'}}>
                             <div className="sticky-elem">
-                                <img src={scene1} alt="scene2" style={{width:'auto',height:'80vh'}}/>
+                                <img className="phone-img" src={scene1} alt="scene2"/>
                             </div>
                         </Animator>
                         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -50))} style={{width:'100%'}}>
@@ -60,7 +68,7 @@ const DataCenterPage = () => {
                     <ScrollPage page={2} className="scroll-section" style={{width:'100%'}}>
                         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -700))} style={{width:'100%'}}>
                             <div className="sticky-elem">
-                                <img src={scene2} alt="scene2" id="scene2_img" style={{width:'auto',height:'110vh'}}/>
+                                <img className="phone-img-lg" src={scene2} alt="scene2" id="scene2_img"/>
                             </div>
                         </Animator>
                         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -50))} style={{width:'100%'}}>
@@ -86,18 +94,20 @@ const DataCenterPage = () => {
                     <ScrollPage page={5} className="scroll-section" style={{width:'100%'}}>
                         <Animator animation={batch(Fade(), Sticky())} style={{width:'100%'}}>
                             <div className="sticky-elem">
-                                <img className="earth-graphic-img" src={scene4} alt="scene4" style={{width:'auto',height:'100vh'}}/>
+                                <img className="earth-graphic-img" src={scene4} alt="scene4"/>
                             </div>
                         </Animator>
                         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -50))} style={{width:'100%'}}>
                             <div className="sticky-elem" id="scene4">
-                                <p className="left-text side-info">
+                                {dataCenterInfo && 
+                                <p className="left-text side-info info">
                                     데이터센터는 말 그대로,정보를 관리하고<br/>
                                     저장/공유 하는 최종 서버입니다.
                                 </p>
-                                <p className="left-text side-info">
+                                }
+                                <p className="left-text side-info info-btn" onClick={showDataCenterInfo} onMouseEnter={showDataCenterInfo} onMouseOut={hideDataCenterInfo}>
                                     데이터 센터란?<br/>
-                                    <img className="data_info_btn" src={data_info_btn} alt="데이터 센터란?"/>
+                                    <img className="data_info_btn" src={data_info_btn} alt="데이터 센터란?" onClick={showDataCenterInfo} onMouseEnter={showDataCenterInfo} onMouseOut={hideDataCenterInfo}/>
                                 </p>
 
                                 <p className="right-text">
@@ -109,7 +119,7 @@ const DataCenterPage = () => {
                     <ScrollPage page={6} className="scroll-section" style={{width:'100%'}}>
                         <Animator animation={batch(Fade(), Sticky())} style={{width:'100%'}}>
                             <div className="sticky-elem">
-                                <img className="earth-graphic-img" src={scene5} alt="scene5" style={{width:'auto',height:'100vh'}}/>
+                                <img className="earth-graphic-img" src={scene5} alt="scene5"/>
                             </div>
                         </Animator>
                         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -50))} style={{width:'100%'}}>
@@ -124,7 +134,7 @@ const DataCenterPage = () => {
                     <ScrollPage page={7} className="scroll-section" style={{width:'100%'}}>
                         <Animator animation={batch(Fade(), Sticky())} style={{width:'100%'}}>
                             <div className="sticky-elem">
-                                <img className="earth-graphic-img" src={scene6} alt="scene6" style={{width:'auto',height:'100vh'}}/>
+                                <img className="earth-graphic-img" src={scene6} alt="scene6"/>
                             </div>
                         </Animator>
                         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -50))} style={{width:'100%'}}>
@@ -139,7 +149,7 @@ const DataCenterPage = () => {
                     <ScrollPage page={8} className="scroll-section" style={{width:'100%'}}>
                         <Animator animation={batch(Fade(), Sticky())} style={{width:'100%'}}>
                             <div className="sticky-elem">
-                                <img className="earth-graphic-img" src={scene7} alt="scene7" style={{width:'auto',height:'100vh'}}/>
+                                <img className="earth-graphic-img" src={scene7} alt="scene7"/>
                             </div>
                         </Animator>
                         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -50))} style={{width:'100%'}}>
@@ -153,8 +163,8 @@ const DataCenterPage = () => {
                     </ScrollPage>
                     <ScrollPage page={10} className="scroll-section" style={{width:'100%'}}>
                         <Animator animation={batch(Fade(), Sticky())} style={{width:'100%'}}>
-                            <div className="sticky-elem">
-                                <img src={scene8} alt="scene8" style={{width:'100vw',height:'auto'}}/>
+                            <div>
+                                <img className="pixel-img" src={scene8} alt="scene8"/>
                             </div>
                         </Animator>
                     </ScrollPage>
@@ -171,7 +181,7 @@ const DataCenterPage = () => {
                                         <p className="center-text">
                                             우리가 만들어 낸다면,
                                         </p>
-                                        <img src={scene9} alt="scene9" style={{width:'auto',height:'70vh'}}/>
+                                        <img className="phone-img-sm" src={scene9} alt="scene9"/>
                                     </div>
                                 </Animator>
                             </ScrollPage>
@@ -182,7 +192,7 @@ const DataCenterPage = () => {
                                             우리가 만들어 낸다면,<br/>
                                             반대로 직접 줄일 수도 있지 않을까요?
                                         </p>
-                                        <img src={scene10} alt="scene10" style={{width:'auto',height:'70vh'}}/>
+                                        <img className="phone-img-sm" src={scene10} alt="scene10"/>
                                     </div>
                                 </Animator>
                             </ScrollPage>

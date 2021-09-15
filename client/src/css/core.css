@@ -143,6 +143,21 @@ button{
   cursor: pointer;
 }
 
+input, textarea, button, select { 
+    appearance: none; 
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    border-radius: 0; 
+    -webkit-border-radius: 0; 
+    -moz-border-radius: 0; 
+}
+input::-ms-clear{
+    display: none;
+}
+select::-ms-expand{
+    display: none;
+}
+
 @media screen and (max-width:480px){
     html{
       font-size:14px;

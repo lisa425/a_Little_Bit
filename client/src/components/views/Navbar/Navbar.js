@@ -27,8 +27,8 @@ const NavBar = ({match}) => {
                         </li>
 
                         <li><Link to="/explain" onClick={closeSidebar}>
-                            <p className="en-menu">Future of earth</p>
-                            <p className="kr-menu">지구의 미래</p></Link>
+                            <p className="en-menu">Why is it a problem?</p>
+                            <p className="kr-menu">도대체 왜 문제일까?</p></Link>
                         </li>
 
                         <li><Link to="/cardnews" onClick={closeSidebar}>
