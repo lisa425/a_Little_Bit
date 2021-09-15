@@ -6,155 +6,16 @@ import scene1 from '../../../assets/images/dataCenter/scene1.svg'
 import scene2 from '../../../assets/images/dataCenter/scene02.svg'
 import scene3 from '../../../assets/images/dataCenter/scene032.svg'
 import scene4 from '../../../assets/images/dataCenter/scene04.svg'
-import scene4_earth from '../../../assets/images/dataCenter/scene4_earth.svg'
-import scene4_datacenter from '../../../assets/images/dataCenter/scene4_datacenter.svg'
+import data_info_btn from '../../../assets/images/dataCenter/data_info_btn.svg'
 import scene5 from '../../../assets/images/dataCenter/scene5.svg'
 import scene6 from '../../../assets/images/dataCenter/scene6.svg'
 import scene7 from '../../../assets/images/dataCenter/scene7.svg'
-import data_info_btn from '../../../assets/images/dataCenter/data_info_btn.svg'
+import scene8 from '../../../assets/images/dataCenter/scene8.svg'
+import scene9 from '../../../assets/images/dataCenter/scene9.svg'
+import scene10 from '../../../assets/images/dataCenter/scene10.svg'
 const DataCenterPage = () => {
     const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
     const FadeUp = batch(Fade(), Move(), Sticky());
-    // let yOffset = 0;
-    // let prevScrollHeight = 0;
-    // let currentScene = 0;
-    // let enterNewScene = false;
-
-    // const article = useRef(); //스크롤 컨텐츠 영역을 감싸는 article
-    // const scroll_section_0 = useRef();
-    // const scroll_section_1 = useRef();
-    // const scroll_section_2 = useRef();
-    // const scroll_section_3 = useRef();
-    // const scroll_section_4 = useRef();
-    // const scroll_section_5 = useRef();
-
-    // const sceneInfo = [
-    //     { 
-    //         type:'sticky',
-    //         heightNum: 5,
-    //         scrollHeight:0,
-    //         objs:{
-    //             container:scroll_section_0
-    //         }
-    //     },
-    //     {	
-	// 		type:'normal',
-	// 		heightNum: 5,
-	// 		scrollHeight: 0,
-	// 		objs:{
-	// 			container:scroll_section_1
-	// 		}
-	// 	},
-	// 	{	
-	// 		//2
-	// 		type:'sticky',
-	// 		heightNum: 5,
-	// 		scrollHeight: 0,
-	// 		objs:{
-	// 			container:scroll_section_2
-	// 		}
-	// 	},
-	// 	{	
-	// 		type:'normal',
-	// 		heightNum: 5,
-	// 		scrollHeight: 0,
-	// 		objs:{
-	// 			container:scroll_section_3
-	// 		}
-	// 	},
-    //     {	
-	// 		type:'sticky',
-	// 		heightNum: 5,
-	// 		scrollHeight: 0,
-	// 		objs:{
-	// 			container:scroll_section_4
-	// 		}
-	// 	},
-    //     {	
-	// 		type:'normal',
-	// 		heightNum: 5,
-	// 		scrollHeight: 0,
-	// 		objs:{
-	// 			container:scroll_section_5
-	// 		}
-	// 	}
-    // ]
-
-    // const setLayout = () => {
-    //     console.log('setLayout');
-    //     for (let i=0; i<sceneInfo.length; i++){
-	// 		if(sceneInfo[i].type === 'sticky'){
-	// 			sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
-	// 			sceneInfo[i].objs.container.current.style.height = `${sceneInfo[i].scrollHeight}px`;
-	// 		}else if(sceneInfo[i].type === 'normal'){
-	// 			sceneInfo[i].scrollHeight = sceneInfo[i].objs.container.current.offsetHeight;
-	// 		}
-	// 		sceneInfo[i].objs.container.current.style.height = `${sceneInfo[i].scrollHeight}px`;
-	// 	}
-
-	// 	yOffset = window.pageYOffset;
-	// 	let totalScrollHeight = 0;
-	// 	for(let i = 0; i<sceneInfo.length; i++){
-	// 		totalScrollHeight += sceneInfo[i].scrollHeight;
-	// 		if(totalScrollHeight >= yOffset){
-	// 			currentScene = i;
-	// 			break;
-	// 		}
-	// 	}
-    //     article.current.id = `show-scene-${currentScene}`;
-    // }
-
-    // const scrollLoop = () => {
-    //     console.log('scroll loop')
-    //     enterNewScene = false;
-	// 	prevScrollHeight = 0;
-	// 	for(let i = 0; i < currentScene; i++){
-	// 		prevScrollHeight += sceneInfo[i].scrollHeight;
-	// 	}
-
-	// 	if(yOffset > prevScrollHeight+sceneInfo[currentScene].scrollHeight){
-	// 		enterNewScene = true;
-	// 		currentScene++;
-	// 		article.current.id = `show-scene-${currentScene}`;
-	// 	}
-	// 	if(yOffset < prevScrollHeight){
-	// 		enterNewScene = true;
-	// 		if(currentScene === 0) return; //바운스 효과로 인해 마이너스가 되는 것 방지
-	// 		currentScene--;
-	// 		article.current.id = `show-scene-${currentScene}`;
-	// 	}
-		
-	// 	if(enterNewScene) return;
-    // }
-
-    
-    // window.addEventListener('resize', setLayout);
-    // window.addEventListener('scroll', ()=>{
-    //         yOffset = window.pageYOffset;
-    //         console.log(yOffset);
-    //         scrollLoop();
-    //     });
-    // window.addEventListener('load', setLayout);
-    
-
-    // useEffect(() => {
-    //     window.addEventListener('resize', setLayout);
-    //     window.removeEventListener('scroll', ()=>{
-    //             yOffset = window.pageYOffset;
-    //             console.log(yOffset);
-    //             scrollLoop();
-    //         });
-	//     window.addEventListener('load', setLayout);
-
-    //     return () => {
-    //         window.removeEventListener('resize', setLayout);
-    //         window.removeEventListener('scroll', ()=>{
-    //             yOffset = window.pageYOffset;
-    //             scrollLoop();
-    //         });
-    //         window.removeEventListener('load', setLayout);
-    //     }
-    // },[]);
 
     return(
         <main className="DataCenterPage">
@@ -204,7 +65,7 @@ const DataCenterPage = () => {
                         </Animator>
                         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -50))} style={{width:'100%'}}>
                             <div className="sticky-elem" id="scene2">
-                                <p class="left-text">
+                                <p className="left-text">
                                     스트리밍 하거나,<br/>
                                     정보를 검색하거나,
                                 </p>
@@ -217,22 +78,11 @@ const DataCenterPage = () => {
                             </div>
                         </Animator>
                     </ScrollPage>
-                    {/* <ScrollPage page={3} className="scroll-section" style={{width:'100%'}}>
-                        <Animator animation={FadeIn} style={{width:'100%'}}>
-                            <section className="scroll-section" id="scroll-section-1">
-                                <img className="wifi-icon" src={scene3} alt="wifi icon"/>
-                            </section>
-                        </Animator>
-                    </ScrollPage> */}
-                </ScrollContainer>
 
-                <section className="scroll-section" id="scroll-section-1">
-                    <img className="wifi-icon" src={scene3} alt="wifi icon"/>
-                </section>
+                    <section className="scroll-section" id="scroll-section-1">
+                        <img className="wifi-icon" src={scene3} alt="wifi icon"/>
+                    </section>
 
-
-
-                <ScrollContainer>
                     <ScrollPage page={5} className="scroll-section" style={{width:'100%'}}>
                         <Animator animation={batch(Fade(), Sticky())} style={{width:'100%'}}>
                             <div className="sticky-elem">
@@ -247,7 +97,7 @@ const DataCenterPage = () => {
                                 </p>
                                 <p className="left-text side-info">
                                     데이터 센터란?<br/>
-                                    <img class="data_info_btn" src={data_info_btn} alt="데이터 센터란?"/>
+                                    <img className="data_info_btn" src={data_info_btn} alt="데이터 센터란?"/>
                                 </p>
 
                                 <p className="right-text">
@@ -301,40 +151,64 @@ const DataCenterPage = () => {
                             </div>
                         </Animator>
                     </ScrollPage>
+                    <ScrollPage page={10} className="scroll-section" style={{width:'100%'}}>
+                        <Animator animation={batch(Fade(), Sticky())} style={{width:'100%'}}>
+                            <div className="sticky-elem">
+                                <img src={scene8} alt="scene8" style={{width:'100vw',height:'auto'}}/>
+                            </div>
+                        </Animator>
+                    </ScrollPage>
+                    <ScrollPage page={11} className="scroll-section" style={{width:'100%'}}>
+                        
+                    </ScrollPage>
                 </ScrollContainer>
 
-                
-
-                <section className="scroll-section" id="scroll-section-3">
-                    <p className="center-text">
-                        결국 우리의 손 위에서 시작되는<br/>
-                        디지털 탄소 발자국.
-                    </p>
-                </section>
-
-                <section className="scroll-section" id="scroll-section-4">
-                    <div className="sticky-elem center-text">
-                        <p>
-                            우리가 만들어 낸다면,<br/>
-                            반대로 직접 줄일 수도 있지 않을까요?
-                        </p>
-                    </div>
-                </section>
-
-                <section className="scroll-section" id="scroll-section-5">
-                    <div className="action-plan-nav">
-                        <p>
-                            디지털 탄소 발자국을 감소시키는<br/>
-                            간단한 실천에 대해서 알아보아요!
-                        </p>
-                        <div className="action-plan-box">
-                            <h2>Action Plan</h2>
-                            <p>액션 플랜 알아보기</p>
-                            <a href="/actionplan">
-                                <button>go</button>
-                            </a>
-                        </div>
-                    </div>
+                <section className="scroll-section" id="scroll-section-2">
+                        <ScrollContainer>
+                            <ScrollPage page={12} className="scroll-section" style={{width:'100%'}}>
+                                <Animator animation={batch(Fade(), Sticky())} style={{width:'100%'}}>
+                                    <div className="sticky-elem scene-outro">
+                                        <p className="center-text">
+                                            우리가 만들어 낸다면,
+                                        </p>
+                                        <img src={scene9} alt="scene9" style={{width:'auto',height:'70vh'}}/>
+                                    </div>
+                                </Animator>
+                            </ScrollPage>
+                            <ScrollPage page={13} className="scroll-section" style={{width:'100%'}}>
+                                <Animator animation={batch(Fade(), Sticky())} style={{width:'100%'}}>
+                                    <div className="sticky-elem scene-outro">
+                                        <p className="center-text">
+                                            우리가 만들어 낸다면,<br/>
+                                            반대로 직접 줄일 수도 있지 않을까요?
+                                        </p>
+                                        <img src={scene10} alt="scene10" style={{width:'auto',height:'70vh'}}/>
+                                    </div>
+                                </Animator>
+                            </ScrollPage>
+                            <ScrollPage page={14} className="scroll-section" style={{width:'100%'}}>
+                                <Animator animation={batch(Fade(), Sticky())} style={{width:'100%'}}>
+                                    
+                                </Animator>
+                            </ScrollPage>
+                            <ScrollPage page={15} className="scroll-section" style={{width:'100%'}}>
+                                <Animator animation={batch(MoveIn(0,10), Sticky())} style={{width:'100%'}}>
+                                    <div className="action-plan-nav">
+                                        <p>
+                                            디지털 탄소 발자국을 감소시키는<br/>
+                                            간단한 실천에 대해서 알아보아요!
+                                        </p>
+                                        <div className="action-plan-box">
+                                            <h2>Action Plan</h2>
+                                            <p>액션 플랜 알아보기</p>
+                                            <a href="/actionplan">
+                                                <button>go</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </Animator>
+                            </ScrollPage>
+                        </ScrollContainer>
                 </section>
             </article>
         </main>

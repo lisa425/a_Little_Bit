@@ -115,12 +115,21 @@
     left:-18px;
 }
 
-/* #show-scene-0 #scroll-section-0 .sticky-elem,
-#show-scene-1 #scroll-section-1 .sticky-elem,
-#show-scene-2 #scroll-section-2 .sticky-elem,
-#show-scene-3 #scroll-section-3 .sticky-elem{
-    display:flex;
-} */
+.scene-outro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.scene-outro p{
+    text-align: center;
+    vertical-align:top;
+    height:3rem;
+}
+.scene-outro img{
+    transform: translateY(50px);
+}
+
+
 
 .DataCenterPage .action-plan-nav{
     display: flex;
@@ -128,6 +137,10 @@
     margin:0 auto;
     justify-content: space-between;
     align-items: center;
+    min-width: 800px;
+}
+.DataCenterPage .action-plan-nav p{
+    margin-right:30px;
 }
 .DataCenterPage .action-plan-box{
     width:427px;
