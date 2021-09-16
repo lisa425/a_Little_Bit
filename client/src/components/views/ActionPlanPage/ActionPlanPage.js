@@ -200,11 +200,6 @@ const ActionPlanPage = () => {
     }
 
     const [isMobile,setIsMobile] = useState(false);
-    // const preventMobile = () => {
-    //     if(window.innerWidth <= 768){
-    //         setIsMobile(true);
-    //     }else return;
-    // }
 
     useEffect(() => {
         if(window.innerWidth <= 768){

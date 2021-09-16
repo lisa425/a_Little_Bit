@@ -148,6 +148,8 @@ const TestPage = () => {
         setCallBtn(false);
         setZoomBtn(false);
         setEmailBtn(false);
+
+        
     }
     
     const onYoutubeBtnHandler = (event) => {
@@ -162,6 +164,9 @@ const TestPage = () => {
         setCallBtn(false);
         setZoomBtn(false);
         setEmailBtn(false);
+        if(isMobile){
+            movePrevListBtn();
+        }
     }
 
     const onFacebookBtnHandler = (event) => {
@@ -176,6 +181,9 @@ const TestPage = () => {
         setCallBtn(false);
         setZoomBtn(false);
         setEmailBtn(false);
+        if(isMobile){
+            movePrevListBtn();
+        }
     }
     
     const onTwitterBtnHandler = (event) => {
@@ -190,6 +198,9 @@ const TestPage = () => {
         setCallBtn(false);
         setZoomBtn(false);
         setEmailBtn(false);
+        if(isMobile){
+            movePrevListBtn();
+        }
     }
     
     const onTiktokBtnHandler = (event) => {
@@ -204,6 +215,9 @@ const TestPage = () => {
         setCallBtn(false);
         setZoomBtn(false);
         setEmailBtn(false);
+        if(isMobile){
+            movePrevListBtn();
+        }
     }
     
     const onInstagramBtnHandler = (event) => {
@@ -218,6 +232,9 @@ const TestPage = () => {
         setCallBtn(false);
         setZoomBtn(false);
         setEmailBtn(false);
+        if(isMobile){
+            moveNextListBtn();
+        }
     }
     
     const onKakaoTalkBtnHandler = (event) => {
@@ -232,6 +249,9 @@ const TestPage = () => {
         setCallBtn(false);
         setZoomBtn(false);
         setEmailBtn(false);
+        if(isMobile){
+            moveNextListBtn();
+        }
     }
     
     const onCallBtnHandler = (event) => {
@@ -669,6 +689,67 @@ const TestPage = () => {
         },1000);
     }
 
+    //모바일 감지 메뉴 구현
+
+    //모바일에서 테스트를 오픈하는 인터랙션
+    const ulListBtn = useRef();
+    const openTest = () => {
+        if(isMobile){
+            ulListBtn.current.classList.remove("wrap-list");
+        }else return;
+    }
+
+    //버튼 리스트 넘어가는 부분을 이동시키는 모션
+    const listBtnNetflix = useRef();
+    const listBtnYoutube = useRef();
+    const listBtnFacebook = useRef();
+    const listBtnTwitter = useRef();
+    const listBtnTiktok = useRef();
+    const listBtnInstagram = useRef();
+    const listBtnKakaoTalk = useRef();
+    const listBtnCall = useRef();
+    const listBtnZoom = useRef();
+    const listBtnEmail = useRef();
+    const moveNextListBtn = () => {
+        listBtnNetflix.current.style.left='-184px';
+        listBtnYoutube.current.style.left='-184px';
+        listBtnFacebook.current.style.left='-184px';
+        listBtnTwitter.current.style.left='-184px';
+        listBtnTiktok.current.style.left='-184px';
+        listBtnInstagram.current.style.left='-184px';
+        listBtnKakaoTalk.current.style.left='-184px';
+        listBtnCall.current.style.left='-184px';
+        listBtnZoom.current.style.left='-184px';
+        listBtnEmail.current.style.left='-184px';
+    }
+    const movePrevListBtn = () => {
+        listBtnNetflix.current.style.left='0vw';
+        listBtnYoutube.current.style.left='0vw';
+        listBtnFacebook.current.style.left='0vw';
+        listBtnTwitter.current.style.left='0vw';
+        listBtnTiktok.current.style.left='0vw';
+        listBtnInstagram.current.style.left='0vw';
+        listBtnKakaoTalk.current.style.left='0vw';
+        listBtnCall.current.style.left='0vw';
+        listBtnZoom.current.style.left='0vw';
+        listBtnEmail.current.style.left='0vw';
+    }
+
+    const [isMobile,setIsMobile] = useState(false);
+    const detectMobileDevice = () => {
+        const minWidth = 500;
+        if (window.innerWidth <= minWidth){
+            setIsMobile(true)
+        }else{
+            setIsMobile(false);
+        }
+    }
+
+
+    useEffect(()=>{
+        detectMobileDevice();
+    },[]);
+
     
  
     return(
@@ -703,53 +784,53 @@ const TestPage = () => {
                         <div className="get-info-input">
                             <div className="test page-3" id="get-appUseData">
                                 <h3>서비스를 클릭해 사용량을 기록해주세요</h3>
-                                <ul className="applist-btn">
-                                    <li>
+                                <ul className="applist-btn wrap-list" ref={ulListBtn} onClick={openTest}>
+                                    <li ref={listBtnNetflix} className="move-li">
                                         <button type="button" onClick={onNetflixBoxHandler}>
                                             <Netflix className={netflixBtn ? 'netfilx-color' : 'netflix-black'} onClick={onNetflixBtnHandler}/>
                                         </button>
                                     </li>
-                                    <li>
+                                    <li ref={listBtnYoutube} className="move-li">
                                         <button style={{background:'transparent'}} onClick={onYoutubeBoxHandler}>
                                             <Youtube className={youtubeBtn ? 'youtube-color' : 'youtube-black'} onClick={onYoutubeBtnHandler}/>
                                         </button>
                                     </li>
-                                    <li>
+                                    <li ref={listBtnFacebook} className="move-li">
                                         <button onClick={onFacebookBoxHandler}>
                                             <Facebook className={facebookBtn ? 'facebook-color' : 'facebook-black'} onClick={onFacebookBtnHandler}/>
                                         </button>
                                     </li>
-                                    <li>
+                                    <li ref={listBtnTwitter} className="move-li">
                                         <button onClick={onTwitterBoxHandler}>
                                             <Twitter className={twitterBtn ? 'twitter-color' : 'twitter-black'} onClick={onTwitterBtnHandler}/>
                                         </button>
                                     </li>
-                                    <li>
+                                    <li ref={listBtnTiktok} className="move-li">
                                         <button onClick={onTiktokBoxHandler}>
                                             <Tiktok className={tiktokBtn ? 'tiktok-color' : 'tiktok-black'} onClick={onTiktokBtnHandler}/>
                                         </button>
                                     </li>
-                                    <li>
+                                    <li ref={listBtnInstagram} className="move-li">
                                         <button onClick={onInstagramBoxHandler}>
                                             <Instagram className={instagramBtn ? 'instagram-color' : 'instagram-black'} onClick={onInstagramBtnHandler}/>
                                         </button>
                                     </li>
-                                    <li>
+                                    <li ref={listBtnKakaoTalk} className="move-li">
                                         <button onClick={onKakaoTalkBoxHandler}>
                                             <Kakaotalk className={kakaoTalkBtn ? 'katalk-color' : 'katalk-black'} onClick={onKakaoTalkBtnHandler}/>
                                         </button>
                                     </li>
-                                    <li>
+                                    <li ref={listBtnCall} className="move-li">
                                         <button onClick={onCallBoxHandler}>
                                             <Call className={callBtn ? 'call-color' : 'call-black'} onClick={onCallBtnHandler}/>
                                         </button>
                                     </li>
-                                    <li>
+                                    <li ref={listBtnZoom} className="move-li">
                                         <button onClick={onZoomBoxHandler}>
                                             <Zoom className={zoomBtn ? 'zoom-color' : 'zoom-black'} onClick={onZoomBtnHandler}/>
                                         </button>
                                     </li>
-                                    <li>
+                                    <li ref={listBtnEmail} className="move-li">
                                         <button onClick={onEmailBoxHandler}>
                                             <Email className={emailBtn ? 'email-color' : 'email-black'} onClick={onEmailBtnHandler}/>
                                         </button>

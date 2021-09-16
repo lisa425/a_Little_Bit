@@ -564,10 +564,19 @@ input:-webkit-autofill {
         font-size: 1.3rem;
         margin-left: 0.8rem;
     }
+    .wrap-list{
+        margin:0 0 4vh 0;
+        width:268px !important;
+        flex-wrap: wrap !important;
+        display:flex;
+        background:transparent;
+    }
     .applist-btn{
         margin:0 0 4vh 0;
-        width:72%;
-        flex-wrap: wrap;
+        width:95%;
+        overflow-x:scroll;
+        -ms-overflow-style: none; 
+        scrollbar-width: none;
         /* width:100vw;
         overflow-x: scroll;
         -ms-overflow-style: none; 
@@ -583,12 +592,17 @@ input:-webkit-autofill {
     }
     .applist-btn li{
         padding:0.3rem;
-        width:12vw;
-        height:12vw;
+        width:45px;
+        height:45px;
+    }
+    .move-li{
+        position: relative;
+        transition: 0.2s ease-in;
+        left:0vw;
     }
     .applist-btn li button{
-        width:12vw;
-        height:12vw;
+        width:45px;
+        height:45px;
     }
     .applist-btn li button svg{
         width:100%;
@@ -671,12 +685,9 @@ input:-webkit-autofill {
         /* padding-top:0;
         justify-content: center; */
     }
-    .applist-btn{
-        width:75%;
-    }
-    .zoom-camera{
+    /* .zoom-camera{
         display: none;
-    }
+    } */
     .test-wrapper{
         margin-top:0;
     }
