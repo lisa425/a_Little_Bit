@@ -44,7 +44,7 @@ function App() {
           <Route exact path="/actionplan" component={ActionPlanPage} />
           <Route exact path="/actionplan/ending" component={ActionPlanEnding} />
 
-          <Route exact path="/explain" component={DataCenterPage} />
+          <Route exact path="/whyisitproblem" component={DataCenterPage} />
         </Switch>
     </Router>
   );
