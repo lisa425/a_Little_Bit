@@ -18,11 +18,13 @@ router.post('/',(req,res)=>{
     })
 })
 
+//test 결과를 전송
 router.get('/getResult',(req,res)=>{
     const cookie = req.cookies.test;
     res.status(200).json({success:true,cookie})
 })
 
+//참여자수를 전송
 router.get('/getCount',(req,res)=>{
     const count = req.cookies.test.count;
     res.status(200).json({success:true,count})

@@ -490,7 +490,7 @@ const TestResult = (props) => {
                 <article className="result-navigator-box-container">
                     <div className="result-navigator-box">
                         <p>디지털 탄소 발자국은<br/>어떻게 해로운 영향을 끼치나요?</p>
-                        <Link to="/explain"><button className="navigator-btn">go</button></Link>
+                        <Link to="/story"><button className="navigator-btn">go</button></Link>
                     </div>
                     <div className="result-navigator-box">
                         <p>디지털 탄소 발자국을 줄이려면<br/>무엇을 해야하나요?</p>

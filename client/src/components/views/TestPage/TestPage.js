@@ -763,7 +763,7 @@ const TestPage = () => {
                             <p>당신의 이름을 입력하세요.</p>
                             <input className="input-info" type="text" name="name" value={name} onChange={onNameHandler} maxLength='10'/>
                         </div>
-                        <button className={next ? "next-clicked" : "submit-to-next"} type="submit" onClick={onClickNext}>NEXT</button>
+                        <button className={next ? "next-clicked" : "submit-to-next"} type="submit" onClick={onClickNext}>next</button>
                     </section>
 
 
@@ -773,7 +773,7 @@ const TestPage = () => {
                             <p>지금 계신 위치가 어디신가요?</p>
                             <p className="location-ex">ex)서울,한국/신비한 우리집</p>
                             <input className="input-info" type="text" name="name" value={location} onChange={onLocationHandler} maxLength='50'/>
-                            <button className={next2 ? "next2-clicked" : "submit-to-next" } type="submit" onClick={onClickNext2}>NEXT</button>
+                            <button className={next2 ? "next2-clicked" : "submit-to-next" } type="submit" onClick={onClickNext2}>next</button>
                         </div>
                     </section>
 
@@ -1184,7 +1184,7 @@ const TestPage = () => {
                                             </div>
                                         </div>
                                         <button className="ctrl-btn next_question" style={{visibility:'hidden'}}><Next/></button>
-                                        <button className={doneBtn? "submit-test" : "submit-test-none"} id="submit-test" type="submit" onClick={onSubmit}>DONE</button>
+                                        <button className={doneBtn? "submit-test" : "submit-test-none"} id="submit-test" type="submit" onClick={onSubmit}>done</button>
                                     </article>
                                 </div>
                             </div>

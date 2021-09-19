@@ -198,7 +198,7 @@ const TestEarthList = (props) => {
             {displayModal && (
                 <div className="earth-modal-wrap">
                     <EarthModal id={earthId} classsname='earth-modal' />
-                    <button id="closeModal" className="close-modal" type="button" onClick={closeModal}>Back</button>
+                    <button id="closeModal" className="close-modal" type="button" onClick={closeModal}>back</button>
                 </div>
             )}
 
@@ -236,7 +236,7 @@ const TestEarthList = (props) => {
                         </div>
                     </div>
                     </div>
-                    <button id="closeModal" className="close-modal" type="button" onClick={closeMyModal}>Back</button>
+                    <button id="closeModal" className="close-modal" type="button" onClick={closeMyModal}>back</button>
                 </div>
             )}
 

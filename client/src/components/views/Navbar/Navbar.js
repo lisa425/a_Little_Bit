@@ -22,27 +22,27 @@ const NavBar = ({match}) => {
                 <ul className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                         <h1 className="menu-title">menu</h1>
                         <li><Link to="/testintro" onClick={closeSidebar}>
-                            <p className="en-menu">Digital usage test</p>
+                            <p className="en-menu">digital usage test</p>
                             <p className="kr-menu">디지털 사용량 테스트</p></Link>
                         </li>
 
-                        <li><Link to="/explain" onClick={closeSidebar}>
-                            <p className="en-menu">Why is it a problem?</p>
-                            <p className="kr-menu">도대체 왜 문제일까?</p></Link>
+                        <li><Link to="/story" onClick={closeSidebar}>
+                            <p className="en-menu">story of a Little bit</p>
+                            <p className="kr-menu">사소하지만 중요한 이야기</p></Link>
                         </li>
 
                         <li><Link to="/cardnews" onClick={closeSidebar}>
-                            <p className="en-menu">Fun facts</p>
+                            <p className="en-menu">fun facts</p>
                             <p className="kr-menu">카드 뉴스</p></Link>
                         </li>
 
                         <li><Link to="/actionplan" onClick={closeSidebar}>
-                            <p className="en-menu">Action plan</p>
+                            <p className="en-menu">action plan</p>
                             <p className="kr-menu">액션 플랜</p></Link>
                         </li>
 
                         <li><Link to="/guestbook" onClick={closeSidebar}>
-                            <p className="en-menu">Guest book</p>
+                            <p className="en-menu">guest book</p>
                             <p className="kr-menu">방명록</p></Link>
                         </li>
                 </ul>

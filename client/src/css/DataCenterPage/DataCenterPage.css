@@ -263,9 +263,23 @@
 
 @media (max-width:480px){
     .DataCenterPage .impact-text{
-        font-size:1.1rem;
-        /* padding:1rem;
-        background: rgba(0,0,0,0.7);
-        text-align: center; */
+        font-size:1.5vh;
+        text-align: center;
     }
+    .DataCenterPage p:not(.impact-text){
+        font-size: 2vh;
+    }
+    #scene1 .right-text{
+        transform: translate(0,-66vw);
+    }
+    #scene2 .left-text{
+        transform: translate(-24vw,-73vw)
+    }
+    #scene2 .right-text{
+        transform: translate(16vw,-70vw)
+    }
+    .DataCenterPage .right-text{
+        transform: translate(0,-33vh)
+    }
+
 }

@@ -1,6 +1,6 @@
 @import "../core.css";
 
-@keyframes blink{
+@keyframes warning-blink{
     50%{
         color:black;
         background-color:#FF00FE;
@@ -60,19 +60,14 @@
     width:229px;
     height: 50px;
     margin-top:1rem;
+    animation-name: warning-blink;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: step-end;
 }
 .warning-btn:hover{
     background-color: #FF00FE;
     color:#000;
-}
-
-@media screen and (max-width:1024px) and (min-width:665px){
-    .warning-btn{
-        animation-name: blink;
-        animation-iteration-count: infinite;
-        animation-duration: 1s;
-        animation-timing-function: step-end;
-    }
 }
 
 @media screen and (max-width:665px){
