@@ -12,6 +12,7 @@ const EarthModal = (props) => {
         Axios.post('/api/test/getEarthDetail',variable)
         .then(response => {
             if(response.data.success){
+                console.log(response.data.earthDetail)
                 setEarthDetail(response.data.earthDetail);
             }else{
                 alert('fail');
@@ -31,7 +32,10 @@ const EarthModal = (props) => {
                     <hr/>
                 </section>
 
-                <img src={EarthImg} alt="earth"/>
+                <section className="earth-result">
+                    <img src={EarthImg} alt="earth"/>
+                    <div className="result"><span className="result-num">{earthDetail.result}g</span> co2 eq</div>
+                </section>
 
                 <section className="earth-info">
                     <div className="earth-info-name">

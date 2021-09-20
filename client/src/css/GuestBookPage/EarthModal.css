@@ -54,19 +54,30 @@
     font-size:30px;
 }
 .earth-result{
-    margin-top:2rem;
-}
-.earth-result span{
-    font-family: "Rany";
-    font-weight: 500;
-    font-size:25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color:white;
 }
-.earth-modal img{
+.earth-result .result span{
+    font-family: "Rany";
+    font-weight: 500;
+    font-size:1.2rem;
+}
+.earth-result img{
     filter:grayscale(0%);
     width:500px;
     position: relative;
     top: -90px;
+}
+.earth-result .result{
+    position: relative;
+    top:-120px;
+    left:2px;
+    font-size: 0.9rem;
+    border:1px solid white;
+    border-radius: 2px;
+    padding: 0.6rem 2.3rem;
 }
 .close-modal{
     position: fixed;
@@ -78,7 +89,7 @@
     font-weight: 700;
     font-size:1.6rem;
     border:none;
-    padding:1rem;
+    padding:1rem 2rem;
 }
 .earth-info {
     width:250px;

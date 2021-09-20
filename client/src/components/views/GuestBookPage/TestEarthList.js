@@ -213,7 +213,10 @@ const TestEarthList = (props) => {
                                 <hr/>
                             </section>
 
-                            <img src={EarthImg} alt="earth image"/>
+                            <section className="earth-result">
+                                <img src={EarthImg} alt="earth"/>
+                                <div className="result"><span className="result-num">{myTest.result}g</span> co2 eq</div>
+                            </section>
 
                             <section className="earth-info">
                                 <div className="earth-info-name">

@@ -28,7 +28,6 @@
 .main_title{
     width:40vw;
     height:15vw;
-    margin-bottom:5vh;
     z-index: 1;
     fill:white;
 }
@@ -44,6 +43,12 @@
     border:1px solid white;
     border-radius: 2px;
     z-index: 1;
+}
+.participant{
+    margin-top:3.5vh;
+    z-index: 1;
+    color:white;
+    font-family: "Elice Digital Baeum";
 }
 
 a{
@@ -61,11 +66,19 @@ a{
 @media screen and (max-width:1024px) and (min-width:768px){
     .main_title{
         width:50vw;
+        margin-bottom: 3vh;
     }
 }
 
 @media screen and (max-width:768px){
     .main_title{
-        width:70vw;
+        width:75vw;
+        margin-bottom: 5vh;
+    }
+}
+@media screen and (max-width:320px){
+    .main_title{
+        width:75vw;
+        fill:white;
     }
 }

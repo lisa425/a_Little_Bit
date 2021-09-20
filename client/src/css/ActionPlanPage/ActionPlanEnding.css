@@ -6,10 +6,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .ask-withus{
     background-image:url('../../assets/images/actionplans/monitor_frame.svg');
-    width:1092px;
+    width:1000px;
     height:524px;
     display: flex;
     flex-direction: column;
@@ -45,7 +46,7 @@
 }
 .select-btn .yes-btn,
 .select-btn .no-btn{
-    width:442px;
+    width:400px;
     padding:1rem 0;
     font-family: 'Digitopia Bold';
     font-size:2.3rem;

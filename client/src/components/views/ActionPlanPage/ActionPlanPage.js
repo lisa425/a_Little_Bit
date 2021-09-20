@@ -5,6 +5,8 @@ import '../../../css/ActionPlanPage/ActionPlanPage.css';
 import PolarBear from '../../../assets/images/actionplans/bear_img.png';
 import Turtle from '../../../assets/images/actionplans/turtle_img.png';
 import Panda from '../../../assets/images/actionplans/panda_img.png';
+//mobile prevent img
+import Desktop from '../../../assets/images/actionplans/desktop.png';
 //next button img
 import { ReactComponent as Next } from '../../../assets/images/next.svg';
 //action list icon
@@ -202,7 +204,7 @@ const ActionPlanPage = () => {
     const [isMobile,setIsMobile] = useState(false);
 
     useEffect(() => {
-        if(window.innerWidth <= 768){
+        if(window.innerWidth <= 500){
             setIsMobile(true);
             console.log(window.innerWidth);
         }else{
@@ -214,7 +216,9 @@ const ActionPlanPage = () => {
         <main className="ActionPlan">
             {isMobile && 
                 <div className="mobile-prevent">
-                    <p>웹에서 이용 가능한 페이지 입니다.</p>
+                    <img src={Desktop} alt="데스크탑에 최적화된 페이지입니다."/>
+                    <h3>데스크탑에 최적화된 페이지입니다.</h3>
+                    <p>더 다양한 정보와 기능을 위해서<br/>데스크탑으로 접속해주세요!</p>
                 </div>
             }
             <div className="background-img-container">
