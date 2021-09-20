@@ -78,7 +78,6 @@ a{
 }
 @media screen and (max-width:320px){
     .main_title{
-        width:75vw;
-        fill:white;
+        width:80vw;
     }
 }

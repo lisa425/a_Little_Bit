@@ -526,15 +526,7 @@
 .result-navigator-box .navigator-btn a{
     color:black;
 }
-/*navvar color!*/
-.nav-logo{
-    fill:white;
-    visibility: visible;
-}
-.timer{
-    color:white;
-    visibility: visible;
-}
+
 @media screen and (max-width:1024px) and (min-width:769px){
     .world-metaphor-img{
         width:100%;
@@ -894,4 +886,13 @@
         margin-top:2rem;
     }
     
+}
+
+@media screen and (max-width:320px){
+    .world-degital-section ul{
+        width:260px;
+    }
+    .world-degital-section ul li{
+        padding: 0.15rem 0;
+    }
 }

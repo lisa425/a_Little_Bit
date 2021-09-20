@@ -4,7 +4,7 @@
     color:white;
     background:black;
     width:74vw;
-    margin:15vh 13vw;
+    margin:15vh 10vw;
     position: relative;
     font-family: 'Elice Digital Baeum';
     font-weight: 400;
@@ -29,6 +29,8 @@
     position: absolute;
     top:0;
     left:0;
+    z-index: 2;
+    background:rgba(0,0,0,0.7);
 }
 .DataCenterPage .title h1{
     font-family: 'Rany';
@@ -179,6 +181,13 @@
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
+.DataCenterPage .action-plan-box a{
+    width:100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .DataCenterPage .action-plan-box button{
     font-size:1.3rem;
     background:#FF00FE;
@@ -191,7 +200,6 @@
 
 @media (max-width:1023px){
     .DataCenterPage{
-        margin:11vh 5vw;
         width:90vw;
     }
     .DataCenterPage .title h1{
@@ -219,7 +227,8 @@
         transform:translate(150px,320px);
     }
     .DataCenterPage .impact-text{
-        font-size:2vh;
+        font-size: 2.5vh;
+        background: rgba(0,0,0,0.7);
     }
 
     .DataCenterPage .phone-img{
@@ -258,13 +267,30 @@
     .DataCenterPage .right-text{
         transform: translate(0,-260px);
     }
+    .DataCenterPage .scene-outro p{
+        transform: translateY(-8vh);
+    }
+    .DataCenterPage .scene-outro img{
+        transform:translateY(-3vh)
+    }
+    .DataCenterPage .action-plan-nav{
+        justify-content: center;
+    }
+    .DataCenterPage .action-plan-box{
+        width:327px;
+        height:327px;
+    }
+    .DataCenterPage .action-plan-box h2{
+        font-size:2rem;
+    }
 
 }
 
 @media (max-width:480px){
     .DataCenterPage .impact-text{
-        font-size:1.5vh;
+        font-size:2.3vh;
         text-align: center;
+        background: rgba(0,0,0,0.7);
     }
     .DataCenterPage p:not(.impact-text){
         font-size: 2vh;
@@ -273,13 +299,42 @@
         transform: translate(0,-66vw);
     }
     #scene2 .left-text{
-        transform: translate(-24vw,-73vw)
+        transform:translate(-29vw,-20vw);
+        background-color: rgba(0,0,0,0.9);
     }
     #scene2 .right-text{
-        transform: translate(16vw,-70vw)
+        transform: translate(21vw,20vw);
+        background-color: rgba(0,0,0,0.9);
+    }
+    #scroll-section-1 .wifi-icon{
+        transform: translate(-6vw,-12vh);
+        width:75vw;
     }
     .DataCenterPage .right-text{
         transform: translate(0,-33vh)
+    }
+
+    .DataCenterPage .action-plan-nav{
+        flex-direction: column;
+
+    }
+    .DataCenterPage .action-plan-box{
+        width:80vw;
+        height:80vw;
+    }
+    .DataCenterPage .action-plan-box h2{
+        font-size: 8vw;
+    }
+    .DataCenterPage .action-plan-nav p{
+        margin-right: 0;
+    }
+    .DataCenterPage .action-plan-nav>p{
+        font-size:5vw;
+        margin-bottom: 30px;
+    }
+    .DataCenterPage .action-plan-box button{
+        width:80%;
+        margin-top:30px;
     }
 
 }

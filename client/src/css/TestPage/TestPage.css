@@ -499,14 +499,6 @@ input:-webkit-autofill {
     background-color:#70FF00;
 }
 
-/*navvar color!*/
-.nav-logo{
-    fill:black;
-}
-.timer{
-    color:black;
-}
-
 
 
 @media screen and (min-width:481px) and (max-width:1024px){
@@ -528,6 +520,9 @@ input:-webkit-autofill {
         justify-content: center;
         /* justify-content: flex-start;
         padding-top:80px; */
+    }
+    #get-appUseData{
+        z-index: 2000;
     }
     .test h3{
         font-size: 1.1rem;
@@ -577,15 +572,6 @@ input:-webkit-autofill {
         overflow-x:scroll;
         -ms-overflow-style: none; 
         scrollbar-width: none;
-        /* width:100vw;
-        overflow-x: scroll;
-        -ms-overflow-style: none; 
-        scrollbar-width: none; */
-
-        /* flex-wrap: wrap;
-        margin:3rem 0;
-        justify-content: flex-start;
-        width:300px; */
     }
     .applist-btn::-webkit-scrollbar{
         display: none;
@@ -681,24 +667,10 @@ input:-webkit-autofill {
 }
 
 @media screen and (max-width:330px){
-    .test {
-        /* padding-top:0;
-        justify-content: center; */
-    }
-    /* .zoom-camera{
-        display: none;
-    } */
     .test-wrapper{
         margin-top:0;
     }
     .test-next-btn{
         margin-top:3vh;
-    }
-    /*navvar color!*/
-    .nav-logo{
-        visibility: hidden !important;
-    }
-    .timer{
-        visibility: hidden !important;
     }
 }
