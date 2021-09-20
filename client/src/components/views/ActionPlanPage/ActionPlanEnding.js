@@ -14,7 +14,7 @@ const ActionPlanEnding = () => {
         Axios.get('/api/test/getCount')
         .then(response => {
             if(response.data.success){
-                setCount(response.data.count);
+                setCount(response.data.myCount);
             }else{
                 alert('Getting count is Fail');
             }

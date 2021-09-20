@@ -26,8 +26,9 @@ router.get('/getResult',(req,res)=>{
 
 //참여자수를 전송
 router.get('/getCount',(req,res)=>{
-    const count = req.cookies.test.count;
-    res.status(200).json({success:true,count})
+    const myCount = req.cookies.test.count;
+    const globalCount = count;
+    res.status(200).json({success:true,globalCount,myCount})
 })
 
 router.get('/getEarth',(req,res) => {

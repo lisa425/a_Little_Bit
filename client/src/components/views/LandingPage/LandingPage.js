@@ -13,7 +13,7 @@ const LandingPage = () => {
         Axios.get('/api/test/getCount')
         .then(response => {
             if(response.data.success){
-                setCount(response.data.count);
+                setCount(response.data.globalCount);
             }else{
                 alert('Getting count is Fail');
             }
