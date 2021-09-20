@@ -5,10 +5,10 @@
 >node.js express<br>
 react.js<br>
 Mongo DB<br>
-<br>
-<br>
-<br>
+
+
 ## 02. Main Function
+
 #### 1.Data Using Test
 디지털 사용량 테스트를 통해 사용자의 디지털 탄소 발자국 배출량을 알려주는 테스트 페이지.
 - useState를 통한 픽셀 인터랙션 기능 구현
@@ -38,8 +38,7 @@ Mongo DB<br>
 - react-draggable 라이브러리를 이용한 지구 드래그 기능 구현
 - useState,useEffect,axios,props를 이용한 모달 기능 구현 
 - cookie-express 라이브러리를 활용해 쿠키를 이용한 자신의 데이터 기록 세팅 및 테스트 전 티켓 제출을 막는 기능 구현
-<br>
-<br>
-<br>
+
+
 ### 03. 고민했던 내용들
 > Cookie를 이용하게 된 배경은 다음에 사용자가 다시 들어와서 자신의 결과 및 방문 기록을 보고싶을 것이라는 판단 하에 cookie를 써서 기록을 계속 저장하는 방향으로 결정하게 되었다.
