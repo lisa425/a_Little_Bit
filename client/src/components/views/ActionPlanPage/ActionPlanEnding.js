@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import '../../../css/ActionPlanPage/ActionPlanEnding.css';
-import glitch from '../../../assets/images/actionplans/glitch.gif';
+import noGlitch from '../../../assets/images/actionplans/no-glitch.mp4';
+import yesGlitch from '../../../assets/images/actionplans/yes-glitch.mp4';
 import { Link } from "react-router-dom";
 import Axios from 'axios';
 
@@ -71,8 +72,18 @@ const ActionPlanEnding = () => {
                     <button className="no-btn" onClick={selectNoBtn}>no</button>
                 </div>
             </section>
+
             <section className={click? "glitch-motion" : "hide"}>
-                <img src={glitch} alt="earth glitch motion"/>
+                {Answer &&
+                    <video autoPlay muted>
+                        <source src={yesGlitch} type="video/mp4"/>
+                    </video>
+                }
+                {!Answer && 
+                    <video autoPlay muted>
+                        <source src={noGlitch} type="video/mp4"/>
+                    </video>
+                }
             </section>
             {showEnding(Answer)}
         </main>

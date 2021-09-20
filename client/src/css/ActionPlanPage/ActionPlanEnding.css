@@ -85,17 +85,16 @@
     animation:glitch 2.9s forwards;
     z-index:2;
 }
-.glitch-motion img{
-    width:100vw;
+.glitch-motion video{
+    height: 100vh;
 }
 
 @keyframes showEnding{
     0%{
         opacity:0;
-        display:none;
     }
     99%{
-        opacity: 0.5;
+        opacity: 0;
     }
     100%{
         opacity: 1;
@@ -105,17 +104,15 @@
 .noEnding,
 .yesEnding{
     z-index:1;
-    /* animation-name: showEnding;
-    animation-delay: 2.8s;
-    animation-duration: 0.5s; */
     display:flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top:0;
     left:0;
-    width:100vw;
-    height: 100vh;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
 }
 .no-ending-box,
 .yes-ending-box{
@@ -134,12 +131,15 @@
     height: 562px;
     line-height: 3rem;
     text-align: center;
+    animation-name: showEnding;
+    animation-duration: 3s;
 }
 
 .yes-ending-box span{
     background-color:#000;
     color:#70FF00;
 }
+
 .no-ending-box a{
     z-index: 3;
 }
