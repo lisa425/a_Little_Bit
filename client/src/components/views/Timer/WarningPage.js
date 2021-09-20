@@ -1,14 +1,7 @@
-import React,{useState,useEffect} from "react";
+import React from "react";
 import '../../../css/Timer/WarningPage.css';
 
 const WarningPage = (props) => {
-    // const [open,setOpen] = useState(false);
-
-    // useEffect(() => {
-    //     if(props.open === true){
-    //         setOpen(true)
-    //     }
-    // }, [])
 
     const closeWarning = () => {
         props.getOpen(false);

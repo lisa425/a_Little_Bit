@@ -1,4 +1,4 @@
-import React,{useState,useRef,useEffect} from 'react'
+import React,{useState} from 'react'
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn, FadeOut } from "react-scroll-motion";
 import '../../../css/DataCenterPage/DataCenterPage.css';
 import scene0 from '../../../assets/images/dataCenter/scene0.svg'

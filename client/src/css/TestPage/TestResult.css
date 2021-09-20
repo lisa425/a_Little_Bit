@@ -145,6 +145,7 @@
 }
 .test-result-recommend{
     width:100%;
+    max-width: 1024px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -292,6 +293,7 @@
 
 .world-data{
     width:100%;
+    max-width: 1024px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top:2rem;
@@ -410,6 +412,7 @@
 .world-metaphor{
     justify-content: space-around;
     width:100%;
+    max-width: 1024px;
 }
 .world-metaphor-content{
     display: flex;

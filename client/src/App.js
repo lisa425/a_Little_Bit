@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import LandingPage from './components/views/LandingPage/LandingPage';
 import Bgm from './components/views/LandingPage/Bgm';
 import NavBar from './components/views/Navbar/Navbar';
@@ -12,7 +12,6 @@ import ActionPlanPage from './components/views/ActionPlanPage/ActionPlanPage'
 import ActionPlanEnding from './components/views/ActionPlanPage/ActionPlanEnding'
 import DataCenterPage from './components/views/DataCenterPage/DataCenterPage'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import React,{ useEffect, useState, useRef } from 'react';
 
 function App() {
   // const [isLoading,setIsLoading] = useState(true);
