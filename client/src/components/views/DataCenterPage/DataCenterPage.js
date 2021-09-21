@@ -28,7 +28,7 @@ const DataCenterPage = () => {
     return(
         <main className="DataCenterPage">
             <header className="title">
-                <h1>Why is it problem?</h1>
+                <h1>story of a Little bit</h1>
                 <h5>도대체 디지털 탄소 발자국의 정체는 무엇일까요?<br/>
                     스크롤을 내려 확인해보세요.
                 </h5>

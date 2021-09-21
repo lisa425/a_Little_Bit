@@ -47,7 +47,8 @@ const testSchema = mongoose.Schema({
     },
     message:{
         type:String,
-        maxlength:150
+        maxlength:150,
+        default:'null'
     }
 },{timestamps:true})
 

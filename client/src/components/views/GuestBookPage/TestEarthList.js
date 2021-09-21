@@ -33,7 +33,7 @@ const TestEarthList = (props) => {
                     setIsCookie(true);
                     setEarth(response.data.tests);
                     setMyTest(response.data.mytest);
-                    if(response.data.mytest.message === undefined){
+                    if(response.data.mytest.message === 'null'){
                         setIsMessage(false);
                         setSubmit(false);
                     }else{
@@ -110,7 +110,7 @@ const TestEarthList = (props) => {
     const openTicket = useRef();
     const openTicketHandler = (e) => {
         openTicket.current.style.display="none";
-        ticketRef.current.style.bottom="15vh";
+        ticketRef.current.style.bottom="3vh";
     }
 
     // 지구를 랜덤한 위치에 출력한다. 
@@ -168,7 +168,7 @@ const TestEarthList = (props) => {
                     <div className="result">
                         <EarthIcon />
                         <div className="result-data">
-                            <span>{myTest.result}kg</span>
+                            <span>{myTest.result}g</span>
                             <span>CO2 eq</span>
                         </div>
                     </div>

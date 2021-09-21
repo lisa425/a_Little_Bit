@@ -12,7 +12,6 @@ const EarthModal = (props) => {
         Axios.post('/api/test/getEarthDetail',variable)
         .then(response => {
             if(response.data.success){
-                console.log(response.data.earthDetail)
                 setEarthDetail(response.data.earthDetail);
             }else{
                 alert('fail');
