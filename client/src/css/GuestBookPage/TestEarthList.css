@@ -323,6 +323,11 @@ html{
     border:none;
 }
 
+@media screen and (max-width:1024px){
+    .earth-content{
+        filter: grayscale(0);
+    }
+}
 @media screen and (min-width:481px) and (max-width:768px){
     .guestbook{
         left:6vw;

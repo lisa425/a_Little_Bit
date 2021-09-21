@@ -15,7 +15,7 @@
     width:100vw;
     color:white;
     padding-top:20vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .mobile-br{
     display: none;
@@ -483,7 +483,6 @@
     color:#00FFF9;
 }
 .result-navigator-box-container{
-    width:85vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -491,13 +490,12 @@
 }
 .result-navigator-box{
     text-align: center;
-    width:32%;
-    height: 15rem;
-    padding:5rem 3rem;
-    margin:1%;
-    background:#252525;
+    width: 325px;
+    height: 320px;
+    margin: 5px;
+    background: #252525;
     border-radius: 5px;
-    color:white;
+    color: white;
     font-family: "Elice Digital Baeum";
     font-weight: bold;
     font-size: 1.2rem;
@@ -507,14 +505,14 @@
     align-items: center;
 }
 .result-navigator-box p{
-    line-height: 2.1rem;
+    line-height: 1.7rem;
 }
 .result-navigator-box a{
     width:100%;
 }
 .result-navigator-box .navigator-btn{
     width:70%;
-    margin-top:5rem;
+    margin-top:3rem;
     background:#00FFF9;
     border-radius: 2px;
     border:none;
@@ -529,6 +527,8 @@
 .result-navigator-box .navigator-btn a{
     color:black;
 }
+
+
 
 @media screen and (max-width:1024px) and (min-width:769px){
     .world-metaphor-img{

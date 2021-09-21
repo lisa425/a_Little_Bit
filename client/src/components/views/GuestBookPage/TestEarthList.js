@@ -125,7 +125,7 @@ const TestEarthList = (props) => {
         earthIdArray.push(earth._id);
 
         return(
-            <Draggable key={index}>
+            <Draggable key={index} cancel=".earth-index">
                 <div 
                     className="earth-list"
                     style={{left:valueLeft, top:valueBottom}}

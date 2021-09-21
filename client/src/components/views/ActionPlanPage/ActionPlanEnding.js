@@ -75,12 +75,12 @@ const ActionPlanEnding = () => {
 
             <section className={click? "glitch-motion" : "hide"}>
                 {Answer &&
-                    <video autoPlay muted>
+                    <video autoPlay muted playsInline>
                         <source src={yesGlitch} type="video/mp4"/>
                     </video>
                 }
                 {!Answer && 
-                    <video autoPlay muted>
+                    <video autoPlay muted playsInline>
                         <source src={noGlitch} type="video/mp4"/>
                     </video>
                 }

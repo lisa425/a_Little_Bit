@@ -30,7 +30,7 @@ const LandingPage = () => {
             </button>
             <p className="participant">지금까지 {count}명이 참여했습니다.</p>
             <div className="video-area">
-                <video className="back-video" autoPlay muted loop>
+                <video className="back-video" autoPlay muted loop playsInline>
                     <source src={mainvideo} type="video/mp4"/>
                 </video>
             </div>
