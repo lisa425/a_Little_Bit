@@ -19,7 +19,7 @@
     line-height: 1.5em;
 }
 .DataCenterPage p:not(.impact-text){
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 .DataCenterPage .impact-text{
     font-size:2.7vh;
@@ -103,7 +103,7 @@
 
 #scroll-section-1 .wifi-icon{
     margin:0 29px;
-    transform: translate(-0.55vh,20px);
+    transform: translate(2.7vw,20px);
 }
 
 .DataCenterPage .sticky-elem{
@@ -197,7 +197,26 @@
     height:60px;
     margin-top:52px;
 }
-
+@media screen and (max-width:1280px) and (min-width:1024px){
+    .DataCenterPage p:not(.impact-text){
+        font-size:1.4rem;
+    }
+    #scene1 .right-text{
+        transform: translateX(290px);
+    }
+    #scene2 .right-text{
+        transform: translate(255px,150px);
+    }
+    #scene2 .left-text{
+        transform: translate(-170px,-150px);
+    }
+    #scene4 .side-info{
+        left:10px;
+    }
+    .DataCenterPage .right-text{
+        transform: translateX(250px);
+    }
+}
 @media (max-width:1023px){
     .DataCenterPage{
         width:90vw;
@@ -221,10 +240,10 @@
         transform:translate(0,-300px);
     }
     #scene2 .left-text{
-        transform:translate(-150px,-300px);
+        transform:translate(-150px,-220px);
     }
     #scene2 .right-text{
-        transform:translate(150px,320px);
+        transform:translate(150px,230px);
     }
     .DataCenterPage .impact-text{
         font-size: 2.5vh;
@@ -260,7 +279,7 @@
 
     #scroll-section-1 .wifi-icon {
         margin: 0;
-        transform:translate(-0.65vw,-20vh);
+        transform:translate(-5.5vw,-20vh);
         width:50vw;
     }
 
