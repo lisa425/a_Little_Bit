@@ -24,11 +24,16 @@ router.get('/getResult',(req,res)=>{
     res.status(200).json({success:true,cookie})
 })
 
-//참여자수를 전송
+//유저의 참여 번호 전송
 router.get('/getCount',(req,res)=>{
     const myCount = req.cookies.test.count;
+    res.status(200).json({success:true,myCount})
+})
+
+//전체 참여자수를 전송
+router.get('/getGlobalCount',(req,res)=>{
     const globalCount = count;
-    res.status(200).json({success:true,globalCount,myCount})
+    res.status(200).json({success:true,globalCount})
 })
 
 router.get('/getEarth',(req,res) => {

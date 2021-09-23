@@ -7,14 +7,14 @@ import Axios from 'axios';
 
 const ActionPlanEnding = () => {
 
-    const [count,setCount] = useState(0);
+    const [myCount,setMyCount] = useState(0);
 
     //test 쿠키 정보를 요청한다.
     useEffect(() => {
         Axios.get('/api/test/getCount')
         .then(response => {
             if(response.data.success){
-                setCount(response.data.myCount);
+                setMyCount(response.data.myCount);
             }else{
                 alert('Getting count is Fail');
             }
@@ -45,7 +45,7 @@ const ActionPlanEnding = () => {
                 <article className="yesEnding">
                     <div className="yes-ending-box">
                         <p><span>지구</span>를 <span>변화</span>시키는<br/>
-                        <span>{count}</span>번째<br/>당신의 선택</p>
+                        <span>{myCount}</span>번째<br/>당신의 선택</p>
                     </div>
                     <Link to="/guestbook"><button className="home-btn">Guestbook</button></Link>
                 </article>

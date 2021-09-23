@@ -1,0 +1,106 @@
+@import '../core.css';
+
+.AboutPage{
+    background-image:url('../../assets/images/aboutpage/aboutbackground.png');
+    background-size: cover;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.about-wrapper{
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    top:25px;
+}
+.about{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom:60px;
+}
+.about .about-project{
+    font-size: 14px;
+    margin-left:133px;
+    line-height: 1.7em;
+}
+.about-logo{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top:60px;
+    width:100%;
+}
+.about-logo .about-logo-info{
+    fill:white;
+    width:47px;
+    height:47px;
+}
+.about-logo .logo-mean{
+    margin-left:25px;
+    font-size: 12px;
+    line-height: 1.8em;
+}
+.mobile{
+    display: none;
+}
+.about-logo-img{
+    fill:white;
+    width:413px;
+    height: 64px;
+}
+
+@media screen and (max-width:1024px){
+    .AboutPage{
+        background-image:url('../../assets/images/aboutpage/aboutbackground_mobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .web{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .about-wrapper{
+        max-width:90vw;
+    }
+    .about{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-bottom: 3vh;
+    }
+    .about .about-project{
+        margin-left: 0;
+        font-size: 13px;
+        margin-top:7vh;
+    }
+    .about-logo-img{
+        width:217px;
+        height:33px;
+    }
+    .about-logo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 3vh;
+    }
+    .about-logo .logo-mean{
+        margin-left: 0;
+        font-size: 11px;
+        margin-top:2vh;
+    }
+}
+
+@media screen and (max-width:320px){
+    .AboutPage{
+        padding:7vh 0;
+    }
+}

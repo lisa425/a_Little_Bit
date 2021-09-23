@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {ReactComponent as Logo } from '../../../assets/images/navbar/logo.svg';
 import menuIcon from "../../../assets/images/navbar/menu_icon.svg";
 import Timer from '../Timer/Timer';
+import {ReactComponent as Symbol } from '../../../assets/images/symbols/symbol.svg';
 
 const NavBar = ({match}) => {
     const [sidebar, setSidebar] = useState(false);
@@ -45,6 +46,12 @@ const NavBar = ({match}) => {
                             <p className="en-menu">guest book</p>
                             <p className="kr-menu">방명록</p></Link>
                         </li>
+                        <div className="about-menu">
+                            <Link to="/about" onClick={closeSidebar}>
+                                <Symbol style={{fill:'white',width:'54px',height:'54px'}}/>
+                                <p>about</p>
+                            </Link>
+                        </div>
                 </ul>
                 <button className="nav-menu-icon" onClick={showSidebar}>  
                     <img src={menuIcon} alt="menuIcon"/>

@@ -2,9 +2,9 @@ import React,{ useState, useEffect, useRef } from "react";
 import '../../../css/Timer/Timer.css';
 import WarningPage from './WarningPage';
 const Timer = () => {
-  const [min, setMin] = useState(20);
+  const [min, setMin] = useState(10);
   const [sec, setSec] = useState(0);
-  const time = useRef(1200);
+  const time = useRef(600);
   const timerId = useRef(null);
   const [warning,setWarning] = useState(false);
   const getOpen = (bool) => {

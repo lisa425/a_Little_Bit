@@ -10,7 +10,7 @@ const LandingPage = () => {
 
     //test 쿠키 정보를 요청한다.
     useEffect(() => {
-        Axios.get('/api/test/getCount')
+        Axios.get('/api/test/getGlobalCount')
         .then(response => {
             if(response.data.success){
                 setCount(response.data.globalCount);

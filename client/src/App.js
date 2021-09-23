@@ -6,24 +6,15 @@ import TestPage from './components/views/TestPage/TestPage';
 import TestIntro from './components/views/TestPage/TestIntro';
 import TestResult from './components/views/TestPage/TestResult';
 import TestEarthList from './components/views/GuestBookPage/TestEarthList';
-import EarthModal from './components/views/GuestBookPage/EarthModal'
-import CardNewsPage from './components/views/CardNewsPage/CardNewsPage'
-import ActionPlanPage from './components/views/ActionPlanPage/ActionPlanPage'
-import ActionPlanEnding from './components/views/ActionPlanPage/ActionPlanEnding'
-import DataCenterPage from './components/views/DataCenterPage/DataCenterPage'
+import EarthModal from './components/views/GuestBookPage/EarthModal';
+import CardNewsPage from './components/views/CardNewsPage/CardNewsPage';
+import ActionPlanPage from './components/views/ActionPlanPage/ActionPlanPage';
+import ActionPlanEnding from './components/views/ActionPlanPage/ActionPlanEnding';
+import DataCenterPage from './components/views/DataCenterPage/DataCenterPage';
+import AboutPage from './components/views/AboutPage/AboutPage';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  // const [isLoading,setIsLoading] = useState(true);
-
-  // useEffect(()=>{
-  //   fetch("/api")
-  //   .then((response) => {
-  //     setIsLoading(false);
-  //   });
-  // })
-  
-  //if(isLoading) return <h1 style={{color:"gray"}}>Loading...</h1>;
   return (
     <Router>
         <Bgm />
@@ -44,6 +35,8 @@ function App() {
           <Route exact path="/actionplan/ending" component={ActionPlanEnding} />
 
           <Route exact path="/story" component={DataCenterPage} />
+
+          <Route exact path="/about" component={AboutPage} />
         </Switch>
     </Router>
   );

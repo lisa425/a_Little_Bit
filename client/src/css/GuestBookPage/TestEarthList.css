@@ -276,7 +276,7 @@ html{
     top:38.5%;
     left:41%;
     color:#70FF00;
-    font-size:1.5rem;
+    font-size:1.8rem;
     font-family: "Rany";
     font-weight: 500;
     padding:5%;
@@ -380,7 +380,11 @@ html{
     .earth-list img{
         width:250px;
     }
-    
+    .earth-result .result{
+        top:-49%;
+        border:none;
+        padding:0;
+    }
     .TestEarthList .search-form{
         z-index: 0;
         left:auto;

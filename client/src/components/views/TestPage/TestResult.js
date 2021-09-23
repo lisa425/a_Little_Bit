@@ -482,7 +482,7 @@ const TestResult = (props) => {
             {/* --- 다른 페이지 소개 & 이동 ---*/}
             <section className="result-navigator">
                 <hr/>
-                <Symbol1/>
+                <Symbol1 className="symbol1"/>
                 <article className="result-navigator-title">
                     <h2>a L<span>i</span>ttle hab<span>i</span>t makes Big <span>i</span>mpacts</h2>
                     <p>"나 하나쯤이야"라고 생각한 <br className="mobile-br"/>사람들의 <span>작은 습관</span>들이 모여 <br className="mobile-br"/>지구에 <span>큰 영향</span>을 끼치고 있습니다.</p>
@@ -496,10 +496,10 @@ const TestResult = (props) => {
                         <p>디지털 탄소 발자국을 줄이려면<br/>무엇을 해야하나요?</p>
                         <Link to="/actionplan"><button className="navigator-btn">go</button></Link>
                     </div>
-                    <div className="result-navigator-box">
-                        <p>다른 사람들은 얼마나 많은<br/>디지털 탄소 발자국을 남겼을까요?</p>
-                        <Link to="/guestbook"><button className="navigator-btn">go</button></Link>
-                    </div>
+                </article>
+                <article className="share-result">
+                    <button className="kakao-share">테스트 공유하기</button>
+                    <button className="copy-link">링크 복사하기</button>
                 </article>
             </section>
             {TestResultPixel(result,'green')}
