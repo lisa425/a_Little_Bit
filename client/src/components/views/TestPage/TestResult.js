@@ -34,6 +34,9 @@ import kakaotalk from '../../../assets/images/cardNews/cardNewsThumbnail/kakaota
 import email from '../../../assets/images/cardNews/cardNewsThumbnail/email.jpg';
 import zoom from '../../../assets/images/cardNews/cardNewsThumbnail/zoom.jpg';
 import datacenter from '../../../assets/images/cardNews/cardNewsThumbnail/datacenter.jpg';
+//공유하기 버튼
+import KakaoShareButton from '../ShareButton/KakaoShareButton';
+import CopyLinkButton from '../ShareButton/CopyLinkButton';
 
 const TestResult = (props) => {
     const [cookie,setCookie] = useState({});
@@ -498,8 +501,8 @@ const TestResult = (props) => {
                     </div>
                 </article>
                 <article className="share-result">
-                    <button className="kakao-share">테스트 공유하기</button>
-                    <button className="copy-link">링크 복사하기</button>
+                    <KakaoShareButton />
+                    <CopyLinkButton />
                 </article>
             </section>
             {TestResultPixel(result,'green')}

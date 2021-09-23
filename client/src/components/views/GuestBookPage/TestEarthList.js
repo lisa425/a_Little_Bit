@@ -9,6 +9,9 @@ import moment from 'moment';
 import {ReactComponent as Arrow} from '../../../assets/images/earth/Arrow.svg'
 import {ReactComponent as EarthIcon} from '../../../assets/images/earth/earth_icon.svg'
 import {ReactComponent as Search} from '../../../assets/images/earth/search.svg';
+//공유하기 버튼
+import KakaoShareButton from '../ShareButton/KakaoShareButton';
+import CopyLinkButton from '../ShareButton/CopyLinkButton';
 
 const TestEarthList = (props) => {
 
@@ -249,6 +252,12 @@ const TestEarthList = (props) => {
                 <input type="text" name="searchText" ref={searchValue} placeholder="find yours !" />
                 <button type="submit" onClick={onSearchSubmit}><Search/></button>
             </form>}
+
+            {/* share button */}
+            <div class="share-guestbook">
+                <KakaoShareButton />
+                <CopyLinkButton />
+            </div>
         </main>
     )
 }

@@ -322,6 +322,29 @@ html{
     background:transparent;
     border:none;
 }
+.TestEarthList .share-guestbook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right:30px;
+    bottom:10px;
+}
+.TestEarthList .share-guestbook button{
+    background:transparent;
+    border:none;
+    width:60px;
+    height:60px;
+}
+.TestEarthList .share-guestbook button span{
+    display: none;
+}
+.TestEarthList .share-guestbook button .share-icon{
+    fill:white;
+}
+.TestEarthList .share-guestbook button .share-icon #katalk_txt{
+    fill:black;
+}
 
 @media screen and (max-width:1024px){
     .earth-content{

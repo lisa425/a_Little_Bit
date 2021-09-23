@@ -545,6 +545,18 @@
     border:none;
     border-radius: 2px;
     margin:11px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.share-result button .share-icon{
+    fill:black;
+    margin-left: 0.7rem;
+    width:26px;
+    height:24px;
+}
+.share-result button .share-icon #katalk_txt{
+    fill:white;
 }
 
 
