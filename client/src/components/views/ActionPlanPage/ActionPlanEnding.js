@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import '../../../css/ActionPlanPage/ActionPlanEnding.css';
-import noGlitch from '../../../assets/images/actionplans/no-glitch.gif';
-import yesGlitch from '../../../assets/images/actionplans/yes-glitch.gif';
+import noGlitch from '../../../assets/images/actionplans/no-glitch.mp4';
+import yesGlitch from '../../../assets/images/actionplans/yes-glitch.mp4';
 import { Link } from "react-router-dom";
 import Axios from 'axios';
 
@@ -74,17 +74,23 @@ const ActionPlanEnding = () => {
             </section>
 
             <section className={click? "glitch-motion" : "hide"}>
+<<<<<<< HEAD
                 {Answer &&	
                     <img src={yesGlitch} alt="yes glitch"/>
                     // <video autoPlay muted playsInline>
                     //     <source src={yesGlitch} type="video/mp4"/>
                     // </video>
+=======
+                {Answer &&
+                    <video autoPlay muted playsInline>
+                        <source src={yesGlitch} type="video/mp4"/>
+                    </video>
+>>>>>>> f149a740b9177a0c02ad0ab8ef7579d5e27b7032
                 }
                 {!Answer && 
-                    <img src={noGlitch} alt="no glitch"/>
-                    // <video autoPlay muted playsInline>
-                    //     <source src={noGlitch} type="video/mp4"/>
-                    // </video>
+                    <video autoPlay muted playsInline>
+                        <source src={noGlitch} type="video/mp4"/>
+                    </video>
                 }
             </section>
             {showEnding(Answer)}
