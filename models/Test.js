@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 
 const testSchema = mongoose.Schema({
     count:{
-        type:Number
+        type:Number,
+        default:0
     },
     name:{
         type:String,

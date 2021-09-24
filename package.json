@@ -30,6 +30,7 @@
     "moment": "^2.29.1",
     "mongoose": "^5.13.3",
     "qs": "^6.10.1",
+    "react-copy-to-clipboard": "^5.0.4",
     "react-draggable": "^4.4.3",
     "react-router": "^5.2.0",
     "react-scroll-motion": "^0.2.1",

@@ -26,7 +26,10 @@ router.get('/getResult',(req,res)=>{
 
 //유저의 참여 번호 전송
 router.get('/getCount',(req,res)=>{
-    const myCount = req.cookies.test.count;
+    let myCount = 0;
+    if(req.cookies.test !== undefined){
+        myCount = req.cookies.test.count;
+    }
     res.status(200).json({success:true,myCount})
 })
 
