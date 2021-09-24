@@ -20,8 +20,8 @@ const KakaoShareButton = () => {
         Kakao.Link.sendDefault({
             objectType: "feed",
             content: {
-                title: "a Little Bit!",
-                description: "디지털 없이 살아갈 수 없는 세상 속,",
+                title: "a Little bit!",
+                description: "디지털 없이 살아갈 수 없는 세상 속,당신은 얼마나 잘 적응하고 있을까요? 당신의 데이터 사용 습관을 a Little bit!에서 분석해보세요.",
                 imageUrl: 'http://drive.google.com/uc?export=view&id=1J85XPPcfqDoabAZGlZMyAVUDdhKkNuV3',
                 link: {
                 mobileWebUrl: "http://www.alittlebit.kr",
