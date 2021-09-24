@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import '../../../css/ActionPlanPage/ActionPlanEnding.css';
-import noGlitch from '../../../assets/images/actionplans/no-glitch.mp4';
-import yesGlitch from '../../../assets/images/actionplans/yes-glitch.mp4';
+import noGlitch from '../../../assets/images/actionplans/no-glitch.gif';
+import yesGlitch from '../../../assets/images/actionplans/yes-glitch.gif';
 import { Link } from "react-router-dom";
 import Axios from 'axios';
 
@@ -75,14 +75,16 @@ const ActionPlanEnding = () => {
 
             <section className={click? "glitch-motion" : "hide"}>
                 {Answer &&
-                    <video autoPlay muted playsInline>
-                        <source src={yesGlitch} type="video/mp4"/>
-                    </video>
+                    <img src={yesGlitch} alt="yes glitch"/>
+                    // <video autoPlay muted playsInline>
+                    //     <source src={yesGlitch} type="video/mp4"/>
+                    // </video>
                 }
                 {!Answer && 
-                    <video autoPlay muted playsInline>
-                        <source src={noGlitch} type="video/mp4"/>
-                    </video>
+                    <img src={noGlitch} alt="no glitch"/>
+                    // <video autoPlay muted playsInline>
+                    //     <source src={noGlitch} type="video/mp4"/>
+                    // </video>
                 }
             </section>
             {showEnding(Answer)}

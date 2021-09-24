@@ -83,10 +83,10 @@
 .glitch-motion{
     justify-content: center;
     align-items: center;
-    animation:glitch 2.9s forwards;
+    animation:glitch 2.7s forwards;
     z-index:2;
 }
-.glitch-motion video{
+.glitch-motion img{
     height: 100vh;
 }
 
