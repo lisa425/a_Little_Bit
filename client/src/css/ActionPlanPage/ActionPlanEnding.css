@@ -85,9 +85,8 @@
     align-items: center;
     animation:glitch 3s forwards;
     z-index:2;
-    opacity: 100%;
 }
-.glitch-motion img{
+.glitch-motion video{
     height: 100vh;
 }
 
