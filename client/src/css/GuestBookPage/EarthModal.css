@@ -198,6 +198,15 @@
         width: 80vw;
         top:0;
     }
+    .earth-result .result{
+        top:-50%;
+        border:none;
+        padding:0;
+        font-size: 1rem;
+    }
+    .earth-result .result span{
+        font-size: 1.8rem;
+    }
 
     .earth-info{
         width:100%;

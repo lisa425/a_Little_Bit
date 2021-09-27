@@ -79,7 +79,7 @@
     z-index: 1000;
 }
 .about-menu{
-    position: absolute;
+    position: fixed;
     right:40px;
     bottom:40px;
     display: flex;

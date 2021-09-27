@@ -176,7 +176,7 @@
     width:180px;
     color:#FF00FD;
     border:1px solid #FF00FD;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: rgba(0,0,0,0);
     padding: 1rem 0.8rem;
     font-family: "Elice Digital Baeum";
@@ -497,7 +497,7 @@
     height: 384px;
     margin: 5px;
     background: #252525;
-    border-radius: 5px;
+    border-radius: 2px;
     color: white;
     font-family: "Elice Digital Baeum";
     font-weight: bold;
@@ -651,7 +651,7 @@
         align-items: center;
         padding: 0.5rem;
         background-color: #2F3130;
-        border-radius: 3px;
+        border-radius: 2px;
     }
     .unit span{
         margin-top:4px;
@@ -855,7 +855,7 @@
         justify-content: center;
         padding: 1rem;
         background-color: #2F3130;
-        border-radius: 3px;
+        border-radius: 2px;
     }
     .world-data-carbon-visualization{
         transform: rotate(90deg);

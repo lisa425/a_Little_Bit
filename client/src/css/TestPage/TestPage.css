@@ -297,7 +297,7 @@ input:-webkit-autofill {
     width:75px;
     height: 34px;
     border:1px dashed #000;
-    border-radius: 4px;
+    border-radius: 2px;
     background-color:#FFF;
     display: flex;
     justify-content: center;
@@ -311,7 +311,7 @@ input:-webkit-autofill {
     font-family: 'Elice Digital Baeum';
     font-size: 1em;
     padding:0.5em;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color:black;
     color:white;
     width:70px;
@@ -330,7 +330,7 @@ input:-webkit-autofill {
     font-family: 'Elice Digital Baeum';
     font-size: 1em;
     padding:0.5em;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color:black;
     color:white;
     width:70px;
