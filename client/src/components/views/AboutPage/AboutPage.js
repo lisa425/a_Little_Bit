@@ -12,10 +12,10 @@ const AboutPage = () => {
                         <Logo className="about-logo-img"/>
                     </section>
                     <section className="about-project">
-                        스마트폰이 없는 오늘을 상상하기 어려울 만큼,<br className="mobile"/> 디지털은 이미 우리 삶에서 뗄 수 없는 존재가<br className="web"/>
+                        스마트폰이 없는 오늘을 상상하기 어려울 만큼,<br className="mobile"/> 디지털은 이미 우리 삶에서 뗄 수 없는 존재가 <br className="web"/>
                         되었습니다. <br className="mobile"/>그러나, 이 디지털 사용이 도리어 지구에 악영향을 <br className="mobile"/>끼치고 있다면 어떨까요?<br className="web"/>
-                        &lt;a Little bit!&gt;은 새롭게 대두되는 환경문제, 디지털 <br className="mobile"/>탄소 발자국을 널리 알리기 위해 시작된<br className="web"/>
-                        프로젝트입니다. <br className="mobile"/>일상 속 디지털 매체를 통해 발생하는 디지털 탄소 발자국에 <br className="mobile"/>대한 정보와<br className="web"/>
+                        &lt;a Little bit!&gt;은 새롭게 대두되는 <br className="mobile"/>환경문제, 디지털 탄소 발자국을 널리 알리기 위해 시작된 <br/>
+                        프로젝트입니다. <br className="mobile"/>일상 속 디지털 매체를 통해 발생하는 디지털 탄소 발자국에 <br className="mobile"/>대한 정보와 <br className="web"/>
                         사용 습관에 대한 솔루션을 제공합니다.
                     </section>
                 </div>

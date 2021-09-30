@@ -102,5 +102,23 @@
 @media screen and (max-width:320px){
     .AboutPage{
         padding:7vh 0;
+        text-align: justify;
     }
+    .about .about-project{
+        margin-top:4vh;
+    }
+    .about-logo-img{
+        width:175px;
+        height: 30px;
+    }
+    .about-logo .about-logo-info{
+        width:40px;
+        height:40px;
+    }
+    .mobile,
+    .web,
+    br{
+        display: none;
+    }
+
 }
