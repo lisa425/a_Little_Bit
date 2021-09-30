@@ -1,4 +1,5 @@
 # a Little Bit!
+![43_thumbnail (1)](https://user-images.githubusercontent.com/65384154/135461537-04aa7748-3c71-4288-9ad9-45dc19973925.jpg)
 디지털 탄소발자국에 대한 인지와 경각심을 높이는 것을 목적으로 하는 인터랙티브 웹사이트
 
 ## 01. Framework
