@@ -2,6 +2,7 @@
 
 # a Little Bit!
 디지털 탄소발자국에 대한 인지와 경각심을 높이는 것을 목적으로 하는 인터랙티브 웹사이트
+>http://alittlebit.kr
 
 ## 01. Framework
 <img src="https://img.shields.io/badge/REACT-61DAFB?style=flat-square&logo=REACT&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white">
