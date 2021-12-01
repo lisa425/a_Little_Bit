@@ -7,35 +7,33 @@
 실제 사이트 오픈 후 약 160명 이상의 사용자가 참여하는 성과를 이루었습니다.<br>
 <br>
 
-> 사이트 바로가기: http://alittlebit.kr
+👉 사이트 바로가기: http://alittlebit.kr
 
 ## 01. 사용 기술
 ### [Front-end]
-<div><img src="https://img.shields.io/badge/REACT-61DAFB?style=flat-square&logo=REACT&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=JAVASCRIPT&logoColor=white"/></div>
-<b>프레임워크: </b>React.js
+<b>프레임워크
+> </b>React.js
+> <div><img src="https://img.shields.io/badge/REACT-61DAFB?style=flat-square&logo=REACT&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=JAVASCRIPT&logoColor=white"/></div>
 
 #### 라이브러리
-- recharts.js : 바 그래프 차트 구현을 위해 사용
-- react-scroll-motion : 자연스러운 스크롤 모션을 위해 사용
-- react-draggable : 지구 드래그 이벤트를 위해 사용
+> - recharts.js : 바 그래프 차트 구현을 위해 사용
+> - react-scroll-motion : 자연스러운 스크롤 모션을 위해 사용
+> - react-draggable : 지구 드래그 이벤트를 위해 사용
 
 #### 이용 API
-- kakao share api : 카카오 공유하기 기능 구현 용도
+> - kakao share api : 카카오 공유하기 기능 구현 용도
 
 
 ### [Back-end]
-<div><img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white"></div>
-<b>프레임워크: </b>Node.js 및 MongoDB
+<b>프레임워크: </b>
+> Node.js 및 MongoDB
+> <div><img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white"></div>
 
 #### 라이브러리
-- cookie-express : 쿠키 저장 및 활용을 위해 사용
+> - cookie-express : 쿠키 저장 및 활용을 위해 사용
 
 ### [Deployment]
-<div>  
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=AmazonAWS&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=Ubuntu&logoColor=white"/>
-  <img src="https://img.shields.io/badge/NGINX-009639?style=flat-square&logo=NGINX&logoColor=white"/>
-</div>
+> <div><img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=AmazonAWS&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=Ubuntu&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/NGINX-009639?style=flat-square&logo=NGINX&logoColor=white"/></div>
 
 
 ## 02. 구현 내용(Main Function)
