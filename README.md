@@ -1,39 +1,32 @@
 # a Little Bit!
 <img src="https://user-images.githubusercontent.com/65384154/144169812-5be01c47-d854-4642-8d4c-ce395c6cd0f6.png" style="width:500px"/>
+
+## 소개
 스마트폰이 없는 오늘을 상상하기 어려울 만큼,디지털은 이미 우리 삶에서 뗄 수 없는 존재가 되었습니다.<br>
 그러나, 이 디지털 사용이 도리어 지구에 악영향을 끼치고 있다면 어떨까요?<br>
-<a Little bit!>은 새롭게 대두되고 있는 환경 문제인 디지털 탄소 발자국을 알리기 위해 시작된 프로젝트입니다.<br>
-일상 속 디지털 매체를 통해 발생하는 디지털 탄소 발자국에 대한 정보와 사용 습관에 대한 솔루션을 제공합니다.<br>
+<a Little bit!>은 새롭게 대두되고 있는 환경 문제인 디지털 탄소 발자국을 널리 알리기 위해 시작된 프로젝트입니다.<br>
+일상 속 디지털 매체를 통해 발생하는 디지털 탄소 발자국에 대한 정보와 사용 습관에 대한 솔루션을 테스트와 함께 제공합니다.<br>
 실제 사이트 오픈 후 약 160명 이상의 사용자가 참여하는 성과를 이루었습니다.<br>
 <br>
 
 👉 사이트 바로가기: http://alittlebit.kr
+<br>
 
 ## 01. 사용 기술
-### [Front-end]
-<b>프레임워크
-> </b>React.js
-> <div><img src="https://img.shields.io/badge/REACT-61DAFB?style=flat-square&logo=REACT&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=JAVASCRIPT&logoColor=white"/></div>
+<b>FrontEnd</b> : React.js<br>
+<b>BackEnd</b> : Node.js<br>
+<b>Deployment</b> : AWS Lightsail, Ubuntu, Nginx<br>
+<div><img src="https://img.shields.io/badge/REACT-61DAFB?style=flat-square&logo=REACT&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=JAVASCRIPT&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=AmazonAWS&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=Ubuntu&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/NGINX-009639?style=flat-square&logo=NGINX&logoColor=white"/></div>
+<br>
 
-#### 라이브러리
-> - recharts.js : 바 그래프 차트 구현을 위해 사용
-> - react-scroll-motion : 자연스러운 스크롤 모션을 위해 사용
-> - react-draggable : 지구 드래그 이벤트를 위해 사용
+> #### 라이브러리
+> recharts.js : 바 그래프 차트 구현을 위해 사용<br>
+> react-scroll-motion : 자연스러운 스크롤 모션을 위해 사용<br>
+> react-draggable : 지구 드래그 이벤트를 위해 사용<br>
+> cookie-express : 쿠키 저장 및 활용을 위해 사용<br>
 
-#### 이용 API
-> - kakao share api : 카카오 공유하기 기능 구현 용도
-
-
-### [Back-end]
-<b>프레임워크: </b>
-> Node.js 및 MongoDB
-> <div><img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white"></div>
-
-#### 라이브러리
-> - cookie-express : 쿠키 저장 및 활용을 위해 사용
-
-### [Deployment]
-> <div><img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=AmazonAWS&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=Ubuntu&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/NGINX-009639?style=flat-square&logo=NGINX&logoColor=white"/></div>
+> #### 이용 API
+> kakao share api : 카카오 공유하기 기능 구현 용도
 <br>
 
 ## 02. 구현 내용(Main Function)
