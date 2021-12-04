@@ -20,7 +20,7 @@
 <br>
 
 > #### 라이브러리
-> http-proxy-middleware : 다른 포트를 쓰는 서버로의 요청 전송 중 발생하는 CORS 오류 방지를 위해 수동으로 Proxy 설정을 하는 용도로 사용
+> http-proxy-middleware : 다른 포트를 쓰는 서버로의 요청 전송 중 발생하는 CORS 오류 방지를 위해 수동으로 Proxy 설정을 하는 용도로 사용<br>
 > recharts.js : 바 그래프 차트 구현을 위해 사용<br>
 > react-scroll-motion : 자연스러운 스크롤 모션을 위해 사용<br>
 > react-draggable : 지구 드래그 이벤트를 위해 사용<br>
