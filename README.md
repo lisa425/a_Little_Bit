@@ -20,13 +20,14 @@
 <br>
 
 > #### 라이브러리
+> http-proxy-middleware : 다른 포트를 쓰는 서버로의 요청 전송 중 발생하는 CORS 오류 방지를 위해 수동으로 Proxy 설정을 하는 용도로 사용
 > recharts.js : 바 그래프 차트 구현을 위해 사용<br>
 > react-scroll-motion : 자연스러운 스크롤 모션을 위해 사용<br>
 > react-draggable : 지구 드래그 이벤트를 위해 사용<br>
 > cookie-express : 쿠키 저장 및 활용을 위해 사용<br>
 
 > #### 이용 API
-> kakao share api : 카카오 공유하기 기능 구현 용도
+> 카카오링크 api : 카카오 공유하기 기능 구현 용도
 <br>
 
 ## 02. 구현 내용(Main Function)
