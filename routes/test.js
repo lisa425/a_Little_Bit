@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { Test } = require("../models/Test");
 
-let count = 0;
+let count = 172;
 router.post('/',(req,res)=>{
     //test 유저 정보를 client에서 가져와 DB에 저장
     const test = new Test(req.body);
